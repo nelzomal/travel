@@ -35,6 +35,27 @@ export interface NearbyDining {
   walkingTimeMin: number;
 }
 
+export type ReviewerRole = 'reviewer1' | 'reviewer2';
+export type TripPreference = 'must_go' | 'nice_to_have' | 'neutral' | 'skip';
+
+export interface UserReview {
+  reviewerId: ReviewerRole;
+  reviewerName: string;      // 例如: "爸爸", "妈妈", "同伴"
+  reviewerAvatar: string;    // 例如: "👨", "👩", "🧓", "👵", "🧑"
+  kidRating: number;         // 1-5
+  elderlyRating: number;     // 1-5
+  strollerRating: number;    // 1-5
+  overallRating: number;     // 1-5 (个人综合推荐指数)
+  preference: TripPreference;// 必去 / 挺想去 / 无所谓 / 建议跳过
+  comment: string;           // 个人评语、顾虑或体验看法
+  updatedAt: string;         // ISO 时间
+}
+
+export interface ReviewerConfig {
+  reviewer1: { name: string; avatar: string; role: string };
+  reviewer2: { name: string; avatar: string; role: string };
+}
+
 export interface Site {
   id: string;
   name: string;
@@ -80,6 +101,7 @@ export interface Site {
   websiteUrl?: string;
   customTags: string[];
   customFields?: Record<string, string>; // 动态自定义字段 (例如: 雨天备选, 停车场信息, 门票预订渠道等)
+  reviews?: UserReview[]; // 2人双人协同评分与评价列表
   createdAt: string;
 }
 

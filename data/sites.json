@@ -830,7 +830,33 @@
       "rainyDayPlan": "普通雨天优先采用铁道馆主馆与水族馆室内路线。铁道馆扇形车库、SL区和Sky Terrace属于户外；水族馆京之里山及无顶通道需要雨伞，海豚体育场虽有顶棚但强风会横向飘雨。暴雨时可进入JR梅小路京都西站旁、经连廊相接的Hotel Emion Kyoto 1至2楼餐饮商业区；如需半天室内替代，可乘JR一站回京都站，使用与车站直连并设母婴室的京都Porta。",
       "ticketBookingTip": "普通门票无需抢票，但周末、连休、春暑假建议提前买。水族馆Web票通常提前30天开放，现场普通票使用售票机；铁道馆可在Asoview或Seven Ticket购前售票。驾驶模拟器必须另购体验票，Asoview通常在体验前一日20:00开售，Seven Ticket约提前1个月。两馆没有公开的65岁或婴儿车绿色通道，轮椅均为先到先得且不能预约。",
       "parkingAndDropoff": "两馆没有私家车或出租车直达门前的专用上下客点，勿在周边道路临停。带4岁学龄前儿童的家庭可使用梅小路公园おもいやり停车场：约122辆、24小时、JR高架下平面停车，至铁道馆标示约30米、至水族馆约300米，无需爬楼梯。当前平日首2小时¥900、之后每30分钟¥200、日间最高¥1,200；周末节假日首2小时¥1,200、之后每30分钟¥300、日间最高¥2,000；车高上限2.3米且不能预约。"
-    }
+    },
+    "reviews": [
+      {
+        "reviewerId": "reviewer1",
+        "reviewerName": "爸爸",
+        "reviewerAvatar": "👨",
+        "kidRating": 5,
+        "elderlyRating": 4,
+        "strollerRating": 5,
+        "overallRating": 5,
+        "preference": "must_go",
+        "comment": "新干线和真实蒸汽火车转盘极具冲击力，4岁宝宝绝对能看入迷！室内全平地推车无障碍满分，且有大量休息长椅给长辈休息，非常值得排入！",
+        "updatedAt": "2026-08-31T14:30:00.000Z"
+      },
+      {
+        "reviewerId": "reviewer2",
+        "reviewerName": "妈妈",
+        "reviewerAvatar": "👩",
+        "kidRating": 5,
+        "elderlyRating": 4,
+        "strollerRating": 5,
+        "overallRating": 5,
+        "preference": "must_go",
+        "comment": "水族馆的海豚表演和企鹅喂食正好在下午午休后（约15:30），两馆紧邻梅小路公园大草坪，带娃和长辈玩起来完全不赶，100%赞同必去！",
+        "updatedAt": "2026-08-31T15:00:00.000Z"
+      }
+    ]
   },
   {
     "id": "site-meiji-jingu",
@@ -1042,7 +1068,33 @@
       "accessibilityDetail": "公园公开无障碍资料显示，主要入口段差小于2厘米，设无障碍厕所、尿布台及少量可借轮椅；资料记载公园轮椅约2台，但数量、领取地点和当日可用性必须现场确认。DiverCity免费轮椅位于3F综合服务台，数量有限且不接受预约。海滨路线平缓，但沙滩并不适合普通轮椅或小轮婴儿车。",
       "safetyNote": "东京湾岸风力可能明显高于市中心；推车停车时必须锁轮。儿童不要攀爬护栏、独自靠近水边或追逐海鸟。长辈如有膝关节、心肺或耐热问题，建议把户外段控制在30-45分钟，并将DiverCity作为空调休息基地。",
       "lastVerified": "2026-08-31"
-    }
+    },
+    "reviews": [
+      {
+        "reviewerId": "reviewer1",
+        "reviewerName": "爸爸",
+        "reviewerAvatar": "👨",
+        "kidRating": 5,
+        "elderlyRating": 4,
+        "strollerRating": 5,
+        "overallRating": 5,
+        "preference": "must_go",
+        "comment": "1:1实体独角兽高达灯光秀是男宝的最爱，DiverCity商场内各楼层直梯充足，餐饮和母婴设施极其完善。",
+        "updatedAt": "2026-08-31T10:00:00.000Z"
+      },
+      {
+        "reviewerId": "reviewer2",
+        "reviewerName": "妈妈",
+        "reviewerAvatar": "👩",
+        "kidRating": 5,
+        "elderlyRating": 5,
+        "strollerRating": 5,
+        "overallRating": 5,
+        "preference": "must_go",
+        "comment": "海滨沙滩可以挖沙看日落和彩虹大桥，商场里有苹果树蛋包饭儿童餐，长辈逛累了随时可在室内咖啡厅休息，全家一致好评！",
+        "updatedAt": "2026-08-31T11:15:00.000Z"
+      }
+    ]
   },
   {
     "id": "site-hakone-owakudani",
@@ -1250,7 +1302,33 @@
       "ticketBookingTip": "散客普通班次不提供指定座位预约，也无需抢固定时段门票；只有15人以上团体可预约。电子片道或往返票通常可自使用日前1个月通过EMot购买，现场启用后扫码登船，可减少售票窗口排队，但不代表保留座位或优先登船。登船一般在开航前5-10分钟开始，周末及旺季建议提前20-30分钟到港。特等舱限额但不指定座位，适合希望更安静的长辈家庭。没有公开的长者、婴儿车免排队绿色通道；轮椅或行动困难者可向工作人员申请无障碍登船协助。",
       "parkingAndDropoff": "元箱根港巴士站、出租车下客点与码头入口基本相邻，约10-30米，主要动线平缓，无需爬长楼梯；港区约有60个收费车位，但旺季容易满。桃源台港约40个收费车位，附近湖尻林间停车场约200个收费车位；箱根町港附近约200个免费车位，自驾停车通常更稳妥。箱根神社境内约有180个停车位，车辆可按一方通行标识进入第一或第二停车场；行动不便者可在宝物殿附近安全下客，约步行50-100米进入无障碍路线并使用电梯。第三停车场及其道路带有优先或许可车辆限制，应服从现场人员指引。元旦、箱根驿传和红叶周末交通管制及堵车明显，不建议临时在路边上下客。"
     },
-    "createdAt": "2026-08-01"
+    "createdAt": "2026-08-01",
+    "reviews": [
+      {
+        "reviewerId": "reviewer1",
+        "reviewerName": "爸爸",
+        "reviewerAvatar": "👨",
+        "kidRating": 5,
+        "elderlyRating": 4,
+        "strollerRating": 4,
+        "overallRating": 5,
+        "preference": "must_go",
+        "comment": "海盗船复古造型特别吸引小朋友，甲板上远眺富士山与水上鸟居拍照非常出片！注意从港口去神社建议走平缓的湖畔脇参道。",
+        "updatedAt": "2026-08-31T12:00:00.000Z"
+      },
+      {
+        "reviewerId": "reviewer2",
+        "reviewerName": "妈妈",
+        "reviewerAvatar": "👩",
+        "kidRating": 4,
+        "elderlyRating": 4,
+        "strollerRating": 4,
+        "overallRating": 4,
+        "preference": "must_go",
+        "comment": "船舱内有空调和宽敞软座，长辈坐着很舒服。建议买往返或提早排队坐特等席，视野更开阔且避开人群。",
+        "updatedAt": "2026-08-31T13:20:00.000Z"
+      }
+    ]
   },
   {
     "id": "site-mount-fuji-5th-kawaguchiko",
@@ -1457,7 +1535,21 @@
       "ticketBookingTip": "无需提前抢票或强制预约。官网电子票为日期指定二维码票，可省去售票机排队，但不代表免除入口排队或馆内拥堵。4岁儿童免费；65岁以上须携带年龄证明。没有长者或婴儿车专属绿色通道，只有馆内电梯优先照顾轮椅及婴儿车。持认可残障证件者本人及原则上一名陪同者可不购票，直接到检票口出示证件。",
       "parkingAndDropoff": "水族园没有专用停车场或普通车辆门前下客区。出租车及包车建议在葛西临海公园站前环岛下客，至现馆建筑入口约600米，全程铺装、可无台阶通行但有轻微坡度。自驾使用24小时开放的葛西临海公园停车场，共182位、其中无障碍位18个；首小时400日元，之后每30分钟200日元，工作日12小时上限1600日元，周末及节假日无该上限。第一停车场至水族园约500-700米为地图估算；大型巴士须预约，周末和行乐季可能长时间排队。"
     },
-    "createdAt": "2026-08-01"
+    "createdAt": "2026-08-01",
+    "reviews": [
+      {
+        "reviewerId": "reviewer1",
+        "reviewerName": "爸爸",
+        "reviewerAvatar": "👨",
+        "kidRating": 5,
+        "elderlyRating": 5,
+        "strollerRating": 5,
+        "overallRating": 5,
+        "preference": "must_go",
+        "comment": "巨型金枪鱼环形水槽和日本最大级企鹅区非常震撼！园区全平缓坡道，门票性价比极高，而且离海湾很近，海风舒适。",
+        "updatedAt": "2026-08-31T16:00:00.000Z"
+      }
+    ]
   },
   {
     "id": "site-ueno-park-zoo",

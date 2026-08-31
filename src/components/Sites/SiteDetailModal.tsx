@@ -1,32 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Site } from '../../types/travel';
 import { PhotoGallery } from '../Common/PhotoGallery';
 import { FamilyScoreBadge, WalkingIntensityBadge, StairsBadge, WeatherBadge } from '../Common/FamilyBadge';
+import { SiteCollaborationReview } from './SiteCollaborationReview';
 import { 
   X, MapPin, Clock, DollarSign, ExternalLink, 
   Baby, HeartHandshake, Utensils, CheckCircle2, XCircle, 
-  Plus, Edit3, Sparkles, Video, Play, ExternalLink as ExtLinkIcon
+  Plus, Edit3, Sparkles, Video, Play, Users, MessageSquare, ExternalLink as ExtLinkIcon
 } from 'lucide-react';
 
 interface SiteDetailModalProps {
   site: Site | null;
   onClose: () => void;
   onEdit: (site: Site) => void;
+  onUpdateSite?: (updatedSite: Site) => void;
   onAddToDay?: (siteId: string) => void;
   onOpenLLMResearch?: (site: Site) => void;
+  initialTab?: 'overview' | 'collaboration' | 'videos' | 'family' | 'dining' | 'tips';
 }
 
 export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
   site,
   onClose,
   onEdit,
+  onUpdateSite,
   onAddToDay,
-  onOpenLLMResearch
+  onOpenLLMResearch,
+  initialTab
 }) => {
-  const [activeTab, setActiveTab] = useState<'overview' | 'videos' | 'family' | 'dining' | 'tips'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'collaboration' | 'videos' | 'family' | 'dining' | 'tips'>('overview');
   const [selectedVideoIdx, setSelectedVideoIdx] = useState(0);
 
+  // Check url params for review tab
+  useEffect(() => {
+    if (initialTab) {
+      setActiveTab(initialTab);
+    } else if (window.location.hash.includes('review=1')) {
+      setActiveTab('collaboration');
+    }
+  }, [initialTab, site?.id]);
+
   if (!site) return null;
+
+  const reviewsCount = site.reviews?.length || 0;
 
   const amenityList = [
     { key: 'nursingRoom', label: '独立母婴室 / 哺乳间', icon: '🍼', value: site.amenities.nursingRoom },
@@ -99,10 +115,12 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
               {site.category === 'museum' ? '🏛️' : site.category === 'temple' ? '⛩️' : site.category === 'park' ? '🐼' : '📍'}
             </span>
             <div>
-              <h2 className="text-xl font-bold text-slate-900 leading-tight">{site.name}</h2>
-              {site.localName && (
-                <p className="text-xs text-slate-500 font-medium">{site.localName} • {site.city}</p>
-              )}
+              <h3 className="text-base sm:text-lg font-black text-slate-900 leading-tight">
+                {site.name}
+              </h3>
+              <p className="text-xs text-slate-400 font-medium">
+                {site.localName || site.address} • {site.city}
+              </p>
             </div>
           </div>
 
@@ -139,6 +157,7 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
 
         {/* Modal Navigation Tabs */}
         <div className="flex items-center gap-2 px-6 pt-3 border-b border-slate-100 bg-slate-50/50 overflow-x-auto">
+          
           <button
             type="button"
             onClick={() => setActiveTab('overview')}
@@ -148,7 +167,26 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
-            概览与高清相册 ({site.gallery.length}张)
+            概览与实景相册 ({site.gallery.length}张)
+          </button>
+
+          {/* 2-PERSON COLLABORATION TAB */}
+          <button
+            type="button"
+            onClick={() => setActiveTab('collaboration')}
+            className={`pb-3 px-3 text-xs font-bold border-b-2 transition-all flex items-center gap-1.5 whitespace-nowrap ${
+              activeTab === 'collaboration'
+                ? 'border-indigo-600 text-indigo-600'
+                : 'border-transparent text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <Users className="w-3.5 h-3.5 text-indigo-600" />
+            <span>👥 双人协同评分 ({reviewsCount === 2 ? '2人已评' : reviewsCount === 1 ? '1人已评' : '待评分'})</span>
+            {reviewsCount === 2 ? (
+              <span className="px-1.5 py-0.2 bg-emerald-100 text-emerald-800 text-[10px] rounded-full font-bold">已达成</span>
+            ) : (
+              <span className="px-1.5 py-0.2 bg-amber-100 text-amber-800 text-[10px] rounded-full font-bold">待打分</span>
+            )}
           </button>
           
           {/* DEDICATED 4K VIDEO TAB */}
@@ -176,7 +214,6 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
             }`}
           >
             <span>👶 三代同堂适宜度 (幼童+长辈)</span>
-            <span className="px-1.5 py-0.2 bg-emerald-100 text-emerald-800 text-[10px] rounded-full font-bold">重点</span>
           </button>
           
           <button
@@ -188,7 +225,7 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
-            避坑小贴士与开放门票 ({site.familyTips.length})
+            避坑小贴士与门票 ({site.familyTips.length})
           </button>
           
           <button
@@ -200,13 +237,21 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
-            周边亲子及和食餐厅 ({site.nearbyDining.length})
+            周边亲子和食餐厅 ({site.nearbyDining.length})
           </button>
         </div>
 
         {/* Modal Scrollable Content */}
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
           
+          {/* ==================== TAB: COLLABORATION REVIEWS ==================== */}
+          {activeTab === 'collaboration' && (
+            <SiteCollaborationReview 
+              site={site} 
+              onUpdateSite={onUpdateSite || (() => {})} 
+            />
+          )}
+
           {/* ==================== TAB 1: OVERVIEW ==================== */}
           {activeTab === 'overview' && (
             <div className="space-y-6">
@@ -218,112 +263,86 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">🚼</span>
                   <div>
-                    <p className="text-[11px] font-semibold text-slate-600">推车便利度</p>
-                    <p className="text-sm font-bold text-slate-900">{site.strollerRating} / 5 <span className="text-xs text-slate-500 font-normal">({site.strollerRating >= 4 ? '纯平缓坡' : '有少许台阶'})</span></p>
+                    <div className="text-[10px] text-slate-500 font-bold uppercase">推车便利度</div>
+                    <div className="text-sm font-black text-emerald-800">{site.strollerRating} / 5 分</div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 border-y sm:border-y-0 sm:border-x border-slate-200/80 py-2 sm:py-0 sm:px-3">
-                  <span className="text-2xl">🧒</span>
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">👶</span>
                   <div>
-                    <p className="text-[11px] font-semibold text-slate-600">4岁幼童趣味</p>
-                    <p className="text-sm font-bold text-slate-900">{site.kidRating} / 5 <span className="text-xs text-slate-500 font-normal">({site.kidRating >= 4 ? '超爱玩' : '适中'})</span></p>
+                    <div className="text-[10px] text-slate-500 font-bold uppercase">4岁孩子趣味</div>
+                    <div className="text-sm font-black text-amber-800">{site.kidRating} / 5 分</div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 sm:pl-3">
+                <div className="flex items-center gap-3">
                   <span className="text-2xl">🧓</span>
                   <div>
-                    <p className="text-[11px] font-semibold text-slate-600">长辈体力舒适</p>
-                    <p className="text-sm font-bold text-slate-900">{site.elderlyRating} / 5 <span className="text-xs text-slate-500 font-normal">({site.elderlyRating >= 4 ? '绿荫多长椅' : '需适度步行'})</span></p>
+                    <div className="text-[10px] text-slate-500 font-bold uppercase">长辈体力友好</div>
+                    <div className="text-sm font-black text-indigo-800">{site.elderlyRating} / 5 分</div>
                   </div>
                 </div>
               </div>
 
               {/* Description */}
-              <div>
-                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">景点介绍</h4>
-                <p className="text-sm text-slate-700 leading-relaxed whitespace-pre-line">
+              <div className="space-y-2">
+                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">景点介绍</h4>
+                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal bg-slate-50/60 p-4 rounded-2xl border border-slate-100">
                   {site.description}
                 </p>
               </div>
 
-              {/* Key Logistics Cards */}
+              {/* Key Logistics Quick Card */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {/* Hours & Duration */}
-                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/70 space-y-2">
-                  <div className="flex items-center gap-2 text-indigo-700 text-xs font-bold">
-                    <Clock className="w-4 h-4" />
-                    <span>开放时间与建议游玩</span>
+                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80 space-y-2">
+                  <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
+                    <Clock className="w-4 h-4 text-indigo-600" />
+                    <span>开放时间与建议时长</span>
                   </div>
-                  <p className="text-xs text-slate-800 font-medium">{site.openingHours}</p>
-                  <div className="flex items-center gap-2 pt-1">
-                    <span className="text-xs text-slate-500">建议游玩时长:</span>
-                    <span className="text-xs font-bold text-indigo-600">约 {site.recommendedDurationMin} 分钟</span>
-                  </div>
+                  <p className="text-xs text-slate-600"><strong>建议游玩：</strong>约 {site.recommendedDurationMin} 分钟</p>
+                  <p className="text-xs text-slate-600"><strong>营业开放：</strong>{site.openingHours}</p>
+                  <p className="text-xs text-slate-600"><strong>最佳时段：</strong>{site.bestTimeToVisit}</p>
                 </div>
 
-                {/* Admission Fee Breakdown */}
-                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/70 space-y-2">
-                  <div className="flex items-center gap-2 text-emerald-700 text-xs font-bold">
-                    <DollarSign className="w-4 h-4" />
-                    <span>门票价格明细</span>
+                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80 space-y-2">
+                  <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
+                    <DollarSign className="w-4 h-4 text-emerald-600" />
+                    <span>门票与三代优惠政策</span>
                   </div>
-                  <div className="grid grid-cols-3 gap-2 text-center text-xs">
-                    <div className="p-1.5 bg-white rounded-xl border border-slate-100">
-                      <p className="text-[10px] text-slate-500">成人</p>
-                      <p className="font-bold text-slate-800">{site.admissionFee.adult}</p>
-                    </div>
-                    <div className="p-1.5 bg-white rounded-xl border border-slate-100">
-                      <p className="text-[10px] text-slate-500">长者(65+)</p>
-                      <p className="font-bold text-slate-800">{site.admissionFee.senior}</p>
-                    </div>
-                    <div className="p-1.5 bg-emerald-50 rounded-xl border border-emerald-100">
-                      <p className="text-[10px] text-emerald-700 font-semibold">4岁幼儿</p>
-                      <p className="font-bold text-emerald-800">{site.admissionFee.child4yo}</p>
-                    </div>
-                  </div>
+                  <p className="text-xs text-slate-600"><strong>成人票：</strong>{site.admissionFee.adult}</p>
+                  <p className="text-xs text-slate-600"><strong>长辈优待：</strong>{site.admissionFee.senior}</p>
+                  <p className="text-xs text-slate-600"><strong>4岁幼童：</strong><span className="text-emerald-700 font-bold">{site.admissionFee.child4yo}</span></p>
                   {site.admissionFee.notes && (
-                    <p className="text-[11px] text-slate-500 italic mt-1">{site.admissionFee.notes}</p>
+                    <p className="text-[11px] text-slate-500 italic">注: {site.admissionFee.notes}</p>
                   )}
                 </div>
               </div>
 
-              {/* Address & Best Time */}
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/70 space-y-3">
-                <div className="flex items-start justify-between gap-2">
-                  <div className="flex items-start gap-2">
-                    <MapPin className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="text-xs font-medium text-slate-800">{site.address}</p>
-                      <p className="text-[11px] text-slate-400">GPS坐标: {site.coordinates[0]}, {site.coordinates[1]}</p>
-                    </div>
-                  </div>
-                  <a
-                    href={`https://www.google.com/maps/search/?api=1&query=${site.coordinates[0]},${site.coordinates[1]}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-1 text-xs text-indigo-600 hover:text-indigo-800 font-semibold flex-shrink-0 bg-white px-2.5 py-1 rounded-xl border border-indigo-100 shadow-2xs"
-                  >
-                    <span>Google 地图导航</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                </div>
-
-                <div className="pt-2 border-t border-slate-200/70 flex items-center justify-between text-xs">
-                  <span className="text-slate-500 font-medium">最佳游览时段:</span>
-                  <span className="text-slate-800 font-semibold">{site.bestTimeToVisit}</span>
-                </div>
+              {/* Badges Row */}
+              <div className="flex flex-wrap gap-2 pt-2">
+                <WalkingIntensityBadge intensity={site.walkingIntensity} />
+                <StairsBadge level={site.stairsLevel} />
+                <WeatherBadge weather={site.weatherSuitability} />
               </div>
             </div>
           )}
 
-          {/* ==================== TAB 2: DEDICATED 4K VIDEOS TAB ==================== */}
+          {/* ==================== TAB 2: DEDICATED 4K VIDEOS ==================== */}
           {activeTab === 'videos' && (
-            <div className="space-y-6 animate-in fade-in duration-200">
-              
-              {/* Main Dedicated Video Player */}
-              <div className="relative w-full h-80 sm:h-96 md:h-[420px] rounded-3xl overflow-hidden bg-black shadow-2xl border border-slate-800 flex flex-col items-center justify-center">
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
+                  <Video className="w-4 h-4 text-rose-600" />
+                  <span>4K 沉浸式实景漫步与官方导览 ({siteVideos.length} 部)</span>
+                </h4>
+                <p className="text-xs text-slate-500">
+                  出游前与家人一起观看实拍视频，提前熟悉现场地形、推车动线与步道平整度。
+                </p>
+              </div>
+
+              {/* Video Player Display */}
+              <div className="relative w-full aspect-video rounded-3xl overflow-hidden bg-black shadow-xl border border-slate-800 flex items-center justify-center">
                 {isMp4 ? (
                   <video
                     src={activeVideoUrl}
@@ -331,9 +350,8 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
                     autoPlay
                     playsInline
                     className="w-full h-full object-contain"
-                    poster={site.coverImage}
                   >
-                    您的浏览器暂不支持直接播放该视频。
+                    您的浏览器不支持直接播放该视频。
                   </video>
                 ) : (
                   <iframe
@@ -345,174 +363,102 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
                     allowFullScreen
                   />
                 )}
+              </div>
 
-                {/* Direct Launch Button */}
-                <div className="absolute top-4 right-4 z-10">
-                  <a
-                    href={activeVideoUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold rounded-2xl shadow-xl flex items-center gap-1.5 transition-all hover:scale-105 border border-rose-400/40"
-                  >
-                    <Play className="w-3.5 h-3.5 fill-white" />
-                    <span>在新窗口全屏超清播放</span>
-                    <ExtLinkIcon className="w-3 h-3 ml-0.5 opacity-80" />
-                  </a>
+              {/* Video Selector Pills & External Link */}
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-xs font-bold text-slate-700 mr-1">选择片段:</span>
+                  {siteVideos.map((vid, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={() => setSelectedVideoIdx(idx)}
+                      className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                        selectedVideoIdx === idx
+                          ? 'bg-rose-600 text-white shadow-sm'
+                          : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
+                      }`}
+                    >
+                      <Play className="w-3.5 h-3.5 fill-current" />
+                      <span>{vid.endsWith('.mp4') ? `⚡ 直链超清短片 ${idx + 1}` : `📺 4K漫步实拍 ${idx + 1}`}</span>
+                    </button>
+                  ))}
                 </div>
+
+                <a
+                  href={activeVideoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-3.5 py-1.5 bg-white hover:bg-slate-100 text-slate-700 text-xs font-bold rounded-xl border border-slate-200 shadow-2xs flex items-center justify-center gap-1.5 transition-colors"
+                >
+                  <span>在独立窗口全屏观看</span>
+                  <ExtLinkIcon className="w-3.5 h-3.5 text-slate-400" />
+                </a>
               </div>
-
-              {/* Video Cards Selector */}
-              <div className="space-y-3">
-                <h4 className="text-xs font-bold text-slate-800 flex items-center gap-1.5">
-                  <Video className="w-4 h-4 text-rose-600" />
-                  <span>选择要播放的实景导览视频 (共 {siteVideos.length} 部)</span>
-                </h4>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {siteVideos.map((vid, idx) => {
-                    const isSelected = idx === selectedVideoIdx;
-                    return (
-                      <div
-                        key={idx}
-                        onClick={() => setSelectedVideoIdx(idx)}
-                        className={`p-3.5 rounded-2xl border-2 transition-all cursor-pointer flex items-center justify-between gap-3 ${
-                          isSelected
-                            ? 'bg-rose-50/80 border-rose-500 shadow-md ring-2 ring-rose-500/20'
-                            : 'bg-slate-50 hover:bg-slate-100 border-slate-200'
-                        }`}
-                      >
-                        <div className="flex items-center gap-3 min-w-0">
-                          <div className={`p-2.5 rounded-xl ${isSelected ? 'bg-rose-600 text-white' : 'bg-slate-200 text-slate-700'}`}>
-                            <Play className="w-4 h-4 fill-current" />
-                          </div>
-                          <div className="min-w-0">
-                            <p className="text-xs font-bold text-slate-900 truncate">
-                              {site.name} — 4K 实景漫步导览 #{idx + 1}
-                            </p>
-                            <p className="text-[11px] font-mono text-slate-500 truncate mt-0.5">{vid}</p>
-                          </div>
-                        </div>
-
-                        <span className={`text-[10px] font-bold px-2 py-1 rounded-lg flex-shrink-0 ${
-                          isSelected ? 'bg-rose-600 text-white' : 'bg-slate-200 text-slate-600'
-                        }`}>
-                          {isSelected ? '正在播放' : '点击切换'}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Family Watching Tips */}
-              <div className="p-4 bg-gradient-to-r from-rose-50/70 to-indigo-50/70 rounded-2xl border border-rose-200/60 text-xs text-slate-700 space-y-1">
-                <p className="font-bold text-slate-900">💡 三代同堂出行前视频预热提示：</p>
-                <p className="text-[11px] text-slate-600 leading-relaxed">
-                  行前在电视或大屏上和 4 岁宝宝一起观看实景视频，提前熟悉展馆动线与小动物，能极大增强小朋友的探索兴趣；长辈也可提前了解步道平缓度与休息区位置。
-                </p>
-              </div>
-
             </div>
           )}
 
-          {/* ==================== TAB 3: FAMILY ==================== */}
+          {/* ==================== TAB 3: FAMILY & ACCESSIBILITY ==================== */}
           {activeTab === 'family' && (
             <div className="space-y-6">
               
-              {/* Detailed Multi-Gen Evaluation Cards */}
-              <div className="space-y-4">
-                
-                {/* 1. Stroller Friendliness */}
-                <div className="p-4 rounded-3xl bg-indigo-50/50 border border-indigo-100 space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="text-2xl">🚼</span>
-                      <div>
-                        <h4 className="text-xs font-bold text-indigo-950">婴儿推车与无障碍平缓度</h4>
-                        <p className="text-[11px] text-slate-500">平坦度、坡度与电梯配置</p>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <span className="text-base font-extrabold text-indigo-600">{site.strollerRating} / 5</span>
-                      <span className="block text-[10px] text-slate-500">{site.strollerRating >= 4 ? '推车极便利' : '部分路段有台阶'}</span>
-                    </div>
+              {/* Detailed Multi-Gen Notes Cards */}
+              <div className="space-y-3">
+                <div className="p-4 bg-amber-50/70 rounded-2xl border border-amber-200/80 space-y-1.5">
+                  <div className="flex items-center gap-2 text-xs font-extrabold text-amber-900">
+                    <Baby className="w-4 h-4 text-amber-600" />
+                    <span>4岁幼童专属评价 (趣味度与安全) ★ {site.kidRating}/5</span>
                   </div>
-                  <p className="text-xs text-slate-700 bg-white/80 p-3 rounded-2xl border border-indigo-50 leading-relaxed">
-                    {site.strollerNotes}
+                  <p className="text-xs text-amber-900/90 leading-relaxed">
+                    {site.kidNotes || '该景点空间开阔，趣味性高，非常适合幼童探索与亲子互动。'}
                   </p>
                 </div>
 
-                {/* 2. Kid Engagement */}
-                <div className="p-4 rounded-3xl bg-purple-50/50 border border-purple-100 space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="text-2xl">🧒</span>
-                      <div>
-                        <h4 className="text-xs font-bold text-purple-950">4岁幼童趣味度与安全性</h4>
-                        <p className="text-[11px] text-slate-500">互动体验、动物植物、安全围栏与母婴室</p>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <span className="text-base font-extrabold text-purple-600">{site.kidRating} / 5</span>
-                      <span className="block text-[10px] text-slate-500">{site.kidRating >= 4 ? '4岁孩子超爱' : '适中'}</span>
-                    </div>
+                <div className="p-4 bg-indigo-50/70 rounded-2xl border border-indigo-200/80 space-y-1.5">
+                  <div className="flex items-center gap-2 text-xs font-extrabold text-indigo-900">
+                    <HeartHandshake className="w-4 h-4 text-indigo-600" />
+                    <span>长辈专属评价 (体力舒适与休息座椅) ★ {site.elderlyRating}/5</span>
                   </div>
-                  <p className="text-xs text-slate-700 bg-white/80 p-3 rounded-2xl border border-purple-50 leading-relaxed">
-                    {site.kidNotes}
+                  <p className="text-xs text-indigo-900/90 leading-relaxed">
+                    {site.elderlyNotes || '步道平缓，遮荫良好，配有充足的长椅与平地无障碍设施。'}
                   </p>
                 </div>
 
-                {/* 3. Elderly Comfort */}
-                <div className="p-4 rounded-3xl bg-emerald-50/50 border border-emerald-100 space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="text-2xl">🧓</span>
-                      <div>
-                        <h4 className="text-xs font-bold text-emerald-950">65岁以上长辈体力舒适度</h4>
-                        <p className="text-[11px] text-slate-500">步行距离、长椅密度、轮椅借用与长者票</p>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <span className="text-base font-extrabold text-emerald-600">{site.elderlyRating} / 5</span>
-                      <span className="block text-[10px] text-slate-500">{site.elderlyRating >= 4 ? '轻松省力' : '需适度步行'}</span>
-                    </div>
+                <div className="p-4 bg-emerald-50/70 rounded-2xl border border-emerald-200/80 space-y-1.5">
+                  <div className="flex items-center gap-2 text-xs font-extrabold text-emerald-900">
+                    <span className="text-base">🚼</span>
+                    <span>婴儿手推车通行实况 ★ {site.strollerRating}/5</span>
                   </div>
-                  <p className="text-xs text-slate-700 bg-white/80 p-3 rounded-2xl border border-emerald-50 leading-relaxed">
-                    {site.elderlyNotes}
+                  <p className="text-xs text-emerald-900/90 leading-relaxed">
+                    {site.strollerNotes || '主路全平坦无障碍，推车通行极为顺畅。'}
                   </p>
-                </div>
-
-              </div>
-
-              {/* Physical Intensity Badges */}
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/70 space-y-3">
-                <h4 className="text-xs font-bold text-slate-800">🚶 步行运动负荷与台阶情况</h4>
-                <div className="flex flex-wrap gap-2">
-                  <WalkingIntensityBadge intensity={site.walkingIntensity} />
-                  <StairsBadge level={site.stairsLevel} />
-                  <WeatherBadge weather={site.weatherSuitability} />
                 </div>
               </div>
 
-              {/* Amenities Grid Checklist */}
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/70 space-y-3">
-                <h4 className="text-xs font-bold text-slate-800">设施无障碍与亲子便利设施一览</h4>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+              {/* 11 Amenities Checklist Grid */}
+              <div className="space-y-3">
+                <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+                  三代同堂关键设施完备度 (11 项无障碍与母婴保障)
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
                   {amenityList.map((item) => (
-                    <div 
-                      key={item.key} 
-                      className={`p-2.5 rounded-xl border flex items-center gap-2 text-xs ${
-                        item.value 
-                          ? 'bg-emerald-50/80 border-emerald-200 text-emerald-900 font-medium' 
-                          : 'bg-slate-100/60 border-slate-200/60 text-slate-400 line-through'
+                    <div
+                      key={item.key}
+                      className={`p-3 rounded-2xl border flex items-center justify-between text-xs transition-colors ${
+                        item.value
+                          ? 'bg-emerald-50/60 border-emerald-200 text-slate-800 font-semibold'
+                          : 'bg-slate-50 border-slate-200/70 text-slate-400 line-through'
                       }`}
                     >
-                      <span className="text-sm">{item.icon}</span>
-                      <span className="truncate">{item.label}</span>
+                      <div className="flex items-center gap-2">
+                        <span>{item.icon}</span>
+                        <span>{item.label}</span>
+                      </div>
                       {item.value ? (
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 ml-auto flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                       ) : (
-                        <XCircle className="w-3.5 h-3.5 text-slate-300 ml-auto flex-shrink-0" />
+                        <XCircle className="w-4 h-4 text-slate-300 flex-shrink-0" />
                       )}
                     </div>
                   ))}
@@ -522,44 +468,99 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
             </div>
           )}
 
-          {/* ==================== TAB 4: TIPS ==================== */}
+          {/* ==================== TAB 4: TIPS & LOGISTICS ==================== */}
           {activeTab === 'tips' && (
             <div className="space-y-6">
+              
+              {/* Family Tips List */}
               <div className="space-y-3">
-                <h4 className="text-xs font-bold text-slate-800">💡 专属避坑与照护贴士</h4>
+                <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+                  带娃与长辈实操避坑贴士 ({site.familyTips.length} 条)
+                </h4>
                 <div className="space-y-2.5">
                   {site.familyTips.map((tip, idx) => (
-                    <div key={idx} className="p-3.5 bg-amber-50/70 border border-amber-200/70 rounded-2xl flex items-start gap-3">
-                      <span className="p-1 bg-amber-200/80 text-amber-800 rounded-lg text-xs font-bold flex-shrink-0 mt-0.5">
-                        {idx + 1}
-                      </span>
-                      <p className="text-xs text-amber-950 leading-relaxed font-medium">
-                        {tip}
-                      </p>
+                    <div
+                      key={idx}
+                      className="p-3.5 bg-amber-50/50 rounded-2xl border border-amber-200/60 text-xs text-amber-950 flex items-start gap-2.5 leading-relaxed"
+                    >
+                      <span className="text-amber-600 font-bold mt-0.5">💡</span>
+                      <span className="flex-1">{tip}</span>
                     </div>
                   ))}
                 </div>
               </div>
+
+              {/* Dynamic Custom Fields */}
+              {site.customFields && Object.keys(site.customFields).length > 0 && (
+                <div className="space-y-3 pt-2">
+                  <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+                    自定义补充信息
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    {Object.entries(site.customFields).map(([key, val]) => (
+                      <div key={key} className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs">
+                        <span className="font-bold text-slate-600">{key}: </span>
+                        <span className="text-slate-800">{val}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Address & Official Website Link */}
+              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+                <div className="flex items-center gap-2 text-slate-700">
+                  <MapPin className="w-4 h-4 text-indigo-600 flex-shrink-0" />
+                  <span>{site.address}</span>
+                </div>
+                {site.websiteUrl && (
+                  <a
+                    href={site.websiteUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-indigo-600 hover:underline font-bold flex items-center gap-1 self-start sm:self-auto"
+                  >
+                    <span>官方网站</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
+              </div>
+
             </div>
           )}
 
-          {/* ==================== TAB 5: DINING ==================== */}
+          {/* ==================== TAB 5: NEARBY DINING ==================== */}
           {activeTab === 'dining' && (
-            <div className="space-y-4">
-              <h4 className="text-xs font-bold text-slate-800">🍜 周边推荐亲子与长辈友好餐厅</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+                  周边和食与亲子餐厅推荐 ({site.nearbyDining.length} 处)
+                </h4>
+                <p className="text-xs text-slate-500">
+                  特别筛选适合4岁幼童（宝宝椅/儿童餐/乌冬面）与长辈（清淡和食/不油腻/长椅包间）的周边步行餐厅。
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {site.nearbyDining.map((dine) => (
-                  <div key={dine.id} className="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
-                    <div className="flex items-start justify-between gap-2">
-                      <h5 className="text-xs font-bold text-slate-900">{dine.name}</h5>
-                      <span className="text-[10px] bg-indigo-50 text-indigo-700 font-bold px-2 py-0.5 rounded-full flex-shrink-0">
+                  <div
+                    key={dine.id}
+                    className="p-4 bg-slate-50 hover:bg-indigo-50/40 rounded-2xl border border-slate-200 transition-colors space-y-2"
+                  >
+                    <div className="flex items-center justify-between">
+                      <h5 className="text-xs sm:text-sm font-extrabold text-slate-900 flex items-center gap-1.5">
+                        <Utensils className="w-4 h-4 text-indigo-600" />
+                        <span>{dine.name}</span>
+                      </h5>
+                      <span className="px-2 py-0.5 bg-white text-indigo-700 text-[10px] font-bold rounded-lg border border-indigo-100 shadow-2xs">
                         步行 {dine.walkingTimeMin} 分钟
                       </span>
                     </div>
-                    <p className="text-[11px] text-slate-500 font-medium">{dine.cuisine}</p>
-                    <div className="pt-1 text-xs text-emerald-800 font-medium bg-emerald-50/60 p-2 rounded-xl border border-emerald-100 flex items-center gap-1.5">
-                      <span>👶🧓</span>
-                      <span>{dine.familyFeatures}</span>
+
+                    <p className="text-xs text-slate-600"><strong>菜系品类：</strong>{dine.cuisine}</p>
+                    <div className="p-2.5 bg-white rounded-xl border border-slate-100 text-[11px] text-slate-700 leading-relaxed">
+                      <span className="font-bold text-indigo-600 mr-1">👶👵 适老适幼特色:</span>
+                      {dine.familyFeatures}
                     </div>
                   </div>
                 ))}
@@ -569,17 +570,13 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
 
         </div>
 
-        {/* Modal Footer */}
-        <div className="sticky bottom-0 z-20 bg-white/95 backdrop-blur-md px-6 py-3.5 border-t border-slate-100 flex items-center justify-between">
-          <button
-            type="button"
-            onClick={onClose}
-            className="px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-100 rounded-xl transition-colors"
-          >
-            关闭
-          </button>
+        {/* Modal Bottom Actions */}
+        <div className="px-6 py-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between gap-3">
+          <div className="text-xs text-slate-500 hidden sm:block">
+            {site.customTags.map((tag) => `#${tag}`).join(' ')}
+          </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 ml-auto">
             {onAddToDay && (
               <button
                 type="button"
@@ -587,12 +584,20 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
                   onAddToDay(site.id);
                   onClose();
                 }}
-                className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold shadow-md shadow-indigo-500/20 flex items-center gap-1.5 transition-all"
+                className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold shadow-md shadow-indigo-600/20 flex items-center gap-1.5 transition-all hover:scale-102"
               >
                 <Plus className="w-4 h-4" />
-                <span>加入当日日程排期</span>
+                <span>+ 加入当日行程</span>
               </button>
             )}
+
+            <button
+              type="button"
+              onClick={onClose}
+              className="px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 rounded-xl text-xs font-bold border border-slate-200 shadow-2xs transition-colors"
+            >
+              关闭
+            </button>
           </div>
         </div>
 

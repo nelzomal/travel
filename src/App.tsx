@@ -32,6 +32,7 @@ export function App() {
 
   // Modals & Selections
   const [selectedSiteForDetails, setSelectedSiteForDetails] = useState<Site | null>(null);
+  const [selectedSiteInitialTab, setSelectedSiteInitialTab] = useState<'overview' | 'collaboration' | 'videos' | 'family' | 'dining' | 'tips'>('overview');
   const [selectedSiteForLLM, setSelectedSiteForLLM] = useState<Site | null>(null);
   const [isLLMModalOpen, setIsLLMModalOpen] = useState(false);
   const [editingSite, setEditingSite] = useState<Site | null>(null);
@@ -47,6 +48,7 @@ export function App() {
     category: 'all',
     city: 'all',
     sortBy: 'itinerary_day',
+    reviewStatus: 'all',
     minStrollerRating: 0,
     minKidRating: 0,
     minElderlyRating: 0,
@@ -131,6 +133,15 @@ export function App() {
     }
     setSites(updated);
     saveSites(updated);
+  };
+
+  const handleUpdateSite = (updatedSite: Site) => {
+    const updated = sites.map((s) => (s.id === updatedSite.id ? updatedSite : s));
+    setSites(updated);
+    saveSites(updated);
+    if (selectedSiteForDetails?.id === updatedSite.id) {
+      setSelectedSiteForDetails(updatedSite);
+    }
   };
 
   const handleDeleteSite = (siteId: string) => {
@@ -327,6 +338,25 @@ export function App() {
       }
     }
 
+    // 2-Person Collaboration Review Status Filter
+    if (filters.reviewStatus && filters.reviewStatus !== 'all') {
+      const revs = site.reviews || [];
+      const r1 = revs.find((r) => r.reviewerId === 'reviewer1');
+      const r2 = revs.find((r) => r.reviewerId === 'reviewer2');
+
+      if (filters.reviewStatus === 'both_must_go') {
+        if (!(r1?.preference === 'must_go' && r2?.preference === 'must_go')) return false;
+      } else if (filters.reviewStatus === 'both_rated') {
+        if (!(r1 && r2)) return false;
+      } else if (filters.reviewStatus === 'pending_partner') {
+        if (revs.length !== 1) return false;
+      } else if (filters.reviewStatus === 'conflicted') {
+        const isConflicted = (r1?.preference === 'must_go' && r2?.preference === 'skip') ||
+                             (r1?.preference === 'skip' && r2?.preference === 'must_go');
+        if (!isConflicted) return false;
+      }
+    }
+
     if (filters.category !== 'all' && site.category !== filters.category) {
       return false;
     }
@@ -354,13 +384,22 @@ export function App() {
     return true;
   });
 
-  // Sorting logic (by itinerary day, city, multi-gen rating, default)
+  // Sorting logic (by itinerary day, collaboration score, city, multi-gen rating, default)
   const sortedSites = [...filteredSites].sort((a, b) => {
     if (filters.sortBy === 'itinerary_day') {
       const dayA = siteDayMap[a.id] ?? 999;
       const dayB = siteDayMap[b.id] ?? 999;
       if (dayA !== dayB) return dayA - dayB;
       return a.name.localeCompare(b.name, 'zh-CN');
+    }
+    if (filters.sortBy === 'collaboration_score') {
+      const getScore = (s: Site) => {
+        const revs = s.reviews || [];
+        if (revs.length >= 2) return (revs[0].overallRating + revs[1].overallRating) / 2;
+        if (revs.length === 1) return revs[0].overallRating;
+        return (s.kidRating + s.elderlyRating + s.strollerRating) / 3;
+      };
+      return getScore(b) - getScore(a);
     }
     if (filters.sortBy === 'city') {
       const getCityRank = (site: Site) => {
@@ -623,6 +662,7 @@ export function App() {
                       category: 'all',
                       city: 'all',
                       sortBy: 'itinerary_day',
+                      reviewStatus: 'all',
                       minStrollerRating: 0,
                       minKidRating: 0,
                       minElderlyRating: 0,
@@ -643,7 +683,10 @@ export function App() {
                     site={site}
                     isSelected={selectedSiteForDetails?.id === site.id}
                     itineraryDayBadge={siteDayMap[site.id] ? `Day ${siteDayMap[site.id]}` : undefined}
-                    onSelect={(s) => setSelectedSiteForDetails(s)}
+                    onSelect={(s, tab) => {
+                      setSelectedSiteForDetails(s);
+                      setSelectedSiteInitialTab(tab || 'overview');
+                    }}
                     onEdit={(s) => {
                       setEditingSite(s);
                       setIsSiteFormOpen(true);
@@ -686,7 +729,10 @@ export function App() {
               }}
               onAddDay={handleAddDay}
               onDeleteDay={handleDeleteDay}
-              onSelectSiteDetails={(site) => setSelectedSiteForDetails(site)}
+              onSelectSiteDetails={(site) => {
+                setSelectedSiteForDetails(site);
+                setSelectedSiteInitialTab('overview');
+              }}
             />
 
           </div>
@@ -720,7 +766,9 @@ export function App() {
       {/* MODAL: Site Detail Viewer */}
       <SiteDetailModal
         site={selectedSiteForDetails}
+        initialTab={selectedSiteInitialTab}
         onClose={() => setSelectedSiteForDetails(null)}
+        onUpdateSite={handleUpdateSite}
         onEdit={(s) => {
           setSelectedSiteForDetails(null);
           setEditingSite(s);

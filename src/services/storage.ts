@@ -2,9 +2,9 @@ import { Site, Trip } from '../types/travel';
 import { INITIAL_SITES } from '../data/mockSites';
 import { INITIAL_TRIPS } from '../data/mockTrips';
 
-const SITES_KEY = 'family_travel_sites_zh_v13';
-const TRIPS_KEY = 'family_travel_trips_zh_v13';
-const ACTIVE_TRIP_KEY = 'family_travel_active_trip_id_zh_v13';
+const SITES_KEY = 'family_travel_sites_zh_v14';
+const TRIPS_KEY = 'family_travel_trips_zh_v14';
+const ACTIVE_TRIP_KEY = 'family_travel_active_trip_id_zh_v14';
 
 // Automatically sync local changes to filesystem / git codebase when running in Vite dev mode
 export const syncToFilesystem = async (sites?: Site[], trips?: Trip[]): Promise<{ success: boolean; message?: string }> => {

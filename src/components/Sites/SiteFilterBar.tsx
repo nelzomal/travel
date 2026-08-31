@@ -1,13 +1,15 @@
 import React from 'react';
-import { Search, Baby, HeartHandshake, Umbrella, Footprints, ArrowUpDown, MapPin, Calendar } from 'lucide-react';
+import { Search, Baby, HeartHandshake, Umbrella, Footprints, ArrowUpDown, MapPin, Calendar, Users } from 'lucide-react';
 
-export type SortOption = 'itinerary_day' | 'city' | 'kid' | 'elderly' | 'stroller' | 'default';
+export type SortOption = 'itinerary_day' | 'city' | 'collaboration_score' | 'kid' | 'elderly' | 'stroller' | 'default';
+export type ReviewFilter = 'all' | 'both_must_go' | 'both_rated' | 'pending_partner' | 'conflicted';
 
 export interface SiteFilters {
   searchQuery: string;
   category: string;
   city: string;
   sortBy: SortOption;
+  reviewStatus: ReviewFilter;
   minStrollerRating: number;
   minKidRating: number;
   minElderlyRating: number;
@@ -75,6 +77,7 @@ export const SiteFilterBar: React.FC<SiteFilterBarProps> = ({
               className="bg-transparent text-xs font-bold text-slate-800 focus:outline-none cursor-pointer pr-1"
             >
               <option value="itinerary_day">📅 按行程天数 (Day 1 → Day 9)</option>
+              <option value="collaboration_score">👥 按双人协同综合评分 (高到低)</option>
               <option value="city">🏙️ 按所在城市 (东京/箱根/富士山/京都)</option>
               <option value="kid">🧒 4岁幼童喜爱 (高到低)</option>
               <option value="elderly">🧓 长辈体力舒适 (高到低)</option>
@@ -146,8 +149,80 @@ export const SiteFilterBar: React.FC<SiteFilterBarProps> = ({
 
       </div>
 
-      {/* ROW 3: Multi-Gen & Family Quick Filter Badges */}
-      <div className="pt-2.5 border-t border-slate-100 flex items-center gap-2 flex-wrap text-xs">
+      {/* ROW 3: 2-Person Collaborative Review Filters */}
+      <div className="pt-2 border-t border-slate-100 flex items-center gap-2 flex-wrap text-xs">
+        <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mr-1 flex items-center gap-1">
+          <Users className="w-3 h-3 text-indigo-500" />
+          双人协同状态:
+        </span>
+
+        <button
+          type="button"
+          onClick={() => onChange({ ...filters, reviewStatus: 'all' })}
+          className={`px-2.5 py-1 rounded-xl border font-bold transition-all ${
+            filters.reviewStatus === 'all'
+              ? 'bg-slate-800 text-white border-slate-800 shadow-2xs'
+              : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+          }`}
+        >
+          全部景点
+        </button>
+
+        <button
+          type="button"
+          onClick={() => onChange({ ...filters, reviewStatus: filters.reviewStatus === 'both_must_go' ? 'all' : 'both_must_go' })}
+          className={`px-2.5 py-1 rounded-xl border font-bold flex items-center gap-1 transition-all ${
+            filters.reviewStatus === 'both_must_go'
+              ? 'bg-emerald-600 text-white border-emerald-600 shadow-2xs'
+              : 'bg-emerald-50 text-emerald-800 border-emerald-200 hover:bg-emerald-100'
+          }`}
+        >
+          <span>🌟</span>
+          <span>双方一致必去</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => onChange({ ...filters, reviewStatus: filters.reviewStatus === 'pending_partner' ? 'all' : 'pending_partner' })}
+          className={`px-2.5 py-1 rounded-xl border font-bold flex items-center gap-1 transition-all ${
+            filters.reviewStatus === 'pending_partner'
+              ? 'bg-amber-600 text-white border-amber-600 shadow-2xs'
+              : 'bg-amber-50 text-amber-800 border-amber-200 hover:bg-amber-100'
+          }`}
+        >
+          <span>⏳</span>
+          <span>待另一人打分</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => onChange({ ...filters, reviewStatus: filters.reviewStatus === 'conflicted' ? 'all' : 'conflicted' })}
+          className={`px-2.5 py-1 rounded-xl border font-bold flex items-center gap-1 transition-all ${
+            filters.reviewStatus === 'conflicted'
+              ? 'bg-orange-600 text-white border-orange-600 shadow-2xs'
+              : 'bg-orange-50 text-orange-800 border-orange-200 hover:bg-orange-100'
+          }`}
+        >
+          <span>⚖️</span>
+          <span>存在意见分歧</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => onChange({ ...filters, reviewStatus: filters.reviewStatus === 'both_rated' ? 'all' : 'both_rated' })}
+          className={`px-2.5 py-1 rounded-xl border font-bold flex items-center gap-1 transition-all ${
+            filters.reviewStatus === 'both_rated'
+              ? 'bg-indigo-600 text-white border-indigo-600 shadow-2xs'
+              : 'bg-indigo-50 text-indigo-800 border-indigo-200 hover:bg-indigo-100'
+          }`}
+        >
+          <span>👥</span>
+          <span>2人已完成评分</span>
+        </button>
+      </div>
+
+      {/* ROW 4: Multi-Gen & Family Quick Filter Badges */}
+      <div className="pt-2 border-t border-slate-100 flex items-center gap-2 flex-wrap text-xs">
         <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mr-1">
           三代同堂专选:
         </span>
@@ -252,6 +327,7 @@ export const SiteFilterBar: React.FC<SiteFilterBarProps> = ({
           filters.category !== 'all' ||
           (filters.city && filters.city !== 'all') ||
           filters.sortBy !== 'itinerary_day' ||
+          filters.reviewStatus !== 'all' ||
           filters.minStrollerRating > 0 ||
           filters.minKidRating > 0 ||
           filters.minElderlyRating > 0 ||
@@ -265,6 +341,7 @@ export const SiteFilterBar: React.FC<SiteFilterBarProps> = ({
                 category: 'all',
                 city: 'all',
                 sortBy: 'itinerary_day',
+                reviewStatus: 'all',
                 minStrollerRating: 0,
                 minKidRating: 0,
                 minElderlyRating: 0,
@@ -274,7 +351,7 @@ export const SiteFilterBar: React.FC<SiteFilterBarProps> = ({
             }
             className="text-xs text-rose-600 hover:underline font-semibold ml-auto"
           >
-            重置筛选与排序
+            重置全部筛选
           </button>
         )}
       </div>
