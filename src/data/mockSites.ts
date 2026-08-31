@@ -12,66 +12,83 @@ export const INITIAL_SITES: Site[] = [
       135.7744
     ],
     "address": "京都府京都市东山区本町15丁目778 (JR/京阪电车 东福寺站步行约10分钟)",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/TofukujiHondo.jpg/1280px-TofukujiHondo.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Tofukuji-bridge-autumn-2017-Luka-Peternel.jpg/1920px-Tofukuji-bridge-autumn-2017-Luka-Peternel.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/TofukujiHondo.jpg/1280px-TofukujiHondo.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tofukuji_Tsutenkyo.jpg/1280px-Tofukuji_Tsutenkyo.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Tofukuji-butsuden.jpg/1280px-Tofukuji-butsuden.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Tofukuji-hattou.jpg/1280px-Tofukuji-hattou.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Yakushi_Nyorai_Saiendo_Horyuji.jpg/1280px-Yakushi_Nyorai_Saiendo_Horyuji.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/TofukujiSanmon.jpg/1280px-TofukujiSanmon.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Toufuku-ji_hojyo2.JPG/1280px-Toufuku-ji_hojyo2.JPG",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/TofukujiKaisando.jpg/1280px-TofukujiKaisando.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/TofukujiZendo.jpg/1280px-TofukujiZendo.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Toufuku-ji_tousu.JPG/1280px-Toufuku-ji_tousu.JPG"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Gate%2C_Tofukuji_temple%2C_Kyoto_-_Jan_9%2C_2022.jpg/1920px-Gate%2C_Tofukuji_temple%2C_Kyoto_-_Jan_9%2C_2022.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tofukuji-Sanmon-M9589.jpg/1920px-Tofukuji-Sanmon-M9589.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Connecting_Corridor_at_T%C5%8Dfuku-ji_Temple_in_Kyoto.jpg/1920px-Connecting_Corridor_at_T%C5%8Dfuku-ji_Temple_in_Kyoto.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Kyoto_Tofuku-ji_Tsuten-kyo_01.jpg/1920px-Kyoto_Tofuku-ji_Tsuten-kyo_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Honbo_Garden%2C_Tofukuji_11.jpg/1920px-Honbo_Garden%2C_Tofukuji_11.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Honbo_Garden%2C_Tofukuji_13.jpg/1920px-Honbo_Garden%2C_Tofukuji_13.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Kyoto_Tofuku-ji_Kaizan-do_Tor_4.jpg/1920px-Kyoto_Tofuku-ji_Kaizan-do_Tor_4.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Tofukuji_nikkamon.jpg/1920px-Tofukuji_nikkamon.jpg",
+      "https://takazawa-kyoto.com/wp-content/uploads/slider4/zashiki_1.jpeg",
+      "https://takazawa-kyoto.com/wp-content/uploads/2023/05/menu_06.jpg"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4",
-      "https://www.youtube.com/watch?v=0k5G82m6sBw"
+      "https://www.youtube.com/watch?v=HTqY64hsJIM",
+      "https://www.youtube.com/watch?v=xthXUnlGWGo"
     ],
-    "description": "临济宗东福寺派大本山，京都最具盛名的禅宗巨刹与红叶第一名所！横跨洗玉涧峡谷的木造长廊「通天桥」可凌空俯瞰2000多株枫树构成的壮阔枫海；方丈庭园「八相之庭」将枯山水与现代几何艺术完美融合，北庭的棋盘格青苔石块极具童趣；三门为日本现存最古老禅宗国宝三门。",
-    "recommendedDurationMin": 120,
-    "openingHours": "09:00 - 16:30 (秋季 08:30 - 16:30)",
+    "description": "京都最大级禅寺，以通天桥俯瞰洗玉涧千株青枫与红叶、本坊四面八相庭及国宝三门闻名。景致恢宏幽静，但石阶、碎石、木廊与红叶季人潮较多，更适合三代家庭采用不下谷底的上层短线参观。",
+    "recommendedDurationMin": 90,
+    "openingHours": "4月1日-11月13日 09:00-16:30（16:00停止售票）；11月14日-12月6日 通天桥08:30、本坊庭园09:00开放，16:00停止售票、16:30闭门；12月7日-3月31日 09:00-16:00（15:30停止售票）",
     "admissionFee": {
-      "adult": "通天桥¥600 / 方丈庭园¥500",
-      "senior": "与成人同价 (境内大广场免门票)",
-      "child4yo": "免费 (中小学生以下免费)",
-      "notes": "境内散步完全免费；通天桥与方丈庭园4岁幼童免票。"
+      "adult": "普通期：通天桥·开山堂¥600，本坊庭园当前¥500且2026-11-01起¥600，普通期联票¥1000；红叶特别期通天桥¥1000、本坊庭园¥600且无联票",
+      "senior": "与成人同价，无65岁以上年龄优惠",
+      "child4yo": "免费",
+      "notes": "小人票仅指小学生和初中生。持认可残障证件者本人及陪同1人免费。不得重复入场；秋期日期和临时开放规则每年可能调整。"
     },
-    "bestTimeToVisit": "上午 08:45 入园，晨光倾洒在通天桥上无大批旅游团，空气清冽舒适。",
-    "weatherSuitability": "全天候适宜",
-    "strollerRating": 4,
-    "strollerNotes": "境内主道与方丈庭园走廊平坦宽敞，推车顺畅；通天桥木质长廊平坦，洗玉涧谷底有台阶建议推车走桥上看全景。",
-    "kidRating": 4,
-    "kidNotes": "八相之庭绿油油的棋盘格青苔方块像跳棋盘，长廊像空中城堡走廊，4岁小朋友兴致盎然。",
-    "elderlyRating": 5,
-    "elderlyNotes": "站在通天桥上无需攀爬山峰即可尽揽壮观峡谷美景；方丈庭园木地板可脱鞋慢行，长辈坐在木缘侧静心看枯山水极为放松。",
-    "walkingIntensity": "轻松 (<500米)",
-    "stairsLevel": "少量台阶 (配有无障碍坡道)",
+    "bestTimeToVisit": "非红叶季工作日08:50抵达；红叶季工作日08:15到日下门，08:30先走通天桥、09:00再看本坊庭园",
+    "weatherSuitability": "晴天或阴天最佳；小雨仅适合桥面和方丈短线，暴雨、强风、台风及大雪不宜",
+    "strollerRating": 2,
+    "strollerNotes": "仅部分上层路线可推行，沿途有碎石、石板、门槛和台阶；通天桥谷底路线不适合婴儿车。寺内无婴儿车借用、无电梯。建议大轮折叠推车配合背带，方丈入口按工作人员要求停放推车。",
+    "kidRating": 3,
+    "kidNotes": "可寻找苍龙图、北斗七星石、棋盘格苔庭及观察枫叶，但没有动物、触摸展品、游乐或儿童互动区。通天桥临空且红叶季拥挤，开山堂附近有水池，必须全程牵手并禁止奔跑。",
+    "elderlyRating": 2,
+    "elderlyNotes": "完整参观寺内约1.5-2公里，加车站往返可达3-3.5公里；座椅和室内休息点稀疏，没有电瓶车或常设茶室。建议日下门至通天桥上层、方丈的600米-1公里短线，并跳过洗玉涧谷底。",
+    "walkingIntensity": "中等至偏高（完整路线约3-3.5公里，三代短线约600米-1公里）",
+    "stairsLevel": "部分连续石阶、碎石与木门槛；通天桥上层可部分绕行，谷底路线不无障碍",
     "amenities": {
-      "nursingRoom": true,
+      "nursingRoom": false,
       "diaperChanging": true,
       "accessibleRestroom": true,
       "benchesRestAreas": true,
       "shuttleOrCart": false,
-      "elevatorAvailable": true,
+      "elevatorAvailable": false,
       "strollerRental": false,
       "wheelchairRental": true,
       "shadeAvailable": true,
-      "indoorRainyDayOption": true,
+      "indoorRainyDayOption": false,
       "kidPlayArea": false
     },
     "familyTips": [
-      "【交通避坑】从「JR/京阪 东福寺站」出站后沿平坦居民街巷步行约10分钟即达，建议打车至卧云桥入口更省力。",
-      "【长辈洗手间】方丈庭园入口旁配有多功能无障碍洗手间，极其干净整洁。"
+      "三代同游采用日下门至通天桥上层和本坊庭园短线，不下洗玉涧谷底。",
+      "红叶季工作日08:15抵达；09:30以后旅行团、人流和站立等待明显增加。",
+      "寺内禁止饮食，进入前先让孩子用餐、补水并使用设有尿布台的观光厕所。",
+      "寺内轮椅仅通天桥和本坊各1台且不能预约，行动困难者应自带轮椅并由成人协助。",
+      "雨后石阶、青苔和木廊易滑；准备防滑鞋、背带和推车雨罩。"
     ],
     "nearbyDining": [
       {
-        "id": "dine-tofukuji-1",
-        "name": "东福寺 鹤屋吉信 和果子茶寮",
-        "cuisine": "京都和风生果子 / 抹茶煎茶",
-        "familyFeatures": "位于寺外平街，清幽雅致，提供温热焙茶与软糯红豆果子",
-        "walkingTimeMin": 3
+        "id": "dine-llm-1788212468187-0",
+        "name": "丹波屋",
+        "cuisine": "乌冬、荞麦面、鲭鱼寿司",
+        "familyFeatures": "可带儿童，热汤乌冬适合孩子与长辈，可要求面煮软；店面较小，宝宝椅未见公开承诺，红叶季需避开正午并提前确认",
+        "walkingTimeMin": 9
+      },
+      {
+        "id": "dine-llm-1788212468187-1",
+        "name": "麺道楽 大",
+        "cuisine": "乌冬、亲子丼、京都家常料理",
+        "familyFeatures": "京都府育儿友好登记店，可选择热乌冬、软饭和亲子丼；有桌席和座敷，宝宝椅及推车停放空间建议提前电话确认",
+        "walkingTimeMin": 10
+      },
+      {
+        "id": "dine-llm-1788212468187-2",
+        "name": "京料理 髙澤",
+        "cuisine": "预约制京料理、会席、季节便当",
+        "familyFeatures": "提供椅子和桌席，对长辈膝关节更友好；可提前商量蒸蛋、软饭和清淡煮物，完全预约制，宝宝椅和儿童餐需预约时确认",
+        "walkingTimeMin": 7
       }
     ],
     "websiteUrl": "https://tofukuji.jp/",
@@ -81,7 +98,12 @@ export const INITIAL_SITES: Site[] = [
       "枯山水禅宗美学",
       "全平坦木走廊"
     ],
-    "createdAt": "2026-08-31"
+    "createdAt": "2026-08-31",
+    "customFields": {
+      "rainyDayPlan": "东福寺只有通天桥木廊和方丈檐下能部分避雨，石阶、青苔和落叶雨后很滑。小雨可缩短为通天桥上层加方丈45-60分钟并取消谷底路线；暴雨或强风转去打车约7-10分钟的京都国立博物馆，其室内馆设电梯、坡道、多功能厕所、授乳室及免费轮椅和婴儿车。4岁儿童更喜欢京都铁道博物馆，可经京都站转车约25-35分钟，馆内大部分为室内并设真车、模拟体验和儿童区。纯购物休息可乘JR一站到京都站八条口的京都AVANTI。",
+      "ticketBookingTip": "普通日间参观无需预约，现场售票；截至2026-08-31没有通用网上普通票、长者或婴儿车快速通道。红叶季偶有需预约付费的早朝或夜间限定参观，但2026方案需等待官网秋季公告。普通游客最有效的避队方式是工作日08:15到日下门，08:30先看通天桥；轮椅路线到场后联系工作人员，但不等同优先入场。",
+      "parkingAndDropoff": "非红叶季可让包车或出租车导航至东福寺日下门或寺内停车场；日下门至主要售票区约100-250米，属于地图测距估算，上层路线无必须攀爬的长楼梯但有碎石和门槛。寺内及北停车场通常免费，资料记载普通车约30台、巴士3台。约10月25日-12月10日停车场关闭并可能实行交通管制；红叶季应以JR为主，若包车需接受在外围下车后约500-800米步行。寺院没有专用代步车、代客泊车或明确的长者优先上下客通道。"
+    }
   },
   {
     "id": "site-nishi-honganji",
@@ -94,66 +116,83 @@ export const INITIAL_SITES: Site[] = [
       135.7516
     ],
     "address": "京都府京都市下京区堀川通花屋町下 (近京都站，步行约15分钟或公交直达)",
-    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Kyoto_Kyoto_Tower_Blick_auf_Nishi_Hongan-ji_1.jpg/1280px-Kyoto_Kyoto_Tower_Blick_auf_Nishi_Hongan-ji_1.jpg",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/View%20of%20West%20Honganji%20Temple%20across%20Horikawadori%20Avenue.jpg?width=1600",
     "gallery": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Kyoto_Kyoto_Tower_Blick_auf_Nishi_Hongan-ji_1.jpg/1280px-Kyoto_Kyoto_Tower_Blick_auf_Nishi_Hongan-ji_1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Nishi-Honganji%2C_Hiunkaku-2.jpg/1280px-Nishi-Honganji%2C_Hiunkaku-2.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Nishi-Honganji%2C_Hiunkaku-1.jpg/1280px-Nishi-Honganji%2C_Hiunkaku-1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Honganji_Plan.jpg/330px-Honganji_Plan.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/c/c8/Honganji_Daishoin_Plan.gif",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Meeting_room_Nishi_Honganji.jpg/1280px-Meeting_room_Nishi_Honganji.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Shiroshoin_Nishi_Honganji.jpg/1280px-Shiroshoin_Nishi_Honganji.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Northern_Noh_Stage.jpg/1280px-Northern_Noh_Stage.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Plan_of_NishiHonganji_Temple.jpg/500px-Plan_of_NishiHonganji_Temple.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Hongan-ji_National_Treasure_World_heritage_Kyoto_%E5%9B%BD%E5%AE%9D%E3%83%BB%E4%B8%96%E7%95%8C%E9%81%BA%E7%94%A3_%E6%9C%AC%E9%A1%98%E5%AF%BA_%E4%BA%AC%E9%83%BD353.JPG/1280px-Hongan-ji_National_Treasure_World_heritage_Kyoto_%E5%9B%BD%E5%AE%9D%E3%83%BB%E4%B8%96%E7%95%8C%E9%81%BA%E7%94%A3_%E6%9C%AC%E9%A1%98%E5%AF%BA_%E4%BA%AC%E9%83%BD353.JPG"
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/View%20of%20West%20Honganji%20Temple%20across%20Horikawadori%20Avenue.jpg?width=1600",
+      "https://www.city.kyoto.lg.jp/hokenfukushi/cmsfiles/contents/0000025/25048/ponishihonnsuro-21.jpg",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nishi%20Hongwanji%20goeido.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ginkgo%20at%20Nishi%20Honganji.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nishi-hongwanji%20kara-mon.JPG?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nishi-Honganji%2C%20Hiunkaku-1.jpg?width=1600",
+      "https://www.hongwanji.kyoto/_assets/img/pray/d_06_002.jpg",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Amida%20Hall%2C%20Nishi%20Hongwanji%20-%20interior%2001.jpg?width=1600",
+      "https://food-mania.jp/wp-content/uploads/2022/03/MG_0387-1-2048x1365.jpg",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kyoto%20Aquarium%20hdsr%202019%2006%2001%209999%201323.jpg?width=1600"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4",
-      "https://www.youtube.com/watch?v=P1bLw3iL1Wc"
+      "https://www.youtube.com/watch?v=N5CUTR0Ti78",
+      "https://www.youtube.com/watch?v=uSWj4Hbx3TQ"
     ],
-    "description": "净土真宗本愿寺派本山、世界文化遗产！境内拥有400年树龄横向生长的神圣大银杏（倒生银杏），秋季满树金黄如巨大华盖。御影堂与阿弥陀堂为日本国宝级木造巨构，全殿铺设一尘不染的宽阔纯平木地板（冬暖夏凉），殿堂各出入口全部配有现代化无障碍坡道与升降电梯，完全免费向公众开放！",
-    "recommendedDurationMin": 90,
-    "openingHours": "05:30 - 17:00 (全天免费开放参拜)",
+    "description": "京都站旁少见的免费世界遗产寺院。穿过御影堂门，400年大银杏与两座国宝巨殿展开；铺装路、坡道和电梯方便推车与长辈，免费僧侣导览适合三代同行。飞云阁通常不公开，秋末金黄最动人。",
+    "recommendedDurationMin": 75,
+    "openingHours": "05:30 - 17:00（通年；大型法要期间可能调整，无售票闸口）",
     "admissionFee": {
-      "adult": "全免门票",
-      "senior": "免费",
+      "adult": "免费",
+      "senior": "免费（无须长者优惠票）",
       "child4yo": "免费",
-      "notes": "世界遗产级殿堂与400年大银杏完全免费参观。"
+      "notes": "常规境内、御影堂及阿弥陀堂免费；飞云阁、书院通常不公开，特别公开活动的日期、预约方式和费用另行公布。"
     },
-    "bestTimeToVisit": "早晨 09:00 或午后 14:00，阳光照耀大银杏与木造大殿，金光璀璨。",
-    "weatherSuitability": "室内 (雨天/避暑优选)",
-    "strollerRating": 5,
-    "strollerNotes": "100%全平坦无障碍典范！外庭全石板平地，大殿配有超宽平缓坡道和专用直梯，推车畅行无阻。",
-    "kidRating": 5,
-    "kidNotes": "秋季金黄银杏叶厚厚铺在地上像黄金地毯，孩子捡落叶超开心；在巨大的木地板大殿脱鞋踏步，找木地板上可爱的修补雕刻（小葫芦、小富士山）。",
-    "elderlyRating": 5,
-    "elderlyNotes": "舒适度极高！全境平坦无门槛无台阶，殿内备有大量木长椅与软垫席，长辈可安静坐下祈福歇脚；离京都站极近。",
-    "walkingIntensity": "轻松 (<500米)",
-    "stairsLevel": "平坦 / 无台阶",
+    "bestTimeToVisit": "07:30–09:00最安静省力；若参加免费导览，09:40抵达茶所参加10:00场",
+    "weatherSuitability": "晴天最佳；小雨可参拜主殿、连廊及茶所，大雨或酷暑建议转龙谷博物馆、京都站Porta或京都水族馆",
+    "strollerRating": 4,
+    "strollerNotes": "御影堂门平进，境内有天然石铺装无障碍路线，两座主殿有坡道，阿弥陀堂另有无障碍电梯。可绕过正面台阶；部分石面、木门槛和雨天木廊需慢行。寺方未公开承诺提供婴儿车或轮椅借用。",
+    "kidRating": 3,
+    "kidNotes": "适合观察400年大银杏、鸽子，并在唐门和木廊寻找花鸟、狮子及埋木图案；没有常设互动展、动物区或游乐场。门外车流繁忙，主殿有台阶和高木缘廊，应全程牵手。",
+    "elderlyRating": 4,
+    "elderlyNotes": "核心无障碍环线约450–650米，含唐门约800–1000米。御影堂、阿弥陀堂和茶所可坐下休息饮茶；露天白洲遮阴与户外长椅不密集，没有代步电瓶车。",
+    "walkingIntensity": "轻松至中等（核心约450–650米）",
+    "stairsLevel": "无障碍路线可避开台阶；传统正面入口仍有台阶",
     "amenities": {
       "nursingRoom": true,
-      "diaperChanging": true,
+      "diaperChanging": false,
       "accessibleRestroom": true,
       "benchesRestAreas": true,
       "shuttleOrCart": false,
       "elevatorAvailable": true,
       "strollerRental": false,
-      "wheelchairRental": true,
+      "wheelchairRental": false,
       "shadeAvailable": true,
       "indoorRainyDayOption": true,
       "kidPlayArea": false
     },
     "familyTips": [
-      "【找地砖小彩蛋】大殿回廊木地板上有工匠巧妙修补的葫芦、团扇、大象等木雕形状，带4岁宝宝玩“寻宝游戏”趣味无穷！",
-      "【免费安静避暑】殿内通风极佳冬暖夏凉，若外头下雨或炎热，是全京都最舒适的室内文化避风港。"
+      "飞云阁通常不公开，不要按普通参拜日必看项目安排行程。",
+      "京都站步行约15分钟但夏季暴晒且路口多；三代同行优先乘9、28、75路至西本愿寺前，或打车至御影堂门。",
+      "场内图标有授乳室，但尿布台配置未获当前官网明确确认；先在茶所询问，确定需要时使用京都站Porta的亲子设施。",
+      "白洲广场户外遮阴少，夏季在09:00前完成参拜；雨天木廊湿滑，长辈穿防滑鞋。",
+      "免费导览每日10:00、11:30、13:45、15:30举行，约30分钟，无需预约且雨天照常。"
     ],
     "nearbyDining": [
       {
-        "id": "dine-honganji-1",
-        "name": "本愿寺 闻法会馆 餐厅 (Monpou Kaikan)",
-        "cuisine": "精进料理 / 亲子和风定食 / 软面条",
-        "familyFeatures": "位于西本愿寺南侧会馆内，全平地面，电梯直达，清淡豆腐与时令蔬菜",
+        "id": "dine-llm-1788212490523-0",
+        "name": "ICHOYA",
+        "cuisine": "京都创作和食／湯葉料理",
+        "familyFeatures": "约2分钟；湯葉そば、湯葉丼、豆腐和京野菜较清淡，设桌席及掘式座席。宝宝椅未在官网明确列出，建议电话确认并预留桌席。",
         "walkingTimeMin": 2
+      },
+      {
+        "id": "dine-llm-1788212490523-1",
+        "name": "がんこ 西本願寺別邸",
+        "cuisine": "寿司／日式套餐／釜饭",
+        "familyFeatures": "约3–5分钟，位于闻法会馆地下1层，共200座，提供儿童乌冬及适合长辈的日式套餐；预约时提出电梯路线、宝宝椅、推车空间和软食需求。",
+        "walkingTimeMin": 4
+      },
+      {
+        "id": "dine-llm-1788212490523-2",
+        "name": "Royal Host 堀川五条店",
+        "cuisine": "日式家庭餐厅／洋食",
+        "familyFeatures": "约7–9分钟，有坡道、停车场、婴儿设施及儿童菜单；宝宝椅数量建议电话确认。2026年8月26日至9月17日装修停业，9月18日11:00重开。",
+        "walkingTimeMin": 8
       }
     ],
     "websiteUrl": "https://www.hongwanji.kyoto/",
@@ -164,7 +203,12 @@ export const INITIAL_SITES: Site[] = [
       "100%纯平无障碍",
       "国宝御影堂"
     ],
-    "createdAt": "2026-08-31"
+    "createdAt": "2026-08-31",
+    "customFields": {
+      "rainyDayPlan": "小雨仍可参拜御影堂、阿弥陀堂、连廊及茶所，免费导览雨天照常，但入口至主殿有露天白洲。大雨转往正对面的龙谷博物馆，开放10:00–17:00、16:30停止入馆、周一休馆，票价随展览变化，全楼设电梯及多功能厕所；或乘公交、出租车返回京都站Porta使用餐饮、授乳及换尿布设施。4岁孩子需要活动量时，打车约5–10分钟去京都水族馆，大部分展区室内或有屋顶，并有3处授乳空间、换尿布台、坡道和电梯。",
+      "ticketBookingTip": "常规境内免费且无需预约，没有售票排队，也没有长者或推车专用绿色通道；直接使用无障碍入口即可。免费僧侣导览无需报名，建议提前10分钟到御影堂门旁茶所。飞云阁和书院通常不公开，只有特定特别公开或文化活动才能参观，须按当期官网页面另行预约购票。",
+      "parkingAndDropoff": "自驾使用北境内地停车场，由花屋町通进出；官方住宿设施标注免费但可能满位，夜间21:30–05:30不能出入，寺院17:00闭门。场内图标有无障碍车位；停车处至阿弥陀堂约120–180米，为地图比例估算，全程基本平缓。出租车可要求在西本愿寺御影堂门寺侧安全落客，下车至门约10–30米且无需爬楼梯；如遇法要交通管制或需轮椅近距离落客，应提前致电075-371-5181确认。"
+    }
   },
   {
     "id": "site-eikando",
@@ -177,48 +221,49 @@ export const INITIAL_SITES: Site[] = [
       135.795
     ],
     "address": "京都府京都市左京区永观堂町48 (近南禅寺/哲学之道)",
-    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Eikando_Somon.jpg/500px-Eikando_Somon.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Eikando%2C_Kyoto_-_Eikando7356.jpg/1920px-Eikando%2C_Kyoto_-_Eikando7356.jpg",
     "gallery": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Eikando_Somon.jpg/500px-Eikando_Somon.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Japan_Kyoto_city_urban_topographic_map.webp/1280px-Japan_Kyoto_city_urban_topographic_map.webp.png",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Eikando_Zenrinji-temple_Tahoto.JPG/1280px-Eikando_Zenrinji-temple_Tahoto.JPG",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Eikando_Founders_Hall.jpg/250px-Eikando_Founders_Hall.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Eikando_Bathroom.jpg/250px-Eikando_Bathroom.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Eikan-do_Zenrin-ji%2C_November_2016_-03.jpg/250px-Eikan-do_Zenrin-ji%2C_November_2016_-03.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Karamon_%40_Eikan-d%C5%8D_Zenrin-ji.jpg/250px-Karamon_%40_Eikan-d%C5%8D_Zenrin-ji.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Descent_of_Amitabha_over_the_Mountain.jpg/500px-Descent_of_Amitabha_over_the_Mountain.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/3/3c/Lotus_flower_gong.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Kyoto_Eikan-do_Zenrin-ji_Haupttor_1.jpg/1920px-Kyoto_Eikan-do_Zenrin-ji_Haupttor_1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Eikando%2C_Kyoto_-_Eikando7356.jpg/1920px-Eikando%2C_Kyoto_-_Eikando7356.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Kyoto_Eikan-do_Zenrin-ji_Hojo_Teich_01.jpg/1920px-Kyoto_Eikan-do_Zenrin-ji_Hojo_Teich_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Zen_garden_at_Zenrinji_Eikando.jpg/1920px-Zen_garden_at_Zenrinji_Eikando.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Eikando_Zenrinji-temple_Tahoto.JPG/1920px-Eikando_Zenrinji-temple_Tahoto.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Kyoto_Eikan-do_Zenrin-ji_Treppe.jpg/1920px-Kyoto_Eikan-do_Zenrin-ji_Treppe.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Kyoto_Eikan-do_Zenrin-ji_Amida_Hall_1.jpg/1920px-Kyoto_Eikan-do_Zenrin-ji_Amida_Hall_1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Eikan-do_Temple_-_Northern_Higashiyama_-_Kyoto_-_Japan_-_05_%2847934802397%29.jpg/1920px-Eikan-do_Temple_-_Northern_Higashiyama_-_Kyoto_-_Japan_-_05_%2847934802397%29.jpg",
+      "https://live.staticflickr.com/7139/7144389507_de776d7d4c_b.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Tsukimi_udon_by_pokpok313_in_Kyoto.jpg/1920px-Tsukimi_udon_by_pokpok313_in_Kyoto.jpg"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4",
-      "https://www.youtube.com/watch?v=Jm_C7q3dC7Q"
+      "https://www.youtube.com/watch?v=wDsb9Kda-Es",
+      "https://www.youtube.com/watch?v=3tIfSQeZWZQ"
     ],
-    "description": "被誉为“红叶的永观堂”的京都顶级名刹，拥有约3000株枫树环抱的放生池与多宝塔。供奉着全日本独一无二的国宝级「回头阿弥陀佛像（阿弥陀佛侧首回望，寓意慈悲等待走得慢的人）」；依山势起伏蜿蜒而建的木造「卧龙廊」宛如龙脊；放生池水榭倒映红叶与锦鲤，是全家身心治愈圣所。",
-    "recommendedDurationMin": 120,
-    "openingHours": "09:00 - 17:00 (最终入园 16:00)",
+    "description": "京都东山著名的“红叶永观堂”，以侧首回望的阿弥陀佛、依山蜿蜒的卧龙廊、放生池倒影与多宝塔闻名。核心堂宇设电梯和轮椅路线，适合三代分流游览：长辈赏池庭与佛堂，孩子寻锦鲤、听水琴窟，体力充足者再登高看京都。",
+    "recommendedDurationMin": 90,
+    "openingHours": "通常 09:00–17:00（售票/受付至16:00）；2026年秋季寺宝展11月11日–12月6日同为09:00–17:00；夜间亮灯11月20日–12月6日17:30–21:00（受付至20:30）",
     "admissionFee": {
-      "adult": "¥600 (秋季红叶展 ¥1000)",
-      "senior": "¥600",
-      "child4yo": "免费 (学龄前幼儿免票)",
-      "notes": "4岁幼儿全免费。"
+      "adult": "通常¥1,000；2026年秋季日间寺宝展¥1,500；夜间亮灯¥1,000",
+      "senior": "无65岁以上年龄优惠，按成人价收费",
+      "child4yo": "免费（官网收费档次从小学生开始）",
+      "notes": "通常小学生¥200、中学生/高中生¥600；2026年秋季日间小中高生¥800。残障手册持有人及部分陪护者有减免。日间与夜间清场并分别购票。"
     },
-    "bestTimeToVisit": "上午 09:30 或下午 14:30，放生池水面平如镜，光影倒映极其梦幻。",
-    "weatherSuitability": "全天候适宜",
-    "strollerRating": 4,
-    "strollerNotes": "放生池周边为平整石板地面，推车极顺畅；大殿之间有平缓木质风雨连廊相连。",
-    "kidRating": 4,
-    "kidNotes": "放生池看大锦鲤游弋，卧龙廊木走廊像穿梭在龙肚子里；看慈祥的回头佛像。",
-    "elderlyRating": 5,
-    "elderlyNotes": "“回头阿弥陀佛”寓意慈悲等待走在后面的人，深得长辈共鸣；殿堂全有木质连廊遮风挡雨，沿途设有长椅静坐观池赏枫。",
-    "walkingIntensity": "轻松 (<500米)",
-    "stairsLevel": "少量台阶 (配有无障碍坡道)",
+    "bestTimeToVisit": "非红叶期08:50抵达、09:00入园；11月红叶季选择周二至周四并于08:35–08:45抵达，避开10:30–15:00旅行团高峰",
+    "weatherSuitability": "晴天或阴天最佳；小雨可游部分有顶回廊和堂宇，暴雨、强风及结冰天气不适合池畔、卧龙廊和多宝塔路线",
+    "strollerRating": 3,
+    "strollerNotes": "放生池和主要堂宇设轮椅无障碍路线、坡道及电梯，但园路含石板、砂砾和短坡；卧龙廊、开山堂、多宝塔为连续阶梯。没有婴儿车租借可靠记录，进入脱鞋木回廊时可能需停放推车，建议携带轻便折叠车和背带。",
+    "kidRating": 3,
+    "kidNotes": "没有游乐或互动展，4岁孩子主要可看锦鲤、池塘、小瀑布、龙形手水并体验水琴窟。放生池和水渠边局部无连续高栏，木回廊及石阶雨天湿滑，必须牵手并禁止奔跑；境内禁止饮食。",
+    "elderlyRating": 3,
+    "elderlyNotes": "核心无障碍线约600–800米，约60–75分钟，可借轮椅并使用电梯；完整游览含卧龙廊和多宝塔约1公里以上且台阶密集。树荫和有顶回廊较多，但固定长椅不密集，池畔茶屋为露天或半露天且雨天可能停业；无电瓶车。",
+    "walkingIntensity": "中等（无障碍核心线约600–800米；含卧龙廊和多宝塔约1公里以上）",
+    "stairsLevel": "核心景点可通过坡道和电梯绕行部分台阶；卧龙廊、开山堂及多宝塔存在连续陡阶",
     "amenities": {
       "nursingRoom": false,
-      "diaperChanging": true,
+      "diaperChanging": false,
       "accessibleRestroom": true,
       "benchesRestAreas": true,
       "shuttleOrCart": false,
-      "elevatorAvailable": false,
+      "elevatorAvailable": true,
       "strollerRental": false,
       "wheelchairRental": true,
       "shadeAvailable": true,
@@ -226,16 +271,33 @@ export const INITIAL_SITES: Site[] = [
       "kidPlayArea": false
     },
     "familyTips": [
-      "【回头佛瞻仰】阿弥陀堂内左侧可近距离瞻仰「回头佛」，佛像神态极温和，引导孩子轻声祈福。",
-      "【南禅寺顺路联动】永观堂出侧门步行5分钟即到南禅寺与水路阁，可一同顺路游览。"
+      "入场后立即向工作人员索取无障碍路线指引；长辈和推车走阿弥陀堂、电梯、放生池核心线，卧龙廊和多宝塔由体力较好的成人分流。",
+      "带防滑袜、轻便折叠婴儿车和儿童背带；官方没有明确确认授乳室和尿布台，进门前先在酒店、餐厅或冈崎地区美术馆完成照护。",
+      "首选出租车或市巴士南禅寺・永观堂道站；不要安排长辈从蹴上站来回步行，红叶季也不要依赖寺内停车。",
+      "境内禁止饮食，4岁孩子应在入场前完成点心和饮水；池边、木廊与陡阶全程牵手。",
+      "2026年11月11日–12月6日寺内停止私家车及多数观光巴士驶入，日间和夜间参拜需分别排队购票。"
     ],
     "nearbyDining": [
       {
-        "id": "dine-eikando-1",
-        "name": "南禅寺 顺正 (Junsei 汤豆腐总店)",
-        "cuisine": "京都顶级名物汤豆腐 / 怀石庭院料理",
-        "familyFeatures": "位于百年回游式庭院内，温和汤豆腐极易消化，宽敞榻榻米与儿童餐具",
-        "walkingTimeMin": 6
+        "id": "dine-llm-1788212517378-0",
+        "name": "お食事処 ごん太",
+        "cuisine": "京乌冬、天妇罗、家庭和食",
+        "familyFeatures": "约10席的小型家庭店；可为孩子选清汤狐狸乌冬并请求面煮软，长辈可选蛋花乌冬或细面。宝宝椅未公开确认，出发前电话询问。",
+        "walkingTimeMin": 4
+      },
+      {
+        "id": "dine-llm-1788212517378-1",
+        "name": "日の出うどん",
+        "cuisine": "京都乌冬、荞麦面",
+        "familyFeatures": "可选择普通热汤乌冬等易消化菜品；招牌咖喱乌冬可能不适合4岁孩子。热门时段常排队，宝宝椅未公开确认，建议11:00前到达。",
+        "walkingTimeMin": 8
+      },
+      {
+        "id": "dine-llm-1788212517378-2",
+        "name": "料庭 八千代",
+        "cuisine": "南禅寺汤豆腐、京汤叶、京料理",
+        "familyFeatures": "明确提供儿童椅、儿童菜单和椅桌席；汤豆腐、汤叶及蒸物适合幼童和长辈。预订时注明一楼椅子席、宝宝椅及轮椅需求。",
+        "walkingTimeMin": 10
       }
     ],
     "websiteUrl": "http://www.eikando.or.jp/",
@@ -245,7 +307,12 @@ export const INITIAL_SITES: Site[] = [
       "卧龙廊龙脊连廊",
       "放生池水榭倒影"
     ],
-    "createdAt": "2026-08-31"
+    "createdAt": "2026-08-31",
+    "customFields": {
+      "rainyDayPlan": "小雨只走有顶堂宇回廊、阿弥陀堂电梯线和放生池短线，放弃卧龙廊与多宝塔；茶屋雨天可能停业。中到大雨改乘出租车约5–10分钟至京都市京瓷美术馆，馆内有电梯、免费轮椅、授乳室、尿布台和宝宝椅咖啡厅；也可去みやこめっせ地下1层的京都传统产业博物馆，10:00–18:00，未就学儿童免费。",
+      "ticketBookingTip": "截至2026年8月31日，官网未提供普通个人参拜、2026年秋季日间寺宝展或夜间亮灯的官方网络预约入口，通常现场购票；也没有公开的长者或婴儿车免排队绿色通道。红叶季选择工作日并在08:35–08:45抵达最有效。轮椅同行者可向入口工作人员申请无障碍路线引导，但不等同于优先入场。",
+      "parkingAndDropoff": "普通季节寺内允许停车但车位很少；总门至售票/大玄关按地图比例约150–200米，以缓坡参道为主、无需爬楼梯，但含石板或砂砾。行动困难者宜事先致电075-761-0007询问能否靠近寺务所下客。2026年11月11日–12月6日私家车及多数观光巴士禁止驶入。自驾可停冈崎公园地下停车场，但距寺约1.4公里；轮椅或推车必须停有电梯的B1，不要停无电梯的B2。三代同行最佳方案是包车总门下客、司机外围停车、结束后预约接回。"
+    }
   },
   {
     "id": "site-arashiyama-combo",
@@ -364,18 +431,18 @@ export const INITIAL_SITES: Site[] = [
       135.7727
     ],
     "address": "京都府京都市伏见区深草薮之内町68 / 伏见区南兵卫町 (近月桂冠大仓纪念馆)",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Fushimiinari-taisha%2C_gehaiden-1.jpg/1280px-Fushimiinari-taisha%2C_gehaiden-1.jpg",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Romon%2C%20Fushimi%20Inari-taisha.jpg?width=1600",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Fushimiinari-taisha%2C_gehaiden-1.jpg/1280px-Fushimiinari-taisha%2C_gehaiden-1.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Fushimiinari-taisha%2C_torii-1-2.jpg/1280px-Fushimiinari-taisha%2C_torii-1-2.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Fushimi_Inari_Shrine%2C_Kyoto%2C_Panorama%2C_Kyoto_Prefecture%2C_Japan_-_panoramio.jpg/500px-Fushimi_Inari_Shrine%2C_Kyoto%2C_Panorama%2C_Kyoto_Prefecture%2C_Japan_-_panoramio.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Fushimiinari-taisha%2C_honden-2.jpg/1280px-Fushimiinari-taisha%2C_honden-2.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Fushimiinari-taisha%2C_naihaiden-1.jpg/1280px-Fushimiinari-taisha%2C_naihaiden-1.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Fushimiinari-taisha%2C_roumon-2.jpg/1280px-Fushimiinari-taisha%2C_roumon-2.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/KyotoFushimiInariLarge.jpg/1280px-KyotoFushimiInariLarge.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/IMG_fushimi_torii.jpg/1280px-IMG_fushimi_torii.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Hushimi-inari-taisha_gehaiden.jpg/250px-Hushimi-inari-taisha_gehaiden.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Fushimiinari-taisha%2C_gonden.jpg/250px-Fushimiinari-taisha%2C_gonden.jpg"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Romon%2C%20Fushimi%20Inari-taisha.jpg?width=1600",
+      "https://i0.wp.com/stick-traveler.com/wp-content/uploads/Blog/Kyoto/Fushimi-Inari-6.jpg?ssl=1",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Fushimi%20Inari%20Senbon%20Torii.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/FushimiInari%20Taisha%20Fox-Ema.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Fushimi%20Horikawa%20jikkokuship.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BC%8F%E8%A6%8B%E5%8D%81%E7%9F%B3%E8%88%9F%E4%B9%97%E8%88%B9%E5%A0%B4%20-%20panoramio.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Misu%20lock%20gate.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Gekkeikan%20Okura%20Sake%20Museum01nt3200.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Gekkeikan%20Okura%20Sake%20Museum02s4592.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kizakura%20Kappa%20Country03n4592.jpg?width=1600"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=I4Q7gxTux-4",
@@ -571,18 +638,18 @@ export const INITIAL_SITES: Site[] = [
       135.763
     ],
     "address": "京都府京都市左京区鞍马贵船町180",
-    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Kibune_Shinto_Shrine001.jpg/500px-Kibune_Shinto_Shrine001.jpg",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kifune-jinja%20sando.jpg?width=1600",
     "gallery": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Kibune_Shinto_Shrine001.jpg/500px-Kibune_Shinto_Shrine001.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Kibune7236.jpg/1280px-Kibune7236.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Kibune7234.jpg/1280px-Kibune7234.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Kibune7286.jpg/1280px-Kibune7286.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Kibune7256.jpg/1280px-Kibune7256.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Kibune7249.jpg/1280px-Kibune7249.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Kibune_Kawadoko01s5s4272.jpg/1280px-Kibune_Kawadoko01s5s4272.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Kurama-dera_sanmon.jpg/1280px-Kurama-dera_sanmon.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Kurama7196.jpg/1280px-Kurama7196.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Kurama-dera_Statue_of_Tiger.jpg/1280px-Kurama-dera_Statue_of_Tiger.jpg"
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kifune-jinja%20sando.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kifune-jinja%20%28Kyoto%20Sakyo-ku%29%20Hong%C5%AB%20hdsr%20S5%2001.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kifune-jinja%20nanmon.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kibune%20%28Kyoto%20Sakyo-ku%29%20Kibune%20River%20hdsr%20S5%2001.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kibune%20Kawadoko01s5s4272.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kibune%20Kawadoko05s5s3200.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kurama-Dera%20%28Kyoto%20Sakyo-ku%29%20gate%20Niomon%20hdsr%20S5%2002.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20cable%20car%20at%20Kurama%20Dera%20%2833531810778%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kurama-dera%20main%20hall%20%2848885598296%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/%22Tree%20root%20path%22%20%287057199181%29.jpg?width=1600"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=fO5PaRxn9cY",
@@ -673,18 +740,18 @@ export const INITIAL_SITES: Site[] = [
       135.7425
     ],
     "address": "京都府京都市下京区观喜寺町 (JR梅小路京都西站出站即达)",
-    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/KYOTO_RAILWAY_MUSEUM_Entrance_20160321.JPG/1280px-KYOTO_RAILWAY_MUSEUM_Entrance_20160321.JPG",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Kyoto_Railway_Museum_entrance_20161017.jpg/1920px-Kyoto_Railway_Museum_entrance_20161017.jpg",
     "gallery": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/KYOTO_RAILWAY_MUSEUM_Entrance_20160321.JPG/1280px-KYOTO_RAILWAY_MUSEUM_Entrance_20160321.JPG",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Kyoto_railway_museum_promenade_rolling_stock_part_2.JPG/1280px-Kyoto_railway_museum_promenade_rolling_stock_part_2.JPG",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Kyoto_railway_museum_promenade_rolling_stock.JPG/1280px-Kyoto_railway_museum_promenade_rolling_stock.JPG",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Kyoto-Railway-Museum_Series489-581-500.jpg/1280px-Kyoto-Railway-Museum_Series489-581-500.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Kyoto_railway_museum_main_building_1F_20160508.jpg/1280px-Kyoto_railway_museum_main_building_1F_20160508.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Kyoto-train-museum_EF58-150_EF81-103.jpg/1280px-Kyoto-train-museum_EF58-150_EF81-103.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Kyoto_railway_museum_Steam_Locomotive_depot.JPG/1280px-Kyoto_railway_museum_Steam_Locomotive_depot.JPG",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/KYOTO_RAILWAY_MUSEUM_SL_Garage.JPG/1280px-KYOTO_RAILWAY_MUSEUM_SL_Garage.JPG",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/KYOTO_RAILWAY_MUSEUM_Turntable.jpg/1280px-KYOTO_RAILWAY_MUSEUM_Turntable.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/JGR_Class_7100_in_the_Kyoto_Railway_Museum.jpg/1280px-JGR_Class_7100_in_the_Kyoto_Railway_Museum.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/KYOTO_RAILWAY_MUSEUM_Main_building_Main_Space_20160508.jpg/1920px-KYOTO_RAILWAY_MUSEUM_Main_building_Main_Space_20160508.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Roundhouse_of_the_Kyoto_Railway_Museum.jpg/1920px-Roundhouse_of_the_Kyoto_Railway_Museum.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/0_Series_Shinkansen_21-1_Kyoto_Railway_Museum_20-09-2024.jpg/1920px-0_Series_Shinkansen_21-1_Kyoto_Railway_Museum_20-09-2024.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/%E4%BA%AC%E9%83%BD%E6%B0%B4%E6%97%8F%E9%A4%A8%E5%A4%96%E8%A3%85.jpg/1920px-%E4%BA%AC%E9%83%BD%E6%B0%B4%E6%97%8F%E9%A4%A8%E5%A4%96%E8%A3%85.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Kyoto_Aquarium_in_2013-5-2_No%2C6.JPG/1920px-Kyoto_Aquarium_in_2013-5-2_No%2C6.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Kyoto_Aquarium_hdsr_2019_06_01_9999_963.jpg/1920px-Kyoto_Aquarium_hdsr_2019_06_01_9999_963.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Kyoto_Aquarium%2C_Japan_%2815134524109%29.jpg/1920px-Kyoto_Aquarium%2C_Japan_%2815134524109%29.jpg",
+      "https://kyoto-aquarium.com/assets/images/img-building-transfer01_BoyvMJMW_1AsLP3.png",
+      "https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/a7nvdil7/62388812/iblj_w1140h600.jpg",
+      "https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/a7nvdil7/76889378/v683_w1140h600.jpg"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=6OhBVG4peew",
@@ -778,18 +845,18 @@ export const INITIAL_SITES: Site[] = [
       139.6993
     ],
     "address": "东京都涩谷区代代木神园町1-1",
-    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Courtyard_of_Meiji_Shrine_20190717.jpg/1280px-Courtyard_of_Meiji_Shrine_20190717.jpg",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20entrance%20to%20Meiji%20Jingu%2C%20Tokyo%2C%20Japan.jpg?width=1600",
     "gallery": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Courtyard_of_Meiji_Shrine_20190717.jpg/1280px-Courtyard_of_Meiji_Shrine_20190717.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Emperor_Meiji_in_1873.jpg/500px-Emperor_Meiji_in_1873.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Empress_Shoken2.jpg/1280px-Empress_Shoken2.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Fushimi_momoyaja_jyou_13.jpg/1280px-Fushimi_momoyaja_jyou_13.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Emperor-Meiji-Empress-Shoken-Meiji-Shrine-c1926.png/1280px-Emperor-Meiji-Empress-Shoken-Meiji-Shrine-c1926.png",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Hitlerjugend_visit_to_Meiji_Shrine_purification_queue_1938.jpg/330px-Hitlerjugend_visit_to_Meiji_Shrine_purification_queue_1938.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Courtyard_of_Meiji_Shrine_20220814a.jpg/1280px-Courtyard_of_Meiji_Shrine_20220814a.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Svatyne-Meidzi.jpg/330px-Svatyne-Meidzi.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Meiji-jingu_Haupthalle_2.jpg/330px-Meiji-jingu_Haupthalle_2.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Interieur_sanctuaire_meiji.jpg/330px-Interieur_sanctuaire_meiji.jpg"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/The%20entrance%20to%20Meiji%20Jingu%2C%20Tokyo%2C%20Japan.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji-jing%C5%AB%20main%20hall.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji%20Shrine%20Minami-sando-torii%202023-01-26.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Courtyard%20of%20Meiji%20Shrine.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji%20Jingu%20Shrine.%20Saki%20Barrels.%20%2827915377617%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Procession%20%284720743612%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji-jingu%20Innenhof.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Iris%20garden%20-%20Meiji%20Shrine%20Inner%20Garden%20-%20DSC04905.JPG?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Japan%20270316%20Meiji%20Ema%2001.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AEIMG%2020220129%2004.jpg?width=1600"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=4bo2-SsLMR8",
@@ -882,18 +949,18 @@ export const INITIAL_SITES: Site[] = [
       139.7753
     ],
     "address": "东京都港区台场1丁目",
-    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Tokyo-Odaiba.jpg/1280px-Tokyo-Odaiba.jpg",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/20190322%20Odaiba%20Rainbow%20Bridge.jpg?width=1600",
     "gallery": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Tokyo-Odaiba.jpg/1280px-Tokyo-Odaiba.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Shinagawa_Baidai_cannon.jpg/1280px-Shinagawa_Baidai_cannon.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Commodore_Matthew_Calbraith_Perry.png/500px-Commodore_Matthew_Calbraith_Perry.png",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/2025_No.3_Battery.jpg/1280px-2025_No.3_Battery.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/%E7%AC%AC%E5%85%AD%E5%8F%B0%E5%A0%B4.jpg/1280px-%E7%AC%AC%E5%85%AD%E5%8F%B0%E5%A0%B4.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Odaiba_1989air.jpg/330px-Odaiba_1989air.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Rainbow_Bridge_%28Tokyo%29_at_night_2.JPG/1280px-Rainbow_Bridge_%28Tokyo%29_at_night_2.JPG",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/2018_FCG_Headquarters_Building_2.jpg/1280px-2018_FCG_Headquarters_Building_2.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Odaiba_Seashore_Park.jpg/1280px-Odaiba_Seashore_Park.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Tokyo_Symbol_Prom_Park_2.jpg/1280px-Tokyo_Symbol_Prom_Park_2.jpg"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/20190322%20Odaiba%20Rainbow%20Bridge.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rainbow%20bridge%2C%20seen%20from%20the%20beach%20at%20Odaiba%20%286155473457%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Odaiba%20Beach.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Odaiba%20Marine%20Park%20%2852652852163%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Odaiba%20Marine%20Park%20Sea%20Bus%20Station.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/20190322%20Odaiba%20Statue%20of%20Liberty.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Diver%20City%20%40%20Odaiba%20%288993326323%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Gundam%20Base%20Tokyo%2C%20entrance.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Life-Sized%20Unicorn%20Gundam%20Statue.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Little%20girl%20gazes%20the%20Rainbow%20Bridge%20in%20Odaiba%20beach%20on%20a%20cloudy%20day%20at%20sunset.jpg?width=1600"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=MOmwu95xqpE",
@@ -990,18 +1057,18 @@ export const INITIAL_SITES: Site[] = [
       139.0205
     ],
     "address": "神奈川县足柄下郡箱根町仙石原1251",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/161223_Owakudani_Hakone_Japan09s3.jpg/1280px-161223_Owakudani_Hakone_Japan09s3.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/A_view_of_Owakudani_and_ropeway%2C_Hakone%2C_Japan4.jpg/1920px-A_view_of_Owakudani_and_ropeway%2C_Hakone%2C_Japan4.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/161223_Owakudani_Hakone_Japan09s3.jpg/1280px-161223_Owakudani_Hakone_Japan09s3.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/%E5%A4%A7%E6%B6%8C%E8%B0%B7_-_panoramio.jpg/1280px-%E5%A4%A7%E6%B6%8C%E8%B0%B7_-_panoramio.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Hako_volcanic_earthquake2015.png/1280px-Hako_volcanic_earthquake2015.png",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/161223_Togendai_Station_Hakone_Japan06s3.jpg/1280px-161223_Togendai_Station_Hakone_Japan06s3.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/%E7%AE%B1%E6%A0%B9%E7%99%BB%E5%B1%B1001.jpg/500px-%E7%AE%B1%E6%A0%B9%E7%99%BB%E5%B1%B1001.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Hakone-ropeway.JPG/250px-Hakone-ropeway.JPG",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/161223_Owakudani_Station_Hakone_Japan02s3.jpg/250px-161223_Owakudani_Station_Hakone_Japan02s3.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Hakone_Ropeway_2.jpg/250px-Hakone_Ropeway_2.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Hakone_Ropeway_daikobus_01_2015-11-16.JPG/250px-Hakone_Ropeway_daikobus_01_2015-11-16.JPG",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Hakone_Ropeway_1.jpg/250px-Hakone_Ropeway_1.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/A_view_of_Owakudani_and_ropeway%2C_Hakone%2C_Japan4.jpg/1920px-A_view_of_Owakudani_and_ropeway%2C_Hakone%2C_Japan4.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/View_of_Mount_Fuji_from_Owakudani%2C_Hakone%2C_Japan2.jpg/1920px-View_of_Mount_Fuji_from_Owakudani%2C_Hakone%2C_Japan2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/161223_Owakudani_Hakone_Japan01s3.jpg/1920px-161223_Owakudani_Hakone_Japan01s3.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/161223_Owakudani_Hakone_Japan02s3.jpg/1920px-161223_Owakudani_Hakone_Japan02s3.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Over_the_sulfur_mines_%2852288292250%29.jpg/1920px-Over_the_sulfur_mines_%2852288292250%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/%E7%AE%B1%E6%A0%B9%E7%A9%BA%E4%B8%AD%E7%BA%9C%E8%BB%8A%28%E6%97%A9%E9%9B%B2%E5%B1%B1-%E5%A4%A7%E6%B9%A7%E8%B0%B7%E5%8D%80%E9%96%93%29_Hakone_Ropeway_between_S%C5%8Dunzan_and_%C5%8Cwakudani_03.jpg/1920px-%E7%AE%B1%E6%A0%B9%E7%A9%BA%E4%B8%AD%E7%BA%9C%E8%BB%8A%28%E6%97%A9%E9%9B%B2%E5%B1%B1-%E5%A4%A7%E6%B9%A7%E8%B0%B7%E5%8D%80%E9%96%93%29_Hakone_Ropeway_between_S%C5%8Dunzan_and_%C5%8Cwakudani_03.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Owakudani_%40_Hakone_%2810621367243%29.jpg/1920px-Owakudani_%40_Hakone_%2810621367243%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Black_eggs_%286475910531%29.jpg/1920px-Black_eggs_%286475910531%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/%C5%8Cwakudani_Station_20211202.jpg/1920px-%C5%8Cwakudani_Station_20211202.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/View_of_Owakudani_Valley_from_Hakone_Cable_Car.JPG/1920px-View_of_Owakudani_Valley_from_Hakone_Cable_Car.JPG"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=IkLnN-X_Jl0",
@@ -1093,18 +1160,18 @@ export const INITIAL_SITES: Site[] = [
       139.0258
     ],
     "address": "神奈川县足柄下郡箱根町元箱根 (箱根观光船 元箱根港/桃源台港/箱根神社)",
-    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Lake_Ashi_from_Mt.Komagatake_02.jpg/1280px-Lake_Ashi_from_Mt.Komagatake_02.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Lake_Ashi_%26_Mt_Fuji_%26_Hakone_Shrine.jpg/1280px-Lake_Ashi_%26_Mt_Fuji_%26_Hakone_Shrine.jpg",
     "gallery": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Lake_Ashi_from_Mt.Komagatake_02.jpg/1280px-Lake_Ashi_from_Mt.Komagatake_02.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Lake_Ashi_Aerial_photograph.1976.jpg/1280px-Lake_Ashi_Aerial_photograph.1976.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Mount_Hakone_2015-06-04.jpg/1280px-Mount_Hakone_2015-06-04.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/260505_Moto-Hakone_Hakone_Japan01s3.jpg/250px-260505_Moto-Hakone_Hakone_Japan01s3.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/View_of_Mount_Fuji_from_Lake_Ashi.jpg/250px-View_of_Mount_Fuji_from_Lake_Ashi.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Mt.Fuji_from_Mt.Taikanzan_%E5%A4%A7%E8%A6%B3%E5%B1%B1.jpg/250px-Mt.Fuji_from_Mt.Taikanzan_%E5%A4%A7%E8%A6%B3%E5%B1%B1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Hakone_Volcano_20121110.jpg/250px-Hakone_Volcano_20121110.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Lake_Ashi_from_Kojiri_Pass_01.jpg/250px-Lake_Ashi_from_Kojiri_Pass_01.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/161223_Lake_Ashi_Hakone_Japan02n.jpg/250px-161223_Lake_Ashi_Hakone_Japan02n.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/%E7%AE%B1%E6%A0%B9_%E8%8A%A6%E3%83%8E%E6%B9%96%E9%81%8A%E8%A6%A7%E8%88%B9.jpg/250px-%E7%AE%B1%E6%A0%B9_%E8%8A%A6%E3%83%8E%E6%B9%96%E9%81%8A%E8%A6%A7%E8%88%B9.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Hakone_Pirate_Ship_-_Hakone%2C_Japan_-_DSC06056.jpg/1280px-Hakone_Pirate_Ship_-_Hakone%2C_Japan_-_DSC06056.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Hakone_Pirate_Ship_-_Hakone%2C_Japan_-_DSC05216.jpg/1280px-Hakone_Pirate_Ship_-_Hakone%2C_Japan_-_DSC05216.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Pirate_ship_on_Lake_Ashi_%289412052470%29.jpg/1280px-Pirate_ship_on_Lake_Ashi_%289412052470%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/JAP_Hakone_Lake_Ashi.jpg/1280px-JAP_Hakone_Lake_Ashi.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Lake_Ashi_%26_Mt_Fuji_%26_Hakone_Shrine.jpg/1280px-Lake_Ashi_%26_Mt_Fuji_%26_Hakone_Shrine.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hakone_Shrine_July_2018.jpg/1280px-Hakone_Shrine_July_2018.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Torii_on_Lake_Ashi_%40_Hakone_Shrine_%2813776879364%29.jpg/1280px-Torii_on_Lake_Ashi_%40_Hakone_Shrine_%2813776879364%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Le_Torii_dans_le_lac_%28Hakone%2C_Japon%29_%2830429846347%29.jpg/1280px-Le_Torii_dans_le_lac_%28Hakone%2C_Japon%29_%2830429846347%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Torii_in_Hakone_Shrine_%2844605438795%29.jpg/1280px-Torii_in_Hakone_Shrine_%2844605438795%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/A_view_of_Lake_Ashi_with_Peace_Torii_gate%2C_Hakone%2C_Japan1.jpg/1280px-A_view_of_Lake_Ashi_with_Peace_Torii_gate%2C_Hakone%2C_Japan1.jpg"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=hlpP1ubsFUA",
@@ -1198,18 +1265,18 @@ export const INITIAL_SITES: Site[] = [
       138.7465
     ],
     "address": "山梨县南都留郡富士河口湖町大石2585",
-    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Mt.Fuji_from_Mierula.jpg/1280px-Mt.Fuji_from_Mierula.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Mount_Fuji_from_Oishi_Park.jpg/1920px-Mount_Fuji_from_Oishi_Park.jpg",
     "gallery": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Mt.Fuji_from_Mierula.jpg/1280px-Mt.Fuji_from_Mierula.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/080103_hakkai_fuji.jpg/1280px-080103_hakkai_fuji.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/MtFuji_FujiCity.jpg/1280px-MtFuji_FujiCity.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Fuji_Plain.jpg/1280px-Fuji_Plain.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Mt_Fuji_NASA_ISS002-E-6971_large.jpg/1280px-Mt_Fuji_NASA_ISS002-E-6971_large.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Mt_fuji_summit.jpg/1280px-Mt_fuji_summit.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Hasshinpo_of_Mt.Fuji_40.jpg/1280px-Hasshinpo_of_Mt.Fuji_40.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Mtfuji_houeisan01.jpg/500px-Mtfuji_houeisan01.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Mount_Fuji_and_Broccolini.jpg/330px-Mount_Fuji_and_Broccolini.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Mount_Fuji_from_Lake_Yamanaka_1995-7-30.jpg/330px-Mount_Fuji_from_Lake_Yamanaka_1995-7-30.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Mount_Fuji_from_Oishi_Park.jpg/1920px-Mount_Fuji_from_Oishi_Park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Oishi_in_Fujikawaguchiko_01.jpg/1920px-Oishi_in_Fujikawaguchiko_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Oishi_in_Fujikawaguchiko_02.jpg/1920px-Oishi_in_Fujikawaguchiko_02.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Oishi_in_Fujikawaguchiko_03.jpg/1920px-Oishi_in_Fujikawaguchiko_03.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Oishi_in_Fujikawaguchiko_04.jpg/1920px-Oishi_in_Fujikawaguchiko_04.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Mount_Fuji_view_from_Lake_Kawaguchi_2024-12-01.jpg/1920px-Mount_Fuji_view_from_Lake_Kawaguchi_2024-12-01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Fuji_Subaru_Line_Fifth_Station_02.JPG/1920px-Fuji_Subaru_Line_Fifth_Station_02.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Fuji_Subaru_Line_Fifth_Station_03.JPG/1920px-Fuji_Subaru_Line_Fifth_Station_03.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Mount_fuji_5th_station.jpg/1920px-Mount_fuji_5th_station.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Mt._Fuji_5th_Station_%283899838189%29.jpg/1920px-Mt._Fuji_5th_Station_%283899838189%29.jpg"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=DzaIVJWiXoY",
@@ -1299,18 +1366,18 @@ export const INITIAL_SITES: Site[] = [
       139.8624
     ],
     "address": "东京都江户川区临海町6-2-3 (JR京叶线 葛西临海公园站步行约5-6分钟)",
-    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Tokyo_Sea_Life_Park_2.jpg/1280px-Tokyo_Sea_Life_Park_2.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/d/df/Front_of_Tokyo_Sea_Life_Park_-_panorama_-_2019-1-8.jpg",
     "gallery": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Tokyo_Sea_Life_Park_2.jpg/1280px-Tokyo_Sea_Life_Park_2.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Tokyo_See_Life_Park_04.jpg/1280px-Tokyo_See_Life_Park_04.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Tokyo_See_Life_Park_01.jpg/1280px-Tokyo_See_Life_Park_01.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Tokyo_Sea_Life_Park_Kasai-1.jpg/250px-Tokyo_Sea_Life_Park_Kasai-1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Tokyo_Sea_Life_Park_Kasai-2.jpg/250px-Tokyo_Sea_Life_Park_Kasai-2.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Tokyo_Sea_Life_Park_Kasai-3.jpg/250px-Tokyo_Sea_Life_Park_Kasai-3.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Tokyo_Sea_Life_Park_Kasai-4.jpg/250px-Tokyo_Sea_Life_Park_Kasai-4.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Tokyo_Sea_Life_Park_Kasai-5.jpg/250px-Tokyo_Sea_Life_Park_Kasai-5.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Tokyo_Sea_Life_Park_Kasai-6.jpg/250px-Tokyo_Sea_Life_Park_Kasai-6.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Tokyo_Sea_Life_Park_Edogawa-ward_Tokyo_Japan.JPG/1280px-Tokyo_Sea_Life_Park_Edogawa-ward_Tokyo_Japan.JPG"
+      "https://upload.wikimedia.org/wikipedia/commons/d/df/Front_of_Tokyo_Sea_Life_Park_-_panorama_-_2019-1-8.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/a5/Tokyo_Sea_Life_Park_-_front_-_2019-1-8.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/3b/Tokyo_Sea_Life_Park_-_%E5%A4%A7%E5%9E%8B%E6%B0%B4%E6%A7%BD2023.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/06/Laika_ac_Tuna_Tank_%287472071434%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/8/80/Tunas_in_Kasai_Auarium_20180204.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Tuna_-_Tokyo_Sea_Life_Park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/8/86/Penguins_%40_Tokyo_Sea_Life_Park_%40_Kasai_Rinkai_Park_%40_Edogawa_City_%289553994685%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/45/Feeding_the_baby_penguins_%40_Tokyo_Sea_Life_Park_%40_Kasai_Rinkai_Park_%40_Edogawa_City_%289556787560%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b0/Tokyo_Sea_Life_Park_%40_Kasai_Rinkai_Park_%40_Edogawa_City_%289553980619%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b0/Yellow_and_blueback_fusiliers_in_Tokyo_Sea_Life_Park.jpg"
     ],
     "videos": [
       "https://vjs.zencdn.net/v/oceans.mp4",
@@ -1405,42 +1472,41 @@ export const INITIAL_SITES: Site[] = [
       139.7739
     ],
     "address": "东京都台东区上野公园・池之端3丁目",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ueno_Zoo_20220414a1.jpg/1280px-Ueno_Zoo_20220414a1.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Boardwalk_on_Shinobazu_Pond_in_Ueno_Park%2C_Ueno-k%C5%8Den%2C_Tait%C5%8D%2C_Tokyo%2C_Japan%2C_2024_May.jpg/1920px-Boardwalk_on_Shinobazu_Pond_in_Ueno_Park%2C_Ueno-k%C5%8Den%2C_Tait%C5%8D%2C_Tokyo%2C_Japan%2C_2024_May.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ueno_Zoo_20220414a1.jpg/1280px-Ueno_Zoo_20220414a1.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Polar_bear_-Ueno_Zoo.jpg/1280px-Polar_bear_-Ueno_Zoo.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/UenoGorilla.jpg/500px-UenoGorilla.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Zhen_Zhen_20220414e.jpg/1280px-Zhen_Zhen_20220414e.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Ailuropoda_melanoleuca_Lei_Lei_Xiao_Xiao_220610g.jpg/1280px-Ailuropoda_melanoleuca_Lei_Lei_Xiao_Xiao_220610g.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Giraffe_-Ueno_Zoo.jpg/1280px-Giraffe_-Ueno_Zoo.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/African_Penguin-Ueno_Zoo.jpg/500px-African_Penguin-Ueno_Zoo.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/%E6%98%AD%E5%92%8C3%E5%B9%B4%281928%E5%B9%B4%29%E3%81%AE%E3%82%AA%E3%83%83%E3%83%88%E3%82%BB%E3%82%A4%E6%B1%A0.jpg/330px-%E6%98%AD%E5%92%8C3%E5%B9%B4%281928%E5%B9%B4%29%E3%81%AE%E3%82%AA%E3%83%83%E3%83%88%E3%82%BB%E3%82%A4%E6%B1%A0.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/%E4%B8%8A%E9%87%8E%E5%8B%95%E7%89%A9%E5%9C%92%E3%81%AE%E3%82%BE%E3%82%A6_%E5%8B%95%E7%89%A9%E5%9C%92%E3%82%B0%E3%83%A9%E3%83%95_%E6%98%AD%E5%92%8C12%E5%B9%B43%E6%9C%8820%E6%97%A5%E5%88%9D%E7%89%88.jpg/330px-%E4%B8%8A%E9%87%8E%E5%8B%95%E7%89%A9%E5%9C%92%E3%81%AE%E3%82%BE%E3%82%A6_%E5%8B%95%E7%89%A9%E5%9C%92%E3%82%B0%E3%83%A9%E3%83%95_%E6%98%AD%E5%92%8C12%E5%B9%B43%E6%9C%8820%E6%97%A5%E5%88%9D%E7%89%88.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/The_gate_of_Ueno_Zoo_in_1952.jpg/500px-The_gate_of_Ueno_Zoo_in_1952.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Boardwalk_on_Shinobazu_Pond_in_Ueno_Park%2C_Ueno-k%C5%8Den%2C_Tait%C5%8D%2C_Tokyo%2C_Japan%2C_2024_May.jpg/1920px-Boardwalk_on_Shinobazu_Pond_in_Ueno_Park%2C_Ueno-k%C5%8Den%2C_Tait%C5%8D%2C_Tokyo%2C_Japan%2C_2024_May.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Shinobazu_pond_sunset_Ueno_park_panorama_2024_July_29.jpeg/1920px-Shinobazu_pond_sunset_Ueno_park_panorama_2024_July_29.jpeg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Walkway_by_Shinobazu_Pond_in_Ueno_Park%2C_Ueno-k%C5%8Den%2C_Tait%C5%8D%2C_Tokyo%2C_Japan%2C_2024_May.jpg/1920px-Walkway_by_Shinobazu_Pond_in_Ueno_Park%2C_Ueno-k%C5%8Den%2C_Tait%C5%8D%2C_Tokyo%2C_Japan%2C_2024_May.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Hanami_at_Ueno_Park_2023_%2853074964780%29.jpg/1920px-Hanami_at_Ueno_Park_2023_%2853074964780%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ueno_Park_Zoo_entrance_01_%2815567623690%29.jpg/1920px-Ueno_Park_Zoo_entrance_01_%2815567623690%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Polar_bear_%40_Ueno_Zoo_%289251300947%29.jpg/1920px-Polar_bear_%40_Ueno_Zoo_%289251300947%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Elephants_%40_Ueno_Zoo_%289251290755%29.jpg/1920px-Elephants_%40_Ueno_Zoo_%289251290755%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Ueno_zoo%2C_Tokyo%2C_Japan_%286155004068%29.jpg/1920px-Ueno_zoo%2C_Tokyo%2C_Japan_%286155004068%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Gorilla_in_Ueno_Zoo_20180206.jpg/1920px-Gorilla_in_Ueno_Zoo_20180206.jpg"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4",
-      "https://www.youtube.com/watch?v=Jm_C7q3dC7Q"
+      "https://www.youtube.com/watch?v=y8aiDVcyWsw",
+      "https://www.youtube.com/watch?v=3B13HG1n8Fk"
     ],
-    "description": "大熊猫、长颈鹿、大象、不忍池荷花湖与天鹅脚踏船。",
-    "recommendedDurationMin": 150,
-    "openingHours": "09:30 - 17:00 (每周一休园)",
+    "description": "东京市中心难得的大型绿洲，把林荫散步、不忍池四季景观与日本历史最悠久的动物园串在一起。4岁孩子可近看大象、北极熊和长颈鹿，长辈则可借轮椅、搭免费电动接驳车，轻松安排半日三代同行。",
+    "recommendedDurationMin": 180,
+    "openingHours": "上野公园 05:00-23:00；上野动物园 09:30-17:00（最晚入园及售票16:00，通常周一休园）",
     "admissionFee": {
-      "adult": "¥600",
-      "senior": "¥300",
+      "adult": "公园免费；动物园 ¥600",
+      "senior": "动物园 ¥300（65岁以上，须出示年龄证明）",
       "child4yo": "免费",
-      "notes": "长者半价，幼童免票。"
+      "notes": "动物园小学6年级以下免费；9月15日至21日老人周的开放日，60岁以上本人及1名陪同者免费。"
     },
-    "bestTimeToVisit": "早晨 09:30 入园看大熊猫。",
-    "weatherSuitability": "晴天适宜",
+    "bestTimeToVisit": "普通工作日09:20抵达，09:30开门即入；上午先游东园，约11:10搭电动接驳车前往西园。",
+    "weatherSuitability": "晴天最佳；小雨可利用室内馆，持续大雨或台风不适合完整游园。",
     "strollerRating": 4,
-    "strollerNotes": "公园与动物园内全路段平缓。",
+    "strollerNotes": "主要展区可通过无台阶路线抵达，东西园高差可使用いそっぷ桥电梯或免费电动接驳车；东园仍有较陡坡段。园内B型推车¥500/天，适合约7个月至4岁、18公斤以内，池之端门仅周末及节假日办理借出。",
     "kidRating": 5,
-    "kidNotes": "近距离看大熊猫吃竹子。",
+    "kidNotes": "4岁儿童适合大象、北极熊水下视角、长颈鹿、河马、两栖爬虫馆及儿童动物园STEP；工作日可于当天10:00抢约豚鼠体验。目前园内没有大熊猫。靠近不忍池和栈道时须全程牵手。",
     "elderlyRating": 4,
-    "elderlyNotes": "长者半价门票，不忍池茶亭静坐。",
-    "walkingIntensity": "适中 (500米-1.5公里)",
-    "stairsLevel": "少量台阶 (配有无障碍坡道)",
+    "elderlyNotes": "精选东、西园路线约1.5-2公里，全景约2.5-3公里。成人轮椅24台免费先到先得；免费电动接驳车优先服务行动不便者，可容纳2台轮椅。东园坡多，建议一程游览并从另一侧出口离园。",
+    "walkingIntensity": "中等（精选路线约1.5-2公里；全景约2.5-3公里）",
+    "stairsLevel": "可全程无台阶绕行，但有局部陡坡",
     "amenities": {
       "nursingRoom": true,
       "diaperChanging": true,
@@ -1451,19 +1517,37 @@ export const INITIAL_SITES: Site[] = [
       "strollerRental": true,
       "wheelchairRental": true,
       "shadeAvailable": true,
-      "indoorRainyDayOption": false,
+      "indoorRainyDayOption": true,
       "kidPlayArea": true
     },
     "familyTips": [
-      "不忍池畔品尝伊豆荣鳗鱼饭。"
+      "截至2026年8月园内没有大熊猫，不要按旧攻略预留熊猫排队时间。",
+      "从JR上野站公园口进正门，上午看东园大型动物，再搭免费电动接驳车到西园并从弁天门离园，可减少坡路和回头路。",
+      "4岁儿童免费且无需领取零元票；长者须携带年龄证明，推车租借上限约18公斤。",
+      "多种动物会在正式闭园前提前结束展示，最想看的动物应安排在15:30以前。",
+      "免费开放日、樱花季周末及黄金周客流很大，即使持电子票也可能排队。"
     ],
     "nearbyDining": [
       {
-        "id": "dine-ueno-1",
-        "name": "伊豆荣 (梅川亭)",
-        "cuisine": "传统江户鳗鱼饭",
-        "familyFeatures": "鳗鱼肉质软嫩无细刺",
-        "walkingTimeMin": 4
+        "id": "dine-llm-1788212447979-0",
+        "name": "EVERYONEs CAFE 上野恩赐公园",
+        "cuisine": "亲子咖啡厅／洋食",
+        "familyFeatures": "可推婴儿车入店，提供儿童椅和儿童菜单；可选择蛋包饭、米饭及松饼等较软餐食。",
+        "walkingTimeMin": 3
+      },
+      {
+        "id": "dine-llm-1788212447979-1",
+        "name": "音音 上野バンブーガーデン店",
+        "cuisine": "和食／稻庭乌冬",
+        "familyFeatures": "有儿童椅、儿童餐具、儿童餐及包间；提供稻庭乌冬、烤鱼御膳和米饭，订位时建议指定桌椅席。",
+        "walkingTimeMin": 5
+      },
+      {
+        "id": "dine-llm-1788212447979-2",
+        "name": "まいか－米香－ atre上野",
+        "cuisine": "釜饭／鱼类和食",
+        "familyFeatures": "有儿童椅和儿童餐，婴儿车可入席；允许携带并协助加热婴儿食品，商场内有尿布更换设施。",
+        "walkingTimeMin": 9
       }
     ],
     "websiteUrl": "https://www.tokyo-zoo.net/zoo/ueno/",
@@ -1472,6 +1556,13 @@ export const INITIAL_SITES: Site[] = [
       "不忍池天鹅船",
       "长者半价"
     ],
-    "createdAt": "2026-08-01"
+    "createdAt": "2026-08-01",
+    "customFields": {
+      "rainyDayPlan": "小雨优先游西园小兽馆、两栖爬虫馆、儿童动物园室内空间及西园室内休息所，但馆间仍为露天道路。持续大雨改去正门约400米外的国立科学博物馆，馆内有恐龙与动物展、电梯、授乳室、尿布台及少量轮椅和推车；常设展成人¥630，高中生以下及65岁以上免费。暴雨或台风则转入与JR上野站一体的atre上野。动物园至博物馆或商场均非全程有顶棚，恶劣天气须先核查临时闭园公告。",
+      "ticketBookingTip": "普通开放日不要求预约。提前购买日期指定电子票可跳过售票机，但不能绕过检票客流；4岁儿童免费，无需购买零元票，65岁长者须带年龄证明。官方没有公布长者或推车专用绿色通道。残障证明持有人及原则上1名陪同者可直接到检票口出示证明。豚鼠体验须在活动当天10:00另行在线抢约。",
+      "parkingAndDropoff": "动物园没有自有停车场，车辆不能驶入上野公园。打车或包车建议定位弁天门，在动物园通沿线最近合法点下车；官方未公布专用落客区，实际步行通常约50-150米，可走无台阶路线。自驾首选京成上野站停车场，104位、限高2.1米，至弁天门约1分钟；上野Parking Center有400位并可搭电梯进入公园。避免使用Parking in上野站前的轮椅路线，其出入口为陡坡。周末宜09:00前到达。",
+      "currentAnimalNotice": "截至2026年8月，上野动物园没有饲养或展示大熊猫。主要亲子看点为大象、北极熊、老虎、猩猩、长颈鹿、河马、鲸头鹳、两栖爬虫馆及儿童动物园。",
+      "recommendedRoute": "JR上野站公园口→动物园正门→大象→老虎与猩猩→北极熊→约11:10或11:30搭免费电动接驳车→西园长颈鹿与河马→儿童动物园STEP→弁天门离园用餐。若长辈步行能力较弱，可仅游平坦西园并从弁天门原路离园。"
+    }
   }
 ];
