@@ -173,6 +173,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ images, videos = [],
             <img
               src={validImages[currentImageIndex]}
               alt={`${title} - 图片 ${currentImageIndex + 1}`}
+              referrerPolicy="no-referrer"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               onError={() => handleImageError(currentImageIndex)}
             />
@@ -236,6 +237,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ images, videos = [],
                   <img 
                     src={img} 
                     alt={`缩略图 ${idx + 1}`} 
+                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover" 
                     onError={() => handleImageError(idx)}
                   />
@@ -337,6 +339,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ images, videos = [],
           <img
             src={validImages[currentImageIndex]}
             alt={title}
+            referrerPolicy="no-referrer"
             className="max-w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl"
             onClick={(e) => e.stopPropagation()}
             onError={() => handleImageError(currentImageIndex)}

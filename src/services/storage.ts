@@ -2,9 +2,9 @@ import { Site, Trip } from '../types/travel';
 import { INITIAL_SITES } from '../data/mockSites';
 import { INITIAL_TRIPS } from '../data/mockTrips';
 
-const SITES_KEY = 'family_travel_sites_zh_v11';
-const TRIPS_KEY = 'family_travel_trips_zh_v11';
-const ACTIVE_TRIP_KEY = 'family_travel_active_trip_id_zh_v11';
+const SITES_KEY = 'family_travel_sites_zh_v12';
+const TRIPS_KEY = 'family_travel_trips_zh_v12';
+const ACTIVE_TRIP_KEY = 'family_travel_active_trip_id_zh_v12';
 
 export const getStoredSites = (): Site[] => {
   try {
@@ -86,7 +86,7 @@ export const exportDataAsJSON = () => {
     sites: getStoredSites(),
     trips: getStoredTrips(),
     exportedAt: new Date().toISOString(),
-    version: '11.0-zh'
+    version: '12.0-zh'
   };
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
