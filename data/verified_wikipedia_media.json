@@ -1,0 +1,68 @@
+{
+  "site-kasai-rinkai-aquarium": {
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Tokyo_Sea_Life_Park_3.jpg/250px-Tokyo_Sea_Life_Park_3.jpg",
+    "gallery": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Tokyo_Sea_Life_Park_3.jpg/250px-Tokyo_Sea_Life_Park_3.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Kasai_Rinkai_Park_20090815.jpg/250px-Kasai_Rinkai_Park_20090815.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kasai_Rinkai_Park_01.jpg/250px-Kasai_Rinkai_Park_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Kasai_Rinkai_Park_20160219.jpg/250px-Kasai_Rinkai_Park_20160219.jpg"
+    ]
+  },
+  "site-kyoto-railway-aquarium": {
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Roundhouse_of_the_Kyoto_Railway_Museum.jpg/1280px-Roundhouse_of_the_Kyoto_Railway_Museum.jpg",
+    "gallery": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Roundhouse_of_the_Kyoto_Railway_Museum.jpg/1280px-Roundhouse_of_the_Kyoto_Railway_Museum.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Kyoto_railway_museum_Steam_Locomotive_depot.JPG/250px-Kyoto_railway_museum_Steam_Locomotive_depot.JPG"
+    ]
+  },
+  "site-meiji-jingu": {
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Meiji_Jingu_2023-3.jpg/1280px-Meiji_Jingu_2023-3.jpg",
+    "gallery": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Meiji_Jingu_2023-3.jpg/1280px-Meiji_Jingu_2023-3.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Meiji-jingu_torii.JPG/250px-Meiji-jingu_torii.JPG"
+    ]
+  },
+  "site-odaiba": {
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Odaiba_close_up_-_2025_Jan_14_01-27PM.jpeg/1280px-Odaiba_close_up_-_2025_Jan_14_01-27PM.jpeg",
+    "gallery": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Odaiba_close_up_-_2025_Jan_14_01-27PM.jpeg/1280px-Odaiba_close_up_-_2025_Jan_14_01-27PM.jpeg"
+    ]
+  },
+  "site-ueno-park-zoo": {
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tokyo_National_Museum%2C_Honkan_2010.jpg/500px-Tokyo_National_Museum%2C_Honkan_2010.jpg",
+    "gallery": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tokyo_National_Museum%2C_Honkan_2010.jpg/500px-Tokyo_National_Museum%2C_Honkan_2010.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/1b/Nishi_Amane_poststamp.jpg"
+    ]
+  },
+  "site-mount-fuji-5th-kawaguchiko": {
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg/1280px-View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg",
+    "gallery": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg/1280px-View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg"
+    ]
+  },
+  "site-arashiyama": {
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/2021_Sagano_Bamboo_forest_in_Arashiyama%2C_Kyoto%2C_Japan.jpg/1280px-2021_Sagano_Bamboo_forest_in_Arashiyama%2C_Kyoto%2C_Japan.jpg",
+    "gallery": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/2021_Sagano_Bamboo_forest_in_Arashiyama%2C_Kyoto%2C_Japan.jpg/1280px-2021_Sagano_Bamboo_forest_in_Arashiyama%2C_Kyoto%2C_Japan.jpg"
+    ]
+  },
+  "site-fushimi-inari-jikkokubune": {
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Hushimi-inari-taisha_honden.jpg/500px-Hushimi-inari-taisha_honden.jpg",
+    "gallery": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Hushimi-inari-taisha_honden.jpg/500px-Hushimi-inari-taisha_honden.jpg"
+    ]
+  },
+  "site-kiyomizudera-gion": {
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Kiyomizudera_morning.jpg/250px-Kiyomizudera_morning.jpg",
+    "gallery": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Kiyomizudera_morning.jpg/250px-Kiyomizudera_morning.jpg"
+    ]
+  },
+  "site-tofukuji": {
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Hiroshige_People_under_maple_trees_by_a_stream.jpg/250px-Hiroshige_People_under_maple_trees_by_a_stream.jpg",
+    "gallery": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Hiroshige_People_under_maple_trees_by_a_stream.jpg/250px-Hiroshige_People_under_maple_trees_by_a_stream.jpg"
+    ]
+  }
+}

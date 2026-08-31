@@ -9,9 +9,9 @@ export type SiteCategory =
   | 'relax' 
   | 'hotel';
 
-export type WalkingIntensity = '轻松 (<500米)' | '适中 (500米-1.5公里)' | '较累 (>1.5公里或坡道)';
-export type StairsLevel = '平坦 / 无台阶' | '少量台阶 (配有无障碍坡道)' | '中等台阶' | '陡峭 / 台阶较多';
-export type WeatherSuitability = '全天候适宜' | '室内 (雨天/避暑优选)' | '晴天适宜' | '纯户外';
+export type WalkingIntensity = '轻松 (<500米)' | '适中 (500米-1.5公里)' | '较累 (>1.5公里或坡道)' | (string & {});
+export type StairsLevel = '平坦 / 无台阶' | '少量台阶 (配有无障碍坡道)' | '中等台阶' | '陡峭 / 台阶较多' | (string & {});
+export type WeatherSuitability = '全天候适宜' | '室内 (雨天/避暑优选)' | '晴天适宜' | '纯户外' | (string & {});
 
 export interface SiteAmenities {
   nursingRoom: boolean;        // 母婴室 / 哺乳室

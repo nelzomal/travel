@@ -12,16 +12,18 @@ export const INITIAL_SITES: Site[] = [
       135.7744
     ],
     "address": "京都府京都市东山区本町15丁目778 (JR/京阪电车 东福寺站步行约10分钟)",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Tofukuji_Tsutenkyo_Bridge_Autumn_Kyoto.jpg/1280px-Tofukuji_Tsutenkyo_Bridge_Autumn_Kyoto.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/TofukujiHondo.jpg/1280px-TofukujiHondo.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Tofukuji_Tsutenkyo_Bridge_Autumn_Kyoto.jpg/1280px-Tofukuji_Tsutenkyo_Bridge_Autumn_Kyoto.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Hasso-no-niwa_Checkerboard_Garden_Tofukuji.jpg/1280px-Hasso-no-niwa_Checkerboard_Garden_Tofukuji.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Tofuku-ji_Sanmon_National_Treasure.jpg/1280px-Tofuku-ji_Sanmon_National_Treasure.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Sengyokukan_Valley_Tofukuji.jpg/1280px-Sengyokukan_Valley_Tofukuji.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Tofukuji_Hojo_Zen_Garden.jpg/1280px-Tofukuji_Hojo_Zen_Garden.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Gaunkyo_Bridge_viewing_Tsutenkyo.jpg/1280px-Gaunkyo_Bridge_viewing_Tsutenkyo.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Moss_and_Stone_Checkerboard_Tofukuji.jpg/1280px-Moss_and_Stone_Checkerboard_Tofukuji.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Tofukuji_Kaisando_Hall_Garden.jpg/1280px-Tofukuji_Kaisando_Hall_Garden.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/TofukujiHondo.jpg/1280px-TofukujiHondo.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tofukuji_Tsutenkyo.jpg/1280px-Tofukuji_Tsutenkyo.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Tofukuji-butsuden.jpg/1280px-Tofukuji-butsuden.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Tofukuji-hattou.jpg/1280px-Tofukuji-hattou.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Yakushi_Nyorai_Saiendo_Horyuji.jpg/1280px-Yakushi_Nyorai_Saiendo_Horyuji.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/TofukujiSanmon.jpg/1280px-TofukujiSanmon.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Toufuku-ji_hojyo2.JPG/1280px-Toufuku-ji_hojyo2.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/TofukujiKaisando.jpg/1280px-TofukujiKaisando.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/TofukujiZendo.jpg/1280px-TofukujiZendo.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Toufuku-ji_tousu.JPG/1280px-Toufuku-ji_tousu.JPG"
     ],
     "videos": [
       "https://vjs.zencdn.net/v/oceans.mp4",
@@ -92,16 +94,18 @@ export const INITIAL_SITES: Site[] = [
       135.7516
     ],
     "address": "京都府京都市下京区堀川通花屋町下 (近京都站，步行约15分钟或公交直达)",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Giant_Ginkgo_Tree_Nishi_Honganji_Kyoto.jpg/1280px-Giant_Ginkgo_Tree_Nishi_Honganji_Kyoto.jpg",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Kyoto_Kyoto_Tower_Blick_auf_Nishi_Hongan-ji_1.jpg/1280px-Kyoto_Kyoto_Tower_Blick_auf_Nishi_Hongan-ji_1.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Giant_Ginkgo_Tree_Nishi_Honganji_Kyoto.jpg/1280px-Giant_Ginkgo_Tree_Nishi_Honganji_Kyoto.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Nishi_Hongan-ji_Mieido_Main_Hall_Kyoto.jpg/1280px-Nishi_Hongan-ji_Mieido_Main_Hall_Kyoto.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Karamon_Gate_National_Treasure_Nishi_Honganji.jpg/1280px-Karamon_Gate_National_Treasure_Nishi_Honganji.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Hiunkaku_Pavilion_Nishi_Honganji.jpg/1280px-Hiunkaku_Pavilion_Nishi_Honganji.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Nishi_Honganji_Amidado_Hall.jpg/1280px-Nishi_Honganji_Amidado_Hall.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wooden_Corridor_Nishi_Honganji.jpg/1280px-Wooden_Corridor_Nishi_Honganji.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/400_Year_Old_Inverted_Ginkgo_Kyoto.jpg/1280px-400_Year_Old_Inverted_Ginkgo_Kyoto.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Nishi_Honganji_Courtyard_Paved_Way.jpg/1280px-Nishi_Honganji_Courtyard_Paved_Way.jpg"
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Kyoto_Kyoto_Tower_Blick_auf_Nishi_Hongan-ji_1.jpg/1280px-Kyoto_Kyoto_Tower_Blick_auf_Nishi_Hongan-ji_1.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Nishi-Honganji%2C_Hiunkaku-2.jpg/1280px-Nishi-Honganji%2C_Hiunkaku-2.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Nishi-Honganji%2C_Hiunkaku-1.jpg/1280px-Nishi-Honganji%2C_Hiunkaku-1.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Honganji_Plan.jpg/330px-Honganji_Plan.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/c/c8/Honganji_Daishoin_Plan.gif",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Meeting_room_Nishi_Honganji.jpg/1280px-Meeting_room_Nishi_Honganji.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Shiroshoin_Nishi_Honganji.jpg/1280px-Shiroshoin_Nishi_Honganji.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Northern_Noh_Stage.jpg/1280px-Northern_Noh_Stage.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Plan_of_NishiHonganji_Temple.jpg/500px-Plan_of_NishiHonganji_Temple.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Hongan-ji_National_Treasure_World_heritage_Kyoto_%E5%9B%BD%E5%AE%9D%E3%83%BB%E4%B8%96%E7%95%8C%E9%81%BA%E7%94%A3_%E6%9C%AC%E9%A1%98%E5%AF%BA_%E4%BA%AC%E9%83%BD353.JPG/1280px-Hongan-ji_National_Treasure_World_heritage_Kyoto_%E5%9B%BD%E5%AE%9D%E3%83%BB%E4%B8%96%E7%95%8C%E9%81%BA%E7%94%A3_%E6%9C%AC%E9%A1%98%E5%AF%BA_%E4%BA%AC%E9%83%BD353.JPG"
     ],
     "videos": [
       "https://vjs.zencdn.net/v/oceans.mp4",
@@ -173,16 +177,17 @@ export const INITIAL_SITES: Site[] = [
       135.795
     ],
     "address": "京都府京都市左京区永观堂町48 (近南禅寺/哲学之道)",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Eikando_Zenrin-ji_Hojo_Pond_Kyoto.jpg/1280px-Eikando_Zenrin-ji_Hojo_Pond_Kyoto.jpg",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Eikando_Somon.jpg/500px-Eikando_Somon.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Eikando_Zenrin-ji_Hojo_Pond_Kyoto.jpg/1280px-Eikando_Zenrin-ji_Hojo_Pond_Kyoto.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Tahoto_Pagoda_Eikando_Kyoto.jpg/1280px-Tahoto_Pagoda_Eikando_Kyoto.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Garyuro_Dragon_Corridor_Eikando.jpg/1280px-Garyuro_Dragon_Corridor_Eikando.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Mikaeri_Amida_Statue_Eikando.jpg/1280px-Mikaeri_Amida_Statue_Eikando.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Eikando_Autumn_Foliage_Bridge.jpg/1280px-Eikando_Autumn_Foliage_Bridge.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Zenrin-ji_Rock_Garden_Eikando.jpg/1280px-Zenrin-ji_Rock_Garden_Eikando.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Eikando_Pond_Pagoda_Reflection.jpg/1280px-Eikando_Pond_Pagoda_Reflection.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Eikando_Stone_Lantern_Maple_Garden.jpg/1280px-Eikando_Stone_Lantern_Maple_Garden.jpg"
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Eikando_Somon.jpg/500px-Eikando_Somon.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Japan_Kyoto_city_urban_topographic_map.webp/1280px-Japan_Kyoto_city_urban_topographic_map.webp.png",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Eikando_Zenrinji-temple_Tahoto.JPG/1280px-Eikando_Zenrinji-temple_Tahoto.JPG",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Eikando_Founders_Hall.jpg/250px-Eikando_Founders_Hall.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Eikando_Bathroom.jpg/250px-Eikando_Bathroom.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Eikan-do_Zenrin-ji%2C_November_2016_-03.jpg/250px-Eikan-do_Zenrin-ji%2C_November_2016_-03.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Karamon_%40_Eikan-d%C5%8D_Zenrin-ji.jpg/250px-Karamon_%40_Eikan-d%C5%8D_Zenrin-ji.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Descent_of_Amitabha_over_the_Mountain.jpg/500px-Descent_of_Amitabha_over_the_Mountain.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/3c/Lotus_flower_gong.jpg"
     ],
     "videos": [
       "https://vjs.zencdn.net/v/oceans.mp4",
@@ -359,18 +364,18 @@ export const INITIAL_SITES: Site[] = [
       135.7727
     ],
     "address": "京都府京都市伏见区深草薮之内町68 / 伏见区南兵卫町 (近月桂冠大仓纪念馆)",
-    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Romon%2C%20Fushimi%20Inari-taisha.jpg?width=1600",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Fushimiinari-taisha%2C_gehaiden-1.jpg/1280px-Fushimiinari-taisha%2C_gehaiden-1.jpg",
     "gallery": [
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Romon%2C%20Fushimi%20Inari-taisha.jpg?width=1600",
-      "https://i0.wp.com/stick-traveler.com/wp-content/uploads/Blog/Kyoto/Fushimi-Inari-6.jpg?ssl=1",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Fushimi%20Inari%20Senbon%20Torii.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/FushimiInari%20Taisha%20Fox-Ema.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Fushimi%20Horikawa%20jikkokuship.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BC%8F%E8%A6%8B%E5%8D%81%E7%9F%B3%E8%88%9F%E4%B9%97%E8%88%B9%E5%A0%B4%20-%20panoramio.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Misu%20lock%20gate.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Gekkeikan%20Okura%20Sake%20Museum01nt3200.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Gekkeikan%20Okura%20Sake%20Museum02s4592.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Kizakura%20Kappa%20Country03n4592.jpg?width=1600"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Fushimiinari-taisha%2C_gehaiden-1.jpg/1280px-Fushimiinari-taisha%2C_gehaiden-1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Fushimiinari-taisha%2C_torii-1-2.jpg/1280px-Fushimiinari-taisha%2C_torii-1-2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Fushimi_Inari_Shrine%2C_Kyoto%2C_Panorama%2C_Kyoto_Prefecture%2C_Japan_-_panoramio.jpg/500px-Fushimi_Inari_Shrine%2C_Kyoto%2C_Panorama%2C_Kyoto_Prefecture%2C_Japan_-_panoramio.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Fushimiinari-taisha%2C_honden-2.jpg/1280px-Fushimiinari-taisha%2C_honden-2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Fushimiinari-taisha%2C_naihaiden-1.jpg/1280px-Fushimiinari-taisha%2C_naihaiden-1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Fushimiinari-taisha%2C_roumon-2.jpg/1280px-Fushimiinari-taisha%2C_roumon-2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/KyotoFushimiInariLarge.jpg/1280px-KyotoFushimiInariLarge.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/IMG_fushimi_torii.jpg/1280px-IMG_fushimi_torii.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Hushimi-inari-taisha_gehaiden.jpg/250px-Hushimi-inari-taisha_gehaiden.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Fushimiinari-taisha%2C_gonden.jpg/250px-Fushimiinari-taisha%2C_gonden.jpg"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=I4Q7gxTux-4",
@@ -566,18 +571,18 @@ export const INITIAL_SITES: Site[] = [
       135.763
     ],
     "address": "京都府京都市左京区鞍马贵船町180",
-    "coverImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kifune-jinja%20sando.jpg?width=1600",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Kibune_Shinto_Shrine001.jpg/500px-Kibune_Shinto_Shrine001.jpg",
     "gallery": [
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kifune-jinja%20sando.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kifune-jinja%20%28Kyoto%20Sakyo-ku%29%20Hong%C5%AB%20hdsr%20S5%2001.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kifune-jinja%20nanmon.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kibune%20%28Kyoto%20Sakyo-ku%29%20Kibune%20River%20hdsr%20S5%2001.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kibune%20Kawadoko01s5s4272.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kibune%20Kawadoko05s5s3200.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kurama-Dera%20%28Kyoto%20Sakyo-ku%29%20gate%20Niomon%20hdsr%20S5%2002.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20cable%20car%20at%20Kurama%20Dera%20%2833531810778%29.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kurama-dera%20main%20hall%20%2848885598296%29.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/%22Tree%20root%20path%22%20%287057199181%29.jpg?width=1600"
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Kibune_Shinto_Shrine001.jpg/500px-Kibune_Shinto_Shrine001.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Kibune7236.jpg/1280px-Kibune7236.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Kibune7234.jpg/1280px-Kibune7234.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Kibune7286.jpg/1280px-Kibune7286.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Kibune7256.jpg/1280px-Kibune7256.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Kibune7249.jpg/1280px-Kibune7249.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Kibune_Kawadoko01s5s4272.jpg/1280px-Kibune_Kawadoko01s5s4272.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Kurama-dera_sanmon.jpg/1280px-Kurama-dera_sanmon.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Kurama7196.jpg/1280px-Kurama7196.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Kurama-dera_Statue_of_Tiger.jpg/1280px-Kurama-dera_Statue_of_Tiger.jpg"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=fO5PaRxn9cY",
@@ -668,18 +673,18 @@ export const INITIAL_SITES: Site[] = [
       135.7425
     ],
     "address": "京都府京都市下京区观喜寺町 (JR梅小路京都西站出站即达)",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Kyoto_Railway_Museum_entrance_20161017.jpg/1920px-Kyoto_Railway_Museum_entrance_20161017.jpg",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/KYOTO_RAILWAY_MUSEUM_Entrance_20160321.JPG/1280px-KYOTO_RAILWAY_MUSEUM_Entrance_20160321.JPG",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/KYOTO_RAILWAY_MUSEUM_Main_building_Main_Space_20160508.jpg/1920px-KYOTO_RAILWAY_MUSEUM_Main_building_Main_Space_20160508.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Roundhouse_of_the_Kyoto_Railway_Museum.jpg/1920px-Roundhouse_of_the_Kyoto_Railway_Museum.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/0_Series_Shinkansen_21-1_Kyoto_Railway_Museum_20-09-2024.jpg/1920px-0_Series_Shinkansen_21-1_Kyoto_Railway_Museum_20-09-2024.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/%E4%BA%AC%E9%83%BD%E6%B0%B4%E6%97%8F%E9%A4%A8%E5%A4%96%E8%A3%85.jpg/1920px-%E4%BA%AC%E9%83%BD%E6%B0%B4%E6%97%8F%E9%A4%A8%E5%A4%96%E8%A3%85.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Kyoto_Aquarium_in_2013-5-2_No%2C6.JPG/1920px-Kyoto_Aquarium_in_2013-5-2_No%2C6.JPG",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Kyoto_Aquarium_hdsr_2019_06_01_9999_963.jpg/1920px-Kyoto_Aquarium_hdsr_2019_06_01_9999_963.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Kyoto_Aquarium%2C_Japan_%2815134524109%29.jpg/1920px-Kyoto_Aquarium%2C_Japan_%2815134524109%29.jpg",
-      "https://kyoto-aquarium.com/assets/images/img-building-transfer01_BoyvMJMW_1AsLP3.png",
-      "https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/a7nvdil7/62388812/iblj_w1140h600.jpg",
-      "https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/a7nvdil7/76889378/v683_w1140h600.jpg"
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/KYOTO_RAILWAY_MUSEUM_Entrance_20160321.JPG/1280px-KYOTO_RAILWAY_MUSEUM_Entrance_20160321.JPG",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Kyoto_railway_museum_promenade_rolling_stock_part_2.JPG/1280px-Kyoto_railway_museum_promenade_rolling_stock_part_2.JPG",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Kyoto_railway_museum_promenade_rolling_stock.JPG/1280px-Kyoto_railway_museum_promenade_rolling_stock.JPG",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Kyoto-Railway-Museum_Series489-581-500.jpg/1280px-Kyoto-Railway-Museum_Series489-581-500.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Kyoto_railway_museum_main_building_1F_20160508.jpg/1280px-Kyoto_railway_museum_main_building_1F_20160508.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Kyoto-train-museum_EF58-150_EF81-103.jpg/1280px-Kyoto-train-museum_EF58-150_EF81-103.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Kyoto_railway_museum_Steam_Locomotive_depot.JPG/1280px-Kyoto_railway_museum_Steam_Locomotive_depot.JPG",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/KYOTO_RAILWAY_MUSEUM_SL_Garage.JPG/1280px-KYOTO_RAILWAY_MUSEUM_SL_Garage.JPG",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/KYOTO_RAILWAY_MUSEUM_Turntable.jpg/1280px-KYOTO_RAILWAY_MUSEUM_Turntable.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/JGR_Class_7100_in_the_Kyoto_Railway_Museum.jpg/1280px-JGR_Class_7100_in_the_Kyoto_Railway_Museum.jpg"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=6OhBVG4peew",
@@ -773,18 +778,18 @@ export const INITIAL_SITES: Site[] = [
       139.6993
     ],
     "address": "东京都涩谷区代代木神园町1-1",
-    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20entrance%20to%20Meiji%20Jingu%2C%20Tokyo%2C%20Japan.jpg?width=1600",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Courtyard_of_Meiji_Shrine_20190717.jpg/1280px-Courtyard_of_Meiji_Shrine_20190717.jpg",
     "gallery": [
-      "https://commons.wikimedia.org/wiki/Special:FilePath/The%20entrance%20to%20Meiji%20Jingu%2C%20Tokyo%2C%20Japan.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji-jing%C5%AB%20main%20hall.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji%20Shrine%20Minami-sando-torii%202023-01-26.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Courtyard%20of%20Meiji%20Shrine.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji%20Jingu%20Shrine.%20Saki%20Barrels.%20%2827915377617%29.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Procession%20%284720743612%29.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji-jingu%20Innenhof.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Iris%20garden%20-%20Meiji%20Shrine%20Inner%20Garden%20-%20DSC04905.JPG?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Japan%20270316%20Meiji%20Ema%2001.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AEIMG%2020220129%2004.jpg?width=1600"
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Courtyard_of_Meiji_Shrine_20190717.jpg/1280px-Courtyard_of_Meiji_Shrine_20190717.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Emperor_Meiji_in_1873.jpg/500px-Emperor_Meiji_in_1873.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Empress_Shoken2.jpg/1280px-Empress_Shoken2.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Fushimi_momoyaja_jyou_13.jpg/1280px-Fushimi_momoyaja_jyou_13.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Emperor-Meiji-Empress-Shoken-Meiji-Shrine-c1926.png/1280px-Emperor-Meiji-Empress-Shoken-Meiji-Shrine-c1926.png",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Hitlerjugend_visit_to_Meiji_Shrine_purification_queue_1938.jpg/330px-Hitlerjugend_visit_to_Meiji_Shrine_purification_queue_1938.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Courtyard_of_Meiji_Shrine_20220814a.jpg/1280px-Courtyard_of_Meiji_Shrine_20220814a.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Svatyne-Meidzi.jpg/330px-Svatyne-Meidzi.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Meiji-jingu_Haupthalle_2.jpg/330px-Meiji-jingu_Haupthalle_2.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Interieur_sanctuaire_meiji.jpg/330px-Interieur_sanctuaire_meiji.jpg"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=4bo2-SsLMR8",
@@ -877,18 +882,18 @@ export const INITIAL_SITES: Site[] = [
       139.7753
     ],
     "address": "东京都港区台场1丁目",
-    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/20190322%20Odaiba%20Rainbow%20Bridge.jpg?width=1600",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Tokyo-Odaiba.jpg/1280px-Tokyo-Odaiba.jpg",
     "gallery": [
-      "https://commons.wikimedia.org/wiki/Special:FilePath/20190322%20Odaiba%20Rainbow%20Bridge.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Rainbow%20bridge%2C%20seen%20from%20the%20beach%20at%20Odaiba%20%286155473457%29.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Odaiba%20Beach.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Odaiba%20Marine%20Park%20%2852652852163%29.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Odaiba%20Marine%20Park%20Sea%20Bus%20Station.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/20190322%20Odaiba%20Statue%20of%20Liberty.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Diver%20City%20%40%20Odaiba%20%288993326323%29.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Gundam%20Base%20Tokyo%2C%20entrance.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Life-Sized%20Unicorn%20Gundam%20Statue.jpg?width=1600",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Little%20girl%20gazes%20the%20Rainbow%20Bridge%20in%20Odaiba%20beach%20on%20a%20cloudy%20day%20at%20sunset.jpg?width=1600"
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Tokyo-Odaiba.jpg/1280px-Tokyo-Odaiba.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Shinagawa_Baidai_cannon.jpg/1280px-Shinagawa_Baidai_cannon.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Commodore_Matthew_Calbraith_Perry.png/500px-Commodore_Matthew_Calbraith_Perry.png",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/2025_No.3_Battery.jpg/1280px-2025_No.3_Battery.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/%E7%AC%AC%E5%85%AD%E5%8F%B0%E5%A0%B4.jpg/1280px-%E7%AC%AC%E5%85%AD%E5%8F%B0%E5%A0%B4.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Odaiba_1989air.jpg/330px-Odaiba_1989air.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Rainbow_Bridge_%28Tokyo%29_at_night_2.JPG/1280px-Rainbow_Bridge_%28Tokyo%29_at_night_2.JPG",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/2018_FCG_Headquarters_Building_2.jpg/1280px-2018_FCG_Headquarters_Building_2.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Odaiba_Seashore_Park.jpg/1280px-Odaiba_Seashore_Park.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Tokyo_Symbol_Prom_Park_2.jpg/1280px-Tokyo_Symbol_Prom_Park_2.jpg"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=MOmwu95xqpE",
@@ -985,18 +990,18 @@ export const INITIAL_SITES: Site[] = [
       139.0205
     ],
     "address": "神奈川县足柄下郡箱根町仙石原1251",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/A_view_of_Owakudani_and_ropeway%2C_Hakone%2C_Japan4.jpg/1920px-A_view_of_Owakudani_and_ropeway%2C_Hakone%2C_Japan4.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/161223_Owakudani_Hakone_Japan09s3.jpg/1280px-161223_Owakudani_Hakone_Japan09s3.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/A_view_of_Owakudani_and_ropeway%2C_Hakone%2C_Japan4.jpg/1920px-A_view_of_Owakudani_and_ropeway%2C_Hakone%2C_Japan4.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/View_of_Mount_Fuji_from_Owakudani%2C_Hakone%2C_Japan2.jpg/1920px-View_of_Mount_Fuji_from_Owakudani%2C_Hakone%2C_Japan2.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/161223_Owakudani_Hakone_Japan01s3.jpg/1920px-161223_Owakudani_Hakone_Japan01s3.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/161223_Owakudani_Hakone_Japan02s3.jpg/1920px-161223_Owakudani_Hakone_Japan02s3.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Over_the_sulfur_mines_%2852288292250%29.jpg/1920px-Over_the_sulfur_mines_%2852288292250%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/%E7%AE%B1%E6%A0%B9%E7%A9%BA%E4%B8%AD%E7%BA%9C%E8%BB%8A%28%E6%97%A9%E9%9B%B2%E5%B1%B1-%E5%A4%A7%E6%B9%A7%E8%B0%B7%E5%8D%80%E9%96%93%29_Hakone_Ropeway_between_S%C5%8Dunzan_and_%C5%8Cwakudani_03.jpg/1920px-%E7%AE%B1%E6%A0%B9%E7%A9%BA%E4%B8%AD%E7%BA%9C%E8%BB%8A%28%E6%97%A9%E9%9B%B2%E5%B1%B1-%E5%A4%A7%E6%B9%A7%E8%B0%B7%E5%8D%80%E9%96%93%29_Hakone_Ropeway_between_S%C5%8Dunzan_and_%C5%8Cwakudani_03.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Owakudani_%40_Hakone_%2810621367243%29.jpg/1920px-Owakudani_%40_Hakone_%2810621367243%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Black_eggs_%286475910531%29.jpg/1920px-Black_eggs_%286475910531%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/%C5%8Cwakudani_Station_20211202.jpg/1920px-%C5%8Cwakudani_Station_20211202.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/View_of_Owakudani_Valley_from_Hakone_Cable_Car.JPG/1920px-View_of_Owakudani_Valley_from_Hakone_Cable_Car.JPG"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/161223_Owakudani_Hakone_Japan09s3.jpg/1280px-161223_Owakudani_Hakone_Japan09s3.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/%E5%A4%A7%E6%B6%8C%E8%B0%B7_-_panoramio.jpg/1280px-%E5%A4%A7%E6%B6%8C%E8%B0%B7_-_panoramio.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Hako_volcanic_earthquake2015.png/1280px-Hako_volcanic_earthquake2015.png",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/161223_Togendai_Station_Hakone_Japan06s3.jpg/1280px-161223_Togendai_Station_Hakone_Japan06s3.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/%E7%AE%B1%E6%A0%B9%E7%99%BB%E5%B1%B1001.jpg/500px-%E7%AE%B1%E6%A0%B9%E7%99%BB%E5%B1%B1001.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Hakone-ropeway.JPG/250px-Hakone-ropeway.JPG",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/161223_Owakudani_Station_Hakone_Japan02s3.jpg/250px-161223_Owakudani_Station_Hakone_Japan02s3.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Hakone_Ropeway_2.jpg/250px-Hakone_Ropeway_2.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Hakone_Ropeway_daikobus_01_2015-11-16.JPG/250px-Hakone_Ropeway_daikobus_01_2015-11-16.JPG",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Hakone_Ropeway_1.jpg/250px-Hakone_Ropeway_1.jpg"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=IkLnN-X_Jl0",
@@ -1088,18 +1093,18 @@ export const INITIAL_SITES: Site[] = [
       139.0258
     ],
     "address": "神奈川县足柄下郡箱根町元箱根 (箱根观光船 元箱根港/桃源台港/箱根神社)",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Lake_Ashi_%26_Mt_Fuji_%26_Hakone_Shrine.jpg/1280px-Lake_Ashi_%26_Mt_Fuji_%26_Hakone_Shrine.jpg",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Lake_Ashi_from_Mt.Komagatake_02.jpg/1280px-Lake_Ashi_from_Mt.Komagatake_02.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Hakone_Pirate_Ship_-_Hakone%2C_Japan_-_DSC06056.jpg/1280px-Hakone_Pirate_Ship_-_Hakone%2C_Japan_-_DSC06056.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Hakone_Pirate_Ship_-_Hakone%2C_Japan_-_DSC05216.jpg/1280px-Hakone_Pirate_Ship_-_Hakone%2C_Japan_-_DSC05216.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Pirate_ship_on_Lake_Ashi_%289412052470%29.jpg/1280px-Pirate_ship_on_Lake_Ashi_%289412052470%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/JAP_Hakone_Lake_Ashi.jpg/1280px-JAP_Hakone_Lake_Ashi.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Lake_Ashi_%26_Mt_Fuji_%26_Hakone_Shrine.jpg/1280px-Lake_Ashi_%26_Mt_Fuji_%26_Hakone_Shrine.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hakone_Shrine_July_2018.jpg/1280px-Hakone_Shrine_July_2018.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Torii_on_Lake_Ashi_%40_Hakone_Shrine_%2813776879364%29.jpg/1280px-Torii_on_Lake_Ashi_%40_Hakone_Shrine_%2813776879364%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Le_Torii_dans_le_lac_%28Hakone%2C_Japon%29_%2830429846347%29.jpg/1280px-Le_Torii_dans_le_lac_%28Hakone%2C_Japon%29_%2830429846347%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Torii_in_Hakone_Shrine_%2844605438795%29.jpg/1280px-Torii_in_Hakone_Shrine_%2844605438795%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/A_view_of_Lake_Ashi_with_Peace_Torii_gate%2C_Hakone%2C_Japan1.jpg/1280px-A_view_of_Lake_Ashi_with_Peace_Torii_gate%2C_Hakone%2C_Japan1.jpg"
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Lake_Ashi_from_Mt.Komagatake_02.jpg/1280px-Lake_Ashi_from_Mt.Komagatake_02.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Lake_Ashi_Aerial_photograph.1976.jpg/1280px-Lake_Ashi_Aerial_photograph.1976.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Mount_Hakone_2015-06-04.jpg/1280px-Mount_Hakone_2015-06-04.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/260505_Moto-Hakone_Hakone_Japan01s3.jpg/250px-260505_Moto-Hakone_Hakone_Japan01s3.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/View_of_Mount_Fuji_from_Lake_Ashi.jpg/250px-View_of_Mount_Fuji_from_Lake_Ashi.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Mt.Fuji_from_Mt.Taikanzan_%E5%A4%A7%E8%A6%B3%E5%B1%B1.jpg/250px-Mt.Fuji_from_Mt.Taikanzan_%E5%A4%A7%E8%A6%B3%E5%B1%B1.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Hakone_Volcano_20121110.jpg/250px-Hakone_Volcano_20121110.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Lake_Ashi_from_Kojiri_Pass_01.jpg/250px-Lake_Ashi_from_Kojiri_Pass_01.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/161223_Lake_Ashi_Hakone_Japan02n.jpg/250px-161223_Lake_Ashi_Hakone_Japan02n.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/%E7%AE%B1%E6%A0%B9_%E8%8A%A6%E3%83%8E%E6%B9%96%E9%81%8A%E8%A6%A7%E8%88%B9.jpg/250px-%E7%AE%B1%E6%A0%B9_%E8%8A%A6%E3%83%8E%E6%B9%96%E9%81%8A%E8%A6%A7%E8%88%B9.jpg"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=hlpP1ubsFUA",
@@ -1193,18 +1198,18 @@ export const INITIAL_SITES: Site[] = [
       138.7465
     ],
     "address": "山梨县南都留郡富士河口湖町大石2585",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Mount_Fuji_from_Oishi_Park.jpg/1920px-Mount_Fuji_from_Oishi_Park.jpg",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Mt.Fuji_from_Mierula.jpg/1280px-Mt.Fuji_from_Mierula.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Mount_Fuji_from_Oishi_Park.jpg/1920px-Mount_Fuji_from_Oishi_Park.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Oishi_in_Fujikawaguchiko_01.jpg/1920px-Oishi_in_Fujikawaguchiko_01.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Oishi_in_Fujikawaguchiko_02.jpg/1920px-Oishi_in_Fujikawaguchiko_02.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Oishi_in_Fujikawaguchiko_03.jpg/1920px-Oishi_in_Fujikawaguchiko_03.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Oishi_in_Fujikawaguchiko_04.jpg/1920px-Oishi_in_Fujikawaguchiko_04.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Mount_Fuji_view_from_Lake_Kawaguchi_2024-12-01.jpg/1920px-Mount_Fuji_view_from_Lake_Kawaguchi_2024-12-01.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Fuji_Subaru_Line_Fifth_Station_02.JPG/1920px-Fuji_Subaru_Line_Fifth_Station_02.JPG",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Fuji_Subaru_Line_Fifth_Station_03.JPG/1920px-Fuji_Subaru_Line_Fifth_Station_03.JPG",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Mount_fuji_5th_station.jpg/1920px-Mount_fuji_5th_station.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Mt._Fuji_5th_Station_%283899838189%29.jpg/1920px-Mt._Fuji_5th_Station_%283899838189%29.jpg"
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Mt.Fuji_from_Mierula.jpg/1280px-Mt.Fuji_from_Mierula.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/080103_hakkai_fuji.jpg/1280px-080103_hakkai_fuji.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/MtFuji_FujiCity.jpg/1280px-MtFuji_FujiCity.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Fuji_Plain.jpg/1280px-Fuji_Plain.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Mt_Fuji_NASA_ISS002-E-6971_large.jpg/1280px-Mt_Fuji_NASA_ISS002-E-6971_large.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Mt_fuji_summit.jpg/1280px-Mt_fuji_summit.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Hasshinpo_of_Mt.Fuji_40.jpg/1280px-Hasshinpo_of_Mt.Fuji_40.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Mtfuji_houeisan01.jpg/500px-Mtfuji_houeisan01.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Mount_Fuji_and_Broccolini.jpg/330px-Mount_Fuji_and_Broccolini.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Mount_Fuji_from_Lake_Yamanaka_1995-7-30.jpg/330px-Mount_Fuji_from_Lake_Yamanaka_1995-7-30.jpg"
     ],
     "videos": [
       "https://www.youtube.com/watch?v=DzaIVJWiXoY",
@@ -1294,18 +1299,18 @@ export const INITIAL_SITES: Site[] = [
       139.8624
     ],
     "address": "东京都江户川区临海町6-2-3 (JR京叶线 葛西临海公园站步行约5-6分钟)",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/d/df/Front_of_Tokyo_Sea_Life_Park_-_panorama_-_2019-1-8.jpg",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Tokyo_Sea_Life_Park_2.jpg/1280px-Tokyo_Sea_Life_Park_2.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/d/df/Front_of_Tokyo_Sea_Life_Park_-_panorama_-_2019-1-8.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/a/a5/Tokyo_Sea_Life_Park_-_front_-_2019-1-8.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/3/3b/Tokyo_Sea_Life_Park_-_%E5%A4%A7%E5%9E%8B%E6%B0%B4%E6%A7%BD2023.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/0/06/Laika_ac_Tuna_Tank_%287472071434%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/8/80/Tunas_in_Kasai_Auarium_20180204.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Tuna_-_Tokyo_Sea_Life_Park.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/8/86/Penguins_%40_Tokyo_Sea_Life_Park_%40_Kasai_Rinkai_Park_%40_Edogawa_City_%289553994685%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/4/45/Feeding_the_baby_penguins_%40_Tokyo_Sea_Life_Park_%40_Kasai_Rinkai_Park_%40_Edogawa_City_%289556787560%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/b/b0/Tokyo_Sea_Life_Park_%40_Kasai_Rinkai_Park_%40_Edogawa_City_%289553980619%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/b/b0/Yellow_and_blueback_fusiliers_in_Tokyo_Sea_Life_Park.jpg"
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Tokyo_Sea_Life_Park_2.jpg/1280px-Tokyo_Sea_Life_Park_2.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Tokyo_See_Life_Park_04.jpg/1280px-Tokyo_See_Life_Park_04.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Tokyo_See_Life_Park_01.jpg/1280px-Tokyo_See_Life_Park_01.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Tokyo_Sea_Life_Park_Kasai-1.jpg/250px-Tokyo_Sea_Life_Park_Kasai-1.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Tokyo_Sea_Life_Park_Kasai-2.jpg/250px-Tokyo_Sea_Life_Park_Kasai-2.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Tokyo_Sea_Life_Park_Kasai-3.jpg/250px-Tokyo_Sea_Life_Park_Kasai-3.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Tokyo_Sea_Life_Park_Kasai-4.jpg/250px-Tokyo_Sea_Life_Park_Kasai-4.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Tokyo_Sea_Life_Park_Kasai-5.jpg/250px-Tokyo_Sea_Life_Park_Kasai-5.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Tokyo_Sea_Life_Park_Kasai-6.jpg/250px-Tokyo_Sea_Life_Park_Kasai-6.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Tokyo_Sea_Life_Park_Edogawa-ward_Tokyo_Japan.JPG/1280px-Tokyo_Sea_Life_Park_Edogawa-ward_Tokyo_Japan.JPG"
     ],
     "videos": [
       "https://vjs.zencdn.net/v/oceans.mp4",
@@ -1400,16 +1405,18 @@ export const INITIAL_SITES: Site[] = [
       139.7739
     ],
     "address": "东京都台东区上野公园・池之端3丁目",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Giant_Panda_at_Ueno_Zoo.jpg/1280px-Giant_Panda_at_Ueno_Zoo.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ueno_Zoo_20220414a1.jpg/1280px-Ueno_Zoo_20220414a1.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Giant_Panda_at_Ueno_Zoo.jpg/1280px-Giant_Panda_at_Ueno_Zoo.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Shinobazu_Pond_and_Bentendo_Ueno_Tokyo.jpg/1280px-Shinobazu_Pond_and_Bentendo_Ueno_Tokyo.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Ueno_Zoo_Panda_Forest.jpg/1280px-Ueno_Zoo_Panda_Forest.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Five-storied_Pagoda_at_Ueno_Zoo.jpg/1280px-Five-storied_Pagoda_at_Ueno_Zoo.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ueno_Park_Cherry_Blossoms.jpg/1280px-Ueno_Park_Cherry_Blossoms.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Ueno_Zoo_Monorail_and_Animals.jpg/1280px-Ueno_Zoo_Monorail_and_Animals.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Shinobazu_Lotus_Pond_Tokyo.jpg/1280px-Shinobazu_Lotus_Pond_Tokyo.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Elephants_at_Ueno_Zoo.jpg/1280px-Elephants_at_Ueno_Zoo.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ueno_Zoo_20220414a1.jpg/1280px-Ueno_Zoo_20220414a1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Polar_bear_-Ueno_Zoo.jpg/1280px-Polar_bear_-Ueno_Zoo.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/UenoGorilla.jpg/500px-UenoGorilla.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Zhen_Zhen_20220414e.jpg/1280px-Zhen_Zhen_20220414e.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Ailuropoda_melanoleuca_Lei_Lei_Xiao_Xiao_220610g.jpg/1280px-Ailuropoda_melanoleuca_Lei_Lei_Xiao_Xiao_220610g.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Giraffe_-Ueno_Zoo.jpg/1280px-Giraffe_-Ueno_Zoo.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/African_Penguin-Ueno_Zoo.jpg/500px-African_Penguin-Ueno_Zoo.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/%E6%98%AD%E5%92%8C3%E5%B9%B4%281928%E5%B9%B4%29%E3%81%AE%E3%82%AA%E3%83%83%E3%83%88%E3%82%BB%E3%82%A4%E6%B1%A0.jpg/330px-%E6%98%AD%E5%92%8C3%E5%B9%B4%281928%E5%B9%B4%29%E3%81%AE%E3%82%AA%E3%83%83%E3%83%88%E3%82%BB%E3%82%A4%E6%B1%A0.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/%E4%B8%8A%E9%87%8E%E5%8B%95%E7%89%A9%E5%9C%92%E3%81%AE%E3%82%BE%E3%82%A6_%E5%8B%95%E7%89%A9%E5%9C%92%E3%82%B0%E3%83%A9%E3%83%95_%E6%98%AD%E5%92%8C12%E5%B9%B43%E6%9C%8820%E6%97%A5%E5%88%9D%E7%89%88.jpg/330px-%E4%B8%8A%E9%87%8E%E5%8B%95%E7%89%A9%E5%9C%92%E3%81%AE%E3%82%BE%E3%82%A6_%E5%8B%95%E7%89%A9%E5%9C%92%E3%82%B0%E3%83%A9%E3%83%95_%E6%98%AD%E5%92%8C12%E5%B9%B43%E6%9C%8820%E6%97%A5%E5%88%9D%E7%89%88.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/The_gate_of_Ueno_Zoo_in_1952.jpg/500px-The_gate_of_Ueno_Zoo_in_1952.jpg"
     ],
     "videos": [
       "https://vjs.zencdn.net/v/oceans.mp4",
