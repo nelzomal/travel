@@ -45,6 +45,8 @@ export function App() {
   const [filters, setFilters] = useState<SiteFilters>({
     searchQuery: '',
     category: 'all',
+    city: 'all',
+    sortBy: 'itinerary_day',
     minStrollerRating: 0,
     minKidRating: 0,
     minElderlyRating: 0,
@@ -290,6 +292,18 @@ export function App() {
     setActiveDayIndex(0);
   };
 
+  // Pre-calculate which day each site is scheduled in the active trip
+  const siteDayMap: Record<string, number> = {};
+  if (activeTrip && activeTrip.days) {
+    activeTrip.days.forEach((day) => {
+      day.stops.forEach((stop) => {
+        if (stop.siteId && !siteDayMap[stop.siteId]) {
+          siteDayMap[stop.siteId] = day.dayNumber;
+        }
+      });
+    });
+  }
+
   // Filter logic
   const filteredSites = sites.filter((site) => {
     if (filters.searchQuery.trim()) {
@@ -301,6 +315,14 @@ export function App() {
       const matchCity = site.city.toLowerCase().includes(q);
       const matchTips = site.familyTips.some((t) => t.toLowerCase().includes(q));
       if (!matchName && !matchLocal && !matchDesc && !matchAddr && !matchCity && !matchTips) {
+        return false;
+      }
+    }
+
+    // City Filter
+    if (filters.city && filters.city !== 'all') {
+      const matchCity = site.city.includes(filters.city) || site.address.includes(filters.city);
+      if (!matchCity) {
         return false;
       }
     }
@@ -330,6 +352,39 @@ export function App() {
     }
 
     return true;
+  });
+
+  // Sorting logic (by itinerary day, city, multi-gen rating, default)
+  const sortedSites = [...filteredSites].sort((a, b) => {
+    if (filters.sortBy === 'itinerary_day') {
+      const dayA = siteDayMap[a.id] ?? 999;
+      const dayB = siteDayMap[b.id] ?? 999;
+      if (dayA !== dayB) return dayA - dayB;
+      return a.name.localeCompare(b.name, 'zh-CN');
+    }
+    if (filters.sortBy === 'city') {
+      const getCityRank = (site: Site) => {
+        if (site.city.includes('东京')) return 1;
+        if (site.city.includes('箱根') || site.address.includes('箱根')) return 2;
+        if (site.city.includes('富士山') || site.city.includes('河口湖') || site.city.includes('山梨')) return 3;
+        if (site.city.includes('京都')) return 4;
+        return 5;
+      };
+      const rankA = getCityRank(a);
+      const rankB = getCityRank(b);
+      if (rankA !== rankB) return rankA - rankB;
+      return a.name.localeCompare(b.name, 'zh-CN');
+    }
+    if (filters.sortBy === 'kid') {
+      return b.kidRating - a.kidRating || b.strollerRating - a.strollerRating;
+    }
+    if (filters.sortBy === 'elderly') {
+      return b.elderlyRating - a.elderlyRating || b.strollerRating - a.strollerRating;
+    }
+    if (filters.sortBy === 'stroller') {
+      return b.strollerRating - a.strollerRating || b.elderlyRating - a.elderlyRating;
+    }
+    return 0; // default
   });
 
   if (!activeTrip) {
@@ -547,11 +602,11 @@ export function App() {
               filters={filters}
               onChange={setFilters}
               totalSites={sites.length}
-              filteredCount={filteredSites.length}
+              filteredCount={sortedSites.length}
             />
 
             {/* Sites Grid */}
-            {filteredSites.length === 0 ? (
+            {sortedSites.length === 0 ? (
               <div className="p-16 text-center bg-white rounded-3xl border border-dashed border-slate-300 space-y-3">
                 <div className="w-12 h-12 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center mx-auto text-xl">
                   🔍
@@ -566,6 +621,8 @@ export function App() {
                     setFilters({
                       searchQuery: '',
                       category: 'all',
+                      city: 'all',
+                      sortBy: 'itinerary_day',
                       minStrollerRating: 0,
                       minKidRating: 0,
                       minElderlyRating: 0,
@@ -575,16 +632,17 @@ export function App() {
                   }
                   className="px-4 py-2 bg-indigo-50 text-indigo-600 font-bold rounded-xl text-xs"
                 >
-                  重置全部筛选
+                  重置全部筛选与排序
                 </button>
               </div>
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredSites.map((site) => (
+                {sortedSites.map((site) => (
                   <SiteCard
                     key={site.id}
                     site={site}
                     isSelected={selectedSiteForDetails?.id === site.id}
+                    itineraryDayBadge={siteDayMap[site.id] ? `Day ${siteDayMap[site.id]}` : undefined}
                     onSelect={(s) => setSelectedSiteForDetails(s)}
                     onEdit={(s) => {
                       setEditingSite(s);
