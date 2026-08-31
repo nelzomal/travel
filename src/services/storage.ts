@@ -6,6 +6,27 @@ const SITES_KEY = 'family_travel_sites_zh_v12';
 const TRIPS_KEY = 'family_travel_trips_zh_v12';
 const ACTIVE_TRIP_KEY = 'family_travel_active_trip_id_zh_v12';
 
+// Automatically sync local changes to filesystem / git codebase when running in Vite dev mode
+export const syncToFilesystem = async (sites?: Site[], trips?: Trip[]): Promise<{ success: boolean; message?: string }> => {
+  try {
+    const payloadSites = sites || getStoredSites();
+    const payloadTrips = trips || getStoredTrips();
+    const res = await fetch('/api/sync-data', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sites: payloadSites, trips: payloadTrips })
+    });
+    if (res.ok) {
+      const data = await res.json();
+      return { success: true, message: data.message || '已成功同步到本地代码文件与 Git' };
+    }
+    return { success: false, message: '同步失败，服务器返回错误' };
+  } catch (e: any) {
+    // Graceful fallback for static hosting
+    return { success: false, message: e?.message || '静态部署环境不支持直接写入磁盘' };
+  }
+};
+
 export const getStoredSites = (): Site[] => {
   try {
     const raw = localStorage.getItem(SITES_KEY);
@@ -23,6 +44,8 @@ export const getStoredSites = (): Site[] => {
 export const saveSites = (sites: Site[]) => {
   try {
     localStorage.setItem(SITES_KEY, JSON.stringify(sites));
+    // Auto-sync to disk in background
+    syncToFilesystem(sites, undefined);
   } catch (e) {
     console.error('Error saving sites to storage:', e);
   }
@@ -45,6 +68,8 @@ export const getStoredTrips = (): Trip[] => {
 export const saveTrips = (trips: Trip[]) => {
   try {
     localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
+    // Auto-sync to disk in background
+    syncToFilesystem(undefined, trips);
   } catch (e) {
     console.error('Error saving trips to storage:', e);
   }
@@ -79,6 +104,7 @@ export const resetToDefaults = () => {
   if (INITIAL_TRIPS[0]) {
     localStorage.setItem(ACTIVE_TRIP_KEY, INITIAL_TRIPS[0].id);
   }
+  syncToFilesystem(INITIAL_SITES, INITIAL_TRIPS);
 };
 
 export const exportDataAsJSON = () => {
@@ -106,6 +132,7 @@ export const importDataFromJSON = (jsonStr: string): { success: boolean; message
       if (parsed.trips.length > 0) {
         setActiveTripId(parsed.trips[0].id);
       }
+      syncToFilesystem(parsed.sites, parsed.trips);
       return { success: true };
     }
     return { success: false, message: '数据格式错误，未找到有效的景点或行程列表。' };

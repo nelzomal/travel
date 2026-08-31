@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { Trip } from '../types/travel';
 import { 
-  Plus, Printer, Download, Upload, RotateCcw, Share2, Check, Link2
+  Plus, Printer, Download, Upload, RotateCcw, Share2, Check, Save, GitBranch
 } from 'lucide-react';
-import { exportDataAsJSON, importDataFromJSON } from '../services/storage';
+import { exportDataAsJSON, importDataFromJSON, syncToFilesystem } from '../services/storage';
 
 export type ActiveTab = 'map_plan' | 'sites' | 'itinerary' | 'checklist';
 
@@ -34,11 +34,22 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [copiedLink, setCopiedLink] = useState(false);
+  const [syncedStatus, setSyncedStatus] = useState<string | null>(null);
 
   const handleShareLink = () => {
     navigator.clipboard.writeText(window.location.href);
     setCopiedLink(true);
     setTimeout(() => setCopiedLink(false), 2500);
+  };
+
+  const handleManualSyncToGit = async () => {
+    const res = await syncToFilesystem();
+    if (res.success) {
+      setSyncedStatus('已成功同步写入本地 Git 文件！');
+    } else {
+      setSyncedStatus(res.message || '同步完成');
+    }
+    setTimeout(() => setSyncedStatus(null), 3000);
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -50,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       if (content) {
         const res = importDataFromJSON(content);
         if (res.success) {
-          alert('行程与景点数据已成功导入！');
+          alert('行程与景点数据已成功导入并同步写入！');
           onDataImported();
         } else {
           alert(`导入失败: ${res.message}`);
@@ -138,7 +149,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </nav>
 
-          {/* Right Controls (Trip Selector, Share & Primary Action) */}
+          {/* Right Controls (Trip Selector, Share, Save to Git & Primary Action) */}
           <div className="flex items-center gap-2">
             
             {/* Trip Selector Dropdown */}
@@ -177,12 +188,36 @@ export const Navbar: React.FC<NavbarProps> = ({
               {copiedLink ? (
                 <>
                   <Check className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>已复制链接!</span>
+                  <span>已复制!</span>
                 </>
               ) : (
                 <>
                   <Share2 className="w-3.5 h-3.5 text-slate-500" />
-                  <span className="hidden sm:inline">分享此页</span>
+                  <span className="hidden sm:inline">分享</span>
+                </>
+              )}
+            </button>
+
+            {/* Save & Sync directly to Git codebase */}
+            <button
+              type="button"
+              onClick={handleManualSyncToGit}
+              title="将修改即时写入本地 Git 代码文件 (src/data/mockSites.ts 及 data/sites.json)"
+              className={`px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all border shadow-2xs ${
+                syncedStatus
+                  ? 'bg-emerald-50 text-emerald-700 border-emerald-300 ring-2 ring-emerald-400/20'
+                  : 'bg-slate-50 hover:bg-slate-100 text-slate-700 border-slate-200'
+              }`}
+            >
+              {syncedStatus ? (
+                <>
+                  <Check className="w-3.5 h-3.5 text-emerald-600" />
+                  <span>已同步Git!</span>
+                </>
+              ) : (
+                <>
+                  <Save className="w-3.5 h-3.5 text-indigo-600" />
+                  <span className="hidden sm:inline">存入Git</span>
                 </>
               )}
             </button>
