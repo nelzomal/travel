@@ -253,40 +253,42 @@ export const INITIAL_SITES: Site[] = [
       135.6713
     ],
     "address": "京都府京都市右京区嵯峨天龙寺芒之马场町 (渡月桥/嵯峨野观光铁道/岩田山)",
-    "coverImage": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sagano%20Scenic%20Railway%20Hozu%20River%202016-08-26.jpg?width=1600",
     "gallery": [
-      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1508873696983-2df5703bc20d?auto=format&fit=crop&w=1200&q=80"
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sagano%20Scenic%20Railway%20Hozu%20River%202016-08-26.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sagano%20Romantic%20Train.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hozugawa-Kudari%20201126n.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hozugawa%20river%20excursion%20boats%20%2832885398198%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Arashiyama-Bamboo-Grove-Sunset.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/2021%20Sagano%20Bamboo%20forest%20in%20Arashiyama%2C%20Kyoto%2C%20Japan.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Togetsukyo%20Bridge%20and%20Mount%20Arashiyama.JPG?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Japanese%20Macaque%20in%20Arashiyama%20-%2009-05-2024.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/View%20from%20the%20top%20of%20Arashiyama%20Monkey%20Park%20Iwatayama%2C%20Japan.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bamboo%20grove%20in%20Arashiyama.jpg?width=1600"
     ],
     "videos": [
-      "https://www.youtube.com/watch?v=1La4QzGeaaQ",
-      "https://www.youtube.com/watch?v=kYJvPcvbA3I"
+      "https://www.youtube.com/watch?v=hO4VW3qcWuI",
+      "https://www.youtube.com/watch?v=cl2reoZNI4g"
     ],
-    "description": "京都最经典的亲子山水全景胜地！乘坐复古「嵯峨野观光小火车」穿行保津川峡谷，搭乘传统平底木船体验「保津川漂流」；漫步遮阳清凉的「竹林小径」与横跨大堰川的「渡月桥」；在山顶「岩田山猴子公园」近距离观察120多只野生日本猕猴并俯瞰京都市全景。",
-    "recommendedDurationMin": 240,
-    "openingHours": "小火车 09:00-17:00；竹林与渡月桥24小时；猴子公园 09:00-16:00",
+    "description": "从嵯峨野观光小火车穿越保津峡，再乘传统木船顺流返回岚山，串联竹林小径、渡月桥与岩田山野生猕猴。火车、峡谷、水花和动物喂食深受幼童喜爱，但猴园陡坡及两小时游船对长辈体力要求较高，建议分组或弹性取舍。",
+    "recommendedDurationMin": 480,
+    "openingHours": "竹林小径全天开放；嵯峨野小火车常规班次约09:02-16:30，按年度运行日历运营，2026年12月30日至2027年2月末预计冬季停运；保津川下通常约09:00-15:00分批出船，全程约2小时；猴子公园09:00-16:30，最晚入园16:00，恶劣天气可能临时休园。",
     "admissionFee": {
-      "adult": "小火车¥880 / 猴子公园¥600 / 保津川游船¥4500",
-      "senior": "与成人同价 (渡月桥与竹林免门票)",
-      "child4yo": "小火车免票(不占座) / 猴子公园¥300 / 游船¥3000",
-      "notes": "小火车与游船建议提前1个月在官网预约；竹林与渡月桥全天免费。"
+      "adult": "合计约¥7,680（小火车单程¥880＋保津川下¥6,000＋猴子公园¥800；竹林免费）",
+      "senior": "合计约¥7,680；没有仅凭65岁年龄享受的常规优惠",
+      "child4yo": "合计约¥4,900（小火车由持票成人陪同且不单独占座时免费；保津川下¥4,500；猴子公园¥400；竹林免费）",
+      "notes": "4岁儿童若在小火车上单独占座，另购儿童票约¥440，合计约¥5,340。保津川下要求身高达到80厘米，所有乘客穿救生衣；没有普通长者折扣。日本认可的残障证明可用于小火车或游船相应优惠，但规则及陪同要求不同。价格与运营资料按2026年8月公开信息整理，出发前应再次核对官方运行日历。"
     },
-    "bestTimeToVisit": "早晨 08:30 先去竹林小径与天龙寺；上午乘坐观光小火车。",
-    "weatherSuitability": "晴天适宜",
-    "strollerRating": 4,
-    "strollerNotes": "竹林小径、天龙寺前庭和渡月桥两岸为平整平缓柏油/石板路，推车极顺畅。",
-    "kidRating": 5,
-    "kidNotes": "复古蒸汽小火车开窗看山景；猴子公园亲手递苹果丁给小猴子吃。",
-    "elderlyRating": 4,
-    "elderlyNotes": "小火车代步省力无需徒步峡谷；渡月桥畔有众多日式茶屋。",
-    "walkingIntensity": "适中 (500米-1.5公里)",
-    "stairsLevel": "少量台阶 (配有无障碍坡道)",
+    "bestTimeToVisit": "工作日07:30-08:00先走竹林，随后乘09:02或10:02小火车前往亀冈并衔接上午游船；樱花季和红叶季需更早抵达。猴园建议安排在上午凉爽时段，盛夏不建议让长辈午后登山。",
+    "weatherSuitability": "晴天或凉爽阴天最佳；小雨时游船通常加装雨篷继续运行，但暴雨、台风、涨水会停航，小火车和猴园亦可能停运。竹林雨后湿滑，猴园陡坡不适合雨天长辈及推车。",
+    "strollerRating": 2,
+    "strollerNotes": "无障碍条件分化明显。トロッコ嵯峨站和トロッコ亀岡站设缓坡、电梯或多功能厕所，列车可携带婴儿车，但必须折叠并带到座位旁；トロッコ嵐山站通往站台约有60级台阶，不适合推车、轮椅或拄杖长辈。竹林以压实土路和碎石路为主，略有坡度且高峰拥挤，大轮推车尚可，小轮伞车较吃力。猴子公园约有120级台阶及连续陡坡，不能视为推车或轮椅路线。游船不提供推车座位，携带前应向船方确认折叠存放。全区没有统一的婴儿车租借服务。",
+    "kidRating": 4,
+    "kidNotes": "4岁孩子通常最喜欢观景小火车、峡谷水花、船头操作和约120只野生日本猕猴。猴园可在网状休息屋内购买食物喂猴，人处于网内、猴在外侧；园外必须遵守不触摸、不直视猴眼、不展示食物等规则。游船约2小时且无厕所，登船前必须如厕；身高不足80厘米不能乘船。渡月桥、河岸及登船区域邻水，猴园山顶也有坡缘，活泼幼童需全程牵手。母婴室位于トロッコ嵯峨站19世纪大厅，小火车嵯峨、嵐山和亀岡站指定厕所设尿布台。",
+    "elderlyRating": 2,
+    "elderlyNotes": "完整串联通常步行约5-7公里，并包含猴园约20分钟持续上坡和约120级台阶；下山亦会增加膝盖压力。游船约2小时，常规开放船为四人长椅或无靠背座位，途中不能自由走动或使用厕所。竹林、渡月桥周边有商店、茶屋和咖啡厅，但休息长椅并非连续密集分布；猴园山顶有休息处，登山途中休息点有限。没有代步电瓶车，也没有普通65岁长者票优惠。建议长辈跳过猴园，在渡月桥附近咖啡厅休息，由年轻家庭单独带孩子登山。",
+    "walkingIntensity": "较高（完整路线约5-7公里；猴园另含约20分钟连续爬坡，全天约8小时）",
+    "stairsLevel": "中高强度：トロッコ嵐山站约60级台阶；猴子公园约120级台阶并伴随陡坡；竹林有碎石和缓坡",
     "amenities": {
       "nursingRoom": true,
       "diaperChanging": true,
@@ -295,20 +297,40 @@ export const INITIAL_SITES: Site[] = [
       "shuttleOrCart": false,
       "elevatorAvailable": true,
       "strollerRental": false,
-      "wheelchairRental": true,
+      "wheelchairRental": false,
       "shadeAvailable": true,
-      "indoorRainyDayOption": false,
-      "kidPlayArea": true
+      "indoorRainyDayOption": true,
+      "kidPlayArea": false
     },
     "familyTips": [
-      "小火车偶数席（双号座位）看保津川峡谷景色时间更长。"
+      "最省力的完整动线是从JR嵯峨嵐山站旁的トロッコ嵯峨站乘小火车到トロッコ亀岡站，再乘接驳巴士或出租车前往游船码头，坐船顺流返回渡月桥附近，避免原路折返。",
+      "不要让推车、轮椅或拄杖长辈从トロッコ嵐山站上下车；该站虽离竹林近，却有约60级台阶，优先使用有无障碍设施的トロッコ嵯峨站。",
+      "全景四项对4岁幼童和65岁以上长辈都偏累。建议把猴园设为可取消项目：长辈在渡月桥附近用餐休息，年轻家长带孩子登山，约90分钟后会合。",
+      "游船约2小时没有厕所，登船前全员如厕并准备饮水、防晒帽和替换衣物；日伞在船上会影响他人，不宜使用。",
+      "猴园禁止触摸猴子、直视猴眼或在户外展示食物；喂食只能在指定网状休息屋内进行。",
+      "樱花、红叶、黄金周及周末的10:00-15:00是竹林和渡月桥最拥挤时段，大轮推车也很难通行；优先选择工作日清晨。",
+      "盛夏京都高温高湿，猴园缺少连续室内空调空间，不建议长辈和幼童在11:00-15:00登山。"
     ],
     "nearbyDining": [
       {
-        "id": "dine-arashiyama-1",
-        "name": "嵯峨豆腐 稻 (本店/北店)",
-        "cuisine": "京都传统手工汤豆腐定食",
-        "familyFeatures": "大豆香气浓郁，豆腐极软嫩易消化，提供儿童餐具",
+        "id": "dine-llm-1788211783838-0",
+        "name": "レストラン嵐山",
+        "cuisine": "京料理、和洋自助餐、细乌冬及团体餐",
+        "familyFeatures": "位于渡月桥旁，全馆无障碍，全部为桌椅席，设两间多功能厕所，其中一间配婴儿床，并有无障碍停车位；适合长辈及推车家庭。自助餐营业日不固定，宝宝椅应提前电话确认。",
+        "walkingTimeMin": 1
+      },
+      {
+        "id": "dine-llm-1788211783838-1",
+        "name": "嵐山よしむら",
+        "cuisine": "手打荞麦面、鸭汁荞麦面、天妇罗和米饭套餐",
+        "familyFeatures": "渡月桥北端附近，未上学儿童会安排在一楼家庭席，热汤荞麦面较柔软、易分食；不接受普通预约，旺季可能排长队，宝宝椅数量应现场确认。",
+        "walkingTimeMin": 3
+      },
+      {
+        "id": "dine-llm-1788211783838-2",
+        "name": "とうふと湯葉 松ヶ枝",
+        "cuisine": "豆腐、汤叶、杂粮饭及清淡京都料理",
+        "familyFeatures": "与嵐山よしむら同址，设家庭席且可网上预约；豆腐、汤叶和米饭口味清淡、质地柔软，适合幼童及长辈。小学生以下儿童会优先安排家庭区域，宝宝椅需预约时确认。",
         "walkingTimeMin": 3
       }
     ],
@@ -319,7 +341,12 @@ export const INITIAL_SITES: Site[] = [
       "保津川游船",
       "竹林秘境"
     ],
-    "createdAt": "2026-08-31"
+    "createdAt": "2026-08-31",
+    "customFields": {
+      "rainyDayPlan": "小雨时保津川下通常会给船加装雨篷，但暴雨、台风或涨水将停航；猴园陡坡湿滑，不建议幼童和长辈冒雨登山。最近且最方便的室内替代是トロッコ嵯峨站内的「ジオラマ京都JAPAN」，通常09:00-17:00、最晚16:30入场，展示大型铁路模型并有列车运行及天体灯光表演，4岁儿童接受度很高；普通票约成人¥530、儿童¥320，持当日小火车票可享相应折扣。第二选择为京都嵐山オルゴール博物館，从JR嵯峨嵐山站或嵐电嵐山站步行约5分钟，通常10:00-17:00、最晚16:15入馆，可看古董音乐盒与自动人偶演示，但不定休，出发前需核对。若全天恶劣天气，建议取消峡谷项目，乘JR前往梅小路京都西站附近的京都水族馆，作为更稳定的全室内亲子方案。",
+      "ticketBookingTip": "嵯峨野小火车全部为指定席，个人票在乘车日前一个月的同一日期、日本时间00:00于官网开放；樱花、红叶、周末及开放式「リッチ号」座位应开售即订。官网售罄时各站仍可能出售少量当日票或站票，但三代家庭不应依赖站票。4岁孩子若需要独立座位必须购买儿童票；不占座且由持票成人陪同通常免费。轮椅乘客应先购买普通前售票，再通过官网聊天机器人提交轮椅空间申请，到站后换取对应座位，列车没有普通长者或推车优先通道。保津川下可在官网预约，旺季强烈建议提前订；无预约也可现场候补，但等候时间不可控。残障优惠需在窗口出示证明，线上通常按一般价格销售。竹林无需门票或预约；猴园现场购票，不设长者、幼童家庭或推车快速通道。",
+      "parkingAndDropoff": "最省力的包车下客点是JR嵯峨嵐山站南口或トロッコ嵯峨站前，步行至小火车入口约30-80米，站内可走缓坡并使用多功能厕所，不必经过トロッコ嵐山站的60级台阶。トロッコ嵯峨、嵐山和保津峡站没有专用停车场；渡月桥旁的京都市嵐山观光停车场或レストラン嵐山停车场较近，但旺季可能涨价、限流或优先接待旅游巴士。レストラン嵐山停车场距渡月桥约0-100米，距竹林约15分钟步行，旅游巴士可预约，单纯上下客亦可能收费。保津川下亀冈乘船场设约80个免费车位，停车场与乘船场在同一场地，通常步行不足100米且无需长距离爬楼梯；但轮椅乘客必须能在协助下转移到船上座位，轮椅只能折叠后放在船尾。自驾车辆不会随船运到岚山，船抵达后必须乘JR、小火车或出租车返回亀冈取车，因此三代出行更适合包车在亀冈送客、岚山另约车辆接客。猴子公园山顶无车辆道路，出租车只能在渡月桥南岸或附近公共道路下客，之后仍需步行约200-400米到入口并完成约20分钟陡坡和台阶，无法做到无障碍直达。樱花与红叶旺季渡月桥周边可能实施临时单行、禁行或停车限制，应让司机在外围合法下客并避免穿越核心拥堵区。"
+    }
   },
   {
     "id": "site-fushimi-inari-jikkokubune",
@@ -332,63 +359,83 @@ export const INITIAL_SITES: Site[] = [
       135.7727
     ],
     "address": "京都府京都市伏见区深草薮之内町68 / 伏见区南兵卫町 (近月桂冠大仓纪念馆)",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Senbon_Torii_Fushimi_Inari_Taisha_Kyoto.jpg/1280px-Senbon_Torii_Fushimi_Inari_Taisha_Kyoto.jpg",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Romon%2C%20Fushimi%20Inari-taisha.jpg?width=1600",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Senbon_Torii_Fushimi_Inari_Taisha_Kyoto.jpg/1280px-Senbon_Torii_Fushimi_Inari_Taisha_Kyoto.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Fushimi_Jikkokubune_Canal_Boat_Kyoto.jpg/1280px-Fushimi_Jikkokubune_Canal_Boat_Kyoto.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Gekkeikan_Okura_Sake_Museum_Canal_Fushimi.jpg/1280px-Gekkeikan_Okura_Sake_Museum_Canal_Fushimi.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Fushimi_Inari_Fox_Statue_Kitsune.jpg/1280px-Fushimi_Inari_Fox_Statue_Kitsune.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Fushimi_Inari_Main_Hall_Honden.jpg/1280px-Fushimi_Inari_Main_Hall_Honden.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Jikkokubune_Boat_under_Cherry_and_Willows.jpg/1280px-Jikkokubune_Boat_under_Cherry_and_Willows.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Fushimi_Inari_Torii_Gates_Path.jpg/1280px-Fushimi_Inari_Torii_Gates_Path.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Fushimi_Canal_Willows_and_Brewery.jpg/1280px-Fushimi_Canal_Willows_and_Brewery.jpg"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Romon%2C%20Fushimi%20Inari-taisha.jpg?width=1600",
+      "https://i0.wp.com/stick-traveler.com/wp-content/uploads/Blog/Kyoto/Fushimi-Inari-6.jpg?ssl=1",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Fushimi%20Inari%20Senbon%20Torii.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/FushimiInari%20Taisha%20Fox-Ema.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Fushimi%20Horikawa%20jikkokuship.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BC%8F%E8%A6%8B%E5%8D%81%E7%9F%B3%E8%88%9F%E4%B9%97%E8%88%B9%E5%A0%B4%20-%20panoramio.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Misu%20lock%20gate.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Gekkeikan%20Okura%20Sake%20Museum01nt3200.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Gekkeikan%20Okura%20Sake%20Museum02s4592.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kizakura%20Kappa%20Country03n4592.jpg?width=1600"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4",
-      "https://www.youtube.com/watch?v=6P63c5m4aL8"
+      "https://www.youtube.com/watch?v=I4Q7gxTux-4",
+      "https://www.youtube.com/watch?v=6aaU-OiVeu0"
     ],
-    "description": "京都最具视觉震撼的红色鸟居圣地与宁静水乡的完美结合！清晨千本鸟居红色隧道漫步，下午乘十石舟穿行垂柳运河与百年清酒厂。",
-    "recommendedDurationMin": 200,
-    "openingHours": "伏见稻荷大社 24小时开放；十石舟 09:30-16:20",
+    "description": "先穿行朱红千本鸟居、寻找狐狸守护像，再转往伏见酒藏水乡乘十石舟慢游。核心路线可压缩为半日，但两地相距约4至5公里；三代同行应止步奥社，并确认长辈能安全上下船埠台阶。",
+    "recommendedDurationMin": 240,
+    "openingHours": "伏见稻荷境内昼夜开放；祈祷08:30-16:30、授与所08:00-18:00、无障碍电梯通常09:00-15:00。十石舟2026年3月20日-12月6日运行，通常10:00-16:20；11月25日-12月6日末班15:40；8月仅1-11日运行。",
     "admissionFee": {
-      "adult": "稻荷大社免费 / 十石舟¥1500",
-      "senior": "稻荷大社免费 / 十石舟¥1500",
-      "child4yo": "稻荷大社免费 / 十石舟¥750",
-      "notes": "大社全天免费开放。"
+      "adult": "伏见稻荷免费；十石舟¥1,900",
+      "senior": "伏见稻荷免费；十石舟¥1,900，无65岁年龄优惠",
+      "child4yo": "伏见稻荷免费；十石舟¥900",
+      "notes": "十石舟小人票适用于小学生以下，因此4岁需购¥900小人票；持身体、智力或精神障碍证明者十石舟5折。票价及航班可能因安全原因调整。"
     },
-    "bestTimeToVisit": "早晨 07:30 - 08:30 到达伏见稻荷大社；下午 14:00 乘十石舟。",
-    "weatherSuitability": "晴天适宜",
-    "strollerRating": 4,
-    "strollerNotes": "伏见稻荷大社本殿至千本鸟居入口段配有无障碍斜坡。",
+    "bestTimeToVisit": "08:40抵达JR稻荷站，09:00使用境内电梯游千本鸟居并于10:10前离开；十石舟预订11:20或13:00班次。",
+    "weatherSuitability": "晴天最佳；小雨十石舟通常运行，但石板坡道湿滑；暴雨、强风或河道条件不佳时可能停航。",
+    "strollerRating": 2,
+    "strollerNotes": "JR稻荷站至本殿基本平缓，楼门可走侧坡道，本殿后方电梯可达千本鸟居入口；坡道局部较陡，奥社以后大量台阶。十石舟乘船场有下行台阶和跨船动作，推车需折叠搬运并提前向运营方确认。两处均无婴儿车或轮椅出租。",
     "kidRating": 4,
-    "kidNotes": "红彤彤连绵不断的鸟居像神秘童话隧道，寻找白狐狸雕像。",
-    "elderlyRating": 5,
-    "elderlyNotes": "千本鸟居行至奥社即折返保存体力；十石舟全程平稳无风浪。",
-    "walkingIntensity": "轻松 (<500米)",
-    "stairsLevel": "少量台阶 (配有无障碍坡道)",
+    "kidNotes": "4岁孩子通常喜欢红色鸟居隧道、狐狸石像寻宝、狐狸脸绘马、运河乘船和闸门展示。没有正式儿童游乐区。千本鸟居拥挤易走散，十石舟为开放水边，候船和船上必须全程牵手并禁止站立探身。",
+    "elderlyRating": 3,
+    "elderlyNotes": "推荐仅游楼门、本殿、千本鸟居及奥社，往返约1.2-1.6公里、75-90分钟；完整御山巡拜约4公里且大量连续台阶。千本鸟居内座椅不密集。十石舟约55分钟但需上下河岸台阶并跨入船舱，不适合无法独立完成动作的长辈。",
+    "walkingIntensity": "中等：三代核心路线约1.5-2公里，另含电车换乘；完整稻荷山约4公里，属高强度",
+    "stairsLevel": "伏见稻荷核心区可用坡道与电梯绕开主要台阶；奥社以后连续山阶。十石舟乘船场及上下船无法完全避开台阶。",
     "amenities": {
-      "nursingRoom": true,
-      "diaperChanging": true,
+      "nursingRoom": false,
+      "diaperChanging": false,
       "accessibleRestroom": true,
       "benchesRestAreas": true,
       "shuttleOrCart": false,
       "elevatorAvailable": true,
       "strollerRental": false,
-      "wheelchairRental": true,
+      "wheelchairRental": false,
       "shadeAvailable": true,
-      "indoorRainyDayOption": false,
+      "indoorRainyDayOption": true,
       "kidPlayArea": false
     },
     "familyTips": [
-      "行至「千本鸟居 ➔ 奥社奉拜所」即可折返，切勿攀登稻荷山顶。"
+      "伏见稻荷与十石舟相距约4-5公里，使用京阪伏见稻荷站至中书岛站换乘，不要推车步行串联。",
+      "需要电梯的家庭不要早于09:00进入千本鸟居；09:00走核心路线仍能避开10:00后的主要旅行团。",
+      "十石舟3-5月须提前20分钟报到，其他月份提前15分钟；长辈若不能独立下台阶和跨船，应改参观月桂冠大仓纪念馆。",
+      "境内没有可靠公布的专用授乳室，建议提前完成喂奶；JR稻荷站改札内有婴儿床。",
+      "雨天应原路返回电梯，避免走较陡的替代下山坡道。"
     ],
     "nearbyDining": [
       {
-        "id": "dine-fushimi-1",
-        "name": "祢ざめ家 (伏见稻荷门前老铺)",
-        "cuisine": "烤鳗鱼饭与狐狸乌冬面",
-        "familyFeatures": "相传400年老铺，清淡热乌冬面适合宝宝",
-        "walkingTimeMin": 2
+        "id": "dine-llm-1788211744004-0",
+        "name": "稻福",
+        "cuisine": "乌冬面、稻荷寿司、日式米饭",
+        "familyFeatures": "距伏见稻荷入口约3-5分钟，允许儿童及婴儿车入店；热乌冬和鸡蛋乌冬适合幼童、稻荷寿司可分食。固定宝宝椅未确认，建议携带便携餐椅。",
+        "walkingTimeMin": 4
+      },
+      {
+        "id": "dine-llm-1788211744004-1",
+        "name": "黄樱 Kappa Country 黄樱酒场",
+        "cuisine": "酒藏和食、米饭、汤物、儿童午餐",
+        "familyFeatures": "官方确认有儿童椅、儿童餐具、午间儿童菜单，可携婴儿车和自带辅食；160席，适合三代同桌。",
+        "walkingTimeMin": 6
+      },
+      {
+        "id": "dine-llm-1788211744004-2",
+        "name": "月之藏人",
+        "cuisine": "豆腐、汤叶、茶碗蒸、京都和食御膳",
+        "familyFeatures": "距十石舟约250米，有儿童菜单和宽敞桌席；手工豆腐、汤叶及茶碗蒸较软，适合长辈。宝宝椅应在预约时确认。",
+        "walkingTimeMin": 5
       }
     ],
     "websiteUrl": "http://inari.jp/",
@@ -397,7 +444,12 @@ export const INITIAL_SITES: Site[] = [
       "白狐狸神使",
       "十石舟水乡运河"
     ],
-    "createdAt": "2026-08-31"
+    "createdAt": "2026-08-31",
+    "customFields": {
+      "rainyDayPlan": "小雨时十石舟通常照常运行，但需准备分体雨衣并防止孩子在湿滑船埠奔跑；荒天可能停航。最直接替代是乘船场旁月桂冠大仓纪念馆，09:30-16:30、参观40-60分钟，20岁以上¥600、12岁以下免费，建议网上预约。孩子需要活动体验时可改去免费的京都市市民防灾中心；全天暴雨则从JR稻荷站返回京都站，前往有授乳室、尿布台、电梯及儿童餐区的AEON MALL KYOTO。",
+      "ticketBookingTip": "伏见稻荷免费且无需预约，没有免排队或长者绿色通道。十石舟应网上预约：3-4月于乘船日前30天日本时间22:00开放并刷卡支付，5-12月可随时预约并于现场现金支付；网上截止乘船日前两日00:00，电话和邮件不受理。3-5月提前20分钟、其他月份提前15分钟报到。没有长者、轮椅或推车优先通道。",
+      "parkingAndDropoff": "伏见稻荷建议包车定位JR稻荷站或表参道，正常情况下下车至第一鸟居约30-80米、基本平坦无楼梯；拥堵或交通管制时可能需步行100-300米。社内参拜停车场道路极拥堵，12月30日至1月6日关闭。十石舟建议在月桂冠大仓纪念馆附近下车，至受付及河岸台阶入口约80-150米；最后一段必须下台阶且没有直梯。十石舟无专用停车场，月桂冠车位仅供入馆客人；伏见港公园约200个车位，但至乘船场约需步行10-15分钟。"
+    }
   },
   {
     "id": "site-kiyomizu-gion-walk",
@@ -410,62 +462,83 @@ export const INITIAL_SITES: Site[] = [
       135.785
     ],
     "address": "京都府京都市东山区清水1丁目294",
-    "coverImage": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Kiyomizudera_morning.jpg/1920px-Kiyomizudera_morning.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1508873696983-2df5703bc20d?auto=format&fit=crop&w=1200&q=80"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Kiyomizudera_morning.jpg/1920px-Kiyomizudera_morning.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Nio-mon%2C_Kiyomizu-dera_Temple%2C_Kyoto%2C_West_view_20190416_2.jpg/1920px-Nio-mon%2C_Kiyomizu-dera_Temple%2C_Kyoto%2C_West_view_20190416_2.jpg",
+      "https://imagedelivery.net/E-phh1i0yxFGQH-IJJZWuw/www.accessible-japan.com/2026/07/Accessible-route-sign-and-ramp-at-Kiyomizu-dera.webp/w=1140",
+      "https://imagedelivery.net/E-phh1i0yxFGQH-IJJZWuw/www.accessible-japan.com/2026/07/Kiyomizu-dera-main-hall-and-wooden-stage.webp/w=1920",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Otowa_waterfall_at_Kiyomizu-dera.jpg/1920px-Otowa_waterfall_at_Kiyomizu-dera.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Illuminated_Sanneizaka_near_Kiyomizudera_Temple.jpg/1920px-Illuminated_Sanneizaka_near_Kiyomizudera_Temple.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/A_street_in_Kyoto_%2852360546390%29.jpg/1920px-A_street_in_Kyoto_%2852360546390%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Yasaka_Shrine_%2854110662429%29.jpg/1920px-Yasaka_Shrine_%2854110662429%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/GIO_-_Traditional_wooden_houses_along_a_stone-paved_street_in_Gion%2C_Kyoto%2C_Japan%2C_2015.jpg/1920px-GIO_-_Traditional_wooden_houses_along_a_stone-paved_street_in_Gion%2C_Kyoto%2C_Japan%2C_2015.jpg",
+      "https://www.okabeya.com/img/menu/yudoufu01.jpg"
     ],
     "videos": [
-      "https://www.youtube.com/watch?v=q7xG0F98x5g"
+      "https://www.youtube.com/watch?v=90S4FA2EQ7Y",
+      "https://www.youtube.com/watch?v=bgIKvOzfC-U"
     ],
-    "description": "最具“京都原汁原味”的古都经典线路！清水舞台俯瞰京都全景，顺坡漫步二年坂三年坂与祇园花见小路。",
+    "description": "从清水舞台俯瞰京都，沿产宁坂、二年坂的石板古街一路下行，穿过高台寺与八坂神社抵达祇园。寺内可绕行无台阶路线，但完整街区包含陡坡和石阶，最适合清晨分段慢游。",
     "recommendedDurationMin": 210,
-    "openingHours": "清水寺 06:00-18:00",
+    "openingHours": "清水寺通常06:00-18:00；2026年7月1日-8月13日及8月17日-31日至18:30；春、夏、秋指定夜间特别参拜日至21:30，21:00停止入场。八坂神社境内24小时开放，社务所09:00-17:00；二年坂、三年坂和祇园为公共街区，店铺多约10:00后营业。",
     "admissionFee": {
-      "adult": "清水寺¥400",
-      "senior": "¥400",
+      "adult": "¥500",
+      "senior": "¥500（无65岁以上年龄优惠）",
       "child4yo": "免费",
-      "notes": "清水寺门票仅需¥400。"
+      "notes": "清水寺小学生及初中生¥200；残障证明持有人及一名陪同者免费。八坂神社、二年坂、三年坂及祇园街区免费。"
     },
-    "bestTimeToVisit": "早晨 07:30 进清水寺（6:00开门晨光清幽）。",
-    "weatherSuitability": "全天候适宜",
-    "strollerRating": 3,
-    "strollerNotes": "清水寺内部规划有无障碍轮椅专用道。",
+    "bestTimeToVisit": "06:30-09:30；暑季建议06:00-08:30。先乘出租车至茶碗坂上端参拜清水寺，再顺坡下行至八坂神社和祇园。",
+    "weatherSuitability": "晴天或阴天优先；雨天石板路和连续石阶湿滑，不建议推婴儿车完成三年坂、二年坂全线。",
+    "strollerRating": 2,
+    "strollerNotes": "清水寺入口左侧有通往本堂的无台阶路线，主要区域可依轮椅路线环游，但仍有坡道、碎石和局部较陡斜坡。寺外三年坂、二年坂有连续石阶和不平石板，需两名成人抬车或收车；全线路没有电梯、婴儿车租借或代步车。",
     "kidRating": 4,
-    "kidNotes": "清水舞台的高空宏伟感让4岁小朋友惊叹。",
-    "elderlyRating": 4,
-    "elderlyNotes": "打车到清水寺顶端，一路顺坡下山逛至祇园省力50%。",
-    "walkingIntensity": "适中 (500米-1.5公里)",
-    "stairsLevel": "少量台阶 (配有无障碍坡道)",
+    "kidNotes": "4岁孩子通常喜欢音羽瀑布长柄勺舀水、摇铃、御神签、红色塔门和彩色祈愿物，但没有正式儿童游乐区或动物展示。清水舞台有栏杆，仍须牵手；瀑布区域地面潮湿，古街可能有车辆，祇园水边部分护栏较低。",
+    "elderlyRating": 2,
+    "elderlyNotes": "清水寺核心无障碍环线约0.8-1.2公里；串联至祇园四条约2.3-2.8公里，含参观与绕行通常达到3-4公里。境内有茶屋，老街公共座椅不密集；无轮椅借用、电瓶车或长者票。膝关节不佳者应将清水寺与八坂神社分段乘车。",
+    "walkingIntensity": "较高（约3-4公里，持续下坡、石阶与拥挤路段）",
+    "stairsLevel": "较多台阶、陡坡及不平石板；清水寺境内可主动选择无台阶绕行线",
     "amenities": {
-      "nursingRoom": true,
+      "nursingRoom": false,
       "diaperChanging": true,
       "accessibleRestroom": true,
       "benchesRestAreas": true,
       "shuttleOrCart": false,
-      "elevatorAvailable": true,
+      "elevatorAvailable": false,
       "strollerRental": false,
-      "wheelchairRental": true,
+      "wheelchairRental": false,
       "shadeAvailable": true,
       "indoorRainyDayOption": false,
       "kidPlayArea": false
     },
     "familyTips": [
-      "顺坡下行省力，二年坂品尝抹茶冰淇淋与和果子。"
+      "清晨06:30前后到达；若等商店10:00开门，人流和日晒会明显增加。",
+      "带长辈务必从清水寺向祇园方向下坡，不要从祇园反向爬坡；严重怕坡者采用茶碗坂和八坂神社常磐新殿侧分段乘车。",
+      "寺内没有正式授乳室，也不借婴儿车或轮椅；入寺前换尿布并备好轻便折叠车、防滑鞋和可密封饮水瓶。",
+      "三年坂、二年坂不要让4岁孩子奔跑；一名成人牵孩子，另一名成人负责推车或扶长辈。",
+      "出发当天使用京都观光舒适度地图查看清水坂至宁宁之道的实时拥挤程度。"
     ],
     "nearbyDining": [
       {
-        "id": "dine-kiyomizu-1",
-        "name": "顺正 清水店",
-        "cuisine": "传统京都汤豆腐 / 怀石雅膳",
-        "familyFeatures": "古典日式町屋庭院，温和豆腐宴",
+        "id": "dine-llm-1788211805935-0",
+        "name": "清水顺正 おかべ家",
+        "cuisine": "汤豆腐、汤叶、京料理",
+        "familyFeatures": "距清水寺门前约5分钟，宽敞桌椅席及无障碍设计；热汤豆腐、蒸煮京野菜和米饭柔软易消化。儿童可入店，宝宝椅未由官网明确保证，建议预约时电话确认。",
+        "walkingTimeMin": 5
+      },
+      {
+        "id": "dine-llm-1788211805935-1",
+        "name": "祇园 京めん",
+        "cuisine": "京都风乌冬面、荞麦面",
+        "familyFeatures": "位于八坂神社北侧，提供热乌冬和清淡高汤，适合幼童分食及长辈；店内宝宝椅信息未公开，建议到店前确认。",
         "walkingTimeMin": 4
+      },
+      {
+        "id": "dine-llm-1788211805935-2",
+        "name": "田ごと光悦舗 京都高岛屋S.C.店",
+        "cuisine": "京料理、汤叶、会席与和风米饭",
+        "familyFeatures": "从祇园四条站约5分钟，电梯直达七楼，桌椅席、宝宝椅和预约服务明确；同楼有无障碍厕所，五楼有授乳室、尿布台和调乳设备。",
+        "walkingTimeMin": 5
       }
     ],
     "websiteUrl": "https://www.kiyomizudera.or.jp/",
@@ -475,7 +548,12 @@ export const INITIAL_SITES: Site[] = [
       "八坂神社",
       "祇园"
     ],
-    "createdAt": "2026-08-31"
+    "createdAt": "2026-08-31",
+    "customFields": {
+      "rainyDayPlan": "清水寺至祇园主要为户外路线，雨天没有连续室内馆区。小雨时只走清水寺官方无台阶线并取消三年坂、二年坂石阶；暴雨时乘车约5-10分钟前往京都国立博物馆平成知新馆，馆内有电梯、母婴室、尿布台及免费限量婴儿车和轮椅，常规09:30-17:00、周一休馆，但展览更替期可能仅开放庭园。另一选择是祇园四条站对面的京都高岛屋S.C.，2026年8月起10:30-20:00，设母婴室、婴儿车借用、儿童厕所、无障碍厕所和餐厅。清水三年坂美术馆目前由京都官方标注休馆中，不应作为确定备选。",
+      "ticketBookingTip": "清水寺常规参拜及2026年已公布的夜间特别参拜无需预约，现场购票即可；没有官方快速票、长者优先、亲子推车绿色通道。残障证明持有人及一名陪同者可免费，但仍需在入口出示证件。最有效的免排队方式是06:00-07:30入场；第三方所谓免排票通常是导览、和服或包车套餐，并非寺院快速通道。",
+      "parkingAndDropoff": "清水寺没有自有停车场。京都市清水坂观光停车场距寺院直线约500米，实际约500-700米持续上坡；茶碗坂可避开主要石阶但仍较陡。正门前道路08:00-19:00限制普通车辆，出租车实际下客点会随管制变化，通常距仁王门约100-300米。真正使用轮椅者可由车辆经茶碗坂防灾道路接近本堂，建议提前致电075-551-1234确认并让司机在入口说明。自驾停车位在旺季可能限制私家车；长辈怕坡时推荐包车分段接送，并将八坂神社下客点指定为常磐新殿停车场侧。"
+    }
   },
   {
     "id": "site-kifune-kurama",
@@ -488,43 +566,45 @@ export const INITIAL_SITES: Site[] = [
       135.763
     ],
     "address": "京都府京都市左京区鞍马贵船町180",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Kifune_Shrine_Red_Lantern_Stairs_Kyoto.jpg/1280px-Kifune_Shrine_Red_Lantern_Stairs_Kyoto.jpg",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kifune-jinja%20sando.jpg?width=1600",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Kifune_Shrine_Red_Lantern_Stairs_Kyoto.jpg/1280px-Kifune_Shrine_Red_Lantern_Stairs_Kyoto.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Kawadoko_River_Dining_Kifune_Kyoto.jpg/1280px-Kawadoko_River_Dining_Kifune_Kyoto.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Eizan_Railway_Maple_Tunnel_Kyoto.jpg/1280px-Eizan_Railway_Maple_Tunnel_Kyoto.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Kifune_Water_Fortune_Mizuuranai.jpg/1280px-Kifune_Water_Fortune_Mizuuranai.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Kurama-dera_Main_Hall_Kondo.jpg/1280px-Kurama-dera_Main_Hall_Kondo.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Kurama_Tengu_Statue_Station.jpg/1280px-Kurama_Tengu_Statue_Station.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Kifune_Stream_Forest_Bridge.jpg/1280px-Kifune_Stream_Forest_Bridge.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Kifune_Okumiya_Deep_Forest.jpg/1280px-Kifune_Okumiya_Deep_Forest.jpg"
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kifune-jinja%20sando.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kifune-jinja%20%28Kyoto%20Sakyo-ku%29%20Hong%C5%AB%20hdsr%20S5%2001.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kifune-jinja%20nanmon.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kibune%20%28Kyoto%20Sakyo-ku%29%20Kibune%20River%20hdsr%20S5%2001.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kibune%20Kawadoko01s5s4272.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kibune%20Kawadoko05s5s3200.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kurama-Dera%20%28Kyoto%20Sakyo-ku%29%20gate%20Niomon%20hdsr%20S5%2002.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20cable%20car%20at%20Kurama%20Dera%20%2833531810778%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kurama-dera%20main%20hall%20%2848885598296%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/%22Tree%20root%20path%22%20%287057199181%29.jpg?width=1600"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4",
-      "https://www.youtube.com/watch?v=W0c4a45uRHg"
+      "https://www.youtube.com/watch?v=fO5PaRxn9cY",
+      "https://www.youtube.com/watch?v=5uR7jalcmKU"
     ],
-    "description": "京都北山深处的清幽避暑圣地与水神总本社！搭乘叡山电车穿过枫叶隧道；溪流川床料理与流水素面；神奇浮字水占卜。",
-    "recommendedDurationMin": 180,
-    "openingHours": "贵船神社 06:00-20:00 (免门票)",
+    "description": "乘叡山电车深入京都北山，在贵船红灯笼石阶、水占御神水与清凉川床之间感受溪谷幽境，再搭鞍马山缆车寻访天狗传说与森林古寺。景色出众，但台阶、陡坡和树根山路较多，三代同行宜分段短游，切勿翻山穿越。",
+    "recommendedDurationMin": 300,
+    "openingHours": "贵船神社：05/01-11/30 06:00-20:00，12/01-04/30 06:00-18:00，授与所09:00-17:00；鞍马寺本殿09:00-16:15，缆车首班上山08:40、末班下山通常16:25",
     "admissionFee": {
-      "adult": "免门票 / 水占卜¥200",
-      "senior": "免费",
-      "child4yo": "免费",
-      "notes": "神社全免门票。"
+      "adult": "贵船免费；鞍马寺爱山费¥500；鞍马缆车¥200/单程",
+      "senior": "与成人相同，无65岁长者优惠",
+      "child4yo": "贵船免费；鞍马寺爱山费免费；鞍马缆车¥100/单程",
+      "notes": "鞍马山灵宝殿另收¥200；贵船水占签¥200。叡山电车4岁幼儿随付费成人同行通常免费，每名成人最多免费携带2名幼儿。"
     },
-    "bestTimeToVisit": "上午 10:00 - 13:30，夏日比市区低5-8℃。",
-    "weatherSuitability": "晴天适宜",
-    "strollerRating": 3,
-    "strollerNotes": "贵船神社本殿入口有朱红色木质灯笼石阶。",
+    "bestTimeToVisit": "夏季、周末及红叶季建议07:30-08:30先到贵船本宫；鞍马寺尽量乘08:40-09:00缆车。避开11:00-15:00的旅行团、川床午餐客和道路拥堵。",
+    "weatherSuitability": "不适合雨天完整游览；石阶、树根路和山坡湿滑。已预约川床餐厅通常可转室内席。",
+    "strollerRating": 1,
+    "strollerNotes": "贵船本宫有约80余级石阶且无连续坡道或电梯；鞍马寺乘缆车后仍需约10分钟上坡，并有土路、台阶和树根路。无婴儿车或轮椅租借，建议寄存推车并使用背带，绝不走鞍马—贵船翻山线。",
     "kidRating": 4,
-    "kidNotes": "神奇的水占卜体验（白纸放水里慢慢浮现字体！）。",
-    "elderlyRating": 4,
-    "elderlyNotes": "山中空气格外清新，川床料理脚下溪水潺潺。",
-    "walkingIntensity": "适中 (500米-1.5公里)",
-    "stairsLevel": "少量台阶 (配有无障碍坡道)",
+    "kidNotes": "4岁孩子通常喜欢水占签、叡山电车、鞍马站天狗、山间缆车、溪流和森林观察。现场无儿童游乐区；石阶、狭窄车道、近水川床和山侧落差要求全程牵手。无可靠母婴室和尿布台。",
+    "elderlyRating": 2,
+    "elderlyNotes": "贵船本宫短游仍须爬约80余级石阶；鞍马缆车只能省去部分爬升，之后仍有连续上坡。公共长椅不密集，无代步电瓶车。建议本宫短游、缆车原路往返，并预约餐厅接送和椅桌席。",
+    "walkingIntensity": "中高：最省力分段路线仍约1.5-2.5公里并含石阶与上坡；鞍马—贵船穿越属于高强度山路",
+    "stairsLevel": "多台阶/陡坡：贵船本宫约80余级石阶；鞍马缆车后仍有坡道和台阶",
     "amenities": {
       "nursingRoom": false,
-      "diaperChanging": true,
+      "diaperChanging": false,
       "accessibleRestroom": true,
       "benchesRestAreas": true,
       "shuttleOrCart": true,
@@ -532,19 +612,35 @@ export const INITIAL_SITES: Site[] = [
       "strollerRental": false,
       "wheelchairRental": false,
       "shadeAvailable": true,
-      "indoorRainyDayOption": false,
+      "indoorRainyDayOption": true,
       "kidPlayArea": false
     },
     "familyTips": [
-      "直接乘接驳巴士至贵船神社门口，免去爬山。"
+      "把贵船和鞍马视作两个独立短景点，通过车辆或贵船口站换乘，绝不从木之根道翻山联游。",
+      "从贵船口站换乘33系巴士或使用预约餐厅接送，不要沿窄公路步行约30分钟前往神社。",
+      "携带防滑鞋、薄外套、饮水、替换衣物及便携尿布垫；提前向餐厅确认宝宝椅、椅桌席、儿童餐和推车寄存。"
     ],
     "nearbyDining": [
       {
-        "id": "dine-kifune-1",
-        "name": "贵船茶屋 (川床和食)",
-        "cuisine": "清凉溪流川床料理 / 烤香鱼",
-        "familyFeatures": "架设在清澈溪流之上，脚下潺潺流水",
-        "walkingTimeMin": 2
+        "id": "dine-llm-1788211847440-0",
+        "name": "鸟居茶屋",
+        "cuisine": "荞麦面、汤豆腐、湯叶与和风茶泡饭",
+        "familyFeatures": "本宫入口旁；热荞麦、汤豆腐和炖煮菜适合儿童及长辈。宝宝椅未获官网确认，建议电话确认椅桌席；一楼普通席不接受预约。",
+        "walkingTimeMin": 1
+      },
+      {
+        "id": "dine-llm-1788211847440-1",
+        "name": "贵船 喜らく",
+        "cuisine": "京会席、川鱼与季节料理",
+        "familyFeatures": "神社正对面，可提前预约贵船口站接送；雨天转室内席。官网标明适合家庭聚餐，但宝宝椅、儿童餐和椅桌席需预约时确认。",
+        "walkingTimeMin": 1
+      },
+      {
+        "id": "dine-llm-1788211847440-2",
+        "name": "料理旅馆 ひろ文",
+        "cuisine": "川床京会席、儿童料理与素面",
+        "familyFeatures": "官网明确提供儿童料理，普通川床会席可预约并可安排贵船口站接送，雨天转室内餐厅。流し素面不可预约且旺季等候极长，不建议三代同行排队。",
+        "walkingTimeMin": 4
       }
     ],
     "websiteUrl": "https://kifunejinja.jp/",
@@ -554,7 +650,12 @@ export const INITIAL_SITES: Site[] = [
       "神奇水占卜",
       "溪流川床料理"
     ],
-    "createdAt": "2026-08-31"
+    "createdAt": "2026-08-31",
+    "customFields": {
+      "rainyDayPlan": "贵船和鞍马没有真正无障碍的全天候室内馆区。下雨时应取消石阶与翻山路线，仅保留已预约餐厅的室内用餐；鞍马山灵宝殿虽为室内馆，但仍需乘缆车后上坡，周二及12月12日至2月底休馆。更稳妥的替代是返回叡山电车市区方向，在茶山・京都芸术大学站下车步行约9分钟到洛北阪急广场，馆内有授乳室、尿布台、儿童区、推车、轮椅、电梯和餐饮；若返回京都站区域，可改去京都铁道博物馆。",
+      "ticketBookingTip": "贵船神社和鞍马寺无需预约，也没有线上限量门票、长者绿色通道或推车优先通道。鞍马缆车约20分钟一班，首班附近最少排队。应提前预约的是川床餐厅、贵船口站接送、儿童餐和椅桌席；夏季周末及红叶期建议提前2-4周。ひろ文流し素面不可预约，旺季官方提示平均等候3-4小时。",
+      "parkingAndDropoff": "出租车通常可在贵船本宫鸟居或对面餐厅附近短暂停靠，距石阶底部约0-50米，但拜殿仍需爬约80余级石阶。贵船官方停车场仅本宫8辆、奥宫10辆，¥1,000/2小时，不提供普通车预约；夏季部分日期会限制普通车北行，出租车和路线路巴士通常豁免。鞍马寺无自有停车场，宜在鞍马站或仁王门附近下客，至仁王门约200-300米、步行3-5分钟。自驾道路极窄，优先包车、出租车或餐厅接送。"
+    }
   },
   {
     "id": "site-kyoto-railway-aquarium",
@@ -567,46 +668,48 @@ export const INITIAL_SITES: Site[] = [
       135.7425
     ],
     "address": "京都府京都市下京区观喜寺町 (JR梅小路京都西站出站即达)",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Kyoto_Railway_Museum_Steam_Locomotive_Roundhouse.jpg/1280px-Kyoto_Railway_Museum_Steam_Locomotive_Roundhouse.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Kyoto_Railway_Museum_entrance_20161017.jpg/1920px-Kyoto_Railway_Museum_entrance_20161017.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Kyoto_Railway_Museum_Steam_Locomotive_Roundhouse.jpg/1280px-Kyoto_Railway_Museum_Steam_Locomotive_Roundhouse.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Shinkansen_0_Series_and_500_Series_Kyoto_Railway_Museum.jpg/1280px-Shinkansen_0_Series_and_500_Series_Kyoto_Railway_Museum.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Kyoto_Aquarium_Dolphin_Stadium.jpg/1280px-Kyoto_Aquarium_Dolphin_Stadium.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Kyoto_Aquarium_Giant_Salamander_Tank.jpg/1280px-Kyoto_Aquarium_Giant_Salamander_Tank.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Steam_Locomotive_SL_Steam_Ride_Kyoto.jpg/1280px-Steam_Locomotive_SL_Steam_Ride_Kyoto.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Umekoji_Park_Train_Plaza_Kyoto.jpg/1280px-Umekoji_Park_Train_Plaza_Kyoto.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Penguins_Zone_Kyoto_Aquarium.jpg/1280px-Penguins_Zone_Kyoto_Aquarium.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Kyoto_Railway_Museum_Interactive_Driving_Simulator.jpg/1280px-Kyoto_Railway_Museum_Interactive_Driving_Simulator.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/KYOTO_RAILWAY_MUSEUM_Main_building_Main_Space_20160508.jpg/1920px-KYOTO_RAILWAY_MUSEUM_Main_building_Main_Space_20160508.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Roundhouse_of_the_Kyoto_Railway_Museum.jpg/1920px-Roundhouse_of_the_Kyoto_Railway_Museum.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/0_Series_Shinkansen_21-1_Kyoto_Railway_Museum_20-09-2024.jpg/1920px-0_Series_Shinkansen_21-1_Kyoto_Railway_Museum_20-09-2024.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/%E4%BA%AC%E9%83%BD%E6%B0%B4%E6%97%8F%E9%A4%A8%E5%A4%96%E8%A3%85.jpg/1920px-%E4%BA%AC%E9%83%BD%E6%B0%B4%E6%97%8F%E9%A4%A8%E5%A4%96%E8%A3%85.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Kyoto_Aquarium_in_2013-5-2_No%2C6.JPG/1920px-Kyoto_Aquarium_in_2013-5-2_No%2C6.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Kyoto_Aquarium_hdsr_2019_06_01_9999_963.jpg/1920px-Kyoto_Aquarium_hdsr_2019_06_01_9999_963.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Kyoto_Aquarium%2C_Japan_%2815134524109%29.jpg/1920px-Kyoto_Aquarium%2C_Japan_%2815134524109%29.jpg",
+      "https://kyoto-aquarium.com/assets/images/img-building-transfer01_BoyvMJMW_1AsLP3.png",
+      "https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/a7nvdil7/62388812/iblj_w1140h600.jpg",
+      "https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/a7nvdil7/76889378/v683_w1140h600.jpg"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4",
-      "https://www.youtube.com/watch?v=kYJvPcvbA3I"
+      "https://www.youtube.com/watch?v=6OhBVG4peew",
+      "https://www.youtube.com/watch?v=I_DqspUUGDw"
     ],
-    "description": "京都最强亲子与雨天避暑双子星宝藏地！搭乘真实SL蒸汽火车，参观梅小路扇形车库与新干线模拟驾驶。",
-    "recommendedDurationMin": 240,
-    "openingHours": "铁道博物馆 10:00-17:00 (周三休馆)",
+    "description": "梅小路公园内集结真实蒸汽机车、0系新干线、驾驶互动、企鹅、水母与日本大鲵。两馆室内无障碍完善，既能让4岁孩子尽情探索，也适合长辈分段休息，是京都少见的三代同堂全天候亲子组合。",
+    "recommendedDurationMin": 300,
+    "openingHours": "京都铁道博物馆 10:00-17:00（最终入馆16:30，通常周三休馆）；京都水族馆依日期变化，常见为10:00-18:00或10:00-19:00，最终入馆及购票为闭馆前1小时",
     "admissionFee": {
-      "adult": "铁道馆¥1500",
-      "senior": "¥1300",
-      "child4yo": "¥200",
-      "notes": "SL蒸汽火车乘车券¥300。"
+      "adult": "铁道馆¥1,500；水族馆¥2,600；双馆联票¥3,690",
+      "senior": "与成人相同；两馆均无普通65岁以上长者优惠",
+      "child4yo": "铁道馆¥200；水族馆¥900；双馆联票¥990",
+      "notes": "两馆均从3岁起收费。铁道馆SL另付成人¥300、儿童¥100，驾驶模拟器每次¥100。残障证优惠与普通长者优惠不同。"
     },
-    "bestTimeToVisit": "全天候适宜！100%无障碍室内圣地。",
-    "weatherSuitability": "室内 (雨天/避暑优选)",
-    "strollerRating": 5,
-    "strollerNotes": "100%纯平无障碍典范！直梯密布、坡道宽阔。",
+    "bestTimeToVisit": "非节假日周二或周四09:40抵达；10:00先游铁道馆，午餐后约13:30进入水族馆",
+    "weatherSuitability": "以室内为主，普通雨天适宜；暴雨或强风时跳过铁道馆户外扇形车库、Sky Terrace、水族馆京之里山及海豚体育场前排",
+    "strollerRating": 4,
+    "strollerNotes": "两馆主路线均有电梯与缓坡。铁道馆可免费借婴儿车，水族馆不提供租借；SL不能携推车上车，部分历史车厢需走窄梯。水族馆连续缓坡在人多时推行较费力。",
     "kidRating": 5,
-    "kidNotes": "4岁小车迷的天堂！坐上真实的复古SL蒸汽火车。",
-    "elderlyRating": 5,
-    "elderlyNotes": "展馆空调舒适，设有大量软座休息区。",
-    "walkingIntensity": "轻松 (<500米)",
-    "stairsLevel": "平坦 / 无台阶",
+    "kidNotes": "4岁孩子通常最喜欢SL蒸汽火车、0系新干线、巨型铁路模型、Kids Park、企鹅、水母、海豹与日本大鲵。水槽有玻璃或围栏；在铁轨、站台、转车台、车厢台阶及海豚体育场必须牵手。",
+    "elderlyRating": 4,
+    "elderlyNotes": "双馆完整参观规划步行约2.5-3.5公里，建议精选路线并安排午餐及两次坐下休息。两馆均可免费借手动轮椅但数量有限，无代步电瓶车；水族馆禁止把手式老年代步车入场。",
+    "walkingIntensity": "中等（精选路线约1.8-2.5公里；完整双馆约2.5-3.5公里，均为规划估算）",
+    "stairsLevel": "主路线平缓并有电梯；历史车厢内部、海豚体育场及少数户外设施有局部台阶",
     "amenities": {
       "nursingRoom": true,
       "diaperChanging": true,
       "accessibleRestroom": true,
       "benchesRestAreas": true,
-      "shuttleOrCart": true,
+      "shuttleOrCart": false,
       "elevatorAvailable": true,
       "strollerRental": true,
       "wheelchairRental": true,
@@ -615,15 +718,34 @@ export const INITIAL_SITES: Site[] = [
       "kidPlayArea": true
     },
     "familyTips": [
-      "出「JR 梅小路京都西站」步行 2 分钟即达。"
+      "strollerRental为true仅代表铁道博物馆提供免费婴儿车；京都水族馆不提供婴儿车租借。",
+      "不要按示例预算免费儿童票：4岁在铁道馆、水族馆均需购票。",
+      "65岁以上没有普通长者半价；如需轮椅应在入馆时立即申请，不能预约且数量有限。",
+      "双馆联票成人¥3,690、4岁儿童¥990，比单买分别节省¥410和¥110。",
+      "驾驶模拟器需另购指定体验票；SL客流高时可能满员，想体验应先安排铁道馆。",
+      "盛夏把两馆之间的户外步行控制在10分钟内，并携带饮水、遮阳帽和儿童替换衣物。"
     ],
     "nearbyDining": [
       {
-        "id": "dine-railway-1",
-        "name": "铁道博物馆 2F 展望景观餐厅",
-        "cuisine": "新干线儿童便当 / 亲子和风咖喱",
-        "familyFeatures": "窗边景观位直面东海道新干线铁轨",
-        "walkingTimeMin": 1
+        "id": "dine-llm-1788211878772-0",
+        "name": "BOTANIQ KAJIYA",
+        "cuisine": "京野菜与西式简餐",
+        "familyFeatures": "铁道馆约2分钟、水族馆约4分钟；无障碍、婴儿车可入，明确提供宝宝椅和儿童椅，可选汤、蛋料理、炖汉堡等软质菜品",
+        "walkingTimeMin": 4
+      },
+      {
+        "id": "dine-llm-1788211878772-1",
+        "name": "本家山久（Hotel Emion Kyoto 2F）",
+        "cuisine": "鸭肉乌冬、荞麦面、杂炊",
+        "familyFeatures": "热乌冬和季节杂炊适合幼童及长辈，30席；官网未明确宝宝椅数量，建议到访前电话确认",
+        "walkingTimeMin": 8
+      },
+      {
+        "id": "dine-llm-1788211878772-2",
+        "name": "本家さんきゅう（Hotel Emion Kyoto 2F）",
+        "cuisine": "寿司与日式料理",
+        "familyFeatures": "可推婴儿车，有儿童餐、儿童餐具、宝宝椅及尿布台；可点茶碗蒸、玉子烧、白饭并要求寿司不放芥末",
+        "walkingTimeMin": 8
       }
     ],
     "websiteUrl": "https://www.kyotorailwaymuseum.jp/",
@@ -633,7 +755,12 @@ export const INITIAL_SITES: Site[] = [
       "梅小路扇形车库",
       "100%全平无障碍"
     ],
-    "createdAt": "2026-08-31"
+    "createdAt": "2026-08-31",
+    "customFields": {
+      "rainyDayPlan": "普通雨天优先采用铁道馆主馆与水族馆室内路线。铁道馆扇形车库、SL区和Sky Terrace属于户外；水族馆京之里山及无顶通道需要雨伞，海豚体育场虽有顶棚但强风会横向飘雨。暴雨时可进入JR梅小路京都西站旁、经连廊相接的Hotel Emion Kyoto 1至2楼餐饮商业区；如需半天室内替代，可乘JR一站回京都站，使用与车站直连并设母婴室的京都Porta。",
+      "ticketBookingTip": "普通门票无需抢票，但周末、连休、春暑假建议提前买。水族馆Web票通常提前30天开放，现场普通票使用售票机；铁道馆可在Asoview或Seven Ticket购前售票。驾驶模拟器必须另购体验票，Asoview通常在体验前一日20:00开售，Seven Ticket约提前1个月。两馆没有公开的65岁或婴儿车绿色通道，轮椅均为先到先得且不能预约。",
+      "parkingAndDropoff": "两馆没有私家车或出租车直达门前的专用上下客点，勿在周边道路临停。带4岁学龄前儿童的家庭可使用梅小路公园おもいやり停车场：约122辆、24小时、JR高架下平面停车，至铁道馆标示约30米、至水族馆约300米，无需爬楼梯。当前平日首2小时¥900、之后每30分钟¥200、日间最高¥1,200；周末节假日首2小时¥1,200、之后每30分钟¥300、日间最高¥2,000；车高上限2.3米且不能预约。"
+    }
   },
   {
     "id": "site-meiji-jingu",
@@ -646,40 +773,42 @@ export const INITIAL_SITES: Site[] = [
       139.6993
     ],
     "address": "东京都涩谷区代代木神园町1-1",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Meiji_Jingu_Torii.jpg/1280px-Meiji_Jingu_Torii.jpg",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20entrance%20to%20Meiji%20Jingu%2C%20Tokyo%2C%20Japan.jpg?width=1600",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Meiji_Jingu_Torii.jpg/1280px-Meiji_Jingu_Torii.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Meiji_Jingu_sake_barrels.jpg/1280px-Meiji_Jingu_sake_barrels.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Meiji_Jingu_shrine_Tokyo.jpg/1280px-Meiji_Jingu_shrine_Tokyo.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Meiji_Shrine_-_Haiden_-_Tokyo%2C_Japan.jpg/1280px-Meiji_Shrine_-_Haiden_-_Tokyo%2C_Japan.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Sake_Barrels_at_Meiji_Jingu_%2849045508821%29.jpg/1280px-Sake_Barrels_at_Meiji_Jingu_%2849045508821%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Meiji-jingu_Minami-sando_Torii.jpg/1280px-Meiji-jingu_Minami-sando_Torii.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Meiji_Jingu_Ema_wall.jpg/1280px-Meiji_Jingu_Ema_wall.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Meiji_Jingu_Garden_Iris.jpg/1280px-Meiji_Jingu_Garden_Iris.jpg"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/The%20entrance%20to%20Meiji%20Jingu%2C%20Tokyo%2C%20Japan.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji-jing%C5%AB%20main%20hall.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji%20Shrine%20Minami-sando-torii%202023-01-26.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Courtyard%20of%20Meiji%20Shrine.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji%20Jingu%20Shrine.%20Saki%20Barrels.%20%2827915377617%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Procession%20%284720743612%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji-jingu%20Innenhof.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Iris%20garden%20-%20Meiji%20Shrine%20Inner%20Garden%20-%20DSC04905.JPG?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Japan%20270316%20Meiji%20Ema%2001.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AEIMG%2020220129%2004.jpg?width=1600"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4",
-      "https://www.youtube.com/watch?v=Jm_C7q3dC7Q"
+      "https://www.youtube.com/watch?v=4bo2-SsLMR8",
+      "https://www.youtube.com/watch?v=pXpcTkSW5yA"
     ],
-    "description": "东京市中心最大的森林绿洲，占地70公顷，拥有超过17万株百年巨树。",
+    "description": "东京原宿旁的百年神社，被约十万株献木形成的常绿森林环抱。穿过巨型木鸟居与幽静碎石参道，可参拜主殿、写绘马、看酒桶墙，偶遇神前婚礼；免费开放，是三代同游感受东京自然与神道文化的经典一站。",
     "recommendedDurationMin": 90,
-    "openingHours": "日出至日落 (全天免费参拜)",
+    "openingHours": "按月份变化：1月06:40-16:20；2月06:20-16:50；3月05:40-17:20；4月05:10-17:50；5月05:00-18:10；6月05:00-18:30；7月05:00-18:20；8月05:00-18:00；9月05:20-17:20；10月05:40-16:40；11月06:10-16:10；12月06:40-16:00",
     "admissionFee": {
-      "adult": "免费参拜",
-      "senior": "免费参拜",
-      "child4yo": "免费",
-      "notes": "神宫本殿全免费。"
+      "adult": "神宫境内免费；御苑¥500；博物馆¥1,000",
+      "senior": "神宫境内免费；无官方长者优惠，御苑¥500、博物馆¥1,000",
+      "child4yo": "神宫境内免费；博物馆免费；御苑官网未列幼儿减免，按¥500准备",
+      "notes": "神宫本体无需购票或预约。御苑和博物馆为独立收费设施；博物馆周四及换展期可能休馆。"
     },
-    "bestTimeToVisit": "早晨 08:30 - 10:00。",
-    "weatherSuitability": "全天候适宜",
-    "strollerRating": 4,
-    "strollerNotes": "主参道两侧专门铺设平整木板道与压实石板道。",
-    "kidRating": 4,
-    "kidNotes": "4岁小朋友特别喜欢清酒桶展示墙与手水舍洗手仪式。",
-    "elderlyRating": 5,
-    "elderlyNotes": "森林遮荫率高达90%，夏日凉爽无暴晒。",
-    "walkingIntensity": "适中 (500米-1.5公里)",
-    "stairsLevel": "平坦 / 无台阶",
+    "bestTimeToVisit": "工作日08:00从原宿口进入，09:00后办理绘马或御朱印，避开10:00-14:00团队客流",
+    "weatherSuitability": "晴天或阴天最佳；雨天碎石路推车费力，御苑土路可能泥泞，博物馆可作局部室内备选",
+    "strollerRating": 3,
+    "strollerNotes": "主殿核心路线基本无连续台阶且有坡道，但原宿口至主殿单程约700-800米，多为压实碎石。建议使用大轮避震推车并沿参道边缘铺装带行进；御苑泥土碎石小径不适合推车。现场不提供婴儿车租借。",
+    "kidRating": 3,
+    "kidNotes": "4岁孩子可体验巨大鸟居、森林寻鸟、手水礼仪、绘马和酒桶墙，但没有游乐区、动物展示或强互动展。主路线无高台和危险水边；进入御苑后须留意池塘、小桥及窄路。境内禁止奔跑和进入树林。",
+    "elderlyRating": 3,
+    "elderlyNotes": "原宿口至主殿往返约1.4-1.6公里，参拜区走动后约1.7-2公里。树荫充足但沿途长椅不密集，可在杜之露台、Forest Terrace及主殿附近休息。入口可借轮椅，但无电瓶车或接驳车。",
+    "walkingIntensity": "中等（主殿往返约1.4-1.6公里；含周边参观约1.7-2公里）",
+    "stairsLevel": "核心路线无连续台阶，坡度温和；主要障碍为长距离碎石路，主殿设无障碍坡道",
     "amenities": {
       "nursingRoom": true,
       "diaperChanging": true,
@@ -690,19 +819,37 @@ export const INITIAL_SITES: Site[] = [
       "strollerRental": false,
       "wheelchairRental": true,
       "shadeAvailable": true,
-      "indoorRainyDayOption": false,
+      "indoorRainyDayOption": true,
       "kidPlayArea": false
     },
     "familyTips": [
-      "原宿站出站进南参道步行距离最短。"
+      "只走原宿口、南参道、主殿并原路返回；体力一般的长辈不要同时加入御苑。",
+      "JR原宿站西口离原宿口最近；使用包车或出租车时必须从代代木口驶入。",
+      "携带大轮推车、防蚊用品、饮水和儿童替换衣物，夏季即使有树荫仍然湿热。",
+      "避开元旦前三天、11月七五三周末及10:00-14:00高峰。",
+      "遇到神前婚礼须让行，不要堵路追拍；主殿正面参拜区域禁止摄影。"
     ],
     "nearbyDining": [
       {
-        "id": "dine-meiji-1",
-        "name": "FOREST TERRACE 森林餐厅",
-        "cuisine": "日式和风定食",
-        "familyFeatures": "全平地面，宽敞婴儿车位",
-        "walkingTimeMin": 3
+        "id": "dine-llm-1788211437659-0",
+        "name": "NOODLE & RICE BOWL",
+        "cuisine": "乌冬面、荞麦面、拉面与和风米饭",
+        "familyFeatures": "空间宽敞、婴儿车可进入并有儿童椅；热汤挂乌冬和狐狸乌冬适合4岁幼童及长辈，可要求不加葱并先分碗降温。",
+        "walkingTimeMin": 5
+      },
+      {
+        "id": "dine-llm-1788211437659-1",
+        "name": "レストラン「よよぎ」",
+        "cuisine": "日式料理与西式料理",
+        "familyFeatures": "有儿童椅、室内座位和较完整正餐；儿童庆祝餐需提前3天预约，长辈可选和食、汤品并要求清淡。",
+        "walkingTimeMin": 6
+      },
+      {
+        "id": "dine-llm-1788211437659-2",
+        "name": "CAFÉ「杜のテラス」",
+        "cuisine": "咖啡、面包、三明治与甜点",
+        "familyFeatures": "紧邻原宿口，适合进出园前让长辈坐下休息或给孩子补充点心；有室内及露台座位，但不是软质和食正餐首选。",
+        "walkingTimeMin": 1
       }
     ],
     "websiteUrl": "https://www.meijijingu.or.jp/",
@@ -711,12 +858,18 @@ export const INITIAL_SITES: Site[] = [
       "全平缓步道",
       "避暑散步"
     ],
-    "createdAt": "2026-08-01"
+    "createdAt": "2026-08-01",
+    "customFields": {
+      "rainyDayPlan": "小雨可穿防滑鞋并只走主殿，推车沿参道边缘铺装带行进；大雨时取消御苑，把明治神宫博物馆作为10:00后的室内备选。博物馆周四及换展期可能关闭。",
+      "ticketBookingTip": "神宫境内免费且无需预约，不存在免排队票。御苑现场支付维护协力金；博物馆通常现场购票，最晚16:00入馆。想办御朱印或购买绘马，应在09:00以后到授与所。",
+      "parkingAndDropoff": "车辆只能从代代木口进入，原宿口和参宫桥口禁止车辆驶入。东京无障碍资料记录约129个车位及2个无障碍车位，但高峰可能停止入苑；导航可按官方建议输入东京都涩谷区代代木1-1-2，停车条件与上下客位置以守卫现场指引为准。",
+      "dragonRajaFanConnection": "与江南《龙族III·黑月之潮》有明确粉丝圣地巡礼关联，作品记忆片段提到Sakura、明治神宫与婚礼。但现场没有官方联名展、固定龙族墙或角色商品；可写绘马纪念，禁止翻看他人愿望、张贴非官方纸张或干扰真实婚礼。"
+    }
   },
   {
     "id": "site-odaiba",
     "name": "台场海滨公园 & DiverCity",
-    "localName": "お台場 (Odaiba Seaside & Gundam)",
+    "localName": "お台場海浜公園 & ダイバーシティ東京 プラザ",
     "category": "attraction",
     "city": "东京 (港区/江东区)",
     "coordinates": [
@@ -724,46 +877,48 @@ export const INITIAL_SITES: Site[] = [
       139.7753
     ],
     "address": "东京都港区台场1丁目",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/RX-0_Unicorn_Gundam_in_DiverCity_Tokyo_Plaza_2018.jpg/1280px-RX-0_Unicorn_Gundam_in_DiverCity_Tokyo_Plaza_2018.jpg",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:FilePath/20190322%20Odaiba%20Rainbow%20Bridge.jpg?width=1600",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/RX-0_Unicorn_Gundam_in_DiverCity_Tokyo_Plaza_2018.jpg/1280px-RX-0_Unicorn_Gundam_in_DiverCity_Tokyo_Plaza_2018.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Statue_of_Liberty_%26_Rainbow_Bridge_in_Odaiba.jpg/1280px-Statue_of_Liberty_%26_Rainbow_Bridge_in_Odaiba.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Odaiba_Rainbow_Bridge_Night.jpg/1280px-Odaiba_Rainbow_Bridge_Night.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Unicorn_Gundam_DiverCity_Tokyo.jpg/1280px-Unicorn_Gundam_DiverCity_Tokyo.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Odaiba_Marine_Park_Beach.jpg/1280px-Odaiba_Marine_Park_Beach.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fuji_TV_building_Odaiba.jpg/1280px-Fuji_TV_building_Odaiba.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Rainbow_Bridge_from_Odaiba.jpg/1280px-Rainbow_Bridge_from_Odaiba.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/DiverCity_Tokyo_Plaza_Front.jpg/1280px-DiverCity_Tokyo_Plaza_Front.jpg"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/20190322%20Odaiba%20Rainbow%20Bridge.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rainbow%20bridge%2C%20seen%20from%20the%20beach%20at%20Odaiba%20%286155473457%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Odaiba%20Beach.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Odaiba%20Marine%20Park%20%2852652852163%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Odaiba%20Marine%20Park%20Sea%20Bus%20Station.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/20190322%20Odaiba%20Statue%20of%20Liberty.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Diver%20City%20%40%20Odaiba%20%288993326323%29.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Gundam%20Base%20Tokyo%2C%20entrance.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Life-Sized%20Unicorn%20Gundam%20Statue.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Little%20girl%20gazes%20the%20Rainbow%20Bridge%20in%20Odaiba%20beach%20on%20a%20cloudy%20day%20at%20sunset.jpg?width=1600"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4",
-      "https://www.youtube.com/watch?v=9gWzQ1j2z40"
+      "https://www.youtube.com/watch?v=MOmwu95xqpE",
+      "https://www.youtube.com/watch?v=VYQp9r7d15k"
     ],
-    "description": "眺望彩虹大桥与自由女神像的白沙滩、1:1独角兽高达立像、DiverCity大型综合商场。",
+    "description": "东京湾海景、沙滩、彩虹大桥与大型室内娱乐商场一次体验。路线总体平缓，兼顾推车幼童与长辈；雨天可转入DiverCity用餐、购物及参观高达基地。户外独角兽高达立像已于2026年8月31日结束展示。",
     "recommendedDurationMin": 180,
-    "openingHours": "海滨公园24小时开放；商场 10:00 - 21:00",
+    "openingHours": "台场海滨公园全天开放、散步免费；DiverCity商店平日11:00-20:00、周末及节假日10:00-21:00；美食广场平日11:00-21:00、周末及节假日10:00-22:00；餐厅通常11:00-22:00。个别店铺及娱乐设施时间不同。",
     "admissionFee": {
       "adult": "免费",
-      "senior": "免费",
+      "senior": "免费，无单独长者票",
       "child4yo": "免费",
-      "notes": "公园与观赏高达免费。"
+      "notes": "海滨公园、DiverCity公共区域及THE GUNDAM BASE TOKYO通常无需景点门票。馆内收费娱乐项目另计，例如うんこミュージアム TOKYO采用浮动票价，成人约¥2000-¥2800、3岁以上儿童约¥1100-¥1200，无公开长者折扣；最终价格以日期选择页面为准。"
     },
-    "bestTimeToVisit": "下午 15:30 傍晚看日落与高达灯光秀。",
-    "weatherSuitability": "室内 (雨天/避暑优选)",
-    "strollerRating": 5,
-    "strollerNotes": "100%全无障碍设计！商场内各楼层电梯极多。",
-    "kidRating": 5,
-    "kidNotes": "沙滩挖沙踩水、看巨型高达变换发光。",
-    "elderlyRating": 5,
-    "elderlyNotes": "海滨栈道长椅极多，微风拂面可远眺东京塔与彩虹桥。",
-    "walkingIntensity": "轻松 (<500米)",
-    "stairsLevel": "平坦 / 无台阶",
+    "bestTimeToVisit": "建议非节假日09:00-09:30抵达海滨公园，先走海岸与自由女神像一带；约10:45前往DiverCity，平日11:00开门后立即用餐或参观。夏季避开12:00-15:30的海边暴晒，周末尽量避开12:00-17:00。",
+    "weatherSuitability": "晴天最佳，雨天可将主要行程转入DiverCity；海滨部分无遮雨连廊，强风、雷雨、酷暑或台风天不建议安排沙滩及长距离滨海步行。",
+    "strollerRating": 4,
+    "strollerNotes": "海滨公园主要滨海道路、木栈道及通往商业区的步行平台总体平缓，可用无障碍坡道和电梯绕开楼梯；入口段差通常小于2厘米。沙滩本身会陷轮，连接不同平台时也可能需要绕行。DiverCity各层设电梯，2F至5F设100日元硬币回收式婴儿车，数量有限且主要限馆内使用；公园不提供婴儿车。",
+    "kidRating": 4,
+    "kidNotes": "4岁孩子通常喜欢沙滩玩沙、看船、海鸟、彩虹大桥，以及DiverCity内的高达基地、哆啦A梦商店、乐高店、Little Planet和うんこミュージアム等互动项目。户外高达立像已于2026年8月31日结束展示。海滨没有连续护栏，沙滩紧邻东京湾，幼童必须牵手并由成人贴身看护；禁止把普通海滩当作自由游泳场。DiverCity 2F和6F设母婴休息室、授乳室、尿布台、热水及儿童厕所。",
+    "elderlyRating": 4,
+    "elderlyNotes": "仅游览海滨核心观景点约步行800-1200米；加上自由女神像、商场及高达基地通常约1.8-2.5公里。公园沿线有长椅，但遮阳密度一般，盛夏建议每20-30分钟进入DECKS、AQUA CiTY或DiverCity休息。DiverCity有大量座椅、咖啡厅、餐厅、无障碍厕所和电梯；3F综合服务台可免费借轮椅，但数量有限、不接受预约。没有面向普通游客的固定代步电瓶车服务。",
+    "walkingIntensity": "轻中度；精简路线约800-1200米，完整路线约1.8-2.5公里",
+    "stairsLevel": "主体平坦；可通过坡道和电梯避开楼梯，沙滩及个别观景平台需绕行",
     "amenities": {
       "nursingRoom": true,
       "diaperChanging": true,
       "accessibleRestroom": true,
       "benchesRestAreas": true,
-      "shuttleOrCart": true,
+      "shuttleOrCart": false,
       "elevatorAvailable": true,
       "strollerRental": true,
       "wheelchairRental": true,
@@ -772,15 +927,34 @@ export const INITIAL_SITES: Site[] = [
       "kidPlayArea": true
     },
     "familyTips": [
-      "搭乘百合鸥线无人驾驶单轨电车前往。"
+      "户外独角兽高达立像已于2026年8月31日结束展示，不要再按旧攻略等待立像变形或夜间灯光演出；高达主题重点改为DiverCity 7F的THE GUNDAM BASE TOKYO及2F ANNEX。",
+      "想让长辈最省力，可从百合海鸥线台场站进入海滨核心区，官方标示步行约3分钟；之后经室内商场休息，再前往DiverCity。若以DiverCity为第一站，临海线东京电讯港站步行约3分钟最短。",
+      "海边夏季遮阴有限，建议携带遮阳帽、饮水和推车遮阳篷；4岁幼童在亲水线、码头和沙滩边必须牵手，雨后木栈道可能湿滑。",
+      "DiverCity婴儿车需准备100日元硬币，归还后退币；免费轮椅在3F综合服务台领取，不能预约，老人有需要应在到馆后优先办理。",
+      "母婴休息室位于DiverCity 2F及6F西侧中庭厕所附近；进入不能中途离场的收费互动馆前，先完成如厕和换尿布。",
+      "午餐尽量安排11:00-11:30或13:30以后；周末中午2F美食广场座位紧张，可由一名成人先找座位，其余家人分批点餐。"
     ],
     "nearbyDining": [
       {
-        "id": "dine-odaiba-1",
-        "name": "Pomme-no-ki 苹果树蛋包饭",
-        "cuisine": "亲子日式蛋包饭",
-        "familyFeatures": "提供儿童特制蛋包饭附赠小玩具",
-        "walkingTimeMin": 2
+        "id": "dine-llm-1788211475537-0",
+        "name": "はなまるうどん DiverCity东京店",
+        "cuisine": "日式讃岐乌冬面",
+        "familyFeatures": "位于DiverCity 2F美食广场，提供儿童菜单；热乌冬可选择清淡汤底并剪短面条，适合幼童与咀嚼能力较弱的长辈。美食广场可放置婴儿车，宝宝椅数量视现场供应。",
+        "walkingTimeMin": 1
+      },
+      {
+        "id": "dine-llm-1788211475537-1",
+        "name": "信州そば処 そじ坊",
+        "cuisine": "日式荞麦面、乌冬及定食",
+        "familyFeatures": "位于DiverCity 6F，官方儿童菜单名单包含该店。可选择热汤面、蒸蛋或米饭类，口味相对容易调整，独立餐厅比高峰期美食广场更适合长辈安坐；宝宝椅请入店时确认。",
+        "walkingTimeMin": 3
+      },
+      {
+        "id": "dine-llm-1788211475537-2",
+        "name": "北陆富山回转寿司 PREMIUM 海王",
+        "cuisine": "回转寿司与日式小菜",
+        "familyFeatures": "位于DiverCity 6F，设约117个禁烟座位并提供儿童菜单。可选择玉子烧、蒸蛋、稻荷寿司、熟鱼、味噌汤及软饭等幼童和长辈较易入口的食物；生食及过敏原需由家长把关。",
+        "walkingTimeMin": 3
       }
     ],
     "websiteUrl": "https://mitsui-shopping-park.com/divercity-tokyo/en/",
@@ -789,7 +963,16 @@ export const INITIAL_SITES: Site[] = [
       "1:1独角兽高达",
       "彩虹大桥海景"
     ],
-    "createdAt": "2026-08-01"
+    "createdAt": "2026-08-01",
+    "customFields": {
+      "rainyDayPlan": "小雨可先从台场站经商场方向移动，但海滨至DiverCity并非全程有顶棚。中到大雨时建议取消沙滩，直接到DiverCity：先在2F的うんこミュージアム、哆啦A梦相关商店或美食广场活动，再到5F乐高店、Little Planet等亲子设施，最后到7F THE GUNDAM BASE TOKYO。多数楼层有电梯、无障碍厕所，2F及6F有母婴室。うんこミュージアム适合4岁儿童，但声光环境可能较刺激且馆内没有厕所，入场前应先如厕；Little Planet等设施的营业与门票需当天确认。若希望安静、照顾长辈，可优先选择购物、高达基地、咖啡厅和6F餐厅，避免将全天都安排在高声量互动馆。台风、雷暴或强风时不要进入沙滩、码头及临水平台。",
+      "ticketBookingTip": "海滨公园、DiverCity公共区域和高达基地无需提前抢票，也没有常规检票队伍。收费互动设施应分开处理：うんこミュージアム采用日期及时段票，当日票数量有限，周末、暑假和日本连休建议提前购买上午首批或傍晚时段；即使持预约票，拥挤时仍可能短暂等候。普通商场没有面向长者或婴儿车的免排队绿色通道；轮椅与推车也不等同于优先入场。免费轮椅不能预约，应到3F综合服务台尽早领取。餐厅通常不因携带推车而优先入座，最好错峰用餐。",
+      "parkingAndDropoff": "包车或出租车以DiverCity东侧或东京电讯港站侧的平层入口附近下客最省力；根据车辆实际允许停靠位置，到入口通常约30-80米，此距离为现场路线估算，并非官方保证。入口可平层进入，楼层间有电梯，无需搬推车爬楼。自驾可使用DiverCity约1400个车位的24小时立体停车场，限高2.3米；1F、2F、6F设无障碍专用车位，前往1F至4F建议使用东侧停车场出入口，购物及用餐停车优惠累计最多4小时，收费和优惠门槛以当天公告为准。海滨公园另有24小时中央停车场101个普通车位及北口停车场244个普通车位，当前公开收费为首小时¥400、之后每30分钟¥200，北口24小时内上限¥2000；游海滨核心景观通常选中央停车场更直接，游台场公园则选北口。停车位至海滨步道仍可能需要约100-300米步行，均可选择无台阶路线。大型包车不可把普通车道当作长时间候车区，应与司机约定二次接驳时间。",
+      "gundamStatus": "实物大独角兽高达立像于2026年8月31日结束约9年的户外展示，旧照片及旧视频仅作历史视觉素材。后续高达主题体验以THE GUNDAM BASE TOKYO、ANNEX及官方公布的新活动为准。",
+      "accessibilityDetail": "公园公开无障碍资料显示，主要入口段差小于2厘米，设无障碍厕所、尿布台及少量可借轮椅；资料记载公园轮椅约2台，但数量、领取地点和当日可用性必须现场确认。DiverCity免费轮椅位于3F综合服务台，数量有限且不接受预约。海滨路线平缓，但沙滩并不适合普通轮椅或小轮婴儿车。",
+      "safetyNote": "东京湾岸风力可能明显高于市中心；推车停车时必须锁轮。儿童不要攀爬护栏、独自靠近水边或追逐海鸟。长辈如有膝关节、心肺或耐热问题，建议把户外段控制在30-45分钟，并将DiverCity作为空调休息基地。",
+      "lastVerified": "2026-08-31"
+    }
   },
   {
     "id": "site-hakone-owakudani",
@@ -802,40 +985,42 @@ export const INITIAL_SITES: Site[] = [
       139.0205
     ],
     "address": "神奈川县足柄下郡箱根町仙石原1251",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Owakudani_volcano_vents_Hakone.jpg/1280px-Owakudani_volcano_vents_Hakone.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/A_view_of_Owakudani_and_ropeway%2C_Hakone%2C_Japan4.jpg/1920px-A_view_of_Owakudani_and_ropeway%2C_Hakone%2C_Japan4.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Owakudani_volcano_vents_Hakone.jpg/1280px-Owakudani_volcano_vents_Hakone.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Hakone_Ropeway_over_Owakudani.jpg/1280px-Hakone_Ropeway_over_Owakudani.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Kuro-tamago_Black_Egg_Monument_Owakudani.jpg/1280px-Kuro-tamago_Black_Egg_Monument_Owakudani.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Owakudani_sulfur_steam_and_Mt_Fuji.jpg/1280px-Owakudani_sulfur_steam_and_Mt_Fuji.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Hakone_Ropeway_Station_Owakudani.jpg/1280px-Hakone_Ropeway_Station_Owakudani.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Boiling_Black_Eggs_in_Owakudani.jpg/1280px-Boiling_Black_Eggs_in_Owakudani.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Mount_Hakone_Owakudani_Trail.jpg/1280px-Mount_Hakone_Owakudani_Trail.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Owakudani_Panoramic_View.jpg/1280px-Owakudani_Panoramic_View.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/A_view_of_Owakudani_and_ropeway%2C_Hakone%2C_Japan4.jpg/1920px-A_view_of_Owakudani_and_ropeway%2C_Hakone%2C_Japan4.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/View_of_Mount_Fuji_from_Owakudani%2C_Hakone%2C_Japan2.jpg/1920px-View_of_Mount_Fuji_from_Owakudani%2C_Hakone%2C_Japan2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/161223_Owakudani_Hakone_Japan01s3.jpg/1920px-161223_Owakudani_Hakone_Japan01s3.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/161223_Owakudani_Hakone_Japan02s3.jpg/1920px-161223_Owakudani_Hakone_Japan02s3.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Over_the_sulfur_mines_%2852288292250%29.jpg/1920px-Over_the_sulfur_mines_%2852288292250%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/%E7%AE%B1%E6%A0%B9%E7%A9%BA%E4%B8%AD%E7%BA%9C%E8%BB%8A%28%E6%97%A9%E9%9B%B2%E5%B1%B1-%E5%A4%A7%E6%B9%A7%E8%B0%B7%E5%8D%80%E9%96%93%29_Hakone_Ropeway_between_S%C5%8Dunzan_and_%C5%8Cwakudani_03.jpg/1920px-%E7%AE%B1%E6%A0%B9%E7%A9%BA%E4%B8%AD%E7%BA%9C%E8%BB%8A%28%E6%97%A9%E9%9B%B2%E5%B1%B1-%E5%A4%A7%E6%B9%A7%E8%B0%B7%E5%8D%80%E9%96%93%29_Hakone_Ropeway_between_S%C5%8Dunzan_and_%C5%8Cwakudani_03.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Owakudani_%40_Hakone_%2810621367243%29.jpg/1920px-Owakudani_%40_Hakone_%2810621367243%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Black_eggs_%286475910531%29.jpg/1920px-Black_eggs_%286475910531%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/%C5%8Cwakudani_Station_20211202.jpg/1920px-%C5%8Cwakudani_Station_20211202.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/View_of_Owakudani_Valley_from_Hakone_Cable_Car.JPG/1920px-View_of_Owakudani_Valley_from_Hakone_Cable_Car.JPG"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4",
-      "https://www.youtube.com/watch?v=F3P_U1B2v44"
+      "https://www.youtube.com/watch?v=IkLnN-X_Jl0",
+      "https://www.youtube.com/watch?v=CSPUkFyu8e4"
     ],
-    "description": "3000年前火山爆发留下的壮丽活火山口！地表喷涌滚滚白色硫磺蒸汽，高空全景缆车飞越裂缝，吃延寿黑鸡蛋。",
-    "recommendedDurationMin": 120,
-    "openingHours": "大涌谷园区 09:00 - 17:00",
+    "description": "乘箱根空中缆车俯瞰仍在喷气的荒凉火山谷，在玻璃观景台感受大地脉动，参观火山地质展示并品尝名物黑蛋。主广场无障碍完善，但乳幼儿与高龄者须特别防范火山气体。",
+    "recommendedDurationMin": 75,
+    "openingHours": "大涌谷园地 09:00-17:00；黑蛋馆商店 09:00-16:15，黑蛋销售至16:20；索道2-11月 09:00-17:00、12-1月 09:00-16:15",
     "admissionFee": {
-      "adult": "免费 (缆车约¥1550)",
-      "senior": "持周游券免费",
-      "child4yo": "免费",
-      "notes": "推荐使用箱根周游券。"
+      "adult": "园地免费；箱根地质博物馆 ¥100",
+      "senior": "园地免费；无普通长者优惠",
+      "child4yo": "园地及地质博物馆免费；由持票乘客陪同乘普通索道通常免费",
+      "notes": "索道成人单程¥2000、往返¥3000；自然研究路协力金¥800，但仅限小学生以上且紧急时能自行跑步撤离者，4岁儿童不可参加。"
     },
-    "bestTimeToVisit": "上午 10:00 - 12:00。",
-    "weatherSuitability": "晴天适宜",
+    "bestTimeToVisit": "周二至周五 09:00-10:30；避开官方停车拥堵高峰12:00-15:00",
+    "weatherSuitability": "晴天或微风天气较适合；大雨、强风、雷电、浓雾及火山气体浓度升高时不宜",
     "strollerRating": 4,
-    "strollerNotes": "箱根空中缆车站台配有直梯。",
-    "kidRating": 5,
-    "kidNotes": "全景大缆车看火山蒸汽、吃火山黑鸡蛋。",
-    "elderlyRating": 4,
-    "elderlyNotes": "全程缆车代步省力，2F展望食堂看富士山。",
-    "walkingIntensity": "轻松 (<500米)",
-    "stairsLevel": "少量台阶 (配有无障碍坡道)",
+    "strollerNotes": "索道站、主广场、黑蛋馆、餐厅和主要展望台可经电梯及坡道无阶移动，路面以硬质铺装为主；部分观景区有缓坡。自然研究路不适合推车且4岁儿童无资格进入。现场未确认婴儿车租借，自带制动可靠的轻便推车。",
+    "kidRating": 3,
+    "kidNotes": "4岁孩子通常喜欢空中缆车、玻璃观景台、火山烟气、岩石展示、黑蛋及卡通雕塑；但不能进入约700米自然研究路，没有正式游乐区。临空玻璃平台虽有围栏，仍须全程牵手；乳幼儿还需特别防范火山气体。",
+    "elderlyRating": 3,
+    "elderlyNotes": "主景观省力线约300-500米，站内和黑蛋馆有电梯、室内座位及免费轮椅；户外长椅有但遮阳不密集，没有代步电瓶车。患呼吸、支气管、心脏疾病或装有起搏器者不应进行户外观光，高龄者即使健康也宜缩短户外停留。",
+    "walkingIntensity": "主景观省力线轻松，约300-500米；自然研究路约700米但不适用于本家庭",
+    "stairsLevel": "主广场、索道站与黑蛋馆可无台阶通行；靠近喷气地带方向有坡度",
     "amenities": {
       "nursingRoom": true,
       "diaperChanging": true,
@@ -845,20 +1030,38 @@ export const INITIAL_SITES: Site[] = [
       "elevatorAvailable": true,
       "strollerRental": false,
       "wheelchairRental": true,
-      "shadeAvailable": true,
+      "shadeAvailable": false,
       "indoorRainyDayOption": true,
       "kidPlayArea": false
     },
     "familyTips": [
-      "买一袋刚出锅的大涌谷黑玉子。"
+      "出发当天先查索道运行、火山气体及天气；闻到强烈刺激味或眼鼻喉不适，立即进入室内并下山。",
+      "健康状况允许时采用索道站—主展望台—地质博物馆—黑蛋馆的短路线，不为4岁儿童预约自然研究路。",
+      "周二至周五09:00抵达最省力；周末自驾可停姥子站后乘索道，避开大涌谷停车场12:00-15:00拥堵。",
+      "4岁活泼幼童在玻璃观景台和拥挤区域必须全程牵手，不要攀爬围栏或在玻璃平台奔跑。",
+      "海拔约1040米且风力较强，即使夏季也应携带薄外套；冬季需准备防风保暖衣物。"
     ],
     "nearbyDining": [
       {
-        "id": "dine-hakone-1",
-        "name": "大涌谷车站2F 展望食堂",
-        "cuisine": "特制黑咖喱饭 / 温泉拉面",
-        "familyFeatures": "正对富士山与火山口，配有儿童餐椅",
+        "id": "dine-llm-1788211552372-0",
+        "name": "OWAKUDANI KITCHEN",
+        "cuisine": "日式咖喱与西式热锅",
+        "familyFeatures": "索道站2楼、电梯直达、室内观景；可选温玉咖喱、汉堡、鸡肉奶油锅和米饭分食。铁锅很烫且咖喱可能偏辛，2026年改装后官方未明确宝宝椅配置。",
+        "walkingTimeMin": 3
+      },
+      {
+        "id": "dine-llm-1788211552372-1",
+        "name": "涌わくキッチン＆CAFE",
+        "cuisine": "咖啡与日式快餐",
+        "familyFeatures": "黑蛋馆内有室内座位、热玉米浓汤、热饮和黑蛋，适合短休；主食以咖喱面包、热狗及炸物为主，宝宝椅未获官方确认。",
         "walkingTimeMin": 1
+      },
+      {
+        "id": "dine-llm-1788211552372-2",
+        "name": "极乐茶屋",
+        "cuisine": "日式拉面与盖饭",
+        "familyFeatures": "有室内热食，可询问白饭或不辣选择；招牌黑拉面偏辣，不适合4岁幼童和清淡饮食长辈，宝宝椅需现场确认。",
+        "walkingTimeMin": 3
       }
     ],
     "websiteUrl": "https://www.hakonenavi.jp/spot/owakudani/",
@@ -867,7 +1070,12 @@ export const INITIAL_SITES: Site[] = [
       "高空全景缆车",
       "长寿黑鸡蛋"
     ],
-    "createdAt": "2026-08-01"
+    "createdAt": "2026-08-01",
+    "customFields": {
+      "rainyDayPlan": "小雨且索道正常时，可改走大涌谷站婴儿室及谷之集市、OWAKUDANI KITCHEN、箱根地质博物馆、黑蛋馆商店与咖啡区；站与黑蛋馆之间仍有短距离露天路。大雨、强风、雷雾或索道停运时不要勉强上山，改去箱根园水族馆与箱根园购物广场，约25-35分钟车程，4岁孩子可看企鹅、水獭、海豹和大水槽，购物广场2楼有授乳室；偏重长辈舒适可去约20分钟车程的宝丽美术馆，馆内有坡道、多功能厕所、轮椅和婴儿车借用及授乳休息室。",
+      "ticketBookingTip": "大涌谷主园地免费且无需预约；索道数字票可减少售票排队，但日常不等于优先上车。自然研究路必须网上预约并缴¥800协力金，但4岁儿童不可参加。没有常设长者或推车绿色通道，可请站务员提供无障碍上下车协助。特定旺季可能临时推出预约优先检票，需查询当期箱根导航官方通知。",
+      "parkingAndDropoff": "官方停车场普通车147位、约3个无障碍优先位，不接受预订。最近车位到黑蛋馆或主广场估约30-60米，远端约100-150米；官方未公布逐车位精确距离。主路线可走铺装路、坡道和电梯，无需爬楼梯。平日2小时内¥500；休日最初30分钟¥500、2小时内¥1000；2-11月16:20停止入库并须在16:40前出库。大涌谷没有常设出租车候车站，也未公布普通包车专用门前下客位，应让包车原车等候并服从停车场人员安排。官方拥堵高峰为12:00-15:00，严重时三岔路到停车场可能超过1小时。"
+    }
   },
   {
     "id": "site-lake-ashi-cruise",
@@ -894,7 +1102,6 @@ export const INITIAL_SITES: Site[] = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/A_view_of_Lake_Ashi_with_Peace_Torii_gate%2C_Hakone%2C_Japan1.jpg/1280px-A_view_of_Lake_Ashi_with_Peace_Torii_gate%2C_Hakone%2C_Japan1.jpg"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4",
       "https://www.youtube.com/watch?v=hlpP1ubsFUA",
       "https://www.youtube.com/watch?v=JZBF4Mm83bU"
     ],
@@ -905,18 +1112,18 @@ export const INITIAL_SITES: Site[] = [
       "adult": "海盗船桃源台港↔元箱根港/箱根町港：片道¥1,700，往返¥3,000；箱根町港↔元箱根港片道¥600；箱根神社免费",
       "senior": "无单纯按年龄设置的长者优惠，按成人价收费；箱根神社免费",
       "child4yo": "通常免费",
-      "notes": "海盗船儿童票适用于小学生：主要航段片道¥850、往返¥1,300。6岁以下幼儿由成人或儿童乘客陪同，每名付费乘客可免费携带2名幼儿；第3名起或幼儿单独乘船按儿童价。符合规定的残障证件持有人可享约五折优惠，部分等级的陪护者同享优惠。特等舱另付费，主要航段单程成人¥800、儿童¥400。持箱根周游券普通舱免费。"
+      "notes": "海盗船儿童票适用于小学生：主要航段片道¥850、往返¥1,300。6岁以下幼儿由成人或儿童乘客陪同，每名付费乘客可免费携带2名幼儿；第3名起或幼儿单独乘船按儿童价。符合规定的残障证件持有人可享约五折优惠，部分等级的陪护者同享优惠。特等舱另付费，主要航段单程成人¥800、儿童¥400。"
     },
     "bestTimeToVisit": "建议08:15-09:00先参拜箱根神社，随后乘09:40前后的元箱根港早班船；清晨旅行团较少、气温较低，富士山能见度通常也优于午后。",
-    "weatherSuitability": "晴天适宜",
+    "weatherSuitability": "晴天和阴天最适宜；小雨可利用室内船舱，但强风、浓雾或雷雨可能导致改点、改航线或停航。",
     "strollerRating": 3,
     "strollerNotes": "元箱根港、桃源台港及三艘海盗船均以无障碍方式连接，工作人员可协助推车通过登船坡板，船内设电梯或无障碍动线。元箱根港至神社入口的湖畔道路大体平缓，但本殿正参道约有90级石阶，林间路局部为石板、砂砾和缓坡；应改走无台阶脇参道，或在宝物殿开放时咨询使用电梯。平和鸟居临水拍照区有石阶，婴儿车不宜下到水边。现场未确认提供婴儿车租借。",
     "kidRating": 4,
     "kidNotes": "4岁孩子通常会喜欢三艘不同造型的海盗船、船内海盗摆件、3D错视摄影、甲板观景和寻找湖上鸟居；航程约25-35分钟，不易无聊。船舷和甲板有护栏，但风大、地面湿滑时必须牵手，禁止攀爬护栏。箱根神社林地和湖岸不是封闭游乐场，平和鸟居紧邻深水且排队区狭窄，应由成人一对一看护。翻新后的元箱根港设Baby Lounge及无障碍卫生间，适合换尿布和短暂休息。",
     "elderlyRating": 4,
     "elderlyNotes": "海盗船本身步行负荷低，普通船舱和特等舱均有大量室内座位；港口候船区、船舱、神社第一停车场附近设休息空间。元箱根港至箱根神社单程约700-900米、步行约10-15分钟，组合参观往返通常累计1.5-2公里。长者应避开正参道约90级石阶，选脇参道或宝物殿电梯；腿脚较弱者宜乘出租车进入神社停车场。各海盗船港口各有1辆免费轮椅可借，数量有限，神社亦有无障碍路线；无代步电瓶车，且没有年龄型长者票。",
-    "walkingIntensity": "适中 (500米-1.5公里)",
-    "stairsLevel": "少量台阶 (配有无障碍坡道)",
+    "walkingIntensity": "中等（常规路线约1.5-2公里；采用出租车接驳和电梯可降至500米左右）",
+    "stairsLevel": "海盗船及港口基本平坦；箱根神社正参道约90级石阶，可改走无阶梯脇参道或宝物殿电梯",
     "amenities": {
       "nursingRoom": true,
       "diaperChanging": true,
@@ -940,21 +1147,21 @@ export const INITIAL_SITES: Site[] = [
     ],
     "nearbyDining": [
       {
-        "id": "dine-ashi-1",
+        "id": "dine-llm-1788211517292-0",
         "name": "あしのこ茶屋",
         "cuisine": "日式土锅饭、煮鱼、家常和食",
         "familyFeatures": "元箱根港约1分钟；室内湖景座席，可选柔软金目鲷煮付、土锅米饭及炖至软嫩的角煮，适合长辈和幼童分食。儿童椅数量未在官网明确，建议入店时确认。",
         "walkingTimeMin": 1
       },
       {
-        "id": "dine-ashi-2",
+        "id": "dine-llm-1788211517292-1",
         "name": "食事処 箱根家",
         "cuisine": "荞麦面、乌冬面、盖饭和若鹭鱼料理",
         "familyFeatures": "提供热乌冬、山药乌冬和米饭类，口味相对传统，便于为幼童选择软面、为长辈选择清淡热食；店铺规模不大，儿童椅需提前确认。",
         "walkingTimeMin": 3
       },
       {
-        "id": "dine-ashi-3",
+        "id": "dine-llm-1788211517292-2",
         "name": "Bakery & Table 箱根",
         "cuisine": "面包、汤品、轻食和咖啡",
         "familyFeatures": "元箱根港旁，1楼可快速购买较柔软的面包，2楼室内咖啡区可看湖景，并提供儿童饮料；适合错峰早餐或船班之间休息。足汤座位不适合无人看护的幼儿。",
@@ -986,63 +1193,81 @@ export const INITIAL_SITES: Site[] = [
       138.7465
     ],
     "address": "山梨县南都留郡富士河口湖町大石2585",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Mt_Fuji_and_Lake_Kawaguchiko_from_Oishi_Park.jpg/1280px-Mt_Fuji_and_Lake_Kawaguchiko_from_Oishi_Park.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Mount_Fuji_from_Oishi_Park.jpg/1920px-Mount_Fuji_from_Oishi_Park.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Mt_Fuji_and_Lake_Kawaguchiko_from_Oishi_Park.jpg/1280px-Mt_Fuji_and_Lake_Kawaguchiko_from_Oishi_Park.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Mount_Fuji_5th_Station_Subashiri_Komitake.jpg/1280px-Mount_Fuji_5th_Station_Subashiri_Komitake.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Oishi_Park_Kochia_and_Mt_Fuji.jpg/1280px-Oishi_Park_Kochia_and_Mt_Fuji.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Lake_Kawaguchi_Flowers_Mt_Fuji.jpg/1280px-Lake_Kawaguchi_Flowers_Mt_Fuji.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Fuji_Subaru_Line_5th_Station.jpg/1280px-Fuji_Subaru_Line_5th_Station.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Mount_Fuji_Reflection_Lake_Kawaguchiko.jpg/1280px-Mount_Fuji_Reflection_Lake_Kawaguchiko.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Komitake_Shrine_at_Mt_Fuji_5th_Station.jpg/1280px-Komitake_Shrine_at_Mt_Fuji_5th_Station.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Kawaguchiko_Oishi_Park_Lavender.jpg/1280px-Kawaguchiko_Oishi_Park_Lavender.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Mount_Fuji_from_Oishi_Park.jpg/1920px-Mount_Fuji_from_Oishi_Park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Oishi_in_Fujikawaguchiko_01.jpg/1920px-Oishi_in_Fujikawaguchiko_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Oishi_in_Fujikawaguchiko_02.jpg/1920px-Oishi_in_Fujikawaguchiko_02.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Oishi_in_Fujikawaguchiko_03.jpg/1920px-Oishi_in_Fujikawaguchiko_03.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Oishi_in_Fujikawaguchiko_04.jpg/1920px-Oishi_in_Fujikawaguchiko_04.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Mount_Fuji_view_from_Lake_Kawaguchi_2024-12-01.jpg/1920px-Mount_Fuji_view_from_Lake_Kawaguchi_2024-12-01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Fuji_Subaru_Line_Fifth_Station_02.JPG/1920px-Fuji_Subaru_Line_Fifth_Station_02.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Fuji_Subaru_Line_Fifth_Station_03.JPG/1920px-Fuji_Subaru_Line_Fifth_Station_03.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Mount_fuji_5th_station.jpg/1920px-Mount_fuji_5th_station.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Mt._Fuji_5th_Station_%283899838189%29.jpg/1920px-Mt._Fuji_5th_Station_%283899838189%29.jpg"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4",
-      "https://www.youtube.com/watch?v=3z8aQpL6w1E"
+      "https://www.youtube.com/watch?v=DzaIVJWiXoY",
+      "https://www.youtube.com/watch?v=YvPwelSQUcY"
     ],
-    "description": "海拔2305米富士山五合目大巴直达，河口湖大石公园纯平木栈道看逆富士与四季花海。",
-    "recommendedDurationMin": 180,
-    "openingHours": "大石公园24小时开放",
+    "description": "从河口湖大石公园的四季花田远眺富士倒影，再乘车登上海拔2305米的五合目看云海、神社与火山地貌。湖畔平缓亲子友好，五合目震撼但高寒多变，适合身体状态良好、天气晴朗的三代家庭。",
+    "recommendedDurationMin": 240,
+    "openingHours": "大石公园散步区全天可进入；河口湖自然生活馆3月至9月商店09:00-17:45；五合目随富士斯巴鲁线开放，7月至9月道路24小时，商店和餐厅各自营业",
     "admissionFee": {
-      "adult": "免费",
-      "senior": "免费",
+      "adult": "免费（大石公园、自然生活馆及五合目观光）",
+      "senior": "免费，无专门长者票",
       "child4yo": "免费",
-      "notes": "大石公园免费进入。"
+      "notes": "交通另计：斯巴鲁线普通车往返¥2800；河口湖站或富士山停车场至五合目巴士成人往返¥3400。4岁幼童不占独立座位时通常免费，需要独立座位时按儿童往返¥1700准备。越过五合目登山闸口继续登山另收2026年吉田路线通行费¥4000。"
     },
-    "bestTimeToVisit": "上午 08:30 - 11:00。",
-    "weatherSuitability": "晴天适宜",
-    "strollerRating": 5,
-    "strollerNotes": "河口湖大石公园与湖畔木栈道100%纯平无障碍。",
+    "bestTimeToVisit": "五合目08:30-09:30抵达；大石公园07:30-08:45拍照，需使用室内设施则09:00抵达",
+    "weatherSuitability": "晴天最佳；雨雾、雷电或强风时不宜上五合目，大石公园仅自然生活馆等部分区域可室内避雨",
+    "strollerRating": 4,
+    "strollerNotes": "大石公园主路平缓、可推车，自然生活馆有缓坡、无障碍厕所和电梯，但咖啡区至温室有一段需绕行；五合目主广场可推车，神社后方及登山道有坡道、台阶、碎石和火山砂。两处均未确认提供婴儿车租借。",
     "kidRating": 4,
-    "kidNotes": "大石公园软草坪奔跑，品尝富士山形状冰淇淋。",
-    "elderlyRating": 5,
-    "elderlyNotes": "平缓舒适，无需登山即可饱览富士山全景。",
-    "walkingIntensity": "轻松 (<500米)",
-    "stairsLevel": "平坦 / 无台阶",
+    "kidNotes": "大石公园有秋千、沙坑、滑梯、摇摇游具、草地、花田和冰淇淋，4岁儿童适宜度很高；湖岸并非全线封闭栏杆，停车场有大巴。五合目有富士山面包、纪念杖、邮局、云海及季节性马匹，但没有儿童游乐区，并需防范车辆、碎石坡和高海拔不适。",
+    "elderlyRating": 4,
+    "elderlyNotes": "大石公园从停车场至近端观景点约50-100米，缩短路线约300-500米，有咖啡、凉亭、长椅和轮椅借用。五合目基础观景约200-400米，但海拔2305米、风冷且氧气较稀薄；长辈应慢走、补水，心肺状态不佳时建议留在河口湖。",
+    "walkingIntensity": "轻松至中等（两处各约300-600米；不含登山步道）",
+    "stairsLevel": "大石公园主路基本平坦；五合目主广场平缓，神社及登山步道有台阶、坡道和碎石",
     "amenities": {
-      "nursingRoom": true,
+      "nursingRoom": false,
       "diaperChanging": true,
       "accessibleRestroom": true,
       "benchesRestAreas": true,
-      "shuttleOrCart": true,
+      "shuttleOrCart": false,
       "elevatorAvailable": true,
       "strollerRental": false,
       "wheelchairRental": true,
       "shadeAvailable": true,
-      "indoorRainyDayOption": false,
+      "indoorRainyDayOption": true,
       "kidPlayArea": true
     },
     "familyTips": [
-      "五合目气温比市区低10-12℃，带好外套。"
+      "晴天先游五合目、再去大石公园；五合目更依赖上午能见度，大石公园即使富士山被云遮住仍有花田和游具。",
+      "2026年7月3日18:00至9月10日18:00实行私家车管制，需停富士山停车场后转乘巴士或出租车；手机票只免售票窗口，不能跳过候车队伍。",
+      "五合目给幼儿和长辈准备防风外套、饮水和易消化零食；出现头痛、恶心、异常安静、走路不稳或明显气喘时立即下山。"
     ],
     "nearbyDining": [
       {
-        "id": "dine-fuji-1",
-        "name": "不动茶屋 (河口湖北本店)",
-        "cuisine": "南瓜馎饦面",
-        "familyFeatures": "大铁锅慢炖南瓜扁面，软烂易消化",
-        "walkingTimeMin": 8
+        "id": "dine-llm-1788211603367-0",
+        "name": "キッチン フジヤマビュー",
+        "cuisine": "咖喱、米饭及简餐",
+        "familyFeatures": "位于自然生活馆内，可室内休息并观赏富士山；可为孩子选择米饭并要求少酱，宝宝椅数量需现场确认",
+        "walkingTimeMin": 1
+      },
+      {
+        "id": "dine-llm-1788211603367-1",
+        "name": "红梅や 河口湖大石公园店",
+        "cuisine": "山梨乡土料理、馎饦、丼饭",
+        "familyFeatures": "南瓜、蔬菜和猪肉煮软的味噌馎饦适合三代分食，也有亲子丼和米饭；接待儿童，宝宝椅建议提前确认",
+        "walkingTimeMin": 3
+      },
+      {
+        "id": "dine-llm-1788211603367-2",
+        "name": "富士急雲上閣二楼餐厅",
+        "cuisine": "乌冬面、拉面、咖喱和定食",
+        "familyFeatures": "五合目内供应狐狸乌冬和肉乌冬，热汤软面适合幼童及长辈；餐厅在二楼，电梯及宝宝椅使用情况应当天确认",
+        "walkingTimeMin": 2
       }
     ],
     "websiteUrl": "https://fujisan.ne.jp/pages/380/",
@@ -1051,7 +1276,12 @@ export const INITIAL_SITES: Site[] = [
       "河口湖逆富士",
       "纯平无障碍"
     ],
-    "createdAt": "2026-08-01"
+    "createdAt": "2026-08-01",
+    "customFields": {
+      "rainyDayPlan": "小雨可在河口湖自然生活馆的商店、咖啡和二楼休息区停留约45-60分钟，相邻富士大石ハナテラス也有多家室内店铺，但楼栋之间需走室外石板路。大雨、浓雾或强风应取消五合目，改去山梨县立富士山世界遗产中心：免费，设大型富士山模型、灯光音效、文化展示、电梯、无障碍厕所、尿布台和轮椅借用。纯购物补给可前往Forest Mall富士河口湖，但它是开放式商业区，并非完全封闭商场。",
+      "ticketBookingTip": "大石公园、自然生活馆和五合目观光均不需要预约。2026夏季五合目巴士不能预约具体班次，按排队顺序上车；提前购买手机往返票可以免去售票窗口，但不能跳过候车队伍。没有公开的长者或婴儿车优先通道。建议08:30-09:30抵达五合目，并避开10:00-14:00旅行团集中时段。",
+      "parkingAndDropoff": "大石公园免费停车场紧邻自然生活馆，最近无障碍车位至入口约20-50米，普通车位约50-150米，走平地或缓坡，无需爬楼梯。五合目巴士、合规出租车和允许通行的包车可在环岛上下客，至主要商店约30-100米。2026年7月3日18:00至9月10日18:00私家车不得上山，须停富士山停车场，停车费每车每次¥1000，再转乘巴士或出租车；非管制期旺日仍可能等待停车两小时以上。"
+    }
   },
   {
     "id": "site-kasai-rinkai-aquarium",
