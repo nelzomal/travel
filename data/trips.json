@@ -1,0 +1,424 @@
+[
+  {
+    "id": "trip-japan-grand-multigen-2026",
+    "title": "日本全景黄金慢游之旅 (东京·箱根活火山·富士山·京都) 🗼⛩️🗻",
+    "destination": "日本 (东京 · 箱根 · 富士山 · 京都)",
+    "startDate": "2026-10-15",
+    "endDate": "2026-10-24",
+    "coverImage": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
+    "summary": "所有景点汇聚为单一完整的大环线行程！专为4岁活泼幼童与65岁以上长辈量身定制。从东京的明治神宫、台场高达与葛西临海水族馆，到箱根大涌谷活火山、芦之湖海盗船与富士山河口湖，再无缝衔接京都的岚山小火车、伏见千本鸟居与十石舟、清水寺、贵船川床与京都铁道博物馆，每日均固定设置1.5小时午睡休整时段。",
+    "partyMembers": [
+      {
+        "id": "p1",
+        "name": "小宝 (Leo)",
+        "role": "👶 4岁幼童",
+        "notes": "极爱SL蒸汽火车、高达变身、高空缆车、海盗船与野生小猴子，每天下午 13:30-15:00 必须午睡充电"
+      },
+      {
+        "id": "p2",
+        "name": "爷爷 & 奶奶",
+        "role": "🧓 长辈/爷爷奶奶",
+        "notes": "喜爱平缓无台阶步道、湖光山色、温泉水乡与清淡和食（汤豆腐/南瓜面/热鳗鱼饭），备好保暖衣物"
+      },
+      {
+        "id": "p3",
+        "name": "爸爸 & 妈妈",
+        "role": "🧑 父母/领队",
+        "notes": "负责推婴儿车、门票预约、路线导航与全家随身行李调度"
+      }
+    ],
+    "checklist": [
+      {
+        "id": "c1",
+        "category": "幼童用品 (4岁)",
+        "item": "轻便折叠旅行婴儿推车 (可直接推上缆车/海盗船/新干线)",
+        "checked": true
+      },
+      {
+        "id": "c2",
+        "category": "幼童用品 (4岁)",
+        "item": "宝宝防风保暖外套 (箱根、富士山、贵船山中海拔较高防着凉)",
+        "checked": true
+      },
+      {
+        "id": "c3",
+        "category": "幼童用品 (4岁)",
+        "item": "消毒便携湿巾 & 挖沙小铲子 (台场海滨玩沙)",
+        "checked": true
+      },
+      {
+        "id": "c4",
+        "category": "长辈/健康保健",
+        "item": "长辈慢病随身药盒 (降压药等随身带)",
+        "checked": true
+      },
+      {
+        "id": "c5",
+        "category": "长辈/健康保健",
+        "item": "便携不锈钢保温水杯 (随时喝温热水/大麦茶)",
+        "checked": true
+      },
+      {
+        "id": "c6",
+        "category": "长辈/健康保健",
+        "item": "轻便折叠防滑健步手杖",
+        "checked": true
+      },
+      {
+        "id": "c7",
+        "category": "全家必备",
+        "item": "箱根周游券 (Hakone Freepass 3日券)",
+        "checked": true,
+        "note": "无缝换乘缆车与海盗船"
+      },
+      {
+        "id": "c8",
+        "category": "全家必备",
+        "item": "嵯峨野小火车 & 伏见十石舟 预订单",
+        "checked": true
+      },
+      {
+        "id": "c9",
+        "category": "全家必备",
+        "item": "Suica / ICOCA 西瓜卡 (手机或实体卡预充值)",
+        "checked": true
+      },
+      {
+        "id": "c10",
+        "category": "全家必备",
+        "item": "大容量移动电源 (拍照录像电量保障)",
+        "checked": true
+      },
+      {
+        "id": "c11",
+        "category": "证件与数码",
+        "item": "护照原件 & 日本入境电子申报码截图",
+        "checked": true
+      }
+    ],
+    "days": [
+      {
+        "id": "day-1",
+        "dayNumber": 1,
+        "date": "2026-10-15",
+        "theme": "东京初探：明治神宫百年古树林荫洗肺 🌿",
+        "dailyNotes": "全平缓步道舒缓日！早晨空气极佳避开高温，午间返回酒店午休，傍晚原宿温和漫步。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-1-1",
+            "siteId": "site-meiji-jingu",
+            "timeSlot": "morning",
+            "startTime": "09:00",
+            "endTime": "11:30",
+            "customNotes": "由原宿站南参道平缓入口进入，带小朋友在手水舍洗手，长辈在神宫茶屋品尝热抹茶与软和果子。",
+            "transportToNext": {
+              "mode": "taxi",
+              "durationMin": 12,
+              "costEst": "约 ¥1,500",
+              "familyNote": "中午直接打车返回酒店或餐厅，免去推车挤地铁，保存长辈体力。"
+            }
+          },
+          {
+            "id": "stop-1-2",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "酒店充电阻断：幼童1.5h午睡 & 长辈品茶泡脚 💤",
+            "timeSlot": "nap_rest",
+            "startTime": "13:30",
+            "endTime": "15:30",
+            "customNotes": "全家回酒店吹空调休息，4岁宝宝深睡眠充电，长辈放松双腿，喝杯温茶看看照片。"
+          }
+        ]
+      },
+      {
+        "id": "day-2",
+        "dayNumber": 2,
+        "date": "2026-10-16",
+        "theme": "东京湾海洋与高达：葛西临海水族园 ➔ 台场海滨公园 🐟🤖",
+        "dailyNotes": "100%全无障碍纯平日！水族馆大金枪鱼环形水槽，傍晚看1:1巨型高达变身与彩虹大桥日落。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-2-1",
+            "siteId": "site-kasai-rinkai-aquarium",
+            "timeSlot": "morning",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "customNotes": "玻璃穹顶平缓坡道，看蓝鳍金枪鱼飞速群游与小蓝企鹅跳水，馆内Seas Cafe享用亲子企鹅便当。",
+            "transportToNext": {
+              "mode": "train",
+              "durationMin": 20,
+              "familyNote": "搭乘临海线电车直达台场，推车无缝进站。"
+            }
+          },
+          {
+            "id": "stop-2-2",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "台场商场舒适休息区午休 & 咖啡茶歇 💤",
+            "timeSlot": "nap_rest",
+            "startTime": "13:30",
+            "endTime": "15:00",
+            "customNotes": "DiverCity全空调室内软沙发休整，宝宝在婴儿推车内安静午睡。"
+          },
+          {
+            "id": "stop-2-3",
+            "siteId": "site-odaiba",
+            "timeSlot": "afternoon",
+            "startTime": "15:30",
+            "endTime": "19:00",
+            "customNotes": "白沙滩踩水看自由女神，看1:1独角兽高达灯光变形，在Aqua City海景餐厅吃晚饭看彩虹大桥夜景。"
+          }
+        ]
+      },
+      {
+        "id": "day-3",
+        "dayNumber": 3,
+        "date": "2026-10-17",
+        "theme": "箱根活火山奇观：空中全景缆车与大涌谷黑玉子 ➔ 芦之湖海盗船 🌋🚢",
+        "dailyNotes": "小田急浪漫特快前往箱根，换乘全景空中缆车飞越冒白烟的活火山口，乘海盗船游芦之湖。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-3-1",
+            "siteId": "site-hakone-owakudani",
+            "timeSlot": "morning",
+            "startTime": "10:00",
+            "endTime": "12:30",
+            "customNotes": "搭乘全景大缆车俯瞰火山大裂缝，品尝刚出锅的延寿大涌谷黑温泉蛋，2F展望食堂看火山口与富士山。",
+            "transportToNext": {
+              "mode": "train",
+              "durationMin": 15,
+              "familyNote": "从大涌谷乘空中缆车直接下行至芦之湖桃源台港码头。"
+            }
+          },
+          {
+            "id": "stop-3-2",
+            "siteId": "site-lake-ashi-cruise",
+            "timeSlot": "afternoon",
+            "startTime": "13:00",
+            "endTime": "14:30",
+            "customNotes": "登上海盗船游览芦之湖，甲板吹微风看水上红色平和鸟居与富士山同框。",
+            "transportToNext": {
+              "mode": "taxi",
+              "durationMin": 15,
+              "costEst": "约 ¥2,000",
+              "familyNote": "返回箱根温泉旅馆办理入住。"
+            }
+          },
+          {
+            "id": "stop-3-3",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "箱根温泉旅馆午休 & 长辈私享天然温泉 ♨️",
+            "timeSlot": "nap_rest",
+            "startTime": "15:00",
+            "endTime": "17:30",
+            "customNotes": "宝宝睡个舒服的午觉，长辈泡天然弱碱性温泉彻底消除疲劳。"
+          }
+        ]
+      },
+      {
+        "id": "day-4",
+        "dayNumber": 4,
+        "date": "2026-10-18",
+        "theme": "圣山朝圣：富士山五合目与河口湖大石公园逆富士 🗻🌸",
+        "dailyNotes": "专车畅游富士五湖，纯平大石公园木栈道漫步赏花，品尝软糯暖胃南瓜馎饦面。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-4-1",
+            "siteId": "site-mount-fuji-5th-kawaguchiko",
+            "timeSlot": "morning",
+            "startTime": "09:30",
+            "endTime": "13:00",
+            "customNotes": "大石公园纯平木栈道推车赏花，拍倒映在清澈湖水里的富士山，中午在不动茶屋吃热腾腾的南瓜蔬菜馎饦面。",
+            "transportToNext": {
+              "mode": "car",
+              "durationMin": 20,
+              "familyNote": "专车接送回湖景酒店休息。"
+            }
+          },
+          {
+            "id": "stop-4-2",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "湖景客房午睡 & 远眺富士山落日余晖 💤",
+            "timeSlot": "nap_rest",
+            "startTime": "14:00",
+            "endTime": "16:30",
+            "customNotes": "全家在房间内静静看着富士山天色变幻，幼童安稳睡眠。"
+          }
+        ]
+      },
+      {
+        "id": "day-5",
+        "dayNumber": 5,
+        "date": "2026-10-19",
+        "theme": "新干线移师古都 · 伏见千本鸟居与十石舟水乡运河 ⛩️🛶",
+        "dailyNotes": "体验东海道新干线至京都，清晨千本鸟居前段漫步，下午乘木船穿行垂柳运河。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-5-1",
+            "siteId": "site-fushimi-inari-jikkokubune",
+            "timeSlot": "morning",
+            "startTime": "08:30",
+            "endTime": "12:00",
+            "customNotes": "清晨千本鸟居平缓段散步祈福，行至奥社折返保存体力，中午吃400年老铺烤鳗鱼与狐狸乌冬面。",
+            "transportToNext": {
+              "mode": "taxi",
+              "durationMin": 12,
+              "costEst": "约 ¥1,500",
+              "familyNote": "打车前往伏见十石舟码头。"
+            }
+          },
+          {
+            "id": "stop-5-2",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "伏见十石舟水乡木船巡游 & 酒店午休 💤",
+            "timeSlot": "afternoon",
+            "startTime": "13:30",
+            "endTime": "16:00",
+            "customNotes": "坐在平稳木船上看柳树江户酒藏，微风拂面，长辈小宝极其惬意。"
+          }
+        ]
+      },
+      {
+        "id": "day-6",
+        "dayNumber": 6,
+        "date": "2026-10-20",
+        "theme": "岚山山水一日全景：嵯峨野观光小火车 · 竹林小径 ➔ 猴子公园 🚂🐒",
+        "dailyNotes": "复古小火车穿行保津川峡谷，漫步清凉竹林，品尝温热汤豆腐，探访野生日本猕猴。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-6-1",
+            "siteId": "site-arashiyama-combo",
+            "timeSlot": "morning",
+            "startTime": "09:00",
+            "endTime": "13:00",
+            "customNotes": "搭乘嵯峨野复古小火车看保津川峡谷，漫步竹林小径，中午在「嵯峨豆腐 稻」享用软嫩汤豆腐。",
+            "transportToNext": {
+              "mode": "walk",
+              "durationMin": 10,
+              "familyNote": "渡月桥平路漫步至岚山温泉旅馆。"
+            }
+          },
+          {
+            "id": "stop-6-2",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "岚山酒店午休 & 爷爷奶奶静享温泉足汤 💤",
+            "timeSlot": "nap_rest",
+            "startTime": "13:30",
+            "endTime": "15:30",
+            "customNotes": "宝宝午睡充电，长辈泡天然温泉足汤放松双腿。"
+          }
+        ]
+      },
+      {
+        "id": "day-7",
+        "dayNumber": 7,
+        "date": "2026-10-21",
+        "theme": "古都原汁原味：清水寺木舞台 ➔ 二年坂 ➔ 八坂神社 ➔ 祇园 🏮",
+        "dailyNotes": "打车直达清水寺顶，一路顺坡向下漫步至祇园，长辈小宝膝盖省力50%！",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-7-1",
+            "siteId": "site-kiyomizu-gion-walk",
+            "timeSlot": "morning",
+            "startTime": "08:30",
+            "endTime": "12:30",
+            "customNotes": "清水舞台俯瞰全景，接音羽瀑布甘泉，顺坡逛二年坂品尝抹茶甜品，漫步至八坂神社与祇园。",
+            "transportToNext": {
+              "mode": "taxi",
+              "durationMin": 10,
+              "costEst": "约 ¥1,200",
+              "familyNote": "返回酒店午休。"
+            }
+          },
+          {
+            "id": "stop-7-2",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "酒店午睡充电 & 傍晚花见小路古街漫步 💤",
+            "timeSlot": "nap_rest",
+            "startTime": "13:30",
+            "endTime": "16:00",
+            "customNotes": "睡饱后再出门品尝祇园键善良房冰镇葛切黑糖凉面。"
+          }
+        ]
+      },
+      {
+        "id": "day-8",
+        "dayNumber": 8,
+        "date": "2026-10-22",
+        "theme": "京都北山纳凉：叡山电车 ➔ 贵船神社神奇水占卜与溪流川床料理 🎋",
+        "dailyNotes": "搭乘观景电车穿行枫叶隧道，在清澈溪流之上享用清凉川床料理与流水素面。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-8-1",
+            "siteId": "site-kifune-kurama",
+            "timeSlot": "morning",
+            "startTime": "09:30",
+            "endTime": "13:30",
+            "customNotes": "叡山电车观景，贵船神社求神奇浮字水占卜，溪流川床吃烤香鱼与流水素面。",
+            "transportToNext": {
+              "mode": "train",
+              "durationMin": 30,
+              "familyNote": "乘坐叡山电车返回京都市区。"
+            }
+          },
+          {
+            "id": "stop-8-2",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "午后静修充电 & 享受京都名物抹茶和果子 🍵",
+            "timeSlot": "nap_rest",
+            "startTime": "14:30",
+            "endTime": "16:30",
+            "customNotes": "山间游览后充足休整。"
+          }
+        ]
+      },
+      {
+        "id": "day-9",
+        "dayNumber": 9,
+        "date": "2026-10-23",
+        "theme": "亲子铁道狂欢与上野熊猫：京都铁道博物馆 ➔ 上野公园 🚂🐼",
+        "dailyNotes": "全天候100%纯平无障碍！搭乘真实SL蒸汽火车，看大熊猫吃竹子，完满舒适收官。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-9-1",
+            "siteId": "site-kyoto-railway-aquarium",
+            "timeSlot": "morning",
+            "startTime": "09:30",
+            "endTime": "13:00",
+            "customNotes": "搭乘SL Steam蒸汽火车，参观梅小路扇形车库，在2F展望餐厅吃新干线便当看高铁飞驰。",
+            "transportToNext": {
+              "mode": "train",
+              "durationMin": 25,
+              "familyNote": "前往上野公园。"
+            }
+          },
+          {
+            "id": "stop-9-2",
+            "siteId": "site-ueno-park-zoo",
+            "timeSlot": "afternoon",
+            "startTime": "14:30",
+            "endTime": "17:00",
+            "customNotes": "上野动物园看大熊猫与长颈鹿，不忍池湖畔漫步，品尝伊豆荣鲜嫩无刺鳗鱼饭。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-08-31",
+    "updatedAt": "2026-08-31"
+  }
+]
