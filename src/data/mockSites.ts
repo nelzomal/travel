@@ -2455,7 +2455,50 @@ export const INITIAL_SITES: Site[] = [
         "id": "social-1788264776398-84c6",
         "url": "https://www.xiaohongshu.com/explore/69d5ab1d00000000220013ff?xsec_token=ABhbjohaLBsJNGqTh1cxgcCpIukRYj9w9402tuA4GemeY=&xsec_source=pc_search&source=web_explore_feed",
         "platform": "xiaohongshu",
-        "title": "小红书 种草推荐",
+        "title": "大连星海广场攻略｜收藏这一篇就够了",
+        "author": "温暖的11",
+        "screenshotUrl": "/social-media/xinghai-square/general-guide.webp",
+        "note": "交通、百年城雕、海鸥、游乐区、跨海大桥夜景与喷泉时段总览；喷泉开放时间需出发前再核实。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-xinghai-family-multigen",
+        "url": "https://www.xiaohongshu.com/search_result/6a22b41e0000000007020f49?xsec_token=AB6l8fzrlXgBK72qk7Bd6Sp-ELUv3n7sh8S5nvoTVlUmA=&xsec_source=pc_search",
+        "platform": "xiaohongshu",
+        "title": "5天4晚大连家庭亲子游，带老带小怎么玩（下）",
+        "author": "阿蕾ALEI",
+        "screenshotUrl": "/social-media/xinghai-square/family-multigen.webp",
+        "note": "带老带小实测：挖沙、喂海鸥、游乐场、推车和防晒；强调轻松安排，不要塞太多景点。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-xinghai-toddler-easy",
+        "url": "https://www.xiaohongshu.com/search_result/6a5b24a6000000001f01eb12?xsec_token=ABUtnrRdUWol-boPkoTXRzJ3kBRAss8wIKN_gGkns3kRk=&xsec_source=pc_search",
+        "platform": "xiaohongshu",
+        "title": "大连带3岁小孩不累躺平攻略⛱️",
+        "author": "devindog",
+        "screenshotUrl": "/social-media/xinghai-square/toddler-easy.webp",
+        "note": "低龄儿童低强度路线：君悦酒店前海滩挖沙，正对跨海大桥；建议打车与带推车，但进入沙滩前需停放推车。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-xinghai-tide-pooling",
+        "url": "https://www.xiaohongshu.com/search_result/6a048333000000003501e767?xsec_token=ABH8knABxUOVPzJB0OwfRJm-faDOltRFGvwUaoU-I6Dwg=&xsec_source=pc_search",
+        "platform": "xiaohongshu",
+        "title": "拖家带口来：星海广场赶海啦！",
+        "author": "小饼饼饼饼饼",
+        "screenshotUrl": "/social-media/xinghai-square/tide-pooling.webp",
+        "note": "星海浴场赶海位置、工具、防滑与涨潮撤离提示；文内具体潮时只对应发帖日期，出发前必须另查当天潮汐。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-xinghai-photo-spots",
+        "url": "https://www.xiaohongshu.com/search_result/69e975290000000023007848?xsec_token=ABVZFhuACXmjExA_31WxrKaGXB0LJ8abfX1caDOtO_mps=&xsec_source=pc_search",
+        "platform": "xiaohongshu",
+        "title": "大连星海广场超全游玩攻略 附送拍照机位",
+        "author": "秋子大连旅游攻略",
+        "screenshotUrl": "/social-media/xinghai-square/photo-spots.webp",
+        "note": "图片版星海广场游玩与拍照机位汇总，适合现场对照构图；具体营业与活动时间需另行核实。",
         "addedAt": "2026-09-01"
       }
     ],

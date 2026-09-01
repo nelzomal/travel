@@ -2,9 +2,9 @@ import { Site, Trip } from '../types/travel';
 import { INITIAL_SITES } from '../data/mockSites';
 import { INITIAL_TRIPS } from '../data/mockTrips';
 
-const SITES_KEY = 'family_travel_sites_zh_v19';
-const TRIPS_KEY = 'family_travel_trips_zh_v19';
-const ACTIVE_TRIP_KEY = 'family_travel_active_trip_id_zh_v19';
+const SITES_KEY = 'family_travel_sites_zh_v20';
+const TRIPS_KEY = 'family_travel_trips_zh_v20';
+const ACTIVE_TRIP_KEY = 'family_travel_active_trip_id_zh_v20';
 
 // Automatically sync local changes to filesystem / git codebase when running in Vite dev mode
 export const syncToFilesystem = async (sites?: Site[], trips?: Trip[]): Promise<{ success: boolean; message?: string }> => {
@@ -24,6 +24,52 @@ export const syncToFilesystem = async (sites?: Site[], trips?: Trip[]): Promise<
   } catch (e: any) {
     // Graceful fallback for static hosting
     return { success: false, message: e?.message || '静态部署环境不支持直接写入磁盘' };
+  }
+};
+
+// Synchronize from disk (data/sites.json & data/trips.json) into browser LocalStorage
+export const syncFromDiskToLocalStorage = async (): Promise<{
+  success: boolean;
+  sites?: Site[];
+  trips?: Trip[];
+  message: string;
+}> => {
+  try {
+    const res = await fetch('/api/sync-data', {
+      method: 'GET',
+      headers: { 'Cache-Control': 'no-cache' }
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (data.success && Array.isArray(data.sites) && Array.isArray(data.trips)) {
+        localStorage.setItem(SITES_KEY, JSON.stringify(data.sites));
+        localStorage.setItem(TRIPS_KEY, JSON.stringify(data.trips));
+        return {
+          success: true,
+          sites: data.sites,
+          trips: data.trips,
+          message: `已成功从磁盘载入 ${data.sites.length} 个景点与 ${data.trips.length} 个行程数据！`
+        };
+      }
+    }
+    // Fallback for static hosting / production build: reload latest bundled mock data
+    localStorage.setItem(SITES_KEY, JSON.stringify(INITIAL_SITES));
+    localStorage.setItem(TRIPS_KEY, JSON.stringify(INITIAL_TRIPS));
+    return {
+      success: true,
+      sites: INITIAL_SITES,
+      trips: INITIAL_TRIPS,
+      message: `已从内置数据源刷新 (含 ${INITIAL_SITES.length} 个景点)！`
+    };
+  } catch (e: any) {
+    localStorage.setItem(SITES_KEY, JSON.stringify(INITIAL_SITES));
+    localStorage.setItem(TRIPS_KEY, JSON.stringify(INITIAL_TRIPS));
+    return {
+      success: true,
+      sites: INITIAL_SITES,
+      trips: INITIAL_TRIPS,
+      message: `已从内置数据源刷新 (含 ${INITIAL_SITES.length} 个景点)！`
+    };
   }
 };
 

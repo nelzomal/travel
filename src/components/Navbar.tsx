@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { Trip } from '../types/travel';
 import { 
-  Plus, Printer, Download, Upload, RotateCcw, Share2, Check, Save, GitBranch, X, Copy
+  Plus, Printer, Download, Upload, RotateCcw, Share2, Check, Save, GitBranch, X, Copy, RotateCw
 } from 'lucide-react';
-import { exportDataAsJSON, importDataFromJSON, syncToFilesystem, getExportDataJSONString } from '../services/storage';
+import { exportDataAsJSON, importDataFromJSON, syncToFilesystem, syncFromDiskToLocalStorage, getExportDataJSONString } from '../services/storage';
 
 export type ActiveTab = 'map_plan' | 'sites' | 'itinerary' | 'checklist';
 
@@ -18,6 +18,7 @@ interface NavbarProps {
   onOpenPrintView: () => void;
   onResetDefaults: () => void;
   onDataImported: () => void;
+  onSyncFromDisk?: () => Promise<{ success: boolean; message: string }>;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -30,14 +31,36 @@ export const Navbar: React.FC<NavbarProps> = ({
   onAddNewSite,
   onOpenPrintView,
   onResetDefaults,
-  onDataImported
+  onDataImported,
+  onSyncFromDisk
 }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [copiedLink, setCopiedLink] = useState(false);
   const [syncedStatus, setSyncedStatus] = useState<string | null>(null);
+  const [diskSyncedStatus, setDiskSyncedStatus] = useState<string | null>(null);
+  const [isSyncingFromDisk, setIsSyncingFromDisk] = useState(false);
 
   const [showSyncModal, setShowSyncModal] = useState(false);
   const [copiedJson, setCopiedJson] = useState(false);
+
+  const handleManualSyncFromDisk = async () => {
+    setIsSyncingFromDisk(true);
+    try {
+      if (onSyncFromDisk) {
+        const res = await onSyncFromDisk();
+        setDiskSyncedStatus(res.message || '已成功从磁盘载入！');
+      } else {
+        const res = await syncFromDiskToLocalStorage();
+        setDiskSyncedStatus(res.message);
+        onDataImported();
+      }
+    } catch (e: any) {
+      setDiskSyncedStatus(e?.message || '从磁盘同步失败');
+    } finally {
+      setIsSyncingFromDisk(false);
+      setTimeout(() => setDiskSyncedStatus(null), 3500);
+    }
+  };
 
   const handleShareLink = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -202,6 +225,31 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <>
                   <Share2 className="w-3.5 h-3.5 text-slate-500" />
                   <span className="hidden sm:inline">分享</span>
+                </>
+              )}
+            </button>
+
+            {/* Sync from Disk to LocalStorage */}
+            <button
+              type="button"
+              onClick={handleManualSyncFromDisk}
+              disabled={isSyncingFromDisk}
+              title="从本地磁盘代码文件 (data/sites.json 与 data/trips.json) 读取最新修改并立即载入浏览器 LocalStorage"
+              className={`px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all border shadow-2xs ${
+                diskSyncedStatus
+                  ? 'bg-amber-50 text-amber-800 border-amber-300 ring-2 ring-amber-400/20'
+                  : 'bg-slate-50 hover:bg-slate-100 text-slate-700 border-slate-200 hover:border-amber-300'
+              }`}
+            >
+              {diskSyncedStatus ? (
+                <>
+                  <Check className="w-3.5 h-3.5 text-amber-600" />
+                  <span className="text-[11px] truncate max-w-[120px]">已从磁盘加载!</span>
+                </>
+              ) : (
+                <>
+                  <RotateCw className={`w-3.5 h-3.5 text-amber-600 ${isSyncingFromDisk ? 'animate-spin' : ''}`} />
+                  <span className="hidden sm:inline">从磁盘同步</span>
                 </>
               )}
             </button>

@@ -135,6 +135,19 @@ export function getEmbeddableUrl(url: string, platform?: SocialPlatform): string
   return trimmed;
 }
 
+// Helper to resolve relative and root screenshot image paths correctly
+export function formatScreenshotUrl(url?: string): string {
+  if (!url) return '';
+  if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('data:image')) {
+    return url;
+  }
+  const base = import.meta.env.BASE_URL || './';
+  if (url.startsWith('/')) {
+    return base.endsWith('/') ? `${base}${url.slice(1)}` : `${base}${url}`;
+  }
+  return url;
+}
+
 // Utility to compress an image file / dataUrl to reasonable dimensions
 function compressImage(base64Str: string, maxDim = 1400, quality = 0.85): Promise<string> {
   return new Promise((resolve) => {
@@ -611,7 +624,7 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
                       title="点击放大查看高清长图与截图详情"
                     >
                       <img
-                        src={item.screenshotUrl}
+                        src={formatScreenshotUrl(item.screenshotUrl)}
                         alt={item.title}
                         className="w-full h-full object-cover object-top transition-transform duration-500 group-hover/img:scale-105"
                       />
@@ -1081,7 +1094,7 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
                         style={{ transform: `scale(${zoomScale})`, transformOrigin: 'top center' }}
                       >
                         <img
-                          src={activePreviewLink.screenshotUrl}
+                          src={formatScreenshotUrl(activePreviewLink.screenshotUrl)}
                           alt={activePreviewLink.title}
                           className="w-full h-auto object-contain select-none"
                         />

@@ -4,7 +4,8 @@ import {
   getStoredSites, saveSites, 
   getStoredTrips, saveTrips, 
   getActiveTripId, setActiveTripId, 
-  resetToDefaults 
+  resetToDefaults,
+  syncFromDiskToLocalStorage
 } from './services/storage';
 
 import { Navbar, ActiveTab } from './components/Navbar';
@@ -65,6 +66,21 @@ export function App() {
     setSites(loadedSites);
     setTrips(loadedTrips);
     setActiveTripIdState(currentActiveId);
+  };
+
+  const handleSyncFromDisk = async () => {
+    const res = await syncFromDiskToLocalStorage();
+    if (res.success && res.sites && res.trips) {
+      setSites(res.sites);
+      setTrips(res.trips);
+      const currentActiveId = getActiveTripId() || (res.trips[0]?.id ?? '');
+      setActiveTripIdState(currentActiveId);
+      if (selectedSiteForDetails) {
+        const fresh = res.sites.find((s) => s.id === selectedSiteForDetails.id);
+        if (fresh) setSelectedSiteForDetails(fresh);
+      }
+    }
+    return res;
   };
 
   useEffect(() => {
@@ -511,6 +527,7 @@ export function App() {
           loadData();
         }}
         onDataImported={loadData}
+        onSyncFromDisk={handleSyncFromDisk}
       />
 
       {/* Main Content Area */}
