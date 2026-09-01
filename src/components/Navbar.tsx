@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { Trip } from '../types/travel';
 import { 
-  Plus, Printer, Download, Upload, RotateCcw, Share2, Check, Save, GitBranch
+  Plus, Printer, Download, Upload, RotateCcw, Share2, Check, Save, GitBranch, X, Copy
 } from 'lucide-react';
-import { exportDataAsJSON, importDataFromJSON, syncToFilesystem } from '../services/storage';
+import { exportDataAsJSON, importDataFromJSON, syncToFilesystem, getExportDataJSONString } from '../services/storage';
 
 export type ActiveTab = 'map_plan' | 'sites' | 'itinerary' | 'checklist';
 
@@ -36,6 +36,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [copiedLink, setCopiedLink] = useState(false);
   const [syncedStatus, setSyncedStatus] = useState<string | null>(null);
 
+  const [showSyncModal, setShowSyncModal] = useState(false);
+  const [copiedJson, setCopiedJson] = useState(false);
+
   const handleShareLink = () => {
     navigator.clipboard.writeText(window.location.href);
     setCopiedLink(true);
@@ -43,13 +46,18 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   const handleManualSyncToGit = async () => {
-    const res = await syncToFilesystem();
-    if (res.success) {
-      setSyncedStatus('已成功同步写入本地 Git 文件！');
+    const isLocalDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    if (isLocalDev) {
+      const res = await syncToFilesystem();
+      if (res.success) {
+        setSyncedStatus('已成功同步写入本地 Git 文件！');
+      } else {
+        setSyncedStatus(res.message || '同步完成');
+      }
+      setTimeout(() => setSyncedStatus(null), 3000);
     } else {
-      setSyncedStatus(res.message || '同步完成');
+      setShowSyncModal(true);
     }
-    setTimeout(() => setSyncedStatus(null), 3000);
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -319,6 +327,81 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
       </div>
+
+      {/* SYNC TO GIT MODAL (For Cloudflare Pages / Static Hosting) */}
+      {showSyncModal && (
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl p-6 border border-slate-200 space-y-4 animate-in fade-in zoom-in-95 duration-200">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <div className="w-10 h-10 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl font-bold">
+                  💾
+                </div>
+                <div>
+                  <h3 className="text-base font-extrabold text-slate-900">同步线上修改至本地 Git</h3>
+                  <p className="text-xs text-slate-500">线上部署运行于纯静态云端，修改暂存于您当前浏览器的本地存储</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowSyncModal(false)}
+                className="p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-xl transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-xs space-y-2.5 text-slate-700">
+              <p className="font-bold text-slate-900">推荐同步方式：</p>
+              <div className="flex items-start gap-2">
+                <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-[11px] flex-shrink-0 mt-0.5">1</span>
+                <p>点击下方 <strong>「一键复制全部数据 JSON」</strong> 按钮；</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-[11px] flex-shrink-0 mt-0.5">2</span>
+                <p>在 AI 对话框中直接粘贴发送，AI 助手将全量写入本地 Git 代码库并即刻提交！</p>
+              </div>
+              <div className="pt-2 border-t border-slate-200 flex items-center gap-2 text-slate-500 text-[11px]">
+                <span>💡</span>
+                <span>也可以在电脑浏览器打开本地版 <strong>http://localhost:5173</strong>，点击顶部的「📤 导入」直接生效。</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-2.5 pt-1">
+              <button
+                type="button"
+                onClick={() => {
+                  navigator.clipboard.writeText(getExportDataJSONString());
+                  setCopiedJson(true);
+                  setTimeout(() => setCopiedJson(false), 3000);
+                }}
+                className="flex-1 px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-indigo-600/20 transition-all"
+              >
+                {copiedJson ? (
+                  <>
+                    <Check className="w-4 h-4 text-emerald-300" />
+                    <span>已复制全部数据 JSON 到剪贴板！</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-4 h-4" />
+                    <span>📋 一键复制全部数据 JSON</span>
+                  </>
+                )}
+              </button>
+
+              <button
+                type="button"
+                onClick={exportDataAsJSON}
+                className="px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-2xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all"
+              >
+                <Download className="w-4 h-4" />
+                <span>下载 JSON 文件</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

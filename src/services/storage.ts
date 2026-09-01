@@ -107,12 +107,22 @@ export const resetToDefaults = () => {
   syncToFilesystem(INITIAL_SITES, INITIAL_TRIPS);
 };
 
+export const getExportDataJSONString = (): string => {
+  const data = {
+    sites: getStoredSites(),
+    trips: getStoredTrips(),
+    exportedAt: new Date().toISOString(),
+    version: '16.0-zh'
+  };
+  return JSON.stringify(data, null, 2);
+};
+
 export const exportDataAsJSON = () => {
   const data = {
     sites: getStoredSites(),
     trips: getStoredTrips(),
     exportedAt: new Date().toISOString(),
-    version: '12.0-zh'
+    version: '16.0-zh'
   };
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
