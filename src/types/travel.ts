@@ -58,6 +58,7 @@ export interface ReviewerConfig {
 
 export interface Site {
   id: string;
+  tripId?: string; // 所属旅行计划ID (隔离存储与展示)
   name: string;
   localName?: string;
   category: SiteCategory;

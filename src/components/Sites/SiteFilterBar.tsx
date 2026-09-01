@@ -22,13 +22,17 @@ interface SiteFilterBarProps {
   onChange: (newFilters: SiteFilters) => void;
   totalSites: number;
   filteredCount: number;
+  currentTripId?: string;
+  currentTripTitle?: string;
 }
 
 export const SiteFilterBar: React.FC<SiteFilterBarProps> = ({
   filters,
   onChange,
   totalSites,
-  filteredCount
+  filteredCount,
+  currentTripId,
+  currentTripTitle
 }) => {
   const categories: Array<{ id: string; label: string; icon: string }> = [
     { id: 'all', label: '全部类型', icon: '✨' },
@@ -40,18 +44,43 @@ export const SiteFilterBar: React.FC<SiteFilterBarProps> = ({
     { id: 'relax', label: '温泉茶歇', icon: '🍵' },
   ];
 
-  const cities = [
-    { id: 'all', label: '全部城市', icon: '🗾' },
-    { id: '大连', label: '大连 (山海亲子)', icon: '🌊' },
-    { id: '东京', label: '东京', icon: '🗼' },
-    { id: '箱根', label: '箱根', icon: '♨️' },
-    { id: '富士山', label: '富士山/河口湖', icon: '🗻' },
-    { id: '京都', label: '京都', icon: '⛩️' },
-  ];
+  const isDalianTrip = currentTripId === 'trip-dalian-coastal-multigen-2026';
+
+  const cities = isDalianTrip
+    ? [
+        { id: 'all', label: '全部大连区域', icon: '🌊' },
+        { id: '沙河口/中山', label: '星海·圣亚·老虎滩 (城区)', icon: '🏙️' },
+        { id: '金石滩', label: '发现王国·黄金海岸·地质公园', icon: '🏖️' },
+        { id: '旅顺/高新', label: '三寰牧场·英歌石 (近郊)', icon: '🐑' },
+        { id: '瓦房店/庄河', label: '骆驼山·蛤蜊岛 (滨海海岛)', icon: '🦀' },
+      ]
+    : [
+        { id: 'all', label: '全部城市', icon: '🗾' },
+        { id: '东京', label: '东京', icon: '🗼' },
+        { id: '箱根', label: '箱根', icon: '♨️' },
+        { id: '富士山', label: '富士山/河口湖', icon: '🗻' },
+        { id: '京都', label: '京都', icon: '⛩️' },
+      ];
 
   return (
     <div className="bg-white rounded-3xl p-5 border border-slate-200 shadow-xs space-y-4">
       
+      {/* Trip Isolation Indicator */}
+      {currentTripTitle && (
+        <div className="flex items-center justify-between pb-2 border-b border-slate-100 text-xs">
+          <div className="flex items-center gap-2">
+            <span className="px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 font-extrabold text-[11px] border border-indigo-200/60 flex items-center gap-1">
+              <span>✈️</span>
+              <span>行程专属景点</span>
+            </span>
+            <span className="font-extrabold text-slate-800 line-clamp-1">{currentTripTitle}</span>
+          </div>
+          <span className="text-[11px] text-slate-400 font-medium hidden sm:inline">
+            该旅行已收录 <strong className="text-slate-700 font-bold">{totalSites}</strong> 个景点
+          </span>
+        </div>
+      )}
+
       {/* ROW 1: Search Input, Sorting Selector & Counter */}
       <div className="flex flex-col lg:flex-row gap-3 items-stretch lg:items-center justify-between">
         

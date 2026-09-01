@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Site, Trip, DayItinerary } from './types/travel';
 import { 
   getStoredSites, saveSites, 
@@ -122,25 +122,47 @@ export function App() {
   const activeTrip = trips.find((t) => t.id === activeTripId) || trips[0];
   const activeDay = activeTrip?.days[activeDayIndex] || activeTrip?.days[0] || null;
 
+  // Sites strictly isolated to the active trip
+  const activeTripSites = useMemo(() => {
+    if (!activeTrip) return sites;
+    return sites.filter((s) => {
+      if (s.tripId) {
+        return s.tripId === activeTrip.id;
+      }
+      if (activeTrip.id === 'trip-dalian-coastal-multigen-2026') {
+        return s.city === '大连' || s.id.startsWith('site-dalian-');
+      }
+      return s.city !== '大连' && !s.id.startsWith('site-dalian-');
+    });
+  }, [sites, activeTrip]);
+
   // Site CRUD operations
   const handleSaveSite = (savedSite: Site) => {
-    const exists = sites.some((s) => s.id === savedSite.id);
+    const siteWithTrip: Site = {
+      ...savedSite,
+      tripId: savedSite.tripId || activeTrip?.id || 'trip-japan-grand-multigen-2026'
+    };
+    const exists = sites.some((s) => s.id === siteWithTrip.id);
     let updated: Site[];
     if (exists) {
-      updated = sites.map((s) => (s.id === savedSite.id ? savedSite : s));
+      updated = sites.map((s) => (s.id === siteWithTrip.id ? siteWithTrip : s));
     } else {
-      updated = [savedSite, ...sites];
+      updated = [siteWithTrip, ...sites];
     }
     setSites(updated);
     saveSites(updated);
   };
 
   const handleUpdateSite = (updatedSite: Site) => {
-    const updated = sites.map((s) => (s.id === updatedSite.id ? updatedSite : s));
+    const siteWithTrip: Site = {
+      ...updatedSite,
+      tripId: updatedSite.tripId || activeTrip?.id || 'trip-japan-grand-multigen-2026'
+    };
+    const updated = sites.map((s) => (s.id === siteWithTrip.id ? siteWithTrip : s));
     setSites(updated);
     saveSites(updated);
-    if (selectedSiteForDetails?.id === updatedSite.id) {
-      setSelectedSiteForDetails(updatedSite);
+    if (selectedSiteForDetails?.id === siteWithTrip.id) {
+      setSelectedSiteForDetails(siteWithTrip);
     }
   };
 
@@ -170,6 +192,10 @@ export function App() {
     setActiveTripIdState(id);
     setActiveTripId(id);
     setActiveDayIndex(0);
+    setFilters((prev) => ({ ...prev, city: 'all' }));
+    if (selectedSiteForDetails && selectedSiteForDetails.tripId && selectedSiteForDetails.tripId !== id) {
+      setSelectedSiteForDetails(null);
+    }
   };
 
   const handleCreateNewTrip = () => {
@@ -315,8 +341,8 @@ export function App() {
     });
   }
 
-  // Filter logic
-  const filteredSites = sites.filter((site) => {
+  // Filter logic strictly over the active trip's sites
+  const filteredSites = activeTripSites.filter((site) => {
     if (filters.searchQuery.trim()) {
       const q = filters.searchQuery.toLowerCase();
       const matchName = site.name.toLowerCase().includes(q);
@@ -330,11 +356,25 @@ export function App() {
       }
     }
 
-    // City Filter
+    // City & Sub-region Filter
     if (filters.city && filters.city !== 'all') {
-      const matchCity = site.city.includes(filters.city) || site.address.includes(filters.city);
-      if (!matchCity) {
-        return false;
+      if (filters.city === '沙河口/中山') {
+        const match = site.address.includes('沙河口') || site.address.includes('中山') || site.name.includes('星海') || site.name.includes('圣亚') || site.name.includes('老虎滩');
+        if (!match) return false;
+      } else if (filters.city === '金石滩') {
+        const match = site.address.includes('金石滩') || site.name.includes('金石滩') || site.name.includes('发现王国');
+        if (!match) return false;
+      } else if (filters.city === '旅顺/高新') {
+        const match = site.address.includes('旅顺') || site.address.includes('高新') || site.name.includes('三寰') || site.name.includes('英歌石');
+        if (!match) return false;
+      } else if (filters.city === '瓦房店/庄河') {
+        const match = site.address.includes('瓦房店') || site.address.includes('庄河') || site.name.includes('骆驼山') || site.name.includes('蛤蜊岛');
+        if (!match) return false;
+      } else {
+        const matchCity = site.city.includes(filters.city) || site.address.includes(filters.city);
+        if (!matchCity) {
+          return false;
+        }
       }
     }
 
@@ -513,7 +553,7 @@ export function App() {
               {/* Left: Interactive Leaflet Map (7 cols) */}
               <div className="lg:col-span-7 h-[580px] lg:h-[720px] sticky top-20">
                 <TravelMap
-                  sites={sites}
+                  sites={activeTripSites}
                   selectedSiteId={selectedSiteForDetails?.id || null}
                   activeDay={activeDay}
                   onSelectSite={(site) => setSelectedSiteForDetails(site)}
@@ -529,7 +569,7 @@ export function App() {
                 <DailyTimeline
                   days={activeTrip.days}
                   activeDayIndex={activeDayIndex}
-                  sites={sites}
+                  sites={activeTripSites}
                   onSelectDayIndex={setActiveDayIndex}
                   onUpdateDay={(updatedDay) => {
                     const updatedDays = activeTrip.days.map((d) =>
@@ -546,7 +586,7 @@ export function App() {
                 <div className="bg-white rounded-3xl p-5 border border-slate-200 shadow-2xs space-y-3">
                   <div className="flex items-center justify-between">
                     <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">
-                      已收藏景点 ({sites.length} 处)
+                      本行程专属景点 ({activeTripSites.length} 处)
                     </h4>
                     <button
                       type="button"
@@ -558,7 +598,7 @@ export function App() {
                   </div>
 
                   <div className="space-y-2.5 max-h-72 overflow-y-auto pr-1">
-                    {sites.slice(0, 5).map((site) => (
+                    {activeTripSites.slice(0, 5).map((site) => (
                       <div
                         key={site.id}
                         className="p-3 bg-slate-50/80 hover:bg-indigo-50/50 rounded-2xl border border-slate-200/80 flex items-center justify-between gap-3 transition-colors"
@@ -641,8 +681,10 @@ export function App() {
             <SiteFilterBar
               filters={filters}
               onChange={setFilters}
-              totalSites={sites.length}
+              totalSites={activeTripSites.length}
               filteredCount={sortedSites.length}
+              currentTripId={activeTrip?.id}
+              currentTripTitle={activeTrip?.title}
             />
 
             {/* Sites Grid */}
@@ -720,7 +762,7 @@ export function App() {
             <DailyTimeline
               days={activeTrip.days}
               activeDayIndex={activeDayIndex}
-              sites={sites}
+              sites={activeTripSites}
               onSelectDayIndex={setActiveDayIndex}
               onUpdateDay={(updatedDay) => {
                 const updatedDays = activeTrip.days.map((d) =>
@@ -813,7 +855,7 @@ export function App() {
       {isPrintOpen && (
         <PrintableView
           trip={activeTrip}
-          sites={sites}
+          sites={activeTripSites}
           onClose={() => setIsPrintOpen(false)}
         />
       )}
