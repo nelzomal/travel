@@ -1739,7 +1739,7 @@ export const INITIAL_SITES: Site[] = [
     "strollerRating": 4,
     "strollerNotes": "馆内展厅以平整硬质地面为主，地下一层至三层可乘直梯，无需强制走楼梯。服务台有免费婴儿车但数量有限。馆外海边木栈道和礁石区存在台阶、湿滑路面及不规则落差，不宜推车进入。",
     "kidRating": 5,
-    "kidNotes": "4岁儿童重点看非洲象、恐龙骨架与模型、巨型鲸类、东北虎生态场景及鸟鸣按钮。馆内没有活体白鲸或其他活体动物，也不是水族馆。展厅总体安全，但需防止奔跑滑倒、攀爬展柜或倚靠二层环廊栏杆。",
+    "kidNotes": "4岁儿童重点看非洲象、恐龙骨架与模型、巨型鲸类、东北虎生态场景及鸟鸣按钮。馆内没有活体白鲸或其他活���动物，也不是水族馆。展厅总体安全，但需防止奔跑滑倒、攀爬展柜或倚靠二层环廊栏杆。",
     "elderlyRating": 4,
     "elderlyNotes": "馆内有直梯、休息座位、轮椅和室内空调，但没有代步电瓶车。建议精选路线约0.8-1.2公里；全馆细逛可能超过1.5公里。轮椅数量有限，最好开馆即到并先到服务台借用。",
     "walkingIntensity": "轻松至中等（精选路线约0.8-1.2公里；全馆约1.5公里以上）",
@@ -2388,10 +2388,6 @@ export const INITIAL_SITES: Site[] = [
       "https://upload.wikimedia.org/wikipedia/commons/e/ec/Xinghai_Bay_Bridge_in_Xinghai_Square%2C_Dalian.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/4/48/Mordern_movement_sculpture.jpg"
     ],
-    "videos": [
-      "https://www.bilibili.com/video/BV1hv41187Sd/",
-      "https://www.bilibili.com/video/BV1Ue4y1675m/"
-    ],
     "description": "星海广场以辽阔海天、百年城雕、千人足迹与跨海大桥夜景著称。这里免费开放、主线平坦，可推车慢行、看海喂鸥；傍晚海风凉爽，适合三代同堂把观景、儿童游乐和海边晚餐串成轻松半日。",
     "recommendedDurationMin": 150,
     "openingHours": "全年全天开放（00:00-24:00；大型活动、维修或安保管制除外）",
@@ -2454,6 +2450,15 @@ export const INITIAL_SITES: Site[] = [
         "walkingTimeMin": 9
       }
     ],
+    "socialMediaLinks": [
+      {
+        "id": "social-1788264776398-84c6",
+        "url": "https://www.xiaohongshu.com/explore/69d5ab1d00000000220013ff?xsec_token=ABhbjohaLBsJNGqTh1cxgcCpIukRYj9w9402tuA4GemeY=&xsec_source=pc_search&source=web_explore_feed",
+        "platform": "xiaohongshu",
+        "title": "小红书 种草推荐",
+        "addedAt": "2026-09-01"
+      }
+    ],
     "customTags": [
       "世界最大广场",
       "喂白鸽",
@@ -2462,51 +2467,8 @@ export const INITIAL_SITES: Site[] = [
       "音乐喷泉",
       "地标必去"
     ],
-    "reviews": [
-      {
-        "reviewerId": "reviewer1",
-        "reviewerName": "爸爸",
-        "reviewerAvatar": "👨",
-        "kidRating": 5,
-        "elderlyRating": 5,
-        "strollerRating": 5,
-        "overallRating": 5,
-        "preference": "must_go",
-        "comment": "大连最核心的地标，不来星海广场等于没来大连！地面平坦到极点，傍晚吹着微凉海风散步，跨海大桥亮灯那一瞬间太震撼了。",
-        "updatedAt": "2026-09-01T08:05:00.000Z"
-      },
-      {
-        "reviewerId": "reviewer2",
-        "reviewerName": "妈妈",
-        "reviewerAvatar": "👩",
-        "kidRating": 5,
-        "elderlyRating": 5,
-        "strollerRating": 5,
-        "overallRating": 5,
-        "preference": "must_go",
-        "comment": "小宝在白鸽广场玩得不想走，鸽子特别温顺亲人。给爷爷奶奶租了四人脚踏车，一家人其乐融融，满分推荐！",
-        "updatedAt": "2026-09-01T08:35:00.000Z"
-      }
-    ],
     "createdAt": "2026-09-01T08:00:00.000Z",
-    "tripId": "trip-dalian-coastal-multigen-2026",
-    "customFields": {
-      "rainyDayPlan": "广场全露天，不适合持续降雨。首选星海广场西北侧的大连博物馆：2026年9月1日起周二至周日09:00-16:30开放，16:00停止入馆，周一闭馆，个人免费且无需预约，持有效证件安检入馆。第二选择为D区2号大连贝壳博物馆，09:00-16:30、16:00停票，成人100元，6岁及以下或1.3米及以下儿童免费，65岁以上半价。持续暴雨、雷暴或大风时短程打车到凯德和平广场，通常09:30-21:00，可用餐、休息并等待天气改善。雷电和六级左右大风时不要在海堤、空旷广场、游乐设备或码头停留。",
-      "ticketBookingTip": "星海广场免费、全天开放，不需要官网抢票、身份证换票或预约，也没有常规检票队伍，因此不存在长者或推车绿色通道。大型活动可能临时安检限流，应提前查看大连发布、交警及星海湾区域公告。游乐项目通常现场单项购票；游船建议使用可查资质和退改规则的平台预约，不购买模糊标价的路边揽客票。大连博物馆个人无需预约，持证安检入馆；未成年人、高龄老人或未持身份证人员可按馆方要求登记入馆。",
-      "parkingAndDropoff": "广场没有唯一主入口。包车或打车看海、喂鸥时导航大连百年纪念城雕，允许临停情况下下车点距核心观景区约50-150米，路面平缓，无需爬楼梯；看中央轴和喷泉可导航星海广场音乐喷泉，但外环至喷泉区域属于严管路段，禁止随意停车。自驾优先查看星海广场外环停车泊位实时空位，停车后按斑马线进入；游乐场外停车位仅约20个，不宜依赖。大型节庆、演唱会和周末可能封闭内环或禁止车辆驶入，建议司机先在允许区域放下老人幼童，再去正规停车场，返程时重新约定同一平坦下客点。"
-    },
-    "socialMediaLinks": [
-      {
-        "id": "social-xinghai-1",
-        "url": "https://www.xiaohongshu.com/explore/69d5ab1d00000000220013ff",
-        "platform": "xiaohongshu",
-        "title": "小红书 种草推荐：大连星海广场看海喂海鸥攻略",
-        "author": "温暖的11",
-        "note": "看海鸥喂海鸥、跨海大桥日落与夜景音乐喷泉；带老人小孩推车平坦顺畅，傍晚游玩最佳。",
-        "screenshotUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Xinghai_Square_Dalian_2.jpg/1280px-Xinghai_Square_Dalian_2.jpg",
-        "addedAt": "2026-09-01"
-      }
-    ]
+    "tripId": "trip-dalian-coastal-multigen-2026"
   },
   {
     "id": "site-dalian-forest-zoo",
@@ -2851,7 +2813,7 @@ export const INITIAL_SITES: Site[] = [
         "id": "dine-llm-1788255407401-0",
         "name": "虎滩羊汤·全羊·海鲜·烧烤（老虎滩店）",
         "cuisine": "清汤羊汤、蒸饺及家常菜",
-        "familyFeatures": "公开资料确认有宝宝椅、大桌、室内卫生间和等位区；可点清汤羊汤、羊肉蒸饺并要求少盐不辣，较适合幼童和长辈。",
+        "familyFeatures": "公开资料确认���宝宝椅、大桌、室内卫生间和等位区；可点清汤羊汤、羊肉蒸饺并要求少盐不辣，较适合幼童和长辈。",
         "walkingTimeMin": 8
       },
       {

@@ -313,18 +313,27 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
     setTimeout(() => setCopiedUrl(false), 2000);
   };
 
-  // Open Preview Modal
+  // Open as standalone browser window preserving first-party cookies & login session
+  const handleOpenStandaloneWindow = (url: string) => {
+    const width = 1280;
+    const height = 850;
+    const left = Math.max(0, (window.screen.width - width) / 2);
+    const top = Math.max(0, (window.screen.height - height) / 2);
+    window.open(
+      url,
+      '_blank',
+      `width=${width},height=${height},top=${top},left=${left},menubar=no,toolbar=no,location=yes,status=no`
+    );
+  };
+
+  // Open Preview Modal (Defaults to Desktop Wide Screen)
   const handleOpenPreview = (link: SocialMediaLink, defaultTab: 'web' | 'screenshot' = 'web') => {
     setActivePreviewLink(link);
     setPreviewTab(defaultTab);
     setIframeKey((k) => k + 1);
     setZoomScale(1);
-    // Auto-select mobile mode for Xiaohongshu / Douyin / TikTok to view full app experience nicely
-    if (['xiaohongshu', 'douyin', 'tiktok'].includes(link.platform || '')) {
-      setDeviceMode('mobile');
-    } else {
-      setDeviceMode('desktop');
-    }
+    // Default to Desktop Wide Screen (电脑大屏)
+    setDeviceMode('desktop');
   };
 
   return (
@@ -881,11 +890,22 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
                   {copiedUrl ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                 </button>
 
+                <button
+                  type="button"
+                  onClick={() => handleOpenStandaloneWindow(activePreviewLink.url)}
+                  className="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-bold flex items-center gap-1 shadow-sm transition-all hidden sm:flex"
+                  title="以独立原生小窗打开（直接继承您当前浏览器的已登录Cookie与账号状态）"
+                >
+                  <span>独立小窗 (含登录态)</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </button>
+
                 <a
                   href={activePreviewLink.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white rounded-xl text-xs font-bold flex items-center gap-1 shadow-sm transition-all"
+                  title="在新标签页全屏打开"
                 >
                   <span>新标签页打开</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -948,13 +968,20 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
                           切换到高清截图 ↗
                         </button>
                       )}
+                      <button
+                        type="button"
+                        onClick={() => handleOpenStandaloneWindow(activePreviewLink.url)}
+                        className="text-amber-300 hover:text-amber-200 font-bold underline"
+                      >
+                        以独立小窗打开 (直接带登录态) ↗
+                      </button>
                       <a
                         href={activePreviewLink.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-rose-400 hover:text-rose-300 font-bold underline"
                       >
-                        在新标签页打开 ↗
+                        新标签页打开 ↗
                       </a>
                     </div>
                   </div>
