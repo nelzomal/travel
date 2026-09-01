@@ -1839,6 +1839,56 @@ export const INITIAL_SITES: Site[] = [
         "author": "点评金牌探索官",
         "note": "带老人建议租电瓶车或双人脚踏车，减少爬坡；园区内鲜奶工坊可歇脚休息。",
         "addedAt": "2026-08-29"
+      },
+      {
+        "id": "social-natural-museum-xhs-parent-guide",
+        "url": "https://www.xiaohongshu.com/explore/6a79ccf90000000033033ba9?xsec_token=AB8m1Po3SzC68dOadsvfZwWV_lmx1kmd-siRpFCVqpCjQ=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连自然博物馆亲子游全攻略（含讲解时间）✨",
+        "author": "向软软在大连",
+        "screenshotUrl": "/social-media/dalian-natural-history-museum/parent-guide.webp",
+        "note": "提醒不要与大连博物馆混淆；整理楼层亮点、公益讲解和建议停留时间，并可顺游黑石礁海边。开放与讲解时间需当天核实。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-natural-museum-xhs-free-no-reservation",
+        "url": "https://www.xiaohongshu.com/explore/6a6eadaa000000002201475d?xsec_token=ABOZDyVYuA8v7PvloaVNdtFrKI5dXXtg2rTGFX5X-Q4uc=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "📍免费又免预约｜大连自然博物馆",
+        "author": "小花妈妈",
+        "screenshotUrl": "/social-media/dalian-natural-history-museum/free-no-reservation.webp",
+        "note": "带娃实测免费刷身份证入馆，重点看巨鲸、化石与动物标本；约1至2小时可逛完，出馆后可到黑石礁喂海鸥和赶海。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-natural-museum-xhs-coast-family-day",
+        "url": "https://www.xiaohongshu.com/explore/6a87b52100000000050173f1?xsec_token=ABe6HTKoc9bJwm_MjEX8ST8BBuBhVvfB84EI5iGcyl7cU=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连封神亲子景点✨大连自然博物馆攻略",
+        "author": "青束",
+        "screenshotUrl": "/social-media/dalian-natural-history-museum/coast-family-day.webp",
+        "note": "博物馆加黑石礁海边的一日组合：上午室内看鲸鱼、非洲动物和恐龙，退潮后赶海，傍晚拍日落；需另查潮汐与当日开馆时间。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-natural-museum-xhs-pros-cons",
+        "url": "https://www.xiaohongshu.com/explore/6a748f4f0000000006005220?xsec_token=ABE5RUHjG0yXKGb2ZwQapf2g3rUdCboW3gwYgnmw_14_s=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连自然博物馆，去了！优缺点罗列一下",
+        "author": "鸵鸟（TFCC恢复版）",
+        "screenshotUrl": "/social-media/dalian-natural-history-museum/pros-cons.webp",
+        "note": "真实优缺点：标本丰富、孩子可逛两小时、出门即海边；夏季部分免费展区可能较热且有气味，对高温或气味敏感者提前准备。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-natural-museum-xhs-rainy-day",
+        "url": "https://www.xiaohongshu.com/explore/6a7d8e7b0000000033011e59?xsec_token=ABoma8s8tf32eJCYqrI3Qss9b_sDQCtxl5W8NwXxv6gzE=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连雨天半日游｜我被博物馆震惊到了",
+        "author": "爆爆",
+        "screenshotUrl": "/social-media/dalian-natural-history-museum/rainy-day.webp",
+        "note": "雨天室内半日备选，鲸鱼、猛犸象和大型动物标本很震撼；对保存液或标本气味敏感者可戴口罩并预留随时离开展厅的余地。",
+        "addedAt": "2026-09-01"
       }
     ]
   },
