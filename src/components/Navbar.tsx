@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Trip } from '../types/travel';
 import { 
-  Plus, Printer, Download, Upload, RotateCcw, Share2, Check, Save, GitBranch, X, Copy, RotateCw
+  Plus, Printer, Download, Upload, Share2, Check, Save, GitBranch, X, Copy, RotateCw
 } from 'lucide-react';
 import { exportDataAsJSON, importDataFromJSON, syncToFilesystem, syncFromDiskToLocalStorage, getExportDataJSONString } from '../services/storage';
 
@@ -16,7 +16,6 @@ interface NavbarProps {
   onCreateNewTrip: () => void;
   onAddNewSite: () => void;
   onOpenPrintView: () => void;
-  onResetDefaults: () => void;
   onDataImported: () => void;
   onSyncFromDisk?: () => Promise<{ success: boolean; message: string }>;
 }
@@ -30,7 +29,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   onCreateNewTrip,
   onAddNewSite,
   onOpenPrintView,
-  onResetDefaults,
   onDataImported,
   onSyncFromDisk
 }) => {
@@ -323,19 +321,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onChange={handleFileUpload}
                 className="hidden"
               />
-
-              <button
-                type="button"
-                onClick={() => {
-                  if (confirm('是否重置为默认推荐的日本全景三代同堂亲子游？')) {
-                    onResetDefaults();
-                  }
-                }}
-                title="恢复默认推荐示例行程"
-                className="p-2 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-xl transition-colors hidden lg:block"
-              >
-                <RotateCcw className="w-3.5 h-3.5" />
-              </button>
             </div>
 
           </div>

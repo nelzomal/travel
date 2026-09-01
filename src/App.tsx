@@ -522,10 +522,6 @@ export function App() {
           setIsSiteFormOpen(true);
         }}
         onOpenPrintView={() => setIsPrintOpen(true)}
-        onResetDefaults={() => {
-          resetToDefaults();
-          loadData();
-        }}
         onDataImported={loadData}
         onSyncFromDisk={handleSyncFromDisk}
       />

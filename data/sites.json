@@ -2652,6 +2652,56 @@
         "author": "熊猫守护者",
         "note": "切记导航南门（滨海西路），避开北门爬坡；上午9:30-11:00熊猫最活跃。",
         "addedAt": "2026-08-29"
+      },
+      {
+        "id": "social-zoo-xhs-low-effort-family",
+        "url": "https://www.xiaohongshu.com/explore/6a7bb478000000002403fa72?xsec_token=ABC9OIBdGqpbqOY_Ju_xKX8cAgTEus8nDQbAU1IYXXtlw=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "带老人和孩子游大连动物园（不费腿版）",
+        "author": "乐撒欢",
+        "screenshotUrl": "/social-media/dalian-forest-zoo/low-effort-family.webp",
+        "note": "三代同行实测：先由北门乘索道到南门，再从南门入园；两区观光车可带婴儿车，仍建议自带推车。索道、观光车价格与运行时间需出发前核实。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-zoo-xhs-kids-short-queues",
+        "url": "https://www.xiaohongshu.com/explore/6a759e9c0000000027021c67?xsec_token=ABbQQvKSZIG8O4FwO-QD6UgaRY0Fz2bIYC_DGf0wIODt0=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "亲测！大连森林动物园带娃少排队攻略！",
+        "author": "顺溜妈妈带娃看世界",
+        "screenshotUrl": "/social-media/dalian-forest-zoo/kids-short-queues.webp",
+        "note": "从南门乘索道到北门，再由北向南游园以避开排队；提醒索道车厢闷热，带小风扇、降温贴和湿巾。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-zoo-xhs-reverse-route",
+        "url": "https://www.xiaohongshu.com/explore/6a55e9b7000000002201ab59?xsec_token=AB1gPA27RMeAc9VllbCe30hhR3Mu2Sy0Y-jADnOdBM-kE=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "听劝！反向游玩大连森林动物园，省2小时排队",
+        "author": "Rainy文昱",
+        "screenshotUrl": "/social-media/dalian-forest-zoo/reverse-route.webp",
+        "note": "北门进、全程尽量下坡、南门出后乘索道回北门的反向路线；含熊猫活跃时段、观光车取舍和亲子慢游建议。门票与免票信息仅作发帖时参考。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-zoo-xhs-zoo-cableway",
+        "url": "https://www.xiaohongshu.com/explore/686e4505000000002203244b?xsec_token=AByxnpoCJIP7nNethN663dLppnZQEiKwXxWq_GvdooN8U=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "省妈版｜大连森林动物园➕索道超全攻略",
+        "author": "言言一家",
+        "screenshotUrl": "/social-media/dalian-forest-zoo/zoo-cableway.webp",
+        "note": "适合较晚到达或暑期假日：南门乘索道至北门，再从北门一路下坡游园；强调园区很大，应使用观光车减少体力消耗。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-zoo-xhs-off-peak-panda",
+        "url": "https://www.xiaohongshu.com/explore/6a07fba0000000003701ee0f?xsec_token=ABf0_iOZtZm0DOcxi8pDeedxayn89680JkWLv_nHyNtXE=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连森林动物园｜保姆级错峰游玩攻略✅",
+        "author": "小卟妞在这里",
+        "screenshotUrl": "/social-media/dalian-forest-zoo/off-peak-panda.webp",
+        "note": "南门索道到北门、圈养区乘观光车、散养区下坡步行，最后到熊猫馆；包含推车、寄存和休息补给体验，具体收费以现场为准。",
+        "addedAt": "2026-09-01"
       }
     ]
   },
