@@ -838,6 +838,7 @@ export function App() {
       {/* MODAL: LLM Research & Auto-Update Modal */}
       <LLMResearchModal
         site={selectedSiteForLLM}
+        trip={activeTrip}
         isOpen={isLLMModalOpen}
         onClose={() => {
           setIsLLMModalOpen(false);
