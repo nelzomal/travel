@@ -45,6 +45,14 @@ export const LLMResearchModal: React.FC<LLMResearchModalProps> = ({
 
   const [newGalleryUrl, setNewGalleryUrl] = useState('');
   const [newVideoUrl, setNewVideoUrl] = useState('');
+  const [customCoverUrl, setCustomCoverUrl] = useState(site?.coverImage || '');
+
+  // Keep customCoverUrl synchronized when site changes
+  React.useEffect(() => {
+    if (site?.coverImage) {
+      setCustomCoverUrl(site.coverImage);
+    }
+  }, [site?.coverImage]);
 
   if (!isOpen || !site) return null;
 
@@ -88,8 +96,6 @@ export const LLMResearchModal: React.FC<LLMResearchModalProps> = ({
     if (customFields.some((f) => f.key === key)) return;
     setCustomFields([...customFields, { key, label, example }]);
   };
-
-  const [customCoverUrl, setCustomCoverUrl] = useState(site?.coverImage || '');
 
   // 1-Click Smart Auto-Curate & Fix media
   const handleAutoCurateMedia = () => {
@@ -499,7 +505,7 @@ ${customJsonEntries || '    "note": "扩展备注"'}
             }`}
           >
             <Video className="w-3.5 h-3.5" />
-            <span>3. 📸 相册({site.gallery.length}) ＆ 🎬 视频({site.videos?.length || 0})</span>
+            <span>3. 📸 相册({site.gallery?.length || 0}) ＆ 🎬 视频({site.videos?.length || 0})</span>
           </button>
         </div>
 
@@ -783,7 +789,7 @@ ${customJsonEntries || '    "note": "扩展备注"'}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
                     <ImageIcon className="w-4 h-4 text-indigo-600" />
-                    <span>8-10 张多图相册管理 (当前共 {site.gallery.length} 张)</span>
+                    <span>8-10 张多图相册管理 (当前共 {(site.gallery || []).length} 张)</span>
                   </div>
                 </div>
 
@@ -808,7 +814,7 @@ ${customJsonEntries || '    "note": "扩展备注"'}
 
                 {/* Grid of gallery images */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
-                  {site.gallery.map((imgUrl, idx) => (
+                  {(site.gallery || []).map((imgUrl, idx) => (
                     <div key={idx} className="relative group rounded-2xl overflow-hidden border border-slate-200 aspect-video bg-slate-100">
                       <img
                         src={imgUrl}
