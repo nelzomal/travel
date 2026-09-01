@@ -32,7 +32,7 @@ export function App() {
 
   // Modals & Selections
   const [selectedSiteForDetails, setSelectedSiteForDetails] = useState<Site | null>(null);
-  const [selectedSiteInitialTab, setSelectedSiteInitialTab] = useState<'overview' | 'collaboration' | 'videos' | 'family' | 'dining' | 'tips'>('overview');
+  const [selectedSiteInitialTab, setSelectedSiteInitialTab] = useState<'overview' | 'collaboration' | 'videos' | 'social' | 'family' | 'dining' | 'tips'>('overview');
   const [selectedSiteForLLM, setSelectedSiteForLLM] = useState<Site | null>(null);
   const [isLLMModalOpen, setIsLLMModalOpen] = useState(false);
   const [editingSite, setEditingSite] = useState<Site | null>(null);

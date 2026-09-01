@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Site, SiteCategory, WalkingIntensity, StairsLevel, WeatherSuitability } from '../../types/travel';
+import { Site, SiteCategory, WalkingIntensity, StairsLevel, WeatherSuitability, SocialMediaLink, SocialPlatform } from '../../types/travel';
+import { detectSocialPlatform, getPlatformMeta } from './SocialMediaSection';
 import { X, Search, Plus, Trash2, Check, Loader2 } from 'lucide-react';
 import { searchPlaces, GeocodeResult } from '../../services/geocoding';
 
@@ -78,6 +79,13 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
   const [newDineFeatures, setNewDineFeatures] = useState('');
   const [newDineWalk, setNewDineWalk] = useState(3);
 
+  // Social Media Links
+  const [socialMediaLinks, setSocialMediaLinks] = useState<SocialMediaLink[]>([]);
+  const [newSocialUrl, setNewSocialUrl] = useState('');
+  const [newSocialTitle, setNewSocialTitle] = useState('');
+  const [newSocialAuthor, setNewSocialAuthor] = useState('');
+  const [newSocialNote, setNewSocialNote] = useState('');
+
   // Search places
   const [geocodingQuery, setGeocodingQuery] = useState('');
   const [geocodeResults, setGeocodeResults] = useState<GeocodeResult[]>([]);
@@ -114,8 +122,10 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       setAmenities(initialSite.amenities);
       setFamilyTips(initialSite.familyTips || []);
       setNearbyDining(initialSite.nearbyDining || []);
+      setSocialMediaLinks(initialSite.socialMediaLinks || []);
     } else {
       // Reset for new site
+      setSocialMediaLinks([]);
       setName(initialName || '');
       setLocalName('');
       setCategory('attraction');
@@ -226,6 +236,30 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
     setNearbyDining(nearbyDining.filter((d) => d.id !== id));
   };
 
+  const handleAddSocialLink = () => {
+    if (!newSocialUrl.trim()) return;
+    const platform = detectSocialPlatform(newSocialUrl.trim());
+    const meta = getPlatformMeta(platform);
+    const link: SocialMediaLink = {
+      id: `social-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+      url: newSocialUrl.trim(),
+      platform,
+      title: newSocialTitle.trim() || `${meta.label} 种草推荐`,
+      author: newSocialAuthor.trim() || undefined,
+      note: newSocialNote.trim() || undefined,
+      addedAt: new Date().toISOString().slice(0, 10)
+    };
+    setSocialMediaLinks([...socialMediaLinks, link]);
+    setNewSocialUrl('');
+    setNewSocialTitle('');
+    setNewSocialAuthor('');
+    setNewSocialNote('');
+  };
+
+  const handleRemoveSocialLink = (id: string) => {
+    setSocialMediaLinks(socialMediaLinks.filter((s) => s.id !== id));
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim()) return;
@@ -262,6 +296,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       amenities,
       familyTips,
       nearbyDining,
+      socialMediaLinks,
       customTags: initialSite?.customTags || ['亲子精选'],
       createdAt: initialSite?.createdAt || new Date().toISOString().slice(0, 10)
     };
@@ -871,6 +906,92 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
                     </button>
                   </div>
                 ))}
+              </div>
+            )}
+          </div>
+
+          {/* Section: Social Media Links (小红书/抖音/B站/大众点评) */}
+          <div className="space-y-3 pt-4 border-t border-slate-100">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+                <span>📱 社交媒体种草与实操链接 ({socialMediaLinks.length})</span>
+              </h3>
+              <span className="text-[11px] text-slate-400">支持小红书、抖音、大众点评、B站等，在详情页可画中画预览</span>
+            </div>
+
+            <div className="p-3 bg-rose-50/50 rounded-2xl border border-rose-200/80 space-y-2.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <input
+                  type="url"
+                  placeholder="粘贴网址 (如: http://xhslink.com/... 或 https://v.douyin.com/...)"
+                  value={newSocialUrl}
+                  onChange={(e) => setNewSocialUrl(e.target.value)}
+                  className="text-xs px-3 py-1.5 rounded-xl border border-slate-200 bg-white font-mono"
+                />
+                <input
+                  type="text"
+                  placeholder="笔记主题/标题 (如: 庄河蛤蜊岛退潮避坑实况)"
+                  value={newSocialTitle}
+                  onChange={(e) => setNewSocialTitle(e.target.value)}
+                  className="text-xs px-3 py-1.5 rounded-xl border border-slate-200 bg-white"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <input
+                  type="text"
+                  placeholder="博主/作者 (选填，如 @大连遛娃指南)"
+                  value={newSocialAuthor}
+                  onChange={(e) => setNewSocialAuthor(e.target.value)}
+                  className="text-xs px-3 py-1.5 rounded-xl border border-slate-200 bg-white"
+                />
+                <input
+                  type="text"
+                  placeholder="摘录笔记 (选填，如 建议下午低潮前1小时去沙滩)"
+                  value={newSocialNote}
+                  onChange={(e) => setNewSocialNote(e.target.value)}
+                  className="sm:col-span-2 text-xs px-3 py-1.5 rounded-xl border border-slate-200 bg-white"
+                />
+              </div>
+
+              <div className="flex justify-end">
+                <button
+                  type="button"
+                  onClick={handleAddSocialLink}
+                  className="px-3.5 py-1.5 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs font-bold transition-colors flex items-center gap-1 shadow-2xs"
+                >
+                  <Plus className="w-3.5 h-3.5" />
+                  添加社交媒体链接
+                </button>
+              </div>
+            </div>
+
+            {socialMediaLinks.length > 0 && (
+              <div className="space-y-1.5">
+                {socialMediaLinks.map((link) => {
+                  const meta = getPlatformMeta(link.platform);
+                  return (
+                    <div key={link.id} className="p-2.5 bg-white rounded-xl border border-slate-200 flex items-center justify-between text-xs">
+                      <div className="min-w-0 pr-2">
+                        <div className="flex items-center gap-2">
+                          <span className={`px-2 py-0.5 rounded text-[10px] font-bold border ${meta.badgeClass}`}>
+                            {meta.icon} {meta.label}
+                          </span>
+                          <span className="font-bold text-slate-800 truncate">{link.title}</span>
+                          {link.author && <span className="text-slate-500 text-[11px]">({link.author})</span>}
+                        </div>
+                        {link.note && <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-1">笔记: {link.note}</p>}
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => handleRemoveSocialLink(link.id)}
+                        className="text-slate-400 hover:text-rose-600 p-1 flex-shrink-0"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  );
+                })}
               </div>
             )}
           </div>

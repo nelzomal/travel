@@ -3,6 +3,7 @@ import { Site } from '../../types/travel';
 import { PhotoGallery } from '../Common/PhotoGallery';
 import { FamilyScoreBadge, WalkingIntensityBadge, StairsBadge, WeatherBadge } from '../Common/FamilyBadge';
 import { SiteCollaborationReview } from './SiteCollaborationReview';
+import { SocialMediaSection } from './SocialMediaSection';
 import { 
   X, MapPin, Clock, DollarSign, ExternalLink, 
   Baby, HeartHandshake, Utensils, CheckCircle2, XCircle, 
@@ -16,7 +17,7 @@ interface SiteDetailModalProps {
   onUpdateSite?: (updatedSite: Site) => void;
   onAddToDay?: (siteId: string) => void;
   onOpenLLMResearch?: (site: Site) => void;
-  initialTab?: 'overview' | 'collaboration' | 'videos' | 'family' | 'dining' | 'tips';
+  initialTab?: 'overview' | 'collaboration' | 'videos' | 'social' | 'family' | 'dining' | 'tips';
 }
 
 export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
@@ -28,7 +29,7 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
   onOpenLLMResearch,
   initialTab
 }) => {
-  const [activeTab, setActiveTab] = useState<'overview' | 'collaboration' | 'videos' | 'family' | 'dining' | 'tips'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'collaboration' | 'videos' | 'social' | 'family' | 'dining' | 'tips'>('overview');
   const [selectedVideoIdx, setSelectedVideoIdx] = useState(0);
 
   // Check url params for review tab
@@ -43,6 +44,7 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
   if (!site) return null;
 
   const reviewsCount = site.reviews?.length || 0;
+  const socialLinksCount = site.socialMediaLinks?.length || 0;
 
   const amenityList = [
     { key: 'nursingRoom', label: '独立母婴室 / 哺乳间', icon: '🍼', value: site.amenities.nursingRoom },
@@ -204,6 +206,25 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
             <span className="px-1.5 py-0.2 bg-rose-100 text-rose-700 text-[10px] rounded-full font-bold">可播放</span>
           </button>
 
+          {/* SOCIAL MEDIA LINKS TAB */}
+          <button
+            type="button"
+            onClick={() => setActiveTab('social')}
+            className={`pb-3 px-3 text-xs font-bold border-b-2 transition-all flex items-center gap-1.5 whitespace-nowrap ${
+              activeTab === 'social'
+                ? 'border-rose-600 text-rose-600'
+                : 'border-transparent text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <span>📱</span>
+            <span>社交笔记与种草 ({socialLinksCount}篇)</span>
+            {socialLinksCount > 0 ? (
+              <span className="px-1.5 py-0.2 bg-rose-100 text-rose-700 text-[10px] rounded-full font-bold">已收录</span>
+            ) : (
+              <span className="px-1.5 py-0.2 bg-slate-100 text-slate-500 text-[10px] rounded-full font-medium">+添加</span>
+            )}
+          </button>
+
           <button
             type="button"
             onClick={() => setActiveTab('family')}
@@ -325,6 +346,37 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
                 <StairsBadge level={site.stairsLevel} />
                 <WeatherBadge weather={site.weatherSuitability} />
               </div>
+
+              {/* Quick Social Media Highlight Card */}
+              <div className="p-4 bg-gradient-to-r from-rose-50/80 via-pink-50/40 to-purple-50/70 rounded-2xl border border-rose-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <span className="p-2.5 bg-rose-100 text-rose-600 rounded-2xl text-base font-bold shadow-2xs">
+                    📱
+                  </span>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <h4 className="text-xs font-extrabold text-slate-900">社交媒体与博主种草笔记</h4>
+                      <span className="px-2 py-0.5 rounded-full bg-rose-100 text-rose-700 text-[10px] font-bold">
+                        {socialLinksCount} 篇攻略
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-slate-500 mt-0.5">
+                      {socialLinksCount > 0 
+                        ? '支持小红书、抖音、大众点评等实操打卡帖，支持画中画直接加载预览网页' 
+                        : '小红书/抖音/大众点评种草避坑，点击立即收录并支持网页即时预览'}
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('social')}
+                  className="px-3.5 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs font-bold shadow-2xs flex items-center justify-center gap-1.5 transition-all self-start sm:self-auto"
+                >
+                  <span>{socialLinksCount > 0 ? '查看全部 & 网页预览' : '+ 添加社交链接'}</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </button>
+              </div>
             </div>
           )}
 
@@ -397,6 +449,14 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
                 </a>
               </div>
             </div>
+          )}
+
+          {/* ==================== TAB: SOCIAL MEDIA & PREVIEW ==================== */}
+          {activeTab === 'social' && (
+            <SocialMediaSection
+              site={site}
+              onUpdateSite={onUpdateSite || (() => {})}
+            />
           )}
 
           {/* ==================== TAB 3: FAMILY & ACCESSIBILITY ==================== */}

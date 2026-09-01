@@ -56,6 +56,28 @@ export interface ReviewerConfig {
   reviewer2: { name: string; avatar: string; role: string };
 }
 
+export type SocialPlatform = 
+  | 'xiaohongshu' 
+  | 'douyin' 
+  | 'bilibili' 
+  | 'dianping' 
+  | 'weibo' 
+  | 'wechat' 
+  | 'youtube' 
+  | 'instagram' 
+  | 'tiktok' 
+  | 'other';
+
+export interface SocialMediaLink {
+  id: string;
+  url: string;
+  platform?: SocialPlatform;
+  title?: string;
+  note?: string;
+  author?: string;
+  addedAt?: string;
+}
+
 export interface Site {
   id: string;
   tripId?: string; // 所属旅行计划ID (隔离存储与展示)
@@ -103,6 +125,7 @@ export interface Site {
   customTags: string[];
   customFields?: Record<string, string>; // 动态自定义字段 (例如: 雨天备选, 停车场信息, 门票预订渠道等)
   reviews?: UserReview[]; // 2人双人协同评分与评价列表
+  socialMediaLinks?: SocialMediaLink[]; // 社交媒体种草与实操攻略链接 (小红书/抖音/B站/点评等)
   createdAt: string;
 }
 

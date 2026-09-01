@@ -9,7 +9,7 @@ interface SiteCardProps {
   site: Site;
   isSelected?: boolean;
   itineraryDayBadge?: string; // e.g. "Day 1", "Day 3"
-  onSelect: (site: Site, initialTab?: 'overview' | 'collaboration' | 'videos' | 'family' | 'dining' | 'tips') => void;
+  onSelect: (site: Site, initialTab?: 'overview' | 'collaboration' | 'videos' | 'social' | 'family' | 'dining' | 'tips') => void;
   onEdit: (site: Site) => void;
   onDelete: (siteId: string) => void;
   onAddToDay?: (siteId: string) => void;
@@ -85,6 +85,19 @@ export const SiteCard: React.FC<SiteCardProps> = ({
 
         {/* Gallery & Video count indicator */}
         <div className="absolute top-2.5 right-2.5 flex items-center gap-1">
+          {site.socialMediaLinks && site.socialMediaLinks.length > 0 && (
+            <span 
+              onClick={(e) => {
+                e.stopPropagation();
+                onSelect(site, 'social');
+              }}
+              className="px-2 py-0.5 rounded-full bg-rose-600/90 hover:bg-rose-700 backdrop-blur-md text-white text-[10px] font-bold shadow-xs cursor-pointer flex items-center gap-0.5 transition-colors"
+              title="查看社交媒体种草笔记与网页预览"
+            >
+              <span>📱</span>
+              <span>{site.socialMediaLinks.length}篇</span>
+            </span>
+          )}
           {site.videos && site.videos.length > 0 && (
             <span className="px-2 py-0.5 rounded-full bg-rose-600/90 backdrop-blur-md text-white text-[10px] font-bold shadow-xs">
               🎬 4K视频
@@ -164,6 +177,35 @@ export const SiteCard: React.FC<SiteCardProps> = ({
 
           <span className="text-[10px] text-indigo-600 font-bold underline flex-shrink-0 ml-1">
             {reviews.length > 0 ? '评语' : '+打分'}
+          </span>
+        </div>
+
+        {/* SOCIAL MEDIA / BLOGGER LINKS PILL */}
+        <div
+          onClick={() => onSelect(site, 'social')}
+          className={`flex items-center justify-between p-2 rounded-xl text-[11px] font-bold cursor-pointer transition-colors border ${
+            (site.socialMediaLinks || []).length > 0
+              ? 'bg-rose-50/80 text-rose-900 border-rose-200/80 hover:bg-rose-100'
+              : 'bg-slate-50/60 text-slate-500 border-slate-200/60 hover:bg-slate-100 hover:text-rose-600'
+          }`}
+          title="点击查看社交媒体种草攻略与网页预览"
+        >
+          <div className="flex items-center gap-1.5 truncate">
+            <span className="text-xs flex-shrink-0">📱</span>
+            <span className="truncate">
+              {(site.socialMediaLinks || []).length > 0 ? (
+                <>
+                  <span>{(site.socialMediaLinks || []).length} 篇社交笔记 / 种草打卡</span>
+                  <span className="text-[10px] text-rose-600 font-normal ml-1">(小红书/抖音/B站)</span>
+                </>
+              ) : (
+                <span className="text-slate-400 font-normal">暂无社交笔记链接</span>
+              )}
+            </span>
+          </div>
+
+          <span className="text-[10px] text-rose-600 font-bold underline flex-shrink-0 ml-1">
+            {(site.socialMediaLinks || []).length > 0 ? '预览' : '+添加'}
           </span>
         </div>
 
