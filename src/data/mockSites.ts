@@ -1674,8 +1674,8 @@ export const INITIAL_SITES: Site[] = [
   },
   {
     "id": "site-dalian-sanhuan-ranch",
-    "name": "三寰牧场 (旅顺/高新)",
-    "localName": "Sanhuan Ranch (Lvshun / High-tech District)",
+    "name": "大连自然博物馆",
+    "localName": "Dalian Natural History Museum (Heishijiao)",
     "category": "park",
     "coordinates": [
       38.9328,
@@ -1683,67 +1683,76 @@ export const INITIAL_SITES: Site[] = [
     ],
     "address": "辽宁省大连市高新园区旅顺北路英歌石段三寰牧场",
     "city": "大连",
-    "coverImage": "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Dalian_Nature_History_Museum.JPG",
     "gallery": [
-      "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1527153857715-3908f2ae5e81?auto=format&fit=crop&w=1200&q=80"
+      "https://www.xiaoniren.com/upload/news/image/202109/1631635660545088.jpeg",
+      "https://img1.qunarzz.com/travel/d3/1807/c6/4f6a6fdaa329beb5.jpg",
+      "https://dimg04.c-ctrip.com/images/0101a12000ifq4vvjFB97_W_750_0.jpg?proc=autoorient",
+      "https://dimg04.c-ctrip.com/images/100316000000z8vmz03AE_W_640_10000.jpg?proc=autoorient",
+      "https://youimg1.c-ctrip.com/target/100u14000000w5snj68EE.jpg",
+      "https://p7.itc.cn/q_70/images03/20230512/241054806fd9490fbe8f0ebadaf0e8e4.png",
+      "https://news.cgtn.com/news/2024-05-26/Dalian-Natural-History-Museum-experiences-tourism-boom--1tUWNxxERag/img/39f1be5170e745b9a17998385dfeacbc/39f1be5170e745b9a17998385dfeacbc.jpeg",
+      "https://m.cnhubei.com/a/10001/202205/d1eb3a789a3299d29313d3579e6beb23.jpeg",
+      "https://news-image.pdrong.com/video_thumb/console/2023/08/31/6f76c2a5a498ed007031e282c2f66811_0.jpg",
+      "https://youimg1.c-ctrip.com/target/100314000000w7jve22DC.jpg"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4"
+      "https://www.bilibili.com/video/BV1rQ7wzTEHn/",
+      "https://www.bilibili.com/video/BV1QE411b7wZ/"
     ],
-    "description": "大连近郊的「小新西兰」辽阔原生态草原牧场！绿草如茵的起伏山坡、黑白花荷斯坦奶牛、绵羊大草坪（定点牧羊犬赶羊秀）、羊驼互动喂食区、童乐谷大型纯木无动力亲子乐园以及帐篷露营区。4岁宝宝可在草地上奔跑投喂小羊，长辈坐在绿荫天幕下品尝新鲜现酿鲜牛奶与手工奶酪，全家尽享欧式慢调田园野趣。",
-    "recommendedDurationMin": 180,
-    "openingHours": "09:00 - 17:00 (夏令时 16:30 停止入场)",
+    "description": "坐落黑石礁海滨的国家一级自然博物馆，蓝顶欧式建筑三面临海。馆内以巨型鲸类标本、恐龙与辽西化石、非洲象和东北森林生态为核心，适合低龄儿童在室内轻松认识海洋与生命演化，也是大连雨天亲子慢游的优质半日站。",
+    "recommendedDurationMin": 150,
+    "openingHours": "周二至周日09:00-16:30，16:00停止入馆；周一闭馆，法定节假日另行通知（2026年9月1日起常规时段）",
     "admissionFee": {
-      "adult": "70元/人",
-      "senior": "60-69岁半价，70岁以上凭身份证免费",
-      "child4yo": "身高1.2米以下儿童免费",
-      "notes": "包含牧场主园区、牧羊犬赶羊秀及无动力儿童设施，小动物胡萝卜投喂饲料另计"
+      "adult": "免费，凭本人有效身份证件入馆",
+      "senior": "所有年龄免费；70周岁及以上凭有效证件可走绿色通道，并可携1-2名家属",
+      "child4yo": "免费，不设身高门槛；无身份证儿童走人工登记通道",
+      "notes": "个人无需预约；馆内无观光车、索道或出海项目。20人以上团队需至少提前3天电话预约。"
     },
-    "bestTimeToVisit": "上午 09:30 - 12:00 (光线柔和，小动物活跃) 或 下午 15:00 之后",
-    "weatherSuitability": "晴天适宜 (草坪户外开阔，夏季注意防晒；小雨时可避入奶牛工坊)",
+    "bestTimeToVisit": "工作日08:40-08:50抵达，09:00首批入馆；建议11:20左右离馆午餐，确保13:30前回酒店午睡",
+    "weatherSuitability": "室内展馆全天候适宜；暴雨、大风、雷电或浪高时取消馆外黑石礁海滨和赶海活动",
     "strollerRating": 4,
-    "strollerNotes": "园区主环路为平整沥青与防滑木栈道，婴儿推车畅通无阻；深入部分起伏草坡稍有坡度，建议走外环平坦主道。",
+    "strollerNotes": "馆内展厅以平整硬质地面为主，地下一层至三层可乘直梯，无需强制走楼梯。服务台有免费婴儿车但数量有限。馆外海边木栈道和礁石区存在台阶、湿滑路面及不规则落差，不宜推车进入。",
     "kidRating": 5,
-    "kidNotes": "小动物互动满分！近距离抚摸小绵羊、给羊驼喂草、看聪明的边境牧羊犬赶羊群，童乐谷有大型滑梯与沙池，4岁幼童流连忘返。",
+    "kidNotes": "4岁儿童重点看非洲象、恐龙骨架与模型、巨型鲸类、东北虎生态场景及鸟鸣按钮。馆内没有活体白鲸或其他活体动物，也不是水族馆。展厅总体安全，但需防止奔跑滑倒、攀爬展柜或倚靠二层环廊栏杆。",
     "elderlyRating": 4,
-    "elderlyNotes": "空气极清新，开阔草原让人心情舒畅；园区设有多处观光电瓶车站，长辈无需全程徒步，草坪露营区有充足木椅与遮阳天幕。",
-    "walkingIntensity": "轻松至适中 (约1.0-1.5公里；可随时搭乘园区电瓶车)",
-    "stairsLevel": "平坦 / 无台阶 (主要为缓坡沥青道与木栈道)",
+    "elderlyNotes": "馆内有直梯、休息座位、轮椅和室内空调，但没有代步电瓶车。建议精选路线约0.8-1.2公里；全馆细逛可能超过1.5公里。轮椅数量有限，最好开馆即到并先到服务台借用。",
+    "walkingIntensity": "轻松至中等（精选路线约0.8-1.2公里；全馆约1.5公里以上）",
+    "stairsLevel": "馆内主体平坦，跨层有直梯、无强制楼梯；馆外海滨木栈道和礁石区另有台阶",
     "amenities": {
       "nursingRoom": true,
       "diaperChanging": true,
       "accessibleRestroom": true,
       "benchesRestAreas": true,
-      "shuttleOrCart": true,
-      "elevatorAvailable": false,
+      "shuttleOrCart": false,
+      "elevatorAvailable": true,
       "strollerRental": true,
       "wheelchairRental": true,
       "shadeAvailable": true,
-      "indoorRainyDayOption": false,
-      "kidPlayArea": true
+      "indoorRainyDayOption": true,
+      "kidPlayArea": false
     },
     "familyTips": [
-      "进门处可租赁带遮阳篷的双人脚踏车或儿童手拉车，带娃推车极为省力。",
-      "每天 10:30 和 14:30 有精彩的牧羊犬赶羊群表演，建议提前15分钟到草坪看台长椅就座。",
-      "园区内「奶牛工坊」供应当日现挤鲜牛奶、手工意式Gelato冰淇淋与酸奶，清淡健康无添加，老少皆宜。"
+      "先看一层恐龙、地下一层非洲动物和二层鲸类，三层按长辈体力决定，避免为了集齐展厅而过度步行。",
+      "馆内免费借用的童车和轮椅数量有限，09:00入馆后先到一层服务台办理；母婴室和尿布台位置同时向工作人员确认。",
+      "馆外黑石礁海滨不属于完整无障碍路线，推车和长辈不要从海边木栈道绕行；需要赶海时必须另查具体日期潮汐。",
+      "展品以标本、化石和模型为主，没有活体白鲸；可提前告诉Leo这是观察鲸鱼大小和骨骼的自然科学馆。",
+      "展厅禁止饮食，随身携带可密封饮水；午餐安排在11:30左右，预留回酒店午睡的车程。"
     ],
     "nearbyDining": [
       {
-        "id": "d1",
-        "name": "三寰牧场会客厅·田园简餐",
-        "cuisine": "牧场现烤轻食 / 鲜奶披萨 / 儿童意面",
-        "familyFeatures": "提供宝宝餐具、儿童高脚椅、草坪户外席，鲜牛奶与奶酪焗饭老幼皆喜",
-        "walkingTimeMin": 3
+        "id": "dine-llm-1788255585110-0",
+        "name": "老大连·大连菜（星海·自然博物馆店）",
+        "cuisine": "大连老菜、海鲜水饺、鲜活海鲜",
+        "familyFeatures": "公开设施标注有儿童宝宝椅、停车位和包间。可选海胆水饺、清蒸贝类、松鼠鱼及温热炖菜，点单时要求少油少盐、不辣、海鲜全熟。",
+        "walkingTimeMin": 9
       },
       {
-        "id": "d2",
-        "name": "龙王塘渔家清淡海鲜庄",
-        "cuisine": "大连地道胶东海鲜 / 杂粮玉米饼",
-        "familyFeatures": "清蒸黄黑鱼、原汁海胆蒸蛋、清淡手擀海鲜面，长辈养胃适口",
-        "walkingTimeMin": 12
+        "id": "dine-llm-1788255585110-1",
+        "name": "1952黑石礁酒楼（中山路店）",
+        "cuisine": "大连老菜、三鲜水饺、家焖海鱼",
+        "familyFeatures": "公开设施标注有宝宝椅、等位区、大桌和停车位。三鲜水饺、海胆水饺、家焖鱼和汤菜较适合幼童及长辈，建议电话预留宝宝椅并要求清淡烹调。",
+        "walkingTimeMin": 10
       }
     ],
     "customTags": [
@@ -1780,7 +1789,12 @@ export const INITIAL_SITES: Site[] = [
       }
     ],
     "createdAt": "2026-09-01T08:00:00.000Z",
-    "tripId": "trip-dalian-coastal-multigen-2026"
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "customFields": {
+      "rainyDayPlan": "博物馆主体展览全部位于室内，是大连海滨行程的优先雨天方案。小雨可让包车在正门附近落客；暴雨、大风或雷电时取消黑石礁公园、海堤、木栈道和赶海。参观结束后可打车约3-5分钟前往辰熙广场或黑石礁站商圈室内用餐、休息和候车，避免推车沿临海路步行。若逢周一闭馆，则改为大连博物馆或和平广场室内商场，并在出发前核对当天公告。",
+      "ticketBookingTip": "个人参观自2024年7月25日起取消预约，免费刷身份证安检入馆，不需要官网抢票。无身份证儿童及持护照游客走人工登记通道。70周岁及以上老人、孕妇、残疾人和军人等凭证件可走绿色通道，最新公告允许携1-2名家属同行。客流达到上限时仍可能减慢或暂停入馆，因此工作日08:40-08:50到达最稳妥。不要购买第三方所谓收费门票或官方讲解套餐。",
+      "parkingAndDropoff": "包车或出租车导航填写“大连自然博物馆正门，黑石礁西村街40号”，不要只写黑石礁公园。馆方提示西侧约50米有公共停车场，地图记录最近停车点约63-81米，但周末和节假日车位紧张。最省力做法是先在馆前让长辈、幼童和一名家长下车，再由司机停车。下车后从馆前硬质道路及无障碍入口进入，不需走海边木栈道；现场若遇台阶，应向保安确认坡道或无障碍门位置。"
+    }
   },
   {
     "id": "site-dalian-discovery-kingdom",
@@ -1793,66 +1807,82 @@ export const INITIAL_SITES: Site[] = [
     ],
     "address": "辽宁省大连市金州区金石滩国家旅游度假区金石路36号",
     "city": "大连",
-    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/%E5%A4%A7%E8%BF%9E%E5%8F%91%E7%8E%B0%E7%8E%8B%E5%9B%BD.jpg/1280px-%E5%A4%A7%E8%BF%9E%E5%8F%91%E7%8E%B0%E7%8E%8B%E5%9B%BD.jpg",
+    "coverImage": "https://dimg04.c-ctrip.com/images/0EQ2912000tl13mj6E387.jpg",
     "gallery": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/%E5%A4%A7%E8%BF%9E%E5%8F%91%E7%8E%B0%E7%8E%8B%E5%9B%BD.jpg/1280px-%E5%A4%A7%E8%BF%9E%E5%8F%91%E7%8E%B0%E7%8E%8B%E5%9B%BD.jpg",
-      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1508873696983-2df5293cb32b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?auto=format&fit=crop&w=1200&q=80"
+      "https://dimg04.c-ctrip.com/images/0EQ5c12000tmj7k56B624.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ3r12000tmj6ooxAB31.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ0b12000tmm12j2F30B.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ1d12000tmjhln6DECF.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ3c12000tmjc3i0CFB7.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ0i12000t67s07p167C.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ1h12000teol2ev53D6.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ6312000st4ogji7C1D.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ2v12000tmm0tyv5C7F.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ4m12000tl12e3mB16B.jpg"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4"
+      "https://www.bilibili.com/video/BV1unRMBVEug/",
+      "https://www.bilibili.com/video/BV1SB4y1c76H/"
     ],
-    "description": "东北规模最大的国家AAAAA级欧式城堡环湖主题乐园！专门设有「魔法森林」与「小人国传奇」低幼亲子专区（旋转木马、童话小飞象、梦幻水上碰碰船、室内泡泡球乐园）。日间有盛大的皇家风情花车巡游与精灵互动，夜场更有浪漫城堡水上音乐烟火秀。全平整石板地面，全家三代体验童话魔力。",
+    "description": "坐落在金石滩海岸的大型主题乐园，以中央湖、欧式城堡、花车巡游和大型机动设备闻名。4岁幼童可重点体验室内酷乐迷你世界、旋转木马与卡通互动，长辈则适合观看巡游、剧场演出和湖景；园区面积较大，三代同行宜租代步车并采用半日精华路线。",
     "recommendedDurationMin": 300,
-    "openingHours": "日场 09:30 - 17:00；夜场开放期延长至 21:00 (含烟火秀)",
+    "openingHours": "2026年9月：周一至周四09:30-17:00，周五至周日09:30-21:00；通常闭园前1小时停止入园，节庆、天气及设备检修可能临时调整",
     "admissionFee": {
-      "adult": "220元/人 (夜场票约130-150元)",
-      "senior": "65周岁以上长辈持老年证享长者特惠票 (约110元)",
-      "child4yo": "身高1.2米以下儿童免费入园",
-      "notes": "一票通玩，夜场门票性价比极高，适合避开午间酷暑安排"
+      "adult": "¥260（官方挂牌全天票）",
+      "senior": "¥150（60周岁及以上，凭有效证件）",
+      "child4yo": "身高1.2米及以下免费；超过1.2米通常购买¥150儿童票，4岁不按年龄自动免票",
+      "notes": "第三方提前票可能更低，但需核对使用日期、实名信息、出票等待时间和退款规则；免费儿童必须由购票成人陪同。"
     },
-    "bestTimeToVisit": "夏季下午 15:30 进场入园 (完美衔接午睡，气温凉爽，看巡游+夜场水上烟火)",
-    "weatherSuitability": "全天候适宜 (小雨天园区正常开放，且室内演艺场馆及魔法餐厅避雨极佳)",
-    "strollerRating": 5,
-    "strollerNotes": "园区围绕中心大湖修建，全平整平地与缓坡，无任何阻碍性台阶，是推婴儿车最顺畅的主题乐园之一。",
-    "kidRating": 5,
-    "kidNotes": "梦幻旋转木马、小飞象、泡泡王国都是4岁小朋友的心头好，玩累了随时看巡游跟卡通人偶击掌合影。",
-    "elderlyRating": 4,
-    "elderlyNotes": "不玩过山车也绝不无聊！湖边绿树成荫长椅很多，坐着看精彩的环湖花车巡游、好莱坞实景特技剧场和城堡灯光秀非常惬意。",
-    "walkingIntensity": "适中 (约1.5-2.0公里；环湖走走停停，休息点密集)",
-    "stairsLevel": "平坦 / 无台阶",
+    "bestTimeToVisit": "非节假日周二至周四09:10抵达、09:30第一批入园；11:30-15:00转入酷乐迷你世界、剧场或餐厅避晒，15:00后看巡游和湖景",
+    "weatherSuitability": "晴天优先；小雨可转酷乐迷你世界、4D馆和室内剧场；雷暴、大风或持续暴雨时户外设备与演出可能停运",
+    "strollerRating": 3,
+    "strollerNotes": "入口和环湖主路以宽阔硬质铺装为主，普通婴儿车可通行；园区面积大，项目候乘区及上下设备处可能有台阶。未查到完整无障碍路线图，也未能确认公园提供婴儿车或轮椅租借，建议自带轻便推车并提前致电确认。",
+    "kidRating": 4,
+    "kidNotes": "4岁孩子最适合7000余平方米全室内酷乐迷你世界，包括魔骑驾校、绘画投屏、AR互动、软包游乐设施及卡通见面会；也可体验旋转木马、巡游和部分温和设备。大量室外项目要求1.2-1.4米以上，中央湖和水上舞台沿线需牵手或坐推车。",
+    "elderlyRating": 3,
+    "elderlyNotes": "精华路线约2-3公里，完整环湖及项目折返通常5-8公里；有餐厅、剧场、湖边座椅及局部树荫，但主广场日晒明显。入园广场右侧有收费代步车，当前参考价单人60元/小时、双人120元/小时，数量与价格以现场为准。",
+    "walkingIntensity": "较高（精华路线约2-3公里；完整游览约5-8公里）",
+    "stairsLevel": "主路总体平坦；项目排队区、上下设备平台及个别室内馆可能有台阶，完整无障碍坡道与直梯信息未公开",
     "amenities": {
       "nursingRoom": true,
-      "diaperChanging": true,
-      "accessibleRestroom": true,
+      "diaperChanging": false,
+      "accessibleRestroom": false,
       "benchesRestAreas": true,
       "shuttleOrCart": true,
-      "elevatorAvailable": true,
-      "strollerRental": true,
-      "wheelchairRental": true,
+      "elevatorAvailable": false,
+      "strollerRental": false,
+      "wheelchairRental": false,
       "shadeAvailable": true,
       "indoorRainyDayOption": true,
       "kidPlayArea": true
     },
     "familyTips": [
-      "强烈建议购买夏季夜场票（15:30入园），午睡后带娃进场既避开了正午暴晒，又能完整欣赏压轴的湖畔水上城堡焰火灯光秀。",
-      "游客服务中心可免费租借婴儿推车（需押金），园区内直梯与无障碍坡道标识清晰。",
-      "好莱坞特技实景剧场（看飞车特技）有专门的长辈与家庭轮椅座席，视野开阔且出入无需挤人流。"
+      "入园先量孩子身高并拍下当天项目开放表，避免排队后才发现不能乘坐。",
+      "金石滩站至公园不建议带老人幼童步行，优先乘观光小火车、接驳车或出租车。",
+      "中午把酷乐迷你世界、室内剧场和正餐安排在一起，避开11:30-15:00暴晒。",
+      "尿布台、无障碍厕所及公园轮椅租借未有可靠公开确认，出发前致电0411-87900000。",
+      "湖边部分位置仅有低矮护栏或缆绳，活泼幼童应牵手或坐推车，不在岸边追跑。"
     ],
     "nearbyDining": [
       {
-        "id": "d3",
-        "name": "王国皇家餐厅 (园区中心湖畔)",
-        "cuisine": "家庭和风定食 / 儿童炸鸡肉丸饭 / 热乌冬面",
-        "familyFeatures": "全空调临湖大玻璃窗席位，提供宝宝椅与温开水，看湖景视野绝佳",
-        "walkingTimeMin": 2
+        "id": "dine-llm-1788255534023-0",
+        "name": "海味私厨（发现王国度假酒店）",
+        "cuisine": "中餐、海鲜、烧烤",
+        "familyFeatures": "酒店公开提供儿童餐；可要求粥、蒸蛋、软面、米饭和清蒸少盐菜。宝宝椅未单独公开确认，建议提前询问。",
+        "walkingTimeMin": 4
       },
       {
-        "id": "d4",
-        "name": "金石滩海鲜大饭店",
-        "cuisine": "大连本地海鲜蒸锅 / 鲅鱼水饺",
-        "familyFeatures": "独立包厢、安静宽敞、海鲜现蒸少油低盐，老人小孩吃得放心",
+        "id": "dine-llm-1788255534023-1",
+        "name": "D大调·音乐情境BAR",
+        "cuisine": "本地菜、海鲜、烧烤",
+        "familyFeatures": "位于酒店花园，晚餐时段营业，可点清淡主食和蒸煮菜；现场音乐可能较响，不适合怕吵幼童或长辈。",
+        "walkingTimeMin": 5
+      },
+      {
+        "id": "dine-llm-1788255534023-2",
+        "name": "奥特曼主题餐厅",
+        "cuisine": "主题简餐、牛肉面、米饭套餐",
+        "familyFeatures": "位于园内，可在不出园的情况下解决热面和米饭需求；部分套餐与剧场票绑定，宝宝椅需现场确认。",
         "walkingTimeMin": 8
       }
     ],
@@ -1890,12 +1920,17 @@ export const INITIAL_SITES: Site[] = [
       }
     ],
     "createdAt": "2026-09-01T08:00:00.000Z",
-    "tripId": "trip-dalian-coastal-multigen-2026"
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "customFields": {
+      "rainyDayPlan": "小雨优先进入酷乐迷你世界、奥特曼冰封剧场、4D体验馆及航海王传奇城堡室内区域；室内过山车不适合4岁幼童及多数长辈。雷暴、大风或持续暴雨时不建议只靠少数室内项目硬撑全天，可打车约5-10分钟前往金石文化博览广场，选择未来科技馆、金石蜡像馆、生命奥秘博物馆或地球之光科普体验馆。各馆开放日、票价及4岁儿童是否适合应当天确认。",
+      "ticketBookingTip": "普通工作日不必抢票，但暑期周末、五一、国庆和烟花活动日建议提前2-3天在官方微信小程序或正规平台实名购票，携带每位购票人的身份证原件。电子票通常可刷身份证入园，部分低价票购买后约2小时才生效。未查到普通长者、轮椅或婴儿车家庭的常设免排队绿色通道；发现王国度假酒店门票套餐可提供专属入口、约提前10分钟入园、部分指定项目优速通及两日多次入园。",
+      "parkingAndDropoff": "园区停车场约1138个泊位，参考收费小车10元/次、中大型车15元/次，15分钟内离场免费。停车位至主入口通常步行约3-5分钟、约200-400米；官方未公布网约车落客点到闸机的准确米数，按现有动线估算约100-300米。入口区域主要为硬质平坦路面，无需攀爬长楼梯；建议先让长辈和孩子在入口广场附近下车，再由一名成人停车。导航应选择发现王国主题公园主入口或停车场，不要只导航到金石滩站。"
+    }
   },
   {
     "id": "site-dalian-golden-pebble-beach",
     "name": "大连金石滩黄金海岸与地质公园",
-    "localName": "Golden Pebble Beach & National Geopark",
+    "localName": "Golden Pebble Beach & Dalian Jinshitan Coastal National Geopark",
     "category": "nature",
     "coordinates": [
       39.0736,
@@ -1903,60 +1938,83 @@ export const INITIAL_SITES: Site[] = [
     ],
     "address": "辽宁省大连市金州区金石滩海滨中路与地质公园核心景区",
     "city": "大连",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/%E9%87%91%E7%9F%B3%E6%BB%A92.jpg/1280px-%E9%87%91%E7%9F%B3%E6%BB%A92.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/a/a7/%E9%87%91%E7%9F%B3%E6%BB%A92.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/%E9%87%91%E7%9F%B3%E6%BB%A92.jpg/1280px-%E9%87%91%E7%9F%B3%E6%BB%A92.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/%E9%87%91%E7%9F%B3%E6%BB%A9.jpg/1280px-%E9%87%91%E7%9F%B3%E6%BB%A9.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/%E9%87%91%E7%9F%B3%E6%BB%A93.jpg/1280px-%E9%87%91%E7%9F%B3%E6%BB%A93.jpg",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+      "https://p2.cri.cn/M00/64/38/rBABC2MEMvKAEpHcAAAAAAAAAAA428.900x506.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/95/Dalian_Jinshitan_Coastal_Geopark.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e6/%E5%A4%A7%E8%BF%9E%E5%9B%BD%E5%AE%B6%E5%9C%B0%E8%B4%A8%E5%85%AC%E5%9B%AD12-%E9%BE%9F%E8%83%8C%E7%9F%B3.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/25/%E5%A4%A7%E8%BF%9E%E5%9B%BD%E5%AE%B6%E5%9C%B0%E8%B4%A8%E5%85%AC%E5%9B%AD9-%E6%B5%B7%E8%9A%80%E5%B4%96.JPG",
+      "https://ak-d.tripcdn.com/images/0100q120009m2k9pw5050.jpg?proc=source/trip",
+      "https://dimg04.c-ctrip.com/images/0EQ4b12000c0pfw1l5F84.jpg",
+      "https://pagodaprojects.com/wp-content/uploads/2018/02/20081209174127171912157073-1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/90/Autumn_Swimming_in_Golden_Stone_Beach_2nd.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/3b/%E9%87%91%E7%9F%B3%E6%BB%A9%E6%B5%B7%E6%BB%A8_-_panoramio.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/ab/Childhood_by_the_sea-%E6%B5%B7%E8%BE%B9%E7%9A%84%E7%AB%A5%E5%B9%B4_-_panoramio.jpg"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4"
+      "https://www.bilibili.com/video/BV1454y1V76d",
+      "https://www.bilibili.com/video/BV1GHqcBmEjm"
     ],
-    "description": "黄海之滨绵延十里的天然海湾与几亿年天然雕琢的海蚀地质奇观！黄金海岸拥有宽阔平缓的金色沙滩，浪柔水清，是4岁幼童挖沙堆城堡、踏浪拾贝的天然游乐场；毗邻的国家地质公园奇石林立，「恐龙探海」、「贝多芬头像」、「大龟裂石」维妙维肖。长辈可乘坐全景环保观光车直达悬崖观海平台，一览黄海万顷碧波。",
+    "description": "一处把四点七公里沙滩与数亿年海蚀奇观串联起来的滨海目的地：孩子可玩沙、寻找“恐龙探海”，长辈可坐看山海；但地质公园精华线含石阶、栈道与陡坡，三代同游宜分段、错峰并利用观光环线车。",
     "recommendedDurationMin": 240,
-    "openingHours": "黄金海岸全天开放；地质公园 08:30 - 17:00",
+    "openingHours": "地质公园旺季08:30-17:00（4月25日-10月25日），淡季08:30-16:00；黄金海岸公共沙滩免费，快乐海岸运营项目当前列示09:00-18:00",
     "admissionFee": {
-      "adult": "黄金海岸免费；地质公园约60元/人",
-      "senior": "60-69岁半价，70岁以上凭有效证件免票",
-      "child4yo": "身高1.2米以下儿童免费",
-      "notes": "地质公园建议购买包含全景环保电瓶车套票，省力不爬山"
+      "adult": "黄金海岸免费；地质公园旺季¥60、淡季¥40",
+      "senior": "60-69岁凭有效证件半价；70岁及以上免费",
+      "child4yo": "免费（6周岁及以下或身高1.3米及以下，每名成人最多带2名免费儿童）",
+      "notes": "优惠和免票须携带有效年龄证件；除1.3米以下儿童外，其他优惠证件不减免观光环线车费；两种及以上优惠不可叠加。"
     },
-    "bestTimeToVisit": "早晨 09:00 黄金海岸踏浪，或傍晚 16:30 看海平线落日红霞",
-    "weatherSuitability": "晴天适宜 (海风微拂最美，紫外线较强需做好防晒)",
-    "strollerRating": 4,
-    "strollerNotes": "黄金海岸建有数公里长的滨海防腐木栈道，推婴儿车赏海极舒适；进沙滩需手提推车或存放在栈道旁遮阳伞下。",
-    "kidRating": 5,
-    "kidNotes": "金黄细沙+清澈浅滩=孩子的最爱！带上小水桶与塑料小铲，小宝能专心挖沙捉小螃蟹玩一整个上午。",
-    "elderlyRating": 4,
-    "elderlyNotes": "地质公园内全程有观光车接驳至观景台，不用让老人爬陡峭台阶；滨海木栈道两旁长椅密集，坐着吹海风听涛声神清气爽。",
-    "walkingIntensity": "轻松至适中 (沙滩可静态休养，地质公园乘车代步)",
-    "stairsLevel": "少量台阶 (主木栈道纯平，地质公园核心观景台有局部台阶)",
+    "bestTimeToVisit": "08:20抵达地质公园、08:30首批入园；黄金海岸安排在16:30以后，避开大巴团、正午暴晒和最强紫外线。",
+    "weatherSuitability": "晴天优先；雨天、大风、雷电或海面风浪较大时不适合地质公园临海步道",
+    "strollerRating": 2,
+    "strollerNotes": "黄金海岸入口广场及铺装路较平，可推至沙滩边缘，但沙面会陷轮；地质公园核心段约1.7公里，含石阶、起伏木栈道和铁索桥，没有连续童车或轮椅专用通道。未核实到童车借用。",
+    "kidRating": 4,
+    "kidNotes": "4岁孩子会喜欢玩沙、浅水观察、找“恐龙探海”“蟹将出洞”等动物形岩石；地质步道临海、风大且雨后湿滑，必须全程牵手，不钻海蚀洞、不在礁石和栈道奔跑。母婴室和固定尿布台未获可靠公开确认。",
+    "elderlyRating": 3,
+    "elderlyNotes": "黄金海岸适合坐看海景；地质公园完整游览约2-3小时，核心步行段约1.7公里，台阶和坡度会显著增加膝关节负荷，沿途固定遮阴座椅和茶室不密集。建议只走入口短段30-45分钟后折返。",
+    "walkingIntensity": "中高：两区转场必须乘车；地质公园核心段约1.7公里并有台阶，完整游览通常2-3小时",
+    "stairsLevel": "黄金海岸入口较平；地质公园有连续石阶、木栈道、坡道和铁索桥",
     "amenities": {
-      "nursingRoom": true,
-      "diaperChanging": true,
-      "accessibleRestroom": true,
+      "nursingRoom": false,
+      "diaperChanging": false,
+      "accessibleRestroom": false,
       "benchesRestAreas": true,
       "shuttleOrCart": true,
       "elevatorAvailable": false,
       "strollerRental": false,
-      "wheelchairRental": true,
+      "wheelchairRental": false,
       "shadeAvailable": true,
-      "indoorRainyDayOption": false,
+      "indoorRainyDayOption": true,
       "kidPlayArea": true
     },
     "familyTips": [
-      "请务必随身准备：儿童挖沙玩具、涉水溯溪凉鞋、长辈遮阳帽与防晒衣。",
-      "黄金海岸沙滩上有租赁遮阳大伞和躺椅的摊位（可适当砍价），长辈躺着休息非常舒服。",
-      "地质公园拍照首选「恐龙探海」，下午顺光时天然海蚀拱桥宛如神龙汲水，拍照极具视觉震撼。"
+      "地质公园无连续推车路线，轻便推车只适合入口前使用；JSON中的false表示未能从可靠公开资料核实，不能据此假定现场一定没有。",
+      "地铁3号线金石滩站出站后买20元观光环线票，直接在“地质公园核心景区”或“黄金海岸”下车，避免两区之间暴走。",
+      "给孩子准备防滑包脚水鞋、备用衣裤、防晒帽和饮水；给长辈准备登山杖或护膝，但使用轮椅者不建议进入地质公园核心步道。",
+      "不要把快乐海岸水上运动当作4岁儿童项目；实际游泳范围和时间服从当天救生旗、海况及现场广播。",
+      "如计划自驾，优先询问能否进入恐龙背停车场；若只能停恐龙探海停车场，需额外预留约10分钟步行。"
     ],
     "nearbyDining": [
       {
-        "id": "d5",
-        "name": "金石滩渔家傲海鲜坊",
-        "cuisine": "现捞大连海鲜 / 杂色蛤豆腐汤 / 软炸蛎黄",
-        "familyFeatures": "海鲜现捞现称，杂色蛤鲜甜不辣，豆腐汤清淡适合老人，有宝宝椅",
-        "walkingTimeMin": 5
+        "id": "dine-llm-1788255515155-0",
+        "name": "金石滩渔家鳌酒楼",
+        "cuisine": "大连海鲜／家常中餐",
+        "familyFeatures": "位于黄金海岸西部沙滩，可选包间；建议点蒸蛋、粥、面食、清蒸鱼并要求少盐，鱼刺由成人彻底处理；宝宝椅需提前电话确认。",
+        "walkingTimeMin": 3
+      },
+      {
+        "id": "dine-llm-1788255515155-1",
+        "name": "大连金石滩绿发希尔顿·厨艺全日餐厅",
+        "cuisine": "国际自助／亚洲面食／点心",
+        "familyFeatures": "官方标注儿童菜单和面条吧，可选软面、蒸点、米饭及熟蔬菜；室内空调、洗手间和酒店服务更适合幼童与长辈。",
+        "walkingTimeMin": 9
+      },
+      {
+        "id": "dine-llm-1788255515155-2",
+        "name": "大连金石滩绿发希尔顿·青雅中餐厅",
+        "cuisine": "中式融合菜／大连菜",
+        "familyFeatures": "有儿童餐椅、包间及禁烟区，可点豆腐、汤、嫩鸡、炒饭等软质菜；午餐11:30-14:00，晚餐17:30-21:00。",
+        "walkingTimeMin": 9
       }
     ],
     "customTags": [
@@ -1993,12 +2051,17 @@ export const INITIAL_SITES: Site[] = [
       }
     ],
     "createdAt": "2026-09-01T08:00:00.000Z",
-    "tripId": "trip-dalian-coastal-multigen-2026"
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "customFields": {
+      "rainyDayPlan": "雨天不要硬走地质公园石阶和临海木栈道。首选乘车前往金石文化博览广场，选择地质博物馆、EX未来科技馆、奇幻艺术体验馆或金石蜡像馆；生命奥秘博物馆有2000余件生物塑化标本，科普性强，但人体及动物解剖展示可能令敏感的4岁孩子害怕。鲁能美丽汇是商业街与Mall组合，只适合小雨或短时避雨，暴雨、雷电和大风时优先选择博览广场或酒店室内餐饮区。",
+      "ticketBookingTip": "黄金海岸免费且不预约。地质公园无需抢票，当前线上渠道支持当日电子票；普通成人提前购票可减少售票窗口排队。免费儿童和70岁以上长者需带身份证或户口簿，通常仍需人工核验。未查到长者、推车专属绿色通道；节假日建议08:20到场。恶劣天气当天先致电0411-87900497确认是否开放。",
+      "parkingAndDropoff": "地质公园有恐龙探海停车场和恐龙背停车场：恐龙探海停车场较宽敞，但到售票处约步行10分钟；恐龙背停车场位于公园内部，到售票及检票口约1分钟，是三代家庭首选，但旺季可能限制车辆进入。包车或网约车应定位“大连滨海国家地质公园核心景区/恐龙背停车场”，并让司机现场确认放行。快乐海岸停车场就在海滩旁，正规下客区到主入口约50-150米，入口广场无长距离楼梯，但沙滩本身不适合普通轮椅或小轮婴儿车。"
+    }
   },
   {
     "id": "site-dalian-natural-history-museum",
-    "name": "大连自然博物馆",
-    "localName": "Dalian Natural History Museum (Heishijiao)",
+    "name": "三寰牧场 (旅顺/高新)",
+    "localName": "Sanhuan Ranch (Lvshun / High-tech District)",
     "category": "museum",
     "coordinates": [
       38.8681,
@@ -2006,51 +2069,61 @@ export const INITIAL_SITES: Site[] = [
     ],
     "address": "辽宁省大连市沙河口区黑石礁西村街40号 (近黑石礁海滨)",
     "city": "大连",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Dalian_Nature_History_Museum.JPG/1280px-Dalian_Nature_History_Museum.JPG",
+    "coverImage": "https://dimg04.c-ctrip.com/images/350f1f000001g48l4A168_W_1080_10000_Q80.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Dalian_Nature_History_Museum.JPG/1280px-Dalian_Nature_History_Museum.JPG",
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1569705460033-cfaa4bf9f822?auto=format&fit=crop&w=1200&q=80"
+      "https://youimg1.c-ctrip.com/target/100p16000000z688fB037.jpg",
+      "https://youimg1.c-ctrip.com/target/100316000000z8toe2A0D.jpg",
+      "https://youimg1.c-ctrip.com/target/100a16000000z8f10FD0F.jpg",
+      "https://youimg1.c-ctrip.com/target/100r16000000z5inkFA10.jpg",
+      "https://youimg1.c-ctrip.com/target/100816000000z7ahb1940.jpg",
+      "https://youimg1.c-ctrip.com/target/100c16000000z9qnc4AFD.jpg",
+      "https://youimg1.c-ctrip.com/target/100t16000000z757fE57A.jpg",
+      "https://youimg1.c-ctrip.com/target/100b16000000z9hfu0D2A.jpg",
+      "https://youimg1.c-ctrip.com/target/100i16000000z5wy7208E.jpg",
+      "https://youimg1.c-ctrip.com/target/100216000000ze6cr5926.jpg"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4"
+      "https://www.youtube.com/watch?v=CfhTEVJt1Mc",
+      "https://www.bilibili.com/video/BV1ep421Q76P/"
     ],
-    "description": "依黑石礁嶙峋海岸而筑的近代百年地标自然博物馆！馆藏全国最为壮观的海洋生物标本群，镇馆之宝是长达18.6米、重达46.7吨的亚洲最大黑露脊鲸巨大骨架与真实剥制立体标本！还拥有恐龙世界展厅、非洲野生动物群情景雕塑与五彩斑斓的海贝走廊。面朝黄海的整面观海弧形全景玻璃幕墙令人惊艳，纯室内全空调，雨天与酷暑避暑头号选择。",
+    "description": "位于大连英歌石丘陵间的生态牧场，改造前以开阔草坪、原木儿童乐园、动物互动、农耕温室和森林步道见长。适合亲子自然体验，但坡地、日晒及较长步行对推车和长者有一定负担。目前闭园升级，恢复时间待定。",
     "recommendedDurationMin": 150,
-    "openingHours": "09:00 - 16:30 (周一闭馆，法定节假日除外，15:30 停止入馆)",
+    "openingHours": "自2026年4月3日起闭园升级，恢复营业时间待定",
     "admissionFee": {
-      "adult": "免费开放 (需提前在大连自然博物馆公号实名预约门票)",
-      "senior": "凭身份证免费入馆，设绿色通道免排队",
-      "child4yo": "随同家长免费进馆",
-      "notes": "完全免费的高性价比亲子场馆，旺季建议提前1-3天线上预约"
+      "adult": "暂停售票；改造前门市价¥70",
+      "senior": "暂停售票；旧制60-69岁约¥35，70岁及以上持证免费",
+      "child4yo": "暂停售票；旧制6周岁以下或身高1.3米以下通常免费",
+      "notes": "当前不可入园。旧优惠政策、营业时间和线上团购均不得视为复开后的有效规则，出发前应致电0411-86186999或0411-86186888确认。"
     },
-    "bestTimeToVisit": "上午 09:30 - 11:30 或 雨天/盛夏午后 (全室内避暑吹空调)",
-    "weatherSuitability": "室内 (雨天/避暑优选，全馆中央空调恒温舒适)",
-    "strollerRating": 5,
-    "strollerNotes": "全馆采用宽幅无障碍斜坡与透明观光直梯连通各楼层，推婴儿车从一楼到三楼完全不需要抬车，平坦极佳。",
-    "kidRating": 5,
-    "kidNotes": "一进门就被巨大的鲸鱼骨骼和高耸的马门溪龙恐龙骨架震撼到了！海洋展厅有声光互动的海底投影，孩子看得目不转睛。",
-    "elderlyRating": 5,
-    "elderlyNotes": "各楼层展厅均配有大量软皮休息长凳，三楼还有全海景休息连廊，坐着眺望黑石礁海潮拍打礁石，十分惬意养神。",
-    "walkingIntensity": "轻松 (<500米，室内平坦且随时可坐)",
-    "stairsLevel": "平坦 / 无台阶 (各楼层有宽敞观光直梯覆盖)",
+    "bestTimeToVisit": "当前不建议前往；复开后优先非节假日开门即入园，并选择南门",
+    "weatherSuitability": "以户外草坪和林道为主，不适合雨天、大风及雨后泥泞天气",
+    "strollerRating": 3,
+    "strollerNotes": "改造前主游客路线没有必须连续爬楼的可靠记录，但包含丘陵坡路、草地和林道；小轮伞车通过性较差。南门可减少前往大草坪的坡路。未确认婴儿车租借、轮椅租借、无障碍坡道及无障碍卫生间。",
+    "kidRating": 4,
+    "kidNotes": "改造前有原木无动力乐园、草坪、羊驼和羊等动物、矮马、旋转木马、卡丁车及农耕活动，适合活泼4岁幼童；但动物展示和互动自2025年3月起暂停。中央水域、浅水系、动物围栏和观景台附近必须一对一看护。母婴室及尿布台未获可靠确认。",
+    "elderlyRating": 3,
+    "elderlyNotes": "森林环线约2.5公里，完整串联主要区域预计约3-5公里；草坪日晒明显，树荫和固定座椅并非高密度配置。改造前有观光车和付费篷房休息区，但当前停运，轮椅借用未确认。",
+    "walkingIntensity": "中等偏高（森林环线2.5公里；完整游览约3-5公里并含坡路）",
+    "stairsLevel": "主路线未见连续台阶记录，但有草坡、林道和不平整地面；改造后布局待核验",
     "amenities": {
-      "nursingRoom": true,
-      "diaperChanging": true,
-      "accessibleRestroom": true,
+      "nursingRoom": false,
+      "diaperChanging": false,
+      "accessibleRestroom": false,
       "benchesRestAreas": true,
-      "shuttleOrCart": false,
-      "elevatorAvailable": true,
-      "strollerRental": true,
-      "wheelchairRental": true,
+      "shuttleOrCart": true,
+      "elevatorAvailable": false,
+      "strollerRental": false,
+      "wheelchairRental": false,
       "shadeAvailable": true,
-      "indoorRainyDayOption": true,
+      "indoorRainyDayOption": false,
       "kidPlayArea": true
     },
     "familyTips": [
-      "大连自然博物馆坐落在黑石礁礁石海边，参观完从后门走出来就是天然黑石礁地貌，可带娃看海浪拍打玄武岩。",
-      "一楼总服务台提供免费轮椅与婴儿手推车借用（凭有效证件登记即可）。",
-      "恐龙馆有恐龙叫声与动态骨架演示，非常适合激发4岁小朋友对史前地球的好奇心。"
+      "当前仍在闭园升级，不要购买使用旧资料包装的2026团购票。",
+      "复开后从南门进入最省力，可缩短前往大草坪和原动物牧区的距离；公交站至入口可能仍需步行约1公里。",
+      "为4岁孩子准备备用衣裤、防晒帽和饮水；长辈准备折叠凳或手杖，雨后不要推小轮婴儿车进入草地。",
+      "旧有动物表演、放牧和投喂均不能默认恢复，购票前先电话确认。",
+      "园区周边没有经核实的5-10分钟步行家庭餐厅，三代同行应安排车辆前往龙王塘、黄泥川或高新万达用餐。"
     ],
     "nearbyDining": [
       {
@@ -2103,7 +2176,12 @@ export const INITIAL_SITES: Site[] = [
       }
     ],
     "createdAt": "2026-09-01T08:00:00.000Z",
-    "tripId": "trip-dalian-coastal-multigen-2026"
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "customFields": {
+      "rainyDayPlan": "牧场为户外型景点，目前闭园，过去的会耕部落温室也不能作为可直接进入的雨天馆。首选替代为大连自然博物馆：2026年9月1日起周二至周日09:00-16:30开放，16:00停止入馆，个人凭身份证免费免预约，馆内恐龙、鲸类和海洋生物展适合4岁儿童；70岁以上等人群可走绿色通道。周一或客流过大时改去大连高新万达广场。",
+      "ticketBookingTip": "当前没有有效售票或预约入口，无需抢票，也不要购买仍展示旧价格的旅行社产品。未找到牧场对长者、轮椅或婴儿车游客提供优先绿色通道的正式承诺。复开后先致电0411-86186999或0411-86186888确认开放日期、动物项目、观光车和无障碍服务，再从园方公布渠道购票。",
+      "parkingAndDropoff": "改造前南门和北门均有地面停车场，社会车辆不能进入游览区。南门距离大草坪较近、坡路更少，更适合长者和推车家庭。官方未公布停车位至闸机的精确米数，不能可靠承诺固定距离；入口实拍显示主要为铺装通道，没有必须连续爬楼的记录。当前闭园期间停车场和上下客区不保证开放。"
+    }
   },
   {
     "id": "site-dalian-yacht-cruise",
@@ -2116,60 +2194,84 @@ export const INITIAL_SITES: Site[] = [
     ],
     "address": "辽宁省大连市沙河口区星海湾国际游艇码头 / 东港游艇港",
     "city": "大连",
-    "coverImage": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "https://dimg04.c-ctrip.com/images/25t0e12000gkhucin9310_W_2048_1536.png_.webp?_fr=wc",
     "gallery": [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1510525009512-ad7fc13eefab?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1569263979104-865ab7cd8d17?auto=format&fit=crop&w=1200&q=80"
+      "https://dimg04.c-ctrip.com/images/25t0e12000gkhucin9310_W_2048_1536.png_.webp?_fr=wc",
+      "https://dimg04.c-ctrip.com/images/0350d12000nuptzqy886A_Z_1000_0.jpg?proc=resize%2Fm_z%2Cw_1000%3Bcrop%2Fm_c%2Cw_1000%2Ch_1000%2Cx_0%2Cy_0%2CDD72",
+      "https://dimg04.c-ctrip.com/images/0352u12000nuptvkoCF9E_Z_1000_0.jpg?proc=resize%2Fm_z%2Cw_1000%3Bcrop%2Fm_c%2Cw_1000%2Ch_1000%2Cx_0%2Cy_0%2CDD72",
+      "https://dimg04.c-ctrip.com/images/0355512000nupu2h8034F_Z_1000_0.jpg?proc=resize%2Fm_z%2Cw_1000%3Bcrop%2Fm_c%2Cw_1000%2Ch_1000%2Cx_0%2Cy_0%2CDD72",
+      "https://dimg04.c-ctrip.com/images/0352i12000nupu2hiD5DB_Z_1000_0.jpg?proc=resize%2Fm_z%2Cw_1000%3Bcrop%2Fm_c%2Cw_1000%2Ch_1000%2Cx_0%2Cy_0%2CDD72",
+      "https://dimg04.c-ctrip.com/images/0355612000nupu2ho2407_Z_1000_0.jpg?proc=resize%2Fm_z%2Cw_1000%3Bcrop%2Fm_c%2Cw_1000%2Ch_1000%2Cx_0%2Cy_0%2CDD72",
+      "https://dimg04.c-ctrip.com/images/0353s12000nupto8xC7EE_Z_1000_0.jpg?proc=resize%2Fm_z%2Cw_1000%3Bcrop%2Fm_c%2Cw_1000%2Ch_1000%2Cx_0%2Cy_0%2CDD72",
+      "https://dimg04.c-ctrip.com/images/0356f12000nuptvlc9FE4_Z_1000_0.jpg?proc=resize%2Fm_z%2Cw_1000%3Bcrop%2Fm_c%2Cw_1000%2Ch_1000%2Cx_0%2Cy_0%2CDD72",
+      "https://dimg04.c-ctrip.com/images/0356t12000nuptvxhA97F_Z_1000_0.jpg?proc=resize%2Fm_z%2Cw_1000%3Bcrop%2Fm_c%2Cw_1000%2Ch_1000%2Cx_0%2Cy_0%2CDD72",
+      "https://dimg04.c-ctrip.com/images/0353i12000nuptxxq1A89_Z_1000_0.jpg?proc=resize%2Fm_z%2Cw_1000%3Bcrop%2Fm_c%2Cw_1000%2Ch_1000%2Cx_0%2Cy_0%2CDD72"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4"
+      "https://www.bilibili.com/video/BV1hv41187Sd/",
+      "https://www.bilibili.com/video/BV16x411R7s3/"
     ],
-    "description": "从星海湾国际游艇码头启航，乘坐豪华双体大帆船或休闲游艇驶向蔚蓝外海！成百上千只洁白海鸥紧贴甲板伴飞争食，大人小孩手持小鱼或面包高高举起，海鸥轻盈俯冲精准叼走，体验妙趣横生！远眺星海湾跨海大桥宛若长龙卧波，大连城堡与海岸天际线尽收眼底。双体船极其平稳不易晕船，船舱内配有空调软沙发，老少皆怡。",
+    "description": "从星海湾游艇港乘帆船贴海而行，追随海鸥穿越跨海大桥，在浪花、帆影与城市天际线间感受大连最浪漫的海上视角。建议三代家庭选择大帆船或双体船，上午短航程出海，轻松不赶路。",
     "recommendedDurationMin": 90,
-    "openingHours": "09:00 - 17:30 (每隔30-60分钟一班船)",
+    "openingHours": "码头场地约06:00-18:30；乘船通常约09:00-18:00，非固定班次，按当日船期、天气和海况安排",
     "admissionFee": {
-      "adult": "散拼游艇票约80-120元/人 (包艇另计)",
-      "senior": "65岁以上长辈持老年优待证享优惠或同儿童价",
-      "child4yo": "1.2米以下幼童约半价或免票 (需占救生衣名额)",
-      "notes": "船上免费提供专业大人和儿童专用轻便救生衣，喂海鸥小鱼条约10元/袋"
+      "adult": "160元/人（星海码头—跨海大桥往返约25-30分钟）",
+      "senior": "60岁及以上门市半价约80元；没有70岁以上统一免票政策，65岁以上乘小船通常须身体健康并由直系亲属陪同",
+      "child4yo": "1.2米以下免费，须成人陪同且仍计入船舶核载人数；1.2-1.5米约80元",
+      "notes": "码头本身通常不收门票；不同私营游艇、J80拼船和包船价格另计。2026年10月31日前，符合条件的国航/大连航空进港旅客可按活动渠道购买90元礼遇票。"
     },
-    "bestTimeToVisit": "下午 16:00 - 17:30 傍晚班次 (光线柔和，海鸥活跃，伴随金黄夕阳晚霞)",
-    "weatherSuitability": "晴天最佳 (风浪小于4级时运行，台风强风时停航)",
-    "strollerRating": 4,
-    "strollerNotes": "游艇码头栈桥平整顺畅，登船时有工作人员协助照看，婴儿车可折叠存放在游艇下层宽敞的室内沙龙舱中。",
-    "kidRating": 5,
-    "kidNotes": "全船最高潮时刻！成群海鸥在头顶盘旋，伸出小手拿着小鱼干就能体验被海鸥轻轻叼走食物的神奇感，孩子兴奋得直蹦跳。",
-    "elderlyRating": 5,
-    "elderlyNotes": "双体游艇阻浪性极强，海湾内波浪极小，不会产生颠簸眩晕；老人若不想吹海风可坐在下层带空调的皮质卡座中透光看海景。",
-    "walkingIntensity": "轻松 (<500米，码头登船后全程坐船)",
-    "stairsLevel": "平坦 / 无台阶 (码头为缓坡浮动栈道，上下船仅2-3级小步级，船员专人搀扶)",
+    "bestTimeToVisit": "首选09:00-10:30出航，海面通常较温和，11:00前结束方便午餐及13:30回酒店午睡；备选15:30-17:00，避开12:00-15:00暴晒与甲板反光",
+    "weatherSuitability": "仅适合晴朗、低风浪天气；雷雨、大风、浓雾及低能见度可能临时停航或改期",
+    "strollerRating": 2,
+    "strollerNotes": "岸上陆域总体平缓，但登船需经过浮动码头、随潮位变化的引桥及台阶或跨缝，不能视为连续无障碍。建议使用轻量折叠推车并在检票后收车，孩子由成人抱行；无婴儿车租借。",
+    "kidRating": 4,
+    "kidNotes": "4岁孩子会喜欢看升帆、追随船只的海鸥、投喂船方专用海鸥食以及从海面穿越跨海大桥。开放水域和浮桥风险较高，必须获得合身儿童救生衣并由一名家长全程一对一照看，远离船头、舷边、缆绳和驾驶区。",
+    "elderlyRating": 3,
+    "elderlyNotes": "岸上通常步行约200-500米且无需爬山，但浮桥晃动、引桥坡度和上船跨步对长辈不友好。优先选择42客位大帆船、双体船或带舱船型，坐中后部有靠背位置；无电瓶车、轮椅登船板和轮椅租借。",
+    "walkingIntensity": "轻松（岸上通常约200-500米；登船段需搀扶）",
+    "stairsLevel": "岸上平坦；浮动码头引桥可能有坡度、台阶及船岸跨缝，非无障碍",
     "amenities": {
       "nursingRoom": false,
       "diaperChanging": false,
-      "accessibleRestroom": true,
+      "accessibleRestroom": false,
       "benchesRestAreas": true,
       "shuttleOrCart": false,
       "elevatorAvailable": false,
       "strollerRental": false,
       "wheelchairRental": false,
-      "shadeAvailable": true,
+      "shadeAvailable": false,
       "indoorRainyDayOption": true,
       "kidPlayArea": false
     },
     "familyTips": [
-      "码头或登船前记得买1-2包喂海鸥用的小干鱼条或火腿肠，海鸥非常喜欢，抢食画面拍照超出片！",
-      "上船后船员会为每位乘客发放救生衣，有专门的幼儿小马甲式救生衣，安全感拉满。",
-      "推荐选择下午4点半左右的夕阳班次，远处的跨海大桥亮起霓虹夜景，回港时恰好入夜极浪漫。"
+      "明确预订海上游大连·星海湾游艇港3号码头，不要误到东港游艇港；出发前一天再次索取准确定位和船长联系方式。",
+      "首选大帆船、双体帆船或带舱船，避免8人J80小帆船；确认备有适合4岁儿童尺寸的救生衣，没有合身救生衣则不上船。",
+      "提前30-40分钟到达并先让孩子如厕，码头没有可确认的母婴室、尿布台或推车绿色通道。",
+      "长辈当天若血压、眩晕、睡眠或晕船状态不佳，应取消小船项目；全家穿包脚防滑鞋并携带轻薄防风外套。",
+      "只使用船方提供的海鸥食，不用面包、油条等人类食物；孩子投喂时保持坐姿并由家长握住手腕。",
+      "公开图片中的J80帆船用于展示星海湾实景，实际预订船型可能不同；登船前应现场核对船名、核载人数和救生装备。"
     ],
     "nearbyDining": [
       {
-        "id": "d8",
-        "name": "星海壹号·海景和风餐厅",
-        "cuisine": "海景精致鲁菜 / 鲜焖鲍鱼 / 软糯海参小米粥",
-        "familyFeatures": "海参小米粥温润养胃最适合长辈和孩子，餐厅有大露台直面星海湾游艇港",
-        "walkingTimeMin": 3
+        "id": "dine-llm-1788255614260-0",
+        "name": "星海假日酒店·假日私厨",
+        "cuisine": "大连菜 / 海鲜 / 温热汤菜",
+        "familyFeatures": "约3-5分钟，设儿童高脚椅和包间；可点海胆豆腐、鱼类及汤品，预订时要求清蒸、少油少盐，适合幼童和长辈",
+        "walkingTimeMin": 4
+      },
+      {
+        "id": "dine-llm-1788255614260-1",
+        "name": "喜家德虾仁水饺（星海公园店）",
+        "cuisine": "虾仁水饺 / 家常面食",
+        "familyFeatures": "有儿童餐椅、沙发位和儿童活动区；虾仁水饺、西芹鲜肉水饺、番茄鸡蛋汤口感软嫩，方便分餐",
+        "walkingTimeMin": 7
+      },
+      {
+        "id": "dine-llm-1788255614260-2",
+        "name": "喜鼎海胆水饺（星海湾壹号店）",
+        "cuisine": "海胆水饺 / 海鲜水饺 / 大连菜",
+        "familyFeatures": "提供宝宝椅；推荐黄瓜鸡蛋虾水饺、海胆豆腐汤和虾汤泡饭，海胆饺本身鲜咸，儿童与长辈不再蘸酱",
+        "walkingTimeMin": 9
       }
     ],
     "customTags": [
@@ -2206,7 +2308,12 @@ export const INITIAL_SITES: Site[] = [
       }
     ],
     "createdAt": "2026-09-01T08:00:00.000Z",
-    "tripId": "trip-dalian-coastal-multigen-2026"
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "customFields": {
+      "rainyDayPlan": "雨天、大风、浓雾或低能见度时不建议在码头等待，直接转往相邻的大连圣亚海洋世界，安排白鲸、企鹅和海底隧道室内游览；若已游过圣亚，可乘车约10分钟前往免费的自然博物馆看恐龙、鲸类与海洋生物标本，注意周一闭馆；需要用餐、儿童活动及舒适休息时可转凯德和平广场。天气原因取消时，先按原购票渠道办理改期或退款。",
+      "ticketBookingTip": "无需在独立官网抢票，通常通过微信小程序或抖音搜索“海上游大连”，也可在游客中心购票。三代家庭建议至少提前1天联系，锁定大帆船/双体船、09:00-10:30船期、儿童尺码救生衣及老人陪同要求；所有乘客携带有效证件，免费儿童仍须申报并占核载人数。没有可核实的长者或推车绿色通道，旺季提前30-40分钟核销即可。出发当日早晨再次确认风浪、能见度和是否停航。",
+      "parkingAndDropoff": "打车或包车直接导航“海上游大连·星海湾游艇港3号码头”，备用定位为“星海湾游艇码头游客服务中心、中山路西段638号、圣亚海洋世界正门西南侧”。车辆尽量在游客中心或码头入口落客，通常再步行约50-200米至候船区、约100-300米至浮桥；最后一段不能乘车且有引桥坡度、台阶或跨缝。自驾优先圣亚海洋世界立体停车场，再步行约5-8分钟；次选中山路638号星海公园公共停车场。节假日先让长辈和孩子落客，再由一名成人停车，避免全家从远端车位步行。"
+    }
   },
   {
     "id": "site-dalian-xinghai-square",
@@ -2219,59 +2326,82 @@ export const INITIAL_SITES: Site[] = [
     ],
     "address": "辽宁省大连市沙河口区星海广场 (临近星海湾跨海大桥)",
     "city": "大连",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/8/87/Xinghai_Square_%28Dalian%29.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/f/f7/China_Dalian_Xinghai_Square_or_Xinghai_Plaza_Day.jpg",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/8/87/Xinghai_Square_%28Dalian%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Xinghai_Square_.jpg/1280px-Xinghai_Square_.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Dalian_Liaoning_China_Two-Chinese-at-Xinghai-Bay-01.jpg/1280px-Dalian_Liaoning_China_Two-Chinese-at-Xinghai-Bay-01.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/c/c6/China_Dalian_Xinghai_Square_or_Xinghai_Plaza_Night_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/4e/1000_footprints_sculpture_in_Xinghai_Square.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/9c/Musical_fountain.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/0a/Open_book_square.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/d9/Amusement_ride.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/57/Amusement_rides.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/2c/Store_in_xinghai_square.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/ec/Xinghai_Bay_Bridge_in_Xinghai_Square%2C_Dalian.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/48/Mordern_movement_sculpture.jpg"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4"
+      "https://www.bilibili.com/video/BV1hv41187Sd/",
+      "https://www.bilibili.com/video/BV1Ue4y1675m/"
     ],
-    "description": "世界最大的海滨城市广场、大连的城市象征与客厅！地面占地176万平方米，正南直面浩瀚黄海与壮丽的星海湾跨海大桥。广场上建有纪念大连百年的城雕巨大无字天书与足迹浮雕。广场中央的白鸽广场常年有成百上千只不怕人的白色和平鸽，海边台阶更有密集海鸥飞掠。傍晚有华丽的大型音乐喷泉秀，入夜后跨海大桥万盏华灯齐放，是全家散步吹海风第一去处。",
+    "description": "星海广场以辽阔海天、百年城雕、千人足迹与跨海大桥夜景著称。这里免费开放、主线平坦，可推车慢行、看海喂鸥；傍晚海风凉爽，适合三代同堂把观景、儿童游乐和海边晚餐串成轻松半日。",
     "recommendedDurationMin": 150,
-    "openingHours": "全天免费开放 (夜间音乐喷泉通常在 19:30 / 20:00 举行)",
+    "openingHours": "全年全天开放（00:00-24:00；大型活动、维修或安保管制除外）",
     "admissionFee": {
-      "adult": "完全免费",
-      "senior": "完全免费",
-      "child4yo": "完全免费",
-      "notes": "广场小火车或四轮家庭脚踏车租赁自愿消费"
+      "adult": "免费",
+      "senior": "免费，不区分60-69岁或70岁以上",
+      "child4yo": "免费，无身高限制",
+      "notes": "广场无需门票。游乐设施、游船和快艇由第三方单独收费，无统一长者优惠或儿童免票标准；2026年平台参考价包括快艇约99元大小同价、3小时拼船成人约288元和儿童约198元，须以运营商当天资质、天气、身高年龄限制及退改规则为准。广场无常设内部观光电瓶车。"
     },
-    "bestTimeToVisit": "傍晚 16:30 - 19:30 (避开正午日晒，喂鸽子、看海鸥、日落夕阳连着看喷泉大桥夜景)",
-    "weatherSuitability": "全天候适宜 (广场开阔，夏季晚上海风非常凉爽宜人)",
+    "bestTimeToVisit": "首选Leo午睡后的15:45至日落；备选07:30-09:30。避开10:30-16:00的暴晒和周末傍晚人流。",
+    "weatherSuitability": "晴天或多云最佳；小雨仅适合短时观景，雷暴、大风、海雾或海浪预警时不宜停留或乘船。",
     "strollerRating": 5,
-    "strollerNotes": "100%纯平花岗岩地面与柏油大道！推车、轮椅平滑如镜，毫无颠簸，可一路从广场中心推到海边观景台。",
-    "kidRating": 5,
-    "kidNotes": "和平鸽广场买一小包玉米粒，鸽子会直接飞落到孩子手臂和小手上啄食；海边还可以扔面包喂海鸥，旁边还有彩光游园小火车。",
-    "elderlyRating": 5,
-    "elderlyNotes": "视野开阔心旷神怡，沿海有长条石凳可随时休息，也可租一辆四轮带遮阳篷的家庭脚踏车全家同骑慢游。",
-    "walkingIntensity": "轻松至适中 (广场极大，可选择乘坐游园小火车代步)",
-    "stairsLevel": "平坦 / 无台阶",
+    "strollerNotes": "中央主轴、外环人行区及海滨观景主线为宽阔硬质铺装，无连续陡坡，路口多有路缘坡道。百年城雕顶部、亲水台阶和登船浮桥可绕行；过车行环路和自行车通道时需走斑马线。广场不提供婴儿车租借。",
+    "kidRating": 4,
+    "kidNotes": "4岁孩子会喜欢喂海鸥、寻找千人足迹、运动铜雕、喷泉和独立收费的旋转木马等项目。免费广场不是封闭儿童乐园，海堤、亲水台阶、车行环路和城雕高处均需全程牵手；大风时不建议乘快艇。未查到稳定公示的独立母婴室和尿布台。",
+    "elderlyRating": 4,
+    "elderlyNotes": "地势平缓但范围巨大，全景步行通常超过2公里。建议只走百年城雕—海边喂鸥—跨海大桥观景的800-1200米核心线。沿途有座椅和免费公厕，但树荫不足，茶室咖啡主要在外围；无官方轮椅租借或随到随坐的内部电瓶车。",
+    "walkingIntensity": "轻松至中等（核心线约800-1200米；不建议长辈全环游览）",
+    "stairsLevel": "主线平坦、无连续台阶；亲水台阶和城雕高处可绕行",
     "amenities": {
       "nursingRoom": false,
       "diaperChanging": false,
       "accessibleRestroom": true,
       "benchesRestAreas": true,
-      "shuttleOrCart": true,
+      "shuttleOrCart": false,
       "elevatorAvailable": false,
       "strollerRental": false,
       "wheelchairRental": false,
       "shadeAvailable": false,
-      "indoorRainyDayOption": false,
+      "indoorRainyDayOption": true,
       "kidPlayArea": true
     },
     "familyTips": [
-      "广场面积巨大，带娃和老人建议直接租一辆「四人亲子脚踏车」或者乘坐彩色观光小火车，既省力又欢声笑语。",
-      "白鸽广场位于广场西北角，海鸥群聚集在临海的百年城雕弧形台阶处，两个点都可以提前备好小面包和谷粒。",
-      "晚上看星海湾跨海大桥亮灯最佳机位在海边城雕大翻书台阶上，背景是大桥和城堡酒店，全家福必拍点。"
+      "导航大连百年纪念城雕而不是笼统的星海广场，可将下车到海边的距离压缩至约50-150米；允许临停时主线无需爬楼梯。",
+      "Leo午睡后15:45开始：百年城雕、千人足迹、岸边喂鸥、跨海大桥观景，游乐设施只选1-2项，约18:00就近晚餐。",
+      "海边树荫少且风比市区明显，携带遮阳伞、儿童防晒帽、轻薄防风外套、温水和折叠隔尿垫。",
+      "喂鸥让孩子向上抛正规无盐鸟食，不要用手指夹食物等待海鸥啄取；海堤边必须由成人牵手。",
+      "游船不是广场统一项目。购买前核实营业资质、儿童救生衣、保险、候船时间、4岁儿童票价以及大风停航退款规则。"
     ],
     "nearbyDining": [
       {
-        "id": "d9",
-        "name": "品海楼 (星海店)",
-        "cuisine": "大连老字号海鲜名店 / 金牌脆皮虾 / 葱油鸟贝",
-        "familyFeatures": "大连老建筑风情，包间宽敞有电梯，菜品清淡适口，宝宝喜欢手工虾丸与软糯大发糕",
+        "id": "dine-llm-1788255646965-0",
+        "name": "喜家德虾仁水饺（星海广场店）",
+        "cuisine": "虾仁水饺、鳕鱼水饺、软嫩家常小菜",
+        "familyFeatures": "星海广场A区1号，公开设施信息显示有儿童宝宝椅和卡座。虾三鲜、鳕鱼水饺、西芹鲜肉水饺及番茄蛋汤适合幼童和长辈，可要求少盐。",
+        "walkingTimeMin": 5
+      },
+      {
+        "id": "dine-llm-1788255646965-1",
+        "name": "奕景海鲜酒家·大连海鲜（星海广场店）",
+        "cuisine": "清蒸海鲜、蒸鱼、大连海鲜家常菜",
+        "familyFeatures": "星海广场E区8号，有儿童宝宝椅、大桌和停车。推荐古法蒸深海黄鱼、蒸贝类、山药文蛤汤，点餐时要求不辣、少油少盐、酱汁另放。",
         "walkingTimeMin": 6
+      },
+      {
+        "id": "dine-llm-1788255646965-2",
+        "name": "赵记老铺满族王府酒楼（星海店）",
+        "cuisine": "东北炖菜、酸菜猪肉水饺、软烂鱼类",
+        "familyFeatures": "滨海西路519号星海新天地，有儿童宝宝椅、包房和停车。适合三代聚餐，但传统东北菜口味偏重，应提前要求减盐少油。",
+        "walkingTimeMin": 9
       }
     ],
     "customTags": [
@@ -2309,7 +2439,12 @@ export const INITIAL_SITES: Site[] = [
       }
     ],
     "createdAt": "2026-09-01T08:00:00.000Z",
-    "tripId": "trip-dalian-coastal-multigen-2026"
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "customFields": {
+      "rainyDayPlan": "广场全露天，不适合持续降雨。首选星海广场西北侧的大连博物馆：2026年9月1日起周二至周日09:00-16:30开放，16:00停止入馆，周一闭馆，个人免费且无需预约，持有效证件安检入馆。第二选择为D区2号大连贝壳博物馆，09:00-16:30、16:00停票，成人100元，6岁及以下或1.3米及以下儿童免费，65岁以上半价。持续暴雨、雷暴或大风时短程打车到凯德和平广场，通常09:30-21:00，可用餐、休息并等待天气改善。雷电和六级左右大风时不要在海堤、空旷广场、游乐设备或码头停留。",
+      "ticketBookingTip": "星海广场免费、全天开放，不需要官网抢票、身份证换票或预约，也没有常规检票队伍，因此不存在长者或推车绿色通道。大型活动可能临时安检限流，应提前查看大连发布、交警及星海湾区域公告。游乐项目通常现场单项购票；游船建议使用可查资质和退改规则的平台预约，不购买模糊标价的路边揽客票。大连博物馆个人无需预约，持证安检入馆；未成年人、高龄老人或未持身份证人员可按馆方要求登记入馆。",
+      "parkingAndDropoff": "广场没有唯一主入口。包车或打车看海、喂鸥时导航大连百年纪念城雕，允许临停情况下下车点距核心观景区约50-150米，路面平缓，无需爬楼梯；看中央轴和喷泉可导航星海广场音乐喷泉，但外环至喷泉区域属于严管路段，禁止随意停车。自驾优先查看星海广场外环停车泊位实时空位，停车后按斑马线进入；游乐场外停车位仅约20个，不宜依赖。大型节庆、演唱会和周末可能封闭内环或禁止车辆驶入，建议司机先在允许区域放下老人幼童，再去正规停车场，返程时重新约定同一平坦下客点。"
+    }
   },
   {
     "id": "site-dalian-forest-zoo",
@@ -2322,60 +2457,84 @@ export const INITIAL_SITES: Site[] = [
     ],
     "address": "辽宁省大连市西岗区迎春路60号 (散养区南门入口)",
     "city": "大连",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Dalian_Forest_Zoo.jpg/1280px-Dalian_Forest_Zoo.jpg",
+    "coverImage": "https://dimg04.c-ctrip.com/images/0EQ2212000c1a48r32D58_W_640_10000.jpg?proc=autoorient",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Dalian_Forest_Zoo.jpg/1280px-Dalian_Forest_Zoo.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Dalian_Zoo.jpg/1280px-Dalian_Zoo.jpg",
-      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+      "https://q1.itc.cn/images01/20240312/5536b83d251b458199d85f23b55af982.jpeg",
+      "https://www.dlzoo.com/files/87f452354b2643ad990c38b9442c0602.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ2212000c1a48r32D58_W_640_10000.jpg?proc=autoorient",
+      "https://www.dlzoo.com/files/1b43311a33c84f9c8b3a34952083b937.png",
+      "https://www.dlzoo.com/files/7d20b72c084c484d90a52b6afa938406.jpg",
+      "https://www.dlzoo.com/files/c7b0192b03814e4082b4618c2b629fd8.jpg",
+      "https://www.dlzoo.com/files/17b1b638fa5a41b0affbf1d535edf22c.jpg",
+      "https://zooinstitutes.com/img/exhibits/1543767251_9.jpg",
+      "https://zooinstitutes.com/img/exhibits/1543767251_10.jpg",
+      "https://www.dlzoo.com/static/img/20211101091529.615f9ea9.png"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4"
+      "https://www.youtube.com/watch?v=vTvubTwSKCg",
+      "https://www.bilibili.com/video/BV1iy411a7ht/"
     ],
-    "description": "依山傍海的国家AAAA级自然山水动物园！依白云山而建，森林覆盖率极高。园区最耀眼的明星当属散养区大熊猫馆（“飞云”、“妙音”、“金虎”三只顶流国宝，憨态可掬啃竹子打滚）；还有深受儿童喜爱的小动物村（可零距离抚摸羊驼、小矮马、喂长颈鹿吃树叶）、热带雨林爬虫馆与跨海摩天轮。园区观光电瓶车直达各馆，免除长辈登山劳累。",
-    "recommendedDurationMin": 240,
-    "openingHours": "09:00 - 16:30 (16:00 停止入场)",
+    "description": "依山傍海的大型森林动物园，南门短线串联热带雨林爬虫馆、升级后的小动物村与大熊猫馆。既能看熊猫晨间进食，也可接触水豚、兔类、陆龟和羊驼等萌宠；三代家庭宜只玩南区精选线，避免跨越全园造成爬坡和步行负担。",
+    "recommendedDurationMin": 150,
+    "openingHours": "当前参考08:30-16:00，15:00停止入园；周末及节假日部分官方页面显示可延长至16:30，出发前一天拨打0411-82476998复核",
     "admissionFee": {
-      "adult": "120元/人 (旺季)",
-      "senior": "60-69岁老人凭证半价(60元)，70岁以上老人免费",
-      "child4yo": "6周岁或身高1.3米以下儿童免门票",
-      "notes": "建议从散养区南门入园，南门直奔大熊猫馆最省力"
+      "adult": "旺季4月1日-10月31日120元/人；淡季11月1日-次年3月31日100元/人",
+      "senior": "60-69周岁凭有效证件半价；70周岁及以上凭有效证件免大门票",
+      "child4yo": "免费；6周岁及以下或身高1.3米及以下满足任一条件即可，1名成人限带2名免票儿童",
+      "notes": "散养区观光车20元/人/区，平台标注大小同价；海达索道独立收费，成人单程约60元、1.3米及以下儿童免票。老人儿童免大门票不代表观光车、投喂和游乐项目免费"
     },
-    "bestTimeToVisit": "早晨 09:00 - 11:30 (早晨大熊猫最活跃，下午气温高易在室内睡觉)",
-    "weatherSuitability": "晴天或凉爽阴天适宜 (林荫茂密，但山地雨后路滑)",
-    "strollerRating": 4,
-    "strollerNotes": "园区依山而建有坡度，但主干道路面柏油平坦；推荐购买园区观光电瓶车票，推车折叠带上车，到站下车推行，省力倍增。",
+    "bestTimeToVisit": "按当日公告开园时间入园，最好08:30前后进入南门，先看小动物村和熊猫馆；11:20前离园，避开旅行团、午后暴晒并确保13:30回酒店午睡",
+    "weatherSuitability": "晴天或阴天最佳；小雨可串联爬虫馆、小动物村室内区、熊猫馆和游客中心；中到大雨、雷电及大风不宜入园",
+    "strollerRating": 3,
+    "strollerNotes": "南门至熊猫馆、小动物村的精选短线可推轻便婴儿车，但全园依山建设，有长坡、台阶及高架木栈道。熊猫馆和两区连接段设室外扶梯，但不是连续无障碍系统，雨雪、检修和冬季可能停运。未查到官方婴儿车租赁服务，建议自带并在坡道锁好刹车。",
     "kidRating": 5,
-    "kidNotes": "三只大熊猫太可爱了！隔着玻璃看飞云吃竹子荡秋千，还能在长颈鹿看台拿桑树叶亲自喂长颈鹿，4岁宝宝全程兴奋尖叫。",
-    "elderlyRating": 4,
-    "elderlyNotes": "绿树成荫空气含氧量极高，但严禁全程徒步登山；务必在南门购买观光车手环，乘车代步看核心动物，轻松不费腿力。",
-    "walkingIntensity": "中等 (约1.5-2.0公里；配合观光车可减少大部分登山路段)",
-    "stairsLevel": "平坦至中等台阶 (主道有坡道，核心展馆均有无障碍坡道绕行)",
+    "kidNotes": "4岁幼童会特别喜欢大熊猫、小动物村水豚与兔类、羊驼和食草动物。互动只使用园方饲料，防止羊驼抢食或吐口水；扶梯、坡道、栈道和水体围栏旁需成人贴身照看。游客中心设母婴区和婴儿床，但尿布台未获公开资料确认。",
+    "elderlyRating": 3,
+    "elderlyNotes": "只游南区精选线较舒适，建议总步行约1.5-2.5公里并在游客中心休息；全园游览通常需4-6小时，估算步行5-8公里，不符合低强度需求。游客中心可免费借轮椅，通常需押金且先到先得；观光车按分区收费，不能视为全园通票。",
+    "walkingIntensity": "南区精选短线中等（约1.5-2.5公里）；全园高强度（估算5-8公里）",
+    "stairsLevel": "有坡道、台阶和较陡路段；部分台阶旁有坡道，熊猫馆及两区连接段有室外扶梯，但非全程平坦无台阶",
     "amenities": {
       "nursingRoom": true,
-      "diaperChanging": true,
-      "accessibleRestroom": true,
+      "diaperChanging": false,
+      "accessibleRestroom": false,
       "benchesRestAreas": true,
       "shuttleOrCart": true,
       "elevatorAvailable": false,
-      "strollerRental": true,
+      "strollerRental": false,
       "wheelchairRental": true,
       "shadeAvailable": true,
       "indoorRainyDayOption": true,
       "kidPlayArea": true
     },
     "familyTips": [
-      "强烈建议路线：从【南门（散养区）】进！进门就是大熊猫馆和小动物村，看完大熊猫后坐园区观光车游览，避免走北门的高强度山路爬坡。",
-      "大熊猫通常在上午 09:30 - 11:00 进食竹子最活跃，下午多在内舍睡大觉，务必把熊猫馆安排在上午第一站。",
-      "长颈鹿喂食台需购买新鲜树叶（约20元/份），长颈鹿大舌头卷树叶非常温顺，拍照极有纪念意义。"
+      "地址避坑：迎春路60号是圈养区北门；熊猫馆和小动物村家庭短线应导航滨海西路79号森林动物园南门。",
+      "按开园时间进入南门，依次游览热带雨林爬虫馆、小动物村、熊猫馆和游客中心，11:20前原路返南门，不跨越全园。",
+      "熊猫上午进食和活动概率较高；动物轮展、室外扶梯和观光车运行情况均以当日公告为准。",
+      "自带轻便推车、防晒帽、饮水、薄防风外套和便携隔尿垫；海边早晚风大，木栈道雨后湿滑。",
+      "观光车20元通常按分区和人次收费，Leo也按大小同价预算；短线只看熊猫和小动物村时不必为了坐车深入园区。",
+      "售票咨询电话0411-82476998；未公开承诺长者或推车绿色通道，可在入口请工作人员引导至宽闸机。"
     ],
     "nearbyDining": [
       {
-        "id": "d10",
-        "name": "森林动物园·熊猫主题亲子餐厅",
-        "cuisine": "卡通熊猫饭团套餐 / 儿童咖喱 / 现煮玉米排骨汤",
-        "familyFeatures": "透明落地窗正对小兽散放区，提供可爱熊猫造型餐盘与宝宝椅，口味少盐温和",
-        "walkingTimeMin": 2
+        "id": "dine-llm-1788255600610-0",
+        "name": "大连国际金融会议中心海雲轩",
+        "cuisine": "酒店中西餐、海鲜及自助餐",
+        "familyFeatures": "公开信息明确标注儿童餐椅、停车位和免费Wi-Fi；可要求开边蒸虾、粥、蒸蛋、面食及少油少盐蔬菜。建议提前致电0411-82408536确认午餐餐制和宝宝椅。",
+        "walkingTimeMin": 8
+      },
+      {
+        "id": "dine-llm-1788255600610-1",
+        "name": "付家庄小渔村（星海店）",
+        "cuisine": "大连海鲜、大连老菜",
+        "familyFeatures": "有宝宝椅；清蒸多宝鱼、老板鱼炖豆腐、厨神豆腐、海菜包子较适合长辈和幼童。点餐时明确要求少油少盐、鱼去刺。",
+        "walkingTimeMin": 3
+      },
+      {
+        "id": "dine-llm-1788255600610-2",
+        "name": "老大连·大连菜（星海店）",
+        "cuisine": "大连老菜、海鲜、水饺",
+        "familyFeatures": "有儿童餐椅、包间及停车；可选海胆水饺、蒸海鲜、软豆腐和温热汤菜，避开烧烤、辣炒及过咸海鲜。",
+        "walkingTimeMin": 3
       }
     ],
     "customTags": [
@@ -2413,7 +2572,12 @@ export const INITIAL_SITES: Site[] = [
       }
     ],
     "createdAt": "2026-09-01T08:00:00.000Z",
-    "tripId": "trip-dalian-coastal-multigen-2026"
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "customFields": {
+      "rainyDayPlan": "小雨采用南门室内短线：热带雨林爬虫馆→小动物村室内展示区→熊猫馆室内观察区→散养区游客中心。河马馆虽有室内和水下观察区，但位置较深，不建议暴雨天专程前往。中到大雨、雷电或大风时直接取消动物园，因为馆际仍需走大量露天坡道，室外扶梯、观光车和海达索道可能停运，木栈道也会湿滑。替代方案为驾车约15-20分钟前往凯德和平广场，商场通常09:30-21:00营业，有餐饮和儿童业态。",
+      "ticketBookingTip": "普通工作日通常无需抢票；暑假周末、国庆和特殊活动日建议提前1天通过景区官方购票小程序、美团、携程、同程或AI游大连购买电子票。成人、老人和孩子均带有效证件，Leo可备身份证或户口簿信息页。免票和半价人员到优待票/证件核验口办理。景区未公开承诺长者或推车绿色通道；使用轮椅时可请工作人员安排宽闸机。不要购买门外揽客人员的低价票或饲料。",
+      "parkingAndDropoff": "导航大连森林动物园南门或滨海西路79号。南门停车场紧邻售票区，公开实测显示普通车位至闸机通常不足100米，入口广场为硬质铺装，无需先爬长楼梯；进入园区后才开始出现坡道。小型车停车参考10元/次。包车或网约车可在南门入口落客，旺季周末最好开园前30分钟到达。此次短线应南门进、南门出，避免车辆留在南门而家人从迎春路60号北门离园。"
+    }
   },
   {
     "id": "site-dalian-sun-asia-ocean-world",
@@ -2426,40 +2590,48 @@ export const INITIAL_SITES: Site[] = [
     ],
     "address": "辽宁省大连市沙河口区中山路608-6-8号 (星海公园西侧内)",
     "city": "大连",
-    "coverImage": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "https://dimg04.c-ctrip.com/images/1lo5q12000oyeimpi9EE8_R_1080_808_Q90.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=1200&q=80"
+      "https://dimg04.c-ctrip.com/images/1lo5q12000oyeimpi9EE8_R_1080_808_Q90.jpg",
+      "https://dimg04.c-ctrip.com/images/0102a12000973y2zlBD5F_R_1080_808_Q90.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ6e12000tcwp4aj1172_R_1080_808_Q90.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ2012000t8hnxnc4DEE_R_1080_808_Q90.jpg",
+      "https://media-cdn.tripadvisor.com/media/daodao/photo-o/02/0c/72/4e/caption.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ6d12000tfuws7s3B97_R_1080_808_Q90.jpg",
+      "https://dimg04.c-ctrip.com/images/1lo0o12000oye7jdg1C2F_R_1080_808_Q90.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ3v12000tfueakj104D_R_1080_808_Q90.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ1512000tfux8568CE7_R_1080_808_Q90.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ3o12000t5echvz666E_R_1080_808_Q90.jpg"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4"
+      "https://www.youtube.com/watch?v=L1NTJWv0Xpo",
+      "https://www.bilibili.com/video/BV1QD4y1576x/"
     ],
-    "description": "坐落在浪漫星海公园内的中国第一座拥有118米超长海底通道的水族胜地！包含「圣亚海洋世界」、「极地世界」、「珊瑚世界」与「银河星海」四大核心馆。经典水下双人白鲸海豚芭蕾《海豚湾之恋》美轮美奂；海狮海象情景喜剧《功夫海象》笑点密集。118米海底通道配有自动前行传送带，鲨鱼、鳐鱼在头顶盘旋穿梭，纯室内空调，适合三代同堂无忧漫步。",
-    "recommendedDurationMin": 210,
-    "openingHours": "08:30 - 17:00 (演出场次按当日时刻表)",
+    "description": "面朝星海湾的四馆式海洋主题景区，118米海底隧道、白鲸传奇、海狮嗨秀和南极企鹅岛是核心。场馆集中且以室内为主，适合低龄亲子避晒避雨；但单向动线较长，三代同行宜拆成上午精华馆与午睡后补馆。",
+    "recommendedDurationMin": 270,
+    "openingHours": "2026年9月参考08:45-17:30；停止入园、夜场及演出时间以当天景区公告为准",
     "admissionFee": {
-      "adult": "四馆套票约190-220元/人",
-      "senior": "65岁以上长辈凭老年证享优待半价",
-      "child4yo": "身高1.3米以下儿童免费入场 (每位成人可带一名免票儿童)",
-      "notes": "一票通用四大展馆，包含全部场次演艺秀，无需另购演出票"
+      "adult": "四馆标准票220元/人起（2026-09-01公开票价）",
+      "senior": "60-69岁优惠；70岁以上优惠且须有购票家属陪同，并非免票。当前通用老人优待票约145元起，120元长者特殊票需逐项核对资格",
+      "child4yo": "免费；年龄6周岁及以下或身高1.3米及以下适用，须由购票成人陪同",
+      "notes": "1名购票成人最多携带2名免票儿童。四馆通常各限核销入场1次。海边观光车组合约成人235元、长者160元起，不是馆内接驳；游船、帆船和快艇另收费，儿童老人政策随运营产品变化"
     },
-    "bestTimeToVisit": "上午 09:30 - 13:00 (看完海豚湾之恋和功夫海象正好衔接午餐与下午午睡)",
-    "weatherSuitability": "室内 (雨天/避暑优选，全场馆恒温空调)",
-    "strollerRating": 5,
-    "strollerNotes": "各馆通道平整宽敞，海底通道有平移步道，婴儿车推行极轻松；演出剧场前排均留有轮椅与婴儿车专属泊位。",
+    "bestTimeToVisit": "工作日08:25-08:35抵达，08:45开园先进入极地世界；上午完成白鲸、企鹅和海洋世界，12:30前离开午餐午睡，15:20后仅补看尚未核销的银河星海或珊瑚世界",
+    "weatherSuitability": "主体室内，普通雨天适宜；馆间需短暂露天转场。暴雨、大风时不适合海边观光车、浴场及所有海上项目",
+    "strollerRating": 4,
+    "strollerNotes": "馆间为平整铺装，主要台阶可通过坡道或直梯绕行，118米海底隧道设自动步道。剧场座席有阶梯且高峰通道拥挤，宜用轻便窄车。游客中心可借童车，参考押金300元或押身份证，数量有限",
     "kidRating": 5,
-    "kidNotes": "海底通道里近距离仰望大鳐鱼的“笑脸”和巨大鲨鱼，极地馆看企鹅排队跳水，海豚表演还会跃出水面击打高空红球，孩子全程目不暇接。",
-    "elderlyRating": 5,
-    "elderlyNotes": "全程在室内平地行走，海底通道站上自动步道即可缓缓前行不用抬脚；两场重量级演艺剧场均有舒适靠背座椅休息看秀。",
-    "walkingIntensity": "轻松 (<1.0公里，平地加剧场就座观演)",
-    "stairsLevel": "平坦 / 无台阶",
+    "kidNotes": "4岁幼童重点看白鲸传奇、南极企鹅岛、海狮嗨秀、海豚湾之恋、鳐鱼鲨鱼海底隧道和水母展。动物池有玻璃或护栏，但馆内昏暗、自动步道口和散场人流需牵手照护；景区外游艇港为开放水岸",
+    "elderlyRating": 3,
+    "elderlyNotes": "四馆慢游约4.5-6小时，估算累计步行2.5-3.5公里。剧场和鲸MALL可集中坐休，但展线长椅并不密集；可在游客中心借轮椅，参考押金500元或押身份证。无贯穿四馆的内部电瓶车",
+    "walkingIntensity": "中等（全四馆估算2.5-3.5公里；只看极地世界和海洋世界约2-2.5小时）",
+    "stairsLevel": "总体平缓；馆间无登山坡，馆内可用直梯或坡道绕开主要台阶，剧场座席仍有阶梯",
     "amenities": {
       "nursingRoom": true,
       "diaperChanging": true,
       "accessibleRestroom": true,
       "benchesRestAreas": true,
-      "shuttleOrCart": false,
+      "shuttleOrCart": true,
       "elevatorAvailable": true,
       "strollerRental": true,
       "wheelchairRental": true,
@@ -2468,17 +2640,26 @@ export const INITIAL_SITES: Site[] = [
       "kidPlayArea": true
     },
     "familyTips": [
-      "入馆第一时间拍摄入口大屏幕的演艺时间表，核心锁定《海豚湾之恋》（极地馆）与《功夫海象》（海洋世界）两场王牌秀，提前20分钟入场占好视野中间位。",
-      "圣亚就在星海公园里，游览完毕后出门就是星海公园绿树长椅和海滩，适合慢节奏散步。",
-      "馆内设有带空调的母婴休息室，哺乳与更换纸尿裤十分便利卫生。"
+      "入园第一件事拍下当天演出表，以白鲸传奇为时间锚点，不沿用网络旧场次",
+      "每个馆通常只能进入一次，不要为了先看表演逆行穿馆；出馆前确认已看完本馆项目",
+      "童车和轮椅均建议开园即借，极地馆冷气足，孩子和长辈各备薄外套",
+      "海边观光车不是四馆内部接驳车，长辈馆内省力仍主要依靠轮椅",
+      "星海公园为卵石粗砂混合海滩，海风大且游艇港临水，幼童出馆后必须牵手"
     ],
     "nearbyDining": [
       {
-        "id": "d11",
-        "name": "星海公园和顺面馆",
-        "cuisine": "现擀清汤大虾面 / 鲜肉小馄饨 / 蒸饺",
-        "familyFeatures": "出馆步行3分钟即达，清汤温和爽口不油腻，提供宝宝椅与小碗",
-        "walkingTimeMin": 3
+        "id": "dine-llm-1788255631980-0",
+        "name": "喜家德虾仁水饺（星海公园店）",
+        "cuisine": "虾仁水饺、素三鲜水饺、温热面食",
+        "familyFeatures": "平台明确列有儿童餐椅、儿童活动区和沙发位；可要求孩子不蘸酱、长辈少蘸料，并搭配热汤",
+        "walkingTimeMin": 6
+      },
+      {
+        "id": "dine-llm-1788255631980-1",
+        "name": "海味当家·蒸锅海鲜（星海公园店）",
+        "cuisine": "原味蒸海鲜、海鲜粥、蚬肉蒸饺、鲅鱼蒸饺",
+        "familyFeatures": "平台列有宝宝椅、沙发位和大桌；建议点海鲜全熟、少盐不辣、蘸汁另放，适合幼童与长辈分食",
+        "walkingTimeMin": 9
       }
     ],
     "customTags": [
@@ -2516,7 +2697,12 @@ export const INITIAL_SITES: Site[] = [
       }
     ],
     "createdAt": "2026-09-01T08:00:00.000Z",
-    "tripId": "trip-dalian-coastal-multigen-2026"
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "customFields": {
+      "rainyDayPlan": "普通降雨可照常游览，给婴儿车加雨罩，采用极地世界—鲸MALL休息—海洋世界—银河星海的短转场路线。大雨时只保留白鲸、企鹅和海底隧道两个核心馆；暴雨或大风取消游船、快艇、海边观光车和浴场活动。鲸MALL位于景区片区内，可直接休息用餐；仍需长时间避雨时，建议打车前往凯德和平广场或辰熙广场，不让老人推车沿海边步行。",
+      "ticketBookingTip": "普通工作日无需抢票，可在官方小程序或可信OTA提前购买电子票；周末、暑期和法定假日建议提前1天。携带所有老人和儿童年龄证件，入园前打开二维码。公开资料没有承诺长者或推车家庭优先绿色通道，可向工作人员申请使用无障碍电梯和剧场无障碍席位。每个馆通常限进入一次，演出提前15-25分钟候场。",
+      "parkingAndDropoff": "导航设为大连圣亚海洋世界游客中心、圣亚海洋世界立体停车场或企鹅酒店一侧，通常由中山路经星雨街/连山街进入。立体停车场地图标注距景点约120米，企鹅酒店停车入口约187米。包车宜先在游客中心一侧落客再停车，落客区至入口约50-120米、以平整铺装为主，无需连续爬楼梯；节假日可能封控连山街转向或停车饱和，届时优先打车直达并听从现场交警安排。"
+    }
   },
   {
     "id": "site-dalian-laohutan-ocean-park",
@@ -2529,42 +2715,49 @@ export const INITIAL_SITES: Site[] = [
     ],
     "address": "辽宁省大连市中山区滨海中路9号",
     "city": "大连",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/%E8%80%81%E8%99%8E%E6%BB%A9%E6%B5%B7%E6%B4%8B%E5%85%AC%E5%9B%AD%E6%AD%A3%E9%97%A8.jpg/1280px-%E8%80%81%E8%99%8E%E6%BB%A9%E6%B5%B7%E6%B4%8B%E5%85%AC%E5%9B%AD%E6%AD%A3%E9%97%A8.jpg",
+    "coverImage": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dalian%20Liaoning%20China%20Laohutan-Ocean-Park-00.jpg?width=1600",
     "gallery": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/%E8%80%81%E8%99%8E%E6%BB%A9%E6%B5%B7%E6%B4%8B%E5%85%AC%E5%9B%AD%E6%AD%A3%E9%97%A8.jpg/1280px-%E8%80%81%E8%99%8E%E6%BB%A9%E6%B5%B7%E6%B4%8B%E5%85%AC%E5%9B%AD%E6%AD%A3%E9%97%A8.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/8/8d/Dalian_Laohutan_Ocean_Park.JPG",
-      "https://upload.wikimedia.org/wikipedia/commons/4/46/Dalian_laohutan.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Bird_Park_%28Dalian%29.jpg/1280px-Bird_Park_%28Dalian%29.jpg"
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dalian%20Liaoning%20China%20Laohutan-Ocean-Park-Entrance-01.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dalian%20Liaoning%20China%20Laohutan-Ocean-Park-00.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dalian%20Liaoning%20China%20Laohutan-Ocean-Park-00a.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dalian%20Liaoning%20China%20Laohutan-Ocean-Park-02.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dalian%20Liaoning%20China%20Laohutan-Ocean-Park-03.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dalian%20Liaoning%20China%20Laohutan-Ocean-Park-04.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dalian%20Liaoning%20China%20Laohutan-Ocean-Park-07.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bird%20Park%20%28Dalian%29.JPG?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dalian%20Liaoning%20China%20Singing-Birds-Woods-00.jpg?width=1600",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dalian%20Liaoning%20China%20Singing-Birds-Woods-02.jpg?width=1600"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4"
+      "https://www.bilibili.com/video/BV1TnbkehEgR/",
+      "https://www.youtube.com/watch?v=ek4MIrgTv0g"
     ],
-    "description": "大连最具代表性的国家AAAAA级自然滨海海洋主题公园！依偎在秀丽的滨海中路天然港湾。五大王牌场馆各具千秋：中国最大极地海洋动物馆（帝企鹅繁育基地、凶猛北极熊、白鲸互动）、五彩珊瑚馆、天然海湾海兽馆、欢腾剧场海狮秀，以及全国规模最大的半自然网笼式「鸟语林」（上千只火烈鸟、孔雀与黑天鹅零距离互动）。海湾秀丽，老少皆爱。",
-    "recommendedDurationMin": 270,
-    "openingHours": "08:30 - 17:00 (16:00 停止检票)",
+    "description": "依山临海的大型海洋主题公园，极地馆汇集企鹅、北极熊、白鲸与海豚，珊瑚馆水母光影梦幻，鸟语林可观群鸟飞行。4岁孩子体验极佳，但园区跨度大、鸟语林坡陡，三代同行宜借轮椅并取舍场馆。",
+    "recommendedDurationMin": 300,
+    "openingHours": "08:30-16:30（2026-09-01园方当日公示；第三方显示约15:00停止入园，表演及各馆停止入场更早，出发当天再次核验）",
     "admissionFee": {
-      "adult": "通票约190-220元/人",
-      "senior": "60-69岁老人凭证享半价优待，70周岁以上老人免费",
-      "child4yo": "身高1.3米以下儿童免费入园",
-      "notes": "通票含极地馆、珊瑚馆、海兽馆、欢腾剧场及鸟语林五大景区"
+      "adult": "¥220（五馆票）",
+      "senior": "60-69周岁¥110；70周岁及以上公园公共园区免费、参观五馆¥70",
+      "child4yo": "免费（6周岁及以下或身高1.3米及以下）",
+      "notes": "优惠票需有效身份证件；欢乐剧场淡季可能不开放；索道、游船、游乐设施和部分互动项目通常另收费。"
     },
-    "bestTimeToVisit": "上午 09:00 入园 (先游极地馆与珊瑚馆，下午漫步鸟语林)",
-    "weatherSuitability": "全天候适宜 (室内三大馆遮风避暑，鸟语林树木阴凉)",
-    "strollerRating": 4,
-    "strollerNotes": "极地馆与珊瑚馆内部无障碍电梯坡道齐全，推车顺畅；海兽馆外围与前往鸟语林建议乘坐园区电瓶车或无障碍步道。",
+    "bestTimeToVisit": "工作日08:15抵达，08:30第一批入园；尽量避开周末及暑期10:00-14:00团队和亲子客流高峰。",
+    "weatherSuitability": "室内与户外混合；小雨可重点游极地馆、珊瑚馆，暴雨或雷暴不宜前往鸟语林，索道、游船和户外演出可能暂停。",
+    "strollerRating": 3,
+    "strollerNotes": "主园区多为硬化路面，极地馆坡道及无障碍条件相对较好；珊瑚馆部分参观路线有台阶，鸟语林位于山地、坡陡且有较多台阶。游客服务中心提供童车，公开参考为押金600元、使用免费，数量需当天确认。未确认各馆均有连续无障碍直梯。",
     "kidRating": 5,
-    "kidNotes": "北极熊潜水游泳的憨态逗乐了宝宝，鸟语林里孔雀就走在脚边，还可以给漂亮的彩色鹦鹉喂瓜子，亲近自然满分。",
-    "elderlyRating": 4,
-    "elderlyNotes": "公园沿天然老虎滩海湾展开，海天一色；极地馆室内空调凉爽，馆与馆之间建议乘观光小火车代步，节省体力。",
-    "walkingIntensity": "适中 (约1.8-2.5公里；建议乘园区观光电瓶车接驳各馆)",
-    "stairsLevel": "平坦至少量台阶 (主路线坡道完善，海兽馆有部分缓坡台阶)",
+    "kidNotes": "企鹅、北极熊、白鲸、海豚、水母、彩色热带鱼和群鸟飞行对4岁幼童吸引力很强。游客服务中心有母婴室，极地馆第三卫生间有折叠式婴儿护理台。海滨步道、水池边、鸟语林坡路及大型鸟类附近必须牵手看护。",
+    "elderlyRating": 3,
+    "elderlyNotes": "仅游极地馆、珊瑚馆及主园约2.5-3.5公里；五馆加鸟语林约5-8公里并伴随排队和坡道。游客服务中心免费提供轮椅，主园区有付费观光车。沿途有座椅、商业休息点和遮阳伞，但开敞海滨路段仍会暴晒；腿脚一般者建议放弃鸟语林。",
+    "walkingIntensity": "中高（主园精选约2.5-3.5公里；全园含鸟语林约5-8公里）",
+    "stairsLevel": "主园多平路和坡道；珊瑚馆部分路线有台阶，鸟语林存在明显坡道及较多台阶",
     "amenities": {
       "nursingRoom": true,
       "diaperChanging": true,
       "accessibleRestroom": true,
       "benchesRestAreas": true,
       "shuttleOrCart": true,
-      "elevatorAvailable": true,
+      "elevatorAvailable": false,
       "strollerRental": true,
       "wheelchairRental": true,
       "shadeAvailable": true,
@@ -2572,17 +2765,34 @@ export const INITIAL_SITES: Site[] = [
       "kidPlayArea": true
     },
     "familyTips": [
-      "鸟语林位于主园区外侧（出正门过跨海桥即达，门票已含），千万别错过！里面孔雀成群在草地上漫步，火烈鸟极其鲜艳出片。",
-      "极地馆内的白鲸水下展厅常有白鲸贴着玻璃跟孩子点头做表情，带娃多停留几分钟往往有意外惊喜互动。",
-      "正门广场有租借四轮家庭代步电瓶车的网点，三代同游租一辆代步车游玩更轻松。"
+      "三代同行优先极地馆、珊瑚馆和海兽馆，不必为了五馆票强行刷完鸟语林。",
+      "入园后立即领取当日表演时间表并借轮椅或童车；热门海豚场次提前约30分钟入场。",
+      "园区和各馆通常一次性验票，离馆前确认没有遗漏，手机二维码提前截图并带充电宝。",
+      "海滨紫外线和反射光强，准备遮阳帽、防晒衣、饮水和儿童薄外套；馆内外温差较大。",
+      "没有公开确认的长者或童车通用免排队绿色通道；无障碍入口需现场向工作人员确认。",
+      "地下停车场虽可经扶梯到广场，但携童车或轮椅应先找无障碍电梯，不要把载有孩子的童车推上扶梯。"
     ],
     "nearbyDining": [
       {
-        "id": "d12",
-        "name": "渔人码头·九月海风餐厅",
-        "cuisine": "海鲜现蒸软饺 / 清炖杂鱼 / 儿童鲜虾面",
-        "familyFeatures": "紧邻老虎滩渔人码头，满眼欧式渔港木船风情，口味清淡鲜甜，备有儿童椅",
+        "id": "dine-llm-1788255407401-0",
+        "name": "虎滩羊汤·全羊·海鲜·烧烤（老虎滩店）",
+        "cuisine": "清汤羊汤、蒸饺及家常菜",
+        "familyFeatures": "公开资料确认有宝宝椅、大桌、室内卫生间和等位区；可点清汤羊汤、羊肉蒸饺并要求少盐不辣，较适合幼童和长辈。",
+        "walkingTimeMin": 8
+      },
+      {
+        "id": "dine-llm-1788255407401-1",
+        "name": "品海楼·大连海鲜·北派海肠捞饭（老虎滩店）",
+        "cuisine": "大连海鲜与东北菜",
+        "familyFeatures": "有宝宝椅、包间、沙发位及室内卫生间；建议点浓汤海胆豆腐、芸豆蚬子面、蒸鱼和米饭。更靠近鸟语林/渔人码头侧，从主入口步行可能超过10分钟。",
         "walkingTimeMin": 10
+      },
+      {
+        "id": "dine-llm-1788255407401-2",
+        "name": "极地小吃街",
+        "cuisine": "园内大连小吃与简餐",
+        "familyFeatures": "位于极地馆出口对面，最节省三代同行体力；可快速补充热食和主食，但宝宝椅未获公开确认，建议携带便携增高坐垫。",
+        "walkingTimeMin": 1
       }
     ],
     "customTags": [
@@ -2620,7 +2830,12 @@ export const INITIAL_SITES: Site[] = [
       }
     ],
     "createdAt": "2026-09-01T08:00:00.000Z",
-    "tripId": "trip-dalian-coastal-multigen-2026"
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "customFields": {
+      "rainyDayPlan": "小雨走极地馆—珊瑚馆—海兽馆室内主线，准备推车雨罩并减少馆间露天停留。大雨、雷暴或强风时不去鸟语林，索道、游船、欢乐剧场及户外游乐设施可能暂停。若天气全天恶劣，可直接打车约15-25分钟前往凯丹广场，使用室内餐饮、儿童娱乐和地下停车设施。",
+      "ticketBookingTip": "普通工作日通常不需抢票，暑假、周末和法定假期建议提前1天通过官方微信公众号实名购票，携带所有成人、长者及儿童身份证明。电子票可减少售票窗口等待，但不能跳过安检、各馆入口或表演排队。未查到园方承诺的长者/童车通用优先通道；轮椅游客到场后向服务中心询问无障碍入口及工作人员协助。避免购买要求门口集合统一入园的低价团队票。",
+      "parkingAndDropoff": "包车或打车导航至“大连老虎滩海洋公园正门/虎雕广场”，在交通管理允许时于广场外平坦道路下客，通常无需先爬长楼梯；公开地图未公布上下客点至闸机的精确米数。自驾可选地上或地下停车场，地下停车场公开参考约1000个车位、约10元/小时；携轮椅或童车先确认无障碍电梯位置。若行程以鸟语林结束，可提前预约司机到鸟语林停车场侧接回，避免折返主入口。"
+    }
   },
   {
     "id": "site-dalian-yinggeshi-botanical-garden",
@@ -2633,59 +2848,75 @@ export const INITIAL_SITES: Site[] = [
     ],
     "address": "辽宁省大连市高新园区龙王塘街道英歌石村",
     "city": "大连",
-    "coverImage": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "https://v2.cri.cn/286401a0-4e98-4bfb-bde8-38b2e8cb7a51/image/05369bce394d4c03abc5e4578dc02317.1080x742.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1200&q=80"
+      "https://v2.cri.cn/286401a0-4e98-4bfb-bde8-38b2e8cb7a51/image/05369bce394d4c03abc5e4578dc02317.1080x742.jpg",
+      "https://v2.cri.cn/286401a0-4e98-4bfb-bde8-38b2e8cb7a51/image/30b76e08746b45ca94ec0b5fc7a484cf.1080x720.jpg",
+      "https://v2.cri.cn/286401a0-4e98-4bfb-bde8-38b2e8cb7a51/image/818d9ae9c6024206ae051d73d674d72d.1080x776.jpg",
+      "https://v2.cri.cn/286401a0-4e98-4bfb-bde8-38b2e8cb7a51/image/1070c727d62c43019f927250ff2eaea6.1080x735.jpg",
+      "https://v2.cri.cn/286401a0-4e98-4bfb-bde8-38b2e8cb7a51/image/9f20ad4c01804873b01c190ec6ead468.1080x709.jpg",
+      "https://dimg04.c-ctrip.com/images/0103n120009fanxdz6A6F_W_671_0_Q90.jpg?proc=autoorient",
+      "https://dimg04.c-ctrip.com/images/0104r120009fap6cz85CE_W_671_0_Q90.jpg?proc=autoorient",
+      "https://dimg04.c-ctrip.com/images/0106j120009fap6d1ED36_W_1024_0_Q90.jpg?proc=autoorient",
+      "https://dimg04.c-ctrip.com/images/100j1g000001gx6pr1663_W_600_0_Q90.jpg?proc=autoorient"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4"
+      "https://www.bilibili.com/video/BV1yRKPzXE1j/",
+      "https://www.bilibili.com/video/BV1Tp421R7tw/"
     ],
-    "description": "被誉为“中国最美世外花园”的幽静梯田花谷！依青山梯田缓坡顺势而建，数百万株名贵花卉依据四季梯度绽放：春有郁金香与芝樱花海，夏有无尽夏绣球花谷、牡丹芍药，秋有斑斓彩叶林。园内山泉细流潺潺，黑天鹅在镜面湖中游弋，儿童森林木屋沙池乐园绿树成荫。极高负氧离子的纯净空气，是长辈慢步养生、宝宝在大自然里采风识花的天然绿洲。",
-    "recommendedDurationMin": 180,
-    "openingHours": "08:00 - 17:30 (开花旺季 07:30 开放)",
+    "description": "依山谷地势铺展的辽南大型花园，春有郁金香与芝樱，夏有绣球、百合和荷花，秋有向日葵与彩色地肤。北门附近设无动力儿童乐园和草坪，适合三代家庭搭配园内车进行两至三小时花海慢游。",
+    "recommendedDurationMin": 150,
+    "openingHours": "07:30-17:30；当前平台列示每年4月1日至11月15日开放，闭园日和最晚检票时间以当天公告为准",
     "admissionFee": {
-      "adult": "60元/人 (花期旺季)",
-      "senior": "60-69周岁半价(30元)，70周岁以上凭身份证免费",
-      "child4yo": "身高1.3米以下儿童免费",
-      "notes": "园区提供全景环保电瓶观光车 (约20-30元/人，随招随停)"
+      "adult": "参考¥30或¥60，按花期分段；OTA旺季常见约¥55",
+      "senior": "65-69岁通常按成人价；70岁及以上凭有效证件半价，参考¥15或¥30",
+      "child4yo": "身高1.3米及以下免费；超过1.3米按成人票，不单纯按年龄免票",
+      "notes": "最近公开季节票制：3月15日-4月14日、6月16日-9月19日、10月11日-11月15日参考¥30；4月15日-6月15日、9月20日-10月10日参考¥60。2026年官方实时价目表未公开检索到，出发前致电0411-86286766复核。"
     },
-    "bestTimeToVisit": "早晨 08:30 - 11:30 (晨光透过花瓣最清新，气温舒适凉爽)",
-    "weatherSuitability": "晴天最佳 (阳光照耀下花海色彩艳丽，适合拍照养生)",
-    "strollerRating": 4,
-    "strollerNotes": "园区主游步道均为平整的防滑石板与柏油路面，推车便利；深入个别山坡小道有坡度，推荐乘坐园区电瓶车沿主环线慢赏。",
+    "bestTimeToVisit": "工作日07:30-09:30；次选15:00后短线游。避开五一、4月下旬至5月中旬周末及11:00-15:00暴晒时段",
+    "weatherSuitability": "户外晴天或多云最佳；中到大雨、雷电、大风不适合，园内无已核实的大型室内温室参观线",
+    "strollerRating": 3,
+    "strollerNotes": "园车可通行的主要硬化道路能够推婴儿车，未发现主花海必须连续爬台阶的证据；但园区依山谷展开，存在长坡、草地和不规则支路。建议大轮带刹车推车，自带防晒雨罩；未核实童车租赁。",
     "kidRating": 4,
-    "kidNotes": "大自然里的植物大课堂！天鹅湖边可以喂优雅的黑天鹅，儿童无动力游乐区有原木滑梯秋千和沙坑，宝宝玩得不亦乐乎。",
-    "elderlyRating": 5,
-    "elderlyNotes": "空气甜美清新，到处是绚烂花海与长寿树木，长辈极其喜爱；梯田步道坡度极缓，沿途亭台水榭与休息木椅随处可见。",
-    "walkingIntensity": "轻松至适中 (约1.2-1.8公里；配合观光车极其省力)",
-    "stairsLevel": "平坦至少量台阶 (主线有坡道绕行无台阶)",
+    "kidNotes": "北门附近有面向儿童的无动力乐园，历史实拍包括木质滑梯、攀爬网、旋转球、秋千和弹床；另有中央草坪及花卉自然观察。园内有湖泊、昆虫、灌溉沟和园务车辆，4岁孩子必须牵手。母婴室和尿布台未获官方确认。",
+    "elderlyRating": 3,
+    "elderlyNotes": "全园约100万平方米，完整游览通常需3-4小时、数公里；建议园内车搭配约1-2公里短线。开阔花田遮阴有限，座椅密度未获确认。园内有付费电瓶车或租赁电动车记录，但当前价格、轮椅携带规则需现场询问；未核实轮椅租借。",
+    "walkingIntensity": "中等偏高；全园数公里，推荐园内车加1-2公里短线",
+    "stairsLevel": "主要车行园路可避开连续台阶，但存在坡道、草地和不规则支路，不属于全程平坦无障碍景点",
     "amenities": {
       "nursingRoom": false,
       "diaperChanging": false,
-      "accessibleRestroom": true,
+      "accessibleRestroom": false,
       "benchesRestAreas": true,
       "shuttleOrCart": true,
       "elevatorAvailable": false,
       "strollerRental": false,
-      "wheelchairRental": true,
+      "wheelchairRental": false,
       "shadeAvailable": true,
       "indoorRainyDayOption": false,
       "kidPlayArea": true
     },
     "familyTips": [
-      "一定要在正门乘坐观光电瓶车直达山顶最高处的「芝樱花海」或「绣球花谷」，然后自上而下缓缓步行下山，省力90%！",
-      "植物园草坪允许搭建遮阳防潮小帐篷与铺设野餐垫，自备些水果点心与保温杯温水，全家在花香鸟鸣中休憩享受慢时光。",
-      "穿浅色或白色衣物拍照最仙，背景是漫山遍野的鲜花，爷爷奶奶拍出的气色格外年轻红润。"
+      "amenities中的false表示截至2026年9月未找到官方确认，不等同于已证实绝对没有；可提前致电景区复核。",
+      "三代家庭优先从当天开放的北门进入，先儿童乐园，再乘园内车前往一个主花海，不追求走完全园。",
+      "园内有湖泊且防护栏连续性不明，4岁孩子在水边和花田支路必须由成人牵手。",
+      "携带长辈证件、儿童身份证明、饮水、软质简餐、遮阳帽、防晒用品、便携尿垫和替换衣物。",
+      "节假日先在正门售票处放下长辈与孩子，再由司机停车；不要让全家从北侧溢出停车区步行进园。"
     ],
     "nearbyDining": [
       {
-        "id": "d13",
-        "name": "英歌石乡村田园土菜馆",
-        "cuisine": "农家笨鸡蛋炒大葱 / 柴火小鸡炖蘑菇 / 玉米面饼子",
-        "familyFeatures": "现采现做绿色有机蔬菜，笨鸡汤鲜美营养适合老人小孩，农家院落安静开阔",
-        "walkingTimeMin": 4
+        "id": "dine-llm-1788255480888-0",
+        "name": "英歌石植物园北门附近咖啡厅",
+        "cuisine": "咖啡、饮品及简易小吃",
+        "familyFeatures": "靠近儿童乐园，可短暂休息；宝宝椅、尿布台、热乌冬面和儿童套餐均未获确认，不建议作为唯一正餐方案",
+        "walkingTimeMin": 3
+      },
+      {
+        "id": "dine-llm-1788255480888-1",
+        "name": "三合驴肉蒸饺饭店",
+        "cuisine": "东北蒸饺及家常菜",
+        "familyFeatures": "蒸饺相对软，点菜时可要求少盐不辣；距景区约六七里，驾车约5-10分钟，实际不在步行5-10分钟范围，宝宝椅未获确认",
+        "walkingTimeMin": 45
       }
     ],
     "customTags": [
@@ -2723,7 +2954,12 @@ export const INITIAL_SITES: Site[] = [
       }
     ],
     "createdAt": "2026-09-01T08:00:00.000Z",
-    "tripId": "trip-dalian-coastal-multigen-2026"
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "customFields": {
+      "rainyDayPlan": "园区基本为露天花园，没有核实到大型温室或连续室内馆区。中到大雨、雷电或大风应取消。首选直接转场大连自然博物馆：2026年9月起周二至周日09:00-16:30、16:00停止入馆、免费且个人免预约；70岁以上老人可携1-2名家属走绿色通道。若需要用餐和长时间休息，可改去高新万达广场，预计驾车约25-35分钟。",
+      "ticketBookingTip": "未发现必须提前抢官网名额的制度，OTA通常可当天购票，但部分电子票仍需到售票处换票，因此不能保证完全免排队。旺季建议前一晚购买可退款产品，07:30前后到达。儿童免票及70岁以上半价人员携带有效证件原件。没有查到景区设置长者或婴儿车专用绿色通道。",
+      "parkingAndDropoff": "2025年交警资料显示园区内部4个停车场约335个车位，北侧燕山基地另有700余个免费溢出泊位。内部停车位最省力；外围停车区可能需步行约600米以上。出租车或包车应明确导航至英歌石植物园正门售票处下客，先放下长辈、孩子和照护者再停车。入口实拍为地面层，未见必须爬楼梯，但官方没有公布精确下客点米数和无障碍坡道参数。"
+    }
   },
   {
     "id": "site-dalian-luotuoshan-haibin",
@@ -2736,59 +2972,80 @@ export const INITIAL_SITES: Site[] = [
     ],
     "address": "辽宁省大连市瓦房店市西岗镇驼山乡海滨村",
     "city": "大连",
-    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "https://mediabluk.cnr.cn/img/cnr/CNRCDP/2023/0812/386ed3a3aa79e169182536456560418810.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80"
+      "https://mediabluk.cnr.cn/img/cnr/CNRCDP/2023/0812/af0d3ce86e8b4169182539254565773310.jpg",
+      "https://mediabluk.cnr.cn/img/cnr/CNRCDP/2023/0812/820a96e4b302a169182542469612723010.jpg",
+      "https://mediabluk.cnr.cn/img/cnr/CNRCDP/2023/0812/533aac998bdc1691825439395379243010.jpg",
+      "https://n.sinaimg.cn/sinakd20220706ac/133/w2000h1333/20220706/72c6-2325c3cd574677f651d13e44cb297a27.jpg",
+      "https://n.sinaimg.cn/sinakd20220706ac/133/w2000h1333/20220706/f8fe-871338e6a007bc523f45c3bc168aeed6.jpg",
+      "https://n.sinaimg.cn/sinakd20220706ac/133/w2000h1333/20220706/eddd-bd50daed1773961c685edf6f008f4890.jpg",
+      "https://n.sinaimg.cn/sinakd20220706ac/133/w2000h1333/20220706/c327-72326c7aa9788e1cd50f24cd5d241f7b.jpg",
+      "https://n.sinaimg.cn/sinakd20220706ac/133/w2000h1333/20220706/5300-259638b007e1cbe3372355c4a6f39e1a.jpg",
+      "https://n.sinaimg.cn/sinakd20220706ac/133/w2000h1333/20220706/5524-d85dbba81eb973c17c2f7b9c41c1540c.jpg"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4"
+      "https://w.mgtv.com/b/336067/8223501.html?lang=my",
+      "https://www.bilibili.com/video/BV1Uu4m1P7dg/"
     ],
-    "description": "大连北部渤海湾畔宛若世外桃源的秘境原生态海岸！天然海蚀巨岩如一峰昂首向海的巨大骆驼卧于碧波之中，惟妙惟肖。岸边拥有绵延数里的茂密海防黑松林与平缓浅海滩涂，是绝佳的原生态赶海宝地：潮退时浅滩裸露，带着小桶与小耙子，随手即可翻开碎石捡小花盖蟹、小海星、海螺与野生牡蛎。游人稀少清幽，海鸥成群翱翔，全家体验质朴纯真的渤海渔乡野趣。",
-    "recommendedDurationMin": 180,
-    "openingHours": "全天开放 (赶海需根据每日潮汐表选择退潮时段)",
+    "description": "瓦房店驼山乡的原生态山海秘境，以龙凤滩细沙、骆驼山森林和排石海蚀地貌见长。低潮时可观察贝壳、小蟹与潮沟，但景区跨度大、设施原始，更适合自驾短停、亲子自然观察和轻量赶海。",
+    "recommendedDurationMin": 120,
+    "openingHours": "全年全天开放（自然岸线无统一闸门；仅建议日出后至日落前游览，季节性经营项目另计）",
     "admissionFee": {
-      "adult": "完全免费",
-      "senior": "完全免费",
-      "child4yo": "完全免费",
-      "notes": "原生态海滨公园无门票，停车费约10-20元/车"
+      "adult": "免费（未发现统一大门票）",
+      "senior": "免费，无单独长者优惠票",
+      "child4yo": "免费",
+      "notes": "停车、餐饮、遮阳棚、快艇及水上项目可能由季节性经营者另行收费；网络页面的¥59并非骆驼山门票。"
     },
-    "bestTimeToVisit": "根据大连当日潮汐表：大退潮前后2小时 (潮退水浅海产最丰富)",
-    "weatherSuitability": "晴天或多云适宜 (海风和煦，海防林下凉爽舒适)",
-    "strollerRating": 3,
-    "strollerNotes": "自驾车可直达离沙滩数十米的林边停车场；松林步道可推推车，进礁石滩涂赶海时建议换上防滑涉水鞋徒步。",
-    "kidRating": 5,
-    "kidNotes": "原生态赶海快乐翻倍！石头缝里抓小螃蟹、挖蛤蜊、看弹涂鱼在泥滩上跳跃，4岁幼童能专注探索整个下午。",
-    "elderlyRating": 4,
-    "elderlyNotes": "海风轻柔不潮湿，海防松林空气带着松香与淡淡海盐味，长辈可在松树林下铺设野餐垫静坐观潮，避开喧嚣人潮。",
-    "walkingIntensity": "轻松至适中 (海滩赶海慢行约800米)",
-    "stairsLevel": "平坦 / 无台阶 (从停车场到海滩为原生态平地与沙石)",
+    "bestTimeToVisit": "先按潮汐安排：低潮前1.5-2小时抵达；夏季以07:30-10:00最适合幼童和长辈",
+    "weatherSuitability": "仅适合晴朗、微风天气；下雨、雷电、大风、浓雾或海浪较大时不适合",
+    "strollerRating": 1,
+    "strollerNotes": "沙滩、湿泥、碎石、礁石和土路无法形成连续无障碍路线；未证实有坡道、电梯、推车租借或无障碍厕所。建议推车留车内，孩子由成人牵行。",
+    "kidRating": 3,
+    "kidNotes": "4岁孩子会喜欢挖沙、找贝壳、观察小蟹和潮沟；但水边无连续护栏，海蚀崖存在落石和涨潮风险，必须一对一看护，禁止进入崖洞或攀爬礁壁。无母婴室和尿布台记录。",
+    "elderlyRating": 2,
+    "elderlyNotes": "全景需车辆串联，无法靠轻松步行完成。短时看海可控制在约500米内，赶海通常涉及0.5-1.5公里沙地或湿滑礁石；未证实有轮椅、电瓶车、密集长椅、茶室或咖啡厅。",
+    "walkingIntensity": "中高（短停看海可控制在500米内；赶海约0.5-1.5公里沙地/礁石，全景需驾车串联）",
+    "stairsLevel": "无连续标准台阶，但软沙、碎石、天然坡地和湿滑礁石比台阶更难通行",
     "amenities": {
       "nursingRoom": false,
       "diaperChanging": false,
-      "accessibleRestroom": true,
+      "accessibleRestroom": false,
       "benchesRestAreas": false,
       "shuttleOrCart": false,
       "elevatorAvailable": false,
       "strollerRental": false,
       "wheelchairRental": false,
-      "shadeAvailable": true,
+      "shadeAvailable": false,
       "indoorRainyDayOption": false,
-      "kidPlayArea": true
+      "kidPlayArea": false
     },
     "familyTips": [
-      "出行前务必使用小程序查看【瓦房店/驼山潮汐表】，退潮至最低潮位（干潮）前1.5小时到达海滩，是赶海收获最多的黄金窗口期！",
-      "务必备齐装备：儿童防滑防割涉水鞋（防礁石牡蛎壳划脚）、小手套、塑料小桶、小耙子与湿纸巾。",
-      "松树林边有当地渔民开的海鲜小馆，现煮刚刚捕捞的海蜇、皮皮虾、杂鱼锅，原汁原味鲜甜至极。"
+      "不要直接使用“西岗镇驼山乡海滨村”或只导航“骆驼山海滨森林公园”；三代同行优先定位八仙岛旅游度假区或大魏村龙凤滩，并提前索取经营者停车定位。",
+      "赶海按低潮时间而非固定钟点安排，低潮前1.5-2小时到达，开始涨潮即回撤；孩子必须一对一看护。",
+      "自带折叠椅、遮阳伞、饮水、儿童主食、换洗衣裤、垃圾袋、防滑包头鞋和简易急救用品；不要穿拖鞋走湿礁石。"
     ],
     "nearbyDining": [
       {
-        "id": "d14",
-        "name": "驼山渔家鲜味居",
-        "cuisine": "野生渤海湾杂鱼炖豆腐 / 现煮皮皮虾 / 菜汁小黄花鱼",
-        "familyFeatures": "渔船直供活海鲜，少油清蒸，鲜美无添加，农家炕榻榻米可供老人孩子歇息",
+        "id": "dine-llm-1788255459422-0",
+        "name": "八仙岛度假村餐饮（季节性）",
+        "cuisine": "东北海鲜、农家菜、烧烤",
+        "familyFeatures": "仅适合以八仙岛为下车点；历史资料显示通常7月15日后营业。宝宝椅未证实，需预订鸡蛋羹、白粥、清汤面、软米饭并要求少盐少油。",
         "walkingTimeMin": 5
+      },
+      {
+        "id": "dine-llm-1788255459422-1",
+        "name": "排石村农家院餐饮部",
+        "cuisine": "海鲜、东北农家菜",
+        "familyFeatures": "距排石村海滩约780米，但不在八仙岛或骆驼山核心步行圈内；宝宝椅未证实，可要求蒸蛋、清汤和清蒸鱼去刺。",
+        "walkingTimeMin": 12
+      },
+      {
+        "id": "dine-llm-1788255459422-2",
+        "name": "颐信园农家饭庄",
+        "cuisine": "东北农家菜、海鲜",
+        "familyFeatures": "位于排石村农家院餐饮部附近，适合游览排石时使用；从骆驼山或八仙岛应驾车前往，营业和宝宝椅需提前确认。",
+        "walkingTimeMin": 3
       }
     ],
     "customTags": [
@@ -2826,7 +3083,12 @@ export const INITIAL_SITES: Site[] = [
       }
     ],
     "createdAt": "2026-09-01T08:00:00.000Z",
-    "tripId": "trip-dalian-coastal-multigen-2026"
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "customFields": {
+      "rainyDayPlan": "景点本体没有室内馆区。下雨、雷电、大风或浓雾时应取消海岸活动，不要躲进海蚀洞或崖壁下。小雨可改去复州古城横山书院，但院落并非完全室内；稳定暴雨建议返回约53公里外的瓦房店城区，选择瓦房店市博物馆（公开信息为09:00-15:00、14:00停止入馆，电话0411-85616997）或大商新玛特旺角店。",
+      "ticketBookingTip": "自然岸线没有统一官网预约或抢票要求，也没有可靠的长者/推车绿色通道。旺季拥堵主要发生在停车、餐饮和水上项目。不要购买来源不明的所谓骆驼山门票；付费前确认收费究竟对应停车、浴场设施还是娱乐项目。",
+      "parkingAndDropoff": "没有统一主入口，因此无法提供可靠的固定下车距离。直接导航景点名可能到荒地；三代同行优先定位八仙岛旅游度假区或大魏村龙凤滩，并提前索取当日停车定位。司机应先在坚实平地让长辈和孩子下车，再去停车；从停车位到海滩仍可能经过软沙，无法保证无台阶或有无障碍坡道。包车应约定原地等候，不建议现场临时叫返程车。"
+    }
   },
   {
     "id": "site-dalian-zhuanghe-geli-island",
@@ -2839,59 +3101,83 @@ export const INITIAL_SITES: Site[] = [
     ],
     "address": "辽宁省大连市庄河市黑岛镇蛤蜊岛度假区 (经跨海公路大堤直达)",
     "city": "大连",
-    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "https://www.dlzh.gov.cn/admin/module/NewsEdit/attached/image/20200714/20200714162723_9842.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=1200&q=80"
+      "https://www.dlzh.gov.cn/admin/module/NewsEdit/attached/image/20200714/20200714162747_8435.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ6012000pngm1i5AEA2.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ0712000cgbl9rkC803.jpg",
+      "https://dimg04.c-ctrip.com/images/300g1g000001h3lhuA612.jpg",
+      "https://dimg04.c-ctrip.com/images/0EQ4r12000ezdkf5e7DDE.jpg",
+      "https://dimg04.c-ctrip.com/images/1001190000018eeacE5FD.jpg",
+      "https://club2.autoimg.cn/album/g34/M09/1C/76/userphotos/2025/07/24/19/800_ChxpWGiCGSiATALjAAc8I0xF5v8483.jpg",
+      "https://club2.autoimg.cn/album/g34/M0A/1C/76/userphotos/2025/07/24/19/800_ChxpWGiCGSqAYgxFAAq_Y67Nih0785.jpg",
+      "https://club2.autoimg.cn/album/g33/M02/1C/DC/userphotos/2025/07/24/19/800_ChxpVWiCGSyAIVhJAAVF5v7CD8E510.jpg",
+      "https://club2.autoimg.cn/album/g33/M00/1C/D3/userphotos/2025/07/24/19/800_Chto52iCGS-AX3jUAAnj42O4KWY051.jpg"
     ],
     "videos": [
-      "https://vjs.zencdn.net/v/oceans.mp4"
+      "https://www.bilibili.com/video/BV1nqvAzEEcq/",
+      "https://www.bilibili.com/video/BV1BP411a7VJ/"
     ],
-    "description": "黄海北部风光旖旎的宝藏海岛度假胜地！最大的亮点是建有一条长达数公里的笔直跨海公路大堤——自驾车可直接一路开上海岛，完全免去老人孩子乘渡轮颠簸搬行李之苦！海岛三面环海，一面耸立秀峰，拥有天然优质细沙海滩与全国著名的优质蛤蜊滩涂。退潮时沙滩平缓如镜，拿小耙子轻轻一挖就是肥美的大骨顶蛤与杂色蛤，现挖现蒸鲜香扑鼻，被誉为“东方夏威夷”与“蛤蜊王国”。",
+    "description": "经约1.7公里跨海大堤可直接驾车抵达的近岸海岛，退潮能挖蛤、找小蟹，涨潮可看海湾与奇礁。亮点是亲海与原生态，并非精致无障碍乐园；带幼童和长辈宜自驾缩短步行，按潮汐只玩主沙滩与平缓区域。",
     "recommendedDurationMin": 240,
-    "openingHours": "08:00 - 18:00 (岛内度假酒店全天开放)",
+    "openingHours": "5月16日-10月20日参考售票时段08:00-18:00；另有平台标注全年全天开放，淡季、夜间及配套服务须致电0411-89455701确认",
     "admissionFee": {
-      "adult": "约40-50元/人",
-      "senior": "60-69岁半价，70周岁以上老人凭有效身份证免费",
-      "child4yo": "身高1.3米以下儿童免票入岛",
-      "notes": "自驾车辆开入岛内停车极为方便，酒店住客常包含景区门票"
+      "adult": "参考¥40（线上约¥38.8）",
+      "senior": "60-69周岁参考¥20半价；70周岁及以上凭有效证件免费",
+      "child4yo": "免费（6周岁及以下）",
+      "notes": "2026年官方价目表未公开检索到；优惠及免票需携带身份证，车辆入岛可能另收费用，均以当天窗口为准。"
     },
-    "bestTimeToVisit": "夏季下午 14:30 进岛至傍晚 18:00 (潮退赶海挖蛤蜊，吃晚霞海鲜大排档)",
-    "weatherSuitability": "全天候适宜 (海岛气候凉爽，海风习习无酷暑)",
-    "strollerRating": 4,
-    "strollerNotes": "汽车直通岛上各景点与酒店大堂，岛内环岛公路平坦，海滨木栈道连贯，推婴儿车赏海极平稳。",
-    "kidRating": 5,
-    "kidNotes": "挖蛤蜊的成就感爆棚！沙滩里的蛤蜊又大又多，孩子一耙子下去就有两三个大蛤蜊，还可以在沙滩上捡彩石踏浪。",
-    "elderlyRating": 5,
-    "elderlyNotes": "车开上海岛免去乘船晕眩与上下渡轮的折腾，长辈赞誉极高；岛上海鲜肥美清淡，现煮蛤蜊汤清亮鲜甜，养生滋补。",
-    "walkingIntensity": "轻松 (约1.0公里；车随人走，累了随时上车或就座)",
-    "stairsLevel": "平坦 / 无台阶",
+    "bestTimeToVisit": "工作日08:00左右或当日低潮前1-2小时抵达；避开11:00-15:00暴晒",
+    "weatherSuitability": "晴天或多云最佳；小雨仅适合短暂停留，雷雨、大风、大雾和风暴潮不适合上岛",
+    "strollerRating": 2,
+    "strollerNotes": "跨海大堤、岛内主车道和部分广场可推车；沙滩、泥滩、碎贝壳地面、礁石及山上观景线不可连续通行。存在陡坡和连续石阶，无婴儿车租借或标准无障碍缓坡的可靠公开证明，建议携带轻便折叠车与背带。",
+    "kidRating": 4,
+    "kidNotes": "4岁孩子会喜欢挖蛤蜊、找螃蟹和寄居蟹、玩沙踩浪、观察潮汐；非遗馆开放时可接触剪纸、面塑和皮影。海边护栏和救生配置未确认，礁石湿滑且碎贝壳锋利，必须一对一看护并穿包脚防滑涉水鞋。未确认母婴室或尿布台。",
+    "elderlyRating": 3,
+    "elderlyNotes": "自驾进入岛内并只走主沙滩省力线时尚可；省力线约0.8-1.5公里，全景线估计约3-4公里且有明显爬升。树荫、亭子和餐厅可休息，但长椅不算密集，未确认轮椅租赁、无障碍厕所或常态电瓶车。",
+    "walkingIntensity": "省力线约0.8-1.5公里；全景线约3-4公里并包含爬升",
+    "stairsLevel": "车行入口和部分广场较平；山上观景、爱情公园及奇礁路线有陡坡和连续石阶",
     "amenities": {
       "nursingRoom": false,
       "diaperChanging": false,
-      "accessibleRestroom": true,
+      "accessibleRestroom": false,
       "benchesRestAreas": true,
-      "shuttleOrCart": true,
+      "shuttleOrCart": false,
       "elevatorAvailable": false,
       "strollerRental": false,
       "wheelchairRental": false,
       "shadeAvailable": true,
       "indoorRainyDayOption": true,
-      "kidPlayArea": true
+      "kidPlayArea": false
     },
     "familyTips": [
-      "跨海大堤本身就是一道绝美风景，两旁海水湛蓝，开车自驾宛如行进在海中央，可放慢车速摇下车窗感受黄海海风。",
-      "挖蛤蜊必备工具：铁耙子、小塑料桶、防晒帽。挖出来的蛤蜊可在岛上渔家餐馆请老板代加工白灼清蒸，鲜美得舌头都要化掉！",
-      "若时间充裕推荐在岛上海景木屋住一晚，早晨拉开窗帘看黄海日出，夜晚沙滩静谧星光璀璨。"
+      "导航输入兰店乡磨石房村的蛤蜊岛旅游度假区，不要导航到黑岛镇或黑岛旅游度假区。",
+      "提前查询庄河当天潮汐，在低潮前1-2小时到达；最低潮后及时回撤，不带孩子深入礁石背面。",
+      "所有未被官方证实的设施在amenities中均按false处理；自带折叠推车、背带、换尿布垫、饮水、防晒用品和包脚防滑鞋。",
+      "让车辆进入岛内平缓区先放下长辈和孩子，避免从外门徒步穿越约1.7公里跨海大堤。",
+      "自挖贝类不要生食；幼童食用鱼贝类前需排除过敏，并彻底煮熟、剔净鱼刺和碎壳。"
     ],
     "nearbyDining": [
       {
-        "id": "d15",
-        "name": "蛤蜊岛·海之味海鲜渔庄",
-        "cuisine": "原汁蒸庄河大骨顶蛤 / 鲜辣炒花蛤 / 蛤蜊手擀面",
-        "familyFeatures": "自家挖的蛤蜊可即时加工，现熬蛤蜊海鲜面鲜香适口，老少皆爱，提供儿童餐具",
-        "walkingTimeMin": 3
+        "id": "dine-llm-1788255440839-0",
+        "name": "海娘小院",
+        "cuisine": "庄河海鲜与渔家菜",
+        "familyFeatures": "岛内步行可达；可要求蒸蛋、白粥、软面、豆腐汤、清蒸鱼少油少盐。宝宝椅未公开确认，建议自带便携增高坐垫。",
+        "walkingTimeMin": 5
+      },
+      {
+        "id": "dine-llm-1788255440839-1",
+        "name": "海景大厅",
+        "cuisine": "海鲜与中式团体餐",
+        "familyFeatures": "有室内或遮阳用餐座位，适合长辈休息；提前询问软面、米饭、蛋羹及少盐菜，宝宝椅和日式乌冬未确认。",
+        "walkingTimeMin": 7
+      },
+      {
+        "id": "dine-llm-1788255440839-2",
+        "name": "渔家傲",
+        "cuisine": "渔家菜与海鲜",
+        "familyFeatures": "建议点清蒸、白灼、炖汤和软质豆腐类菜品，避免生腌及重辣海鲜；是否提供宝宝椅需电话确认。",
+        "walkingTimeMin": 10
       }
     ],
     "customTags": [
@@ -2929,6 +3215,11 @@ export const INITIAL_SITES: Site[] = [
       }
     ],
     "createdAt": "2026-09-01T08:00:00.000Z",
-    "tripId": "trip-dalian-coastal-multigen-2026"
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "customFields": {
+      "rainyDayPlan": "岛内有6个非遗展示体验空间、总面积约400平方米，可在小雨时作为30-60分钟临时室内项目，但散客开放和互动课程并非每天保证，须先致电景区。雷雨、大风、大雾或风暴潮应直接放弃海岛：可改去庄河市博物馆（世纪大街一段32号公共文化服务中心四楼，电话0411-89832007，开放日与午间闭馆需确认），或到庄河万达广场（延安路南段918号）用餐休息，商场三层儿童游乐场当日营业情况另行确认。",
+      "ticketBookingTip": "没有查到必须官网实名预约或抢票的规定；在线平台常见约38.8元成人票，但长者半价、70岁免票及4岁儿童免票通常仍需人工核验证件。没有发现长者、轮椅或推车绿色通道的可靠说明。周末最好08:00左右到达，提前准备身份证；下单前确认电子票是否可即时使用及退款规则，淡季先拨0411-89455701。",
+      "parkingAndDropoff": "车辆可经约1.7公里跨海大堤直接上岛，不需要轮渡。景区未公布停车位至主入口的精确米数；应请求司机在岛内主沙滩、餐饮区附近硬化平地先放下长辈和孩子，再去停车。车行入口无需爬楼梯，但登高观景路线有陡坡和石阶。游客旧记录曾提及车辆另收费10元，2026现行标准未获官方确认。包车宜约定原地等候或固定返程时间，避免傍晚临时叫不到车。"
+    }
   }
 ];
