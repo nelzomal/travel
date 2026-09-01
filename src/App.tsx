@@ -403,11 +403,12 @@ export function App() {
     }
     if (filters.sortBy === 'city') {
       const getCityRank = (site: Site) => {
-        if (site.city.includes('东京')) return 1;
-        if (site.city.includes('箱根') || site.address.includes('箱根')) return 2;
-        if (site.city.includes('富士山') || site.city.includes('河口湖') || site.city.includes('山梨')) return 3;
-        if (site.city.includes('京都')) return 4;
-        return 5;
+        if (site.city.includes('大连')) return 1;
+        if (site.city.includes('东京')) return 2;
+        if (site.city.includes('箱根') || site.address.includes('箱根')) return 3;
+        if (site.city.includes('富士山') || site.city.includes('河口湖') || site.city.includes('山梨')) return 4;
+        if (site.city.includes('京都')) return 5;
+        return 6;
       };
       const rankA = getCityRank(a);
       const rankB = getCityRank(b);

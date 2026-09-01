@@ -42,6 +42,7 @@ export const SiteFilterBar: React.FC<SiteFilterBarProps> = ({
 
   const cities = [
     { id: 'all', label: '全部城市', icon: '🗾' },
+    { id: '大连', label: '大连 (山海亲子)', icon: '🌊' },
     { id: '东京', label: '东京', icon: '🗼' },
     { id: '箱根', label: '箱根', icon: '♨️' },
     { id: '富士山', label: '富士山/河口湖', icon: '🗻' },

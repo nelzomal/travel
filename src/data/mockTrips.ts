@@ -422,5 +422,442 @@ export const INITIAL_TRIPS: Trip[] = [
     ],
     "createdAt": "2026-08-31",
     "updatedAt": "2026-08-31"
+  },
+  {
+    "id": "trip-dalian-coastal-multigen-2026",
+    "title": "大连海滨浪漫亲子慢游 (山海牧场·海洋世界·地质公园·出海喂海鸥) 🌊🦭⛵",
+    "destination": "中国 · 大连 (中山 · 沙河口 · 金石滩 · 旅顺 · 庄河)",
+    "startDate": "2026-07-10",
+    "endDate": "2026-07-17",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/8/87/Xinghai_Square_%28Dalian%29.jpg",
+    "summary": "专为4岁活泼幼童与65岁以上长辈设计的8天7晚大连海滨度假慢游！汇聚星海广场鸽群海鸥、圣亚海底隧道、豪华双体帆船出海投喂、森林动物园大熊猫、三寰牧场小新西兰草坡、发现王国亲子城堡夜场、金石滩黄金海岸与十里地质奇观、英歌石植物园花海、瓦房店骆驼山海蚀赶海与庄河蛤蜊岛自驾直达吃蛤。每日严格保障1.5小时午睡充电与全程无障碍推车关怀。",
+    "createdAt": "2026-09-01T08:00:00.000Z",
+    "updatedAt": "2026-09-01T08:00:00.000Z",
+    "partyMembers": [
+      {
+        "id": "dp1",
+        "name": "小宝 (Leo)",
+        "role": "👶 4岁幼童",
+        "notes": "极爱大熊猫、白鲸水族馆、出海喂海鸥、海滩挖沙与羊驼互动，每天下午 13:30-15:00 必须回酒店午睡充电"
+      },
+      {
+        "id": "dp2",
+        "name": "爷爷 & 奶奶",
+        "role": "🧓 长辈/爷爷奶奶",
+        "notes": "喜爱海风慢步、开阔海天、清淡海鲜蒸菜/和合水饺/大连老菜，严禁高强度登山爬坡，优先电瓶车代步"
+      },
+      {
+        "id": "dp3",
+        "name": "爸爸 & 妈妈",
+        "role": "🧑 父母/领队",
+        "notes": "负责推车、包车自驾自如切换、海滨防晒装备与行程节奏控制，确保全家轻松不赶路"
+      }
+    ],
+    "checklist": [
+      {
+        "id": "dc1",
+        "category": "幼童用品 (4岁)",
+        "item": "便携轻便折叠婴儿推车 (各大展馆全平无障碍)",
+        "checked": true
+      },
+      {
+        "id": "dc2",
+        "category": "幼童用品 (4岁)",
+        "item": "海滩挖沙玩具套装 (小水桶、塑料铲、挖蛤蜊小耙子)",
+        "checked": true
+      },
+      {
+        "id": "dc3",
+        "category": "幼童用品 (4岁)",
+        "item": "儿童防滑涉水溯溪鞋 (瓦房店骆驼山与庄河赶海防贝壳)",
+        "checked": true
+      },
+      {
+        "id": "dc4",
+        "category": "幼童用品 (4岁)",
+        "item": "儿童防风连帽薄外套 (傍晚出海吹海风防着凉)",
+        "checked": true
+      },
+      {
+        "id": "dc5",
+        "category": "长辈/健康保健",
+        "item": "长辈慢病随身药盒 (降压药等随身小包携带)",
+        "checked": true
+      },
+      {
+        "id": "dc6",
+        "category": "长辈/健康保健",
+        "item": "不锈钢便携保温水杯 (随时补充温开水/大麦茶)",
+        "checked": true
+      },
+      {
+        "id": "dc7",
+        "category": "长辈/健康保健",
+        "item": "轻便折叠防滑健步手杖",
+        "checked": true
+      },
+      {
+        "id": "dc8",
+        "category": "全家必备",
+        "item": "高倍数海滨防晒霜 (SPF50+) & 遮阳帽墨镜",
+        "checked": true
+      },
+      {
+        "id": "dc9",
+        "category": "全家必备",
+        "item": "喂海鸥干鱼小食 & 白鸽玉米粒 (星海湾出海喂海鸥)",
+        "checked": true
+      },
+      {
+        "id": "dc10",
+        "category": "全家必备",
+        "item": "大容量移动电源 (录制海鸥伴飞与萌娃喂羊驼)",
+        "checked": true
+      },
+      {
+        "id": "dc11",
+        "category": "证件与数码",
+        "item": "身份证原件 (长辈60+/70+门票减免优待凭证)",
+        "checked": true
+      }
+    ],
+    "days": [
+      {
+        "id": "dalian-day-1",
+        "dayNumber": 1,
+        "date": "2026-07-10",
+        "theme": "抵达大连·初遇浪漫海湾·星海广场慢步",
+        "napBreakIncluded": true,
+        "dailyNotes": "入住星海湾高品质海景家庭套房，行程节奏极缓，傍晚散步喂鸽吹海风看跨海大桥霓虹。",
+        "stops": [
+          {
+            "id": "s1-1",
+            "siteId": "site-dalian-xinghai-square",
+            "timeSlot": "afternoon",
+            "startTime": "16:00",
+            "endTime": "18:00",
+            "customNotes": "入住酒店休整后前往星海广场，在白鸽广场喂和平鸽，百年城雕台阶看海鸥与跨海大桥。",
+            "transportToNext": {
+              "mode": "walk",
+              "durationMin": 8,
+              "familyNote": "从广场中心慢步推车穿过滨海走廊直达品海楼"
+            }
+          },
+          {
+            "id": "s1-2",
+            "siteId": "",
+            "timeSlot": "dinner",
+            "startTime": "18:00",
+            "endTime": "19:30",
+            "customNotes": "在「品海楼 (星海店)」享用迎宾大连老菜，金牌脆皮虾、软糯海参包子，老幼皆喜。"
+          },
+          {
+            "id": "s1-3",
+            "siteId": "site-dalian-xinghai-square",
+            "timeSlot": "evening",
+            "startTime": "19:30",
+            "endTime": "20:30",
+            "customNotes": "饭后步行至海边观赏星海广场大型音乐喷泉秀，跨海大桥千盏华灯齐放，随后回酒店休息。"
+          }
+        ]
+      },
+      {
+        "id": "dalian-day-2",
+        "dayNumber": 2,
+        "date": "2026-07-11",
+        "theme": "海底隧道探秘·午间充电·双体帆船出海喂海鸥",
+        "napBreakIncluded": true,
+        "dailyNotes": "上午圣亚全室内无日晒，午后严格保障小宝在酒店午睡1.5小时，傍晚出海喂海鸥看夕阳。",
+        "stops": [
+          {
+            "id": "s2-1",
+            "siteId": "site-dalian-sun-asia-ocean-world",
+            "timeSlot": "morning",
+            "startTime": "09:30",
+            "endTime": "12:00",
+            "customNotes": "漫步118米海底通道看鲨鱼魔鬼鱼，观赏《海豚湾之恋》与《功夫海象》王牌演出。",
+            "transportToNext": {
+              "mode": "walk",
+              "durationMin": 5,
+              "familyNote": "出馆到星海公园和顺面馆，平坦树荫步道"
+            }
+          },
+          {
+            "id": "s2-2",
+            "siteId": "",
+            "timeSlot": "lunch",
+            "startTime": "12:00",
+            "endTime": "13:00",
+            "customNotes": "享用鲜美大虾面与手工水饺，清淡养胃。"
+          },
+          {
+            "id": "s2-3",
+            "siteId": "",
+            "timeSlot": "nap_rest",
+            "startTime": "13:30",
+            "endTime": "15:30",
+            "isRestBreak": true,
+            "customNotes": "🌟 核心三代午睡保护：全家回酒店吹空调午休2小时，小宝深度睡眠充电，长辈泡茶小憩。"
+          },
+          {
+            "id": "s2-4",
+            "siteId": "site-dalian-yacht-cruise",
+            "timeSlot": "afternoon",
+            "startTime": "16:00",
+            "endTime": "17:30",
+            "customNotes": "乘坐豪华双体帆船出海！上千只海鸥盘旋伴飞，手递手投喂小鱼条，远眺跨海大桥日落。"
+          }
+        ]
+      },
+      {
+        "id": "dalian-day-3",
+        "dayNumber": 3,
+        "date": "2026-07-12",
+        "theme": "森林动物园看顶流飞云·小动物村喂长颈鹿",
+        "napBreakIncluded": true,
+        "dailyNotes": "从散养区南门进，观光车直达大熊猫馆看早晨进食，小动物村零距离互动，下午午睡。",
+        "stops": [
+          {
+            "id": "s3-1",
+            "siteId": "site-dalian-forest-zoo",
+            "timeSlot": "morning",
+            "startTime": "09:00",
+            "endTime": "12:30",
+            "customNotes": "南门进乘电瓶车先睹国宝飞云啃竹子，随后在小动物村看羊驼、喂长颈鹿，树林遮阴凉爽。"
+          },
+          {
+            "id": "s3-2",
+            "siteId": "",
+            "timeSlot": "lunch",
+            "startTime": "12:30",
+            "endTime": "13:30",
+            "customNotes": "在熊猫主题餐厅享用亲子卡通定食与热玉米排骨汤。"
+          },
+          {
+            "id": "s3-3",
+            "siteId": "",
+            "timeSlot": "nap_rest",
+            "startTime": "14:00",
+            "endTime": "15:30",
+            "isRestBreak": true,
+            "customNotes": "🌟 亲子午休休整：酒店午睡，避开盛夏正午高温。"
+          },
+          {
+            "id": "s3-4",
+            "siteId": "site-dalian-xinghai-square",
+            "timeSlot": "afternoon",
+            "startTime": "16:30",
+            "endTime": "18:30",
+            "customNotes": "傍晚租用四轮亲子脚踏车慢骑海滨木栈道，享受惬意海风。"
+          }
+        ]
+      },
+      {
+        "id": "dalian-day-4",
+        "dayNumber": 4,
+        "date": "2026-07-13",
+        "theme": "黑石礁百年自然博物馆·旅顺三寰牧场小新西兰",
+        "napBreakIncluded": true,
+        "dailyNotes": "上午看亚洲最大黑露脊鲸骨架，全空调无障碍；下午前往三寰牧场看牧羊犬赶羊秀。",
+        "stops": [
+          {
+            "id": "s4-1",
+            "siteId": "site-dalian-natural-history-museum",
+            "timeSlot": "morning",
+            "startTime": "09:30",
+            "endTime": "11:30",
+            "customNotes": "震撼的巨型鲸鱼骨架与恐龙展厅，三楼观海落地窗眺望黑石礁海潮拍岸。"
+          },
+          {
+            "id": "s4-2",
+            "siteId": "",
+            "timeSlot": "lunch",
+            "startTime": "11:30",
+            "endTime": "12:30",
+            "customNotes": "在喜家德水饺享用现包虾仁水饺与热饺子汤。"
+          },
+          {
+            "id": "s4-3",
+            "siteId": "",
+            "timeSlot": "nap_rest",
+            "startTime": "13:00",
+            "endTime": "14:30",
+            "isRestBreak": true,
+            "customNotes": "🌟 车程中或酒店小憩午睡充电。"
+          },
+          {
+            "id": "s4-4",
+            "siteId": "site-dalian-sanhuan-ranch",
+            "timeSlot": "afternoon",
+            "startTime": "15:00",
+            "endTime": "18:00",
+            "customNotes": "欧式大草坡牧场！看15:30牧羊犬赶羊秀，喂羊驼小羊，品尝现挤鲜牛奶与冰淇淋。"
+          }
+        ]
+      },
+      {
+        "id": "dalian-day-5",
+        "dayNumber": 5,
+        "date": "2026-07-14",
+        "theme": "金石滩黄金海岸踏浪·发现王国城堡水上焰火夜场",
+        "napBreakIncluded": true,
+        "dailyNotes": "转移至金石滩度假区，上午沙滩挖沙踏浪，午睡后15:30进发现王国玩亲子项目看夜景城堡烟花。",
+        "stops": [
+          {
+            "id": "s5-1",
+            "siteId": "site-dalian-golden-pebble-beach",
+            "timeSlot": "morning",
+            "startTime": "09:00",
+            "endTime": "11:30",
+            "customNotes": "黄金海岸租遮阳伞躺椅，小宝在平缓浅滩挖沙堆堡，老人坐躺椅听海浪。"
+          },
+          {
+            "id": "s5-2",
+            "siteId": "",
+            "timeSlot": "lunch",
+            "startTime": "11:30",
+            "endTime": "12:30",
+            "customNotes": "渔家傲海鲜坊享用现蒸黄鱼与清甜杂色蛤豆腐汤。"
+          },
+          {
+            "id": "s5-3",
+            "siteId": "",
+            "timeSlot": "nap_rest",
+            "startTime": "13:00",
+            "endTime": "15:00",
+            "isRestBreak": true,
+            "customNotes": "🌟 金石滩度假酒店全员午睡休整，为精彩夜场蓄足体能！"
+          },
+          {
+            "id": "s5-4",
+            "siteId": "site-dalian-discovery-kingdom",
+            "timeSlot": "afternoon",
+            "startTime": "15:30",
+            "endTime": "21:00",
+            "customNotes": "玩转小人国与旋转木马，看花车大巡游，晚上八点压轴观赏城堡水上音乐焰火秀。"
+          }
+        ]
+      },
+      {
+        "id": "dalian-day-6",
+        "dayNumber": 6,
+        "date": "2026-07-15",
+        "theme": "国家地质公园恐龙探海·英歌石植物园仙境花海",
+        "napBreakIncluded": true,
+        "dailyNotes": "上午观光车巡礼亿年海蚀奇观，下午走进中国最美植物园慢步吸氧赏绣球花谷。",
+        "stops": [
+          {
+            "id": "s6-1",
+            "siteId": "site-dalian-golden-pebble-beach",
+            "timeSlot": "morning",
+            "startTime": "09:00",
+            "endTime": "11:30",
+            "customNotes": "乘坐地质公园观光车直达观景平台，俯瞰万顷碧波与鬼斧神工的「恐龙探海」大石桥。"
+          },
+          {
+            "id": "s6-2",
+            "siteId": "",
+            "timeSlot": "lunch",
+            "startTime": "11:45",
+            "endTime": "12:45",
+            "customNotes": "品尝金石滩地道海鲜大包子与清爽凉拌海藻。"
+          },
+          {
+            "id": "s6-3",
+            "siteId": "",
+            "timeSlot": "nap_rest",
+            "startTime": "13:00",
+            "endTime": "14:30",
+            "isRestBreak": true,
+            "customNotes": "🌟 午睡小憩，恢复活力。"
+          },
+          {
+            "id": "s6-4",
+            "siteId": "site-dalian-yinggeshi-botanical-garden",
+            "timeSlot": "afternoon",
+            "startTime": "15:00",
+            "endTime": "17:30",
+            "customNotes": "坐观光车至花海山顶，顺梯田漫步下山，在黑天鹅湖畔喂天鹅，空气极度甘冽。"
+          }
+        ]
+      },
+      {
+        "id": "dalian-day-7",
+        "dayNumber": 7,
+        "date": "2026-07-16",
+        "theme": "瓦房店骆驼山海滨自驾·松林海风与原生态赶海",
+        "napBreakIncluded": true,
+        "dailyNotes": "自驾前往大连北部秘境骆驼山，松林下野餐，配合退潮时间翻石头抓螃蟹捡海螺。",
+        "stops": [
+          {
+            "id": "s7-1",
+            "siteId": "site-dalian-luotuoshan-haibin",
+            "timeSlot": "morning",
+            "startTime": "10:00",
+            "endTime": "12:30",
+            "customNotes": "车停松林旁，换涉水鞋带小桶在浅滩礁石赶海，小螃蟹海星随便捡，眺望骆驼入海巨石。"
+          },
+          {
+            "id": "s7-2",
+            "siteId": "",
+            "timeSlot": "lunch",
+            "startTime": "12:30",
+            "endTime": "13:30",
+            "customNotes": "驼山渔家鲜味居现煮皮皮虾与家焖小黄鱼，大块炕头舒展双腿。"
+          },
+          {
+            "id": "s7-3",
+            "siteId": "",
+            "timeSlot": "nap_rest",
+            "startTime": "13:30",
+            "endTime": "15:00",
+            "isRestBreak": true,
+            "customNotes": "🌟 松林海风下树荫野餐垫午休，听海浪声安睡入梦。"
+          },
+          {
+            "id": "s7-4",
+            "siteId": "site-dalian-luotuoshan-haibin",
+            "timeSlot": "afternoon",
+            "startTime": "15:00",
+            "endTime": "17:00",
+            "customNotes": "将抓到的小螃蟹放归大海，在黑松林步道漫步，感受大自然馈赠。"
+          }
+        ]
+      },
+      {
+        "id": "dalian-day-8",
+        "dayNumber": 8,
+        "date": "2026-07-17",
+        "theme": "自驾跨海大堤登蛤蜊岛·滩涂挖大蛤·满载鲜美返程",
+        "napBreakIncluded": true,
+        "dailyNotes": "汽车直接开上蛤蜊岛免乘渡轮，滩涂体验一耙子挖两蛤的丰收乐趣，现煮原汁蛤蜊完美收官！",
+        "stops": [
+          {
+            "id": "s8-1",
+            "siteId": "site-dalian-zhuanghe-geli-island",
+            "timeSlot": "morning",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "customNotes": "穿过跨海大堤登岛，在蛤蜊沙滩用铁耙挖肥美大骨顶蛤，小桶迅速装满，成就感满满！"
+          },
+          {
+            "id": "s8-2",
+            "siteId": "",
+            "timeSlot": "lunch",
+            "startTime": "12:30",
+            "endTime": "14:00",
+            "customNotes": "海岛渔庄当场加工刚挖的蛤蜊，煮一锅清亮鲜香的蛤蜊手擀面，鲜美无匹。"
+          },
+          {
+            "id": "s8-3",
+            "siteId": "site-dalian-zhuanghe-geli-island",
+            "timeSlot": "afternoon",
+            "startTime": "14:00",
+            "endTime": "15:30",
+            "customNotes": "海岛环岛木栈道留影合照，收拾行装，依依不舍踏上返程之旅。"
+          }
+        ]
+      }
+    ]
   }
 ];

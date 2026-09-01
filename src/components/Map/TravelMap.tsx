@@ -277,6 +277,10 @@ export const TravelMap: React.FC<TravelMapProps> = ({
         if (selectedSite) {
           mapInstanceRef.current.flyTo(selectedSite.coordinates, 15, { duration: 1.2 });
         }
+      } else if (activeDay && routeCoords.length > 0) {
+        mapInstanceRef.current.fitBounds(L.latLngBounds(routeCoords), { padding: [60, 60], maxZoom: 14 });
+      } else if (bounds.isValid()) {
+        mapInstanceRef.current.fitBounds(bounds, { padding: [60, 60], maxZoom: 13 });
       }
     }
   }, [sites, selectedSiteId, activeDay]);
