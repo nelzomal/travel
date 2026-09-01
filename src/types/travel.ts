@@ -75,6 +75,7 @@ export interface SocialMediaLink {
   title?: string;
   note?: string;
   author?: string;
+  screenshotUrl?: string; // 网页截图 / 笔记长图 / 封面快照 (URL 或 base64)
   addedAt?: string;
 }
 

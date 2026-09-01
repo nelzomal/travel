@@ -1828,7 +1828,8 @@ export const INITIAL_SITES: Site[] = [
         "title": "【B站精选】大连三寰牧场：北方小新西兰，草坡赶羊秀与萌宠互动",
         "author": "周末去哪儿",
         "note": "下午15:30牧羊犬赶羊秀非常精彩，大草坪适合野餐，现挤鲜奶冰淇淋必尝。",
-        "addedAt": "2026-08-28"
+        "addedAt": "2026-08-28",
+        "screenshotUrl": "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1000&q=80"
       },
       {
         "id": "social-sanhuan-2",
@@ -2494,7 +2495,18 @@ export const INITIAL_SITES: Site[] = [
       "ticketBookingTip": "星海广场免费、全天开放，不需要官网抢票、身份证换票或预约，也没有常规检票队伍，因此不存在长者或推车绿色通道。大型活动可能临时安检限流，应提前查看大连发布、交警及星海湾区域公告。游乐项目通常现场单项购票；游船建议使用可查资质和退改规则的平台预约，不购买模糊标价的路边揽客票。大连博物馆个人无需预约，持证安检入馆；未成年人、高龄老人或未持身份证人员可按馆方要求登记入馆。",
       "parkingAndDropoff": "广场没有唯一主入口。包车或打车看海、喂鸥时导航大连百年纪念城雕，允许临停情况下下车点距核心观景区约50-150米，路面平缓，无需爬楼梯；看中央轴和喷泉可导航星海广场音乐喷泉，但外环至喷泉区域属于严管路段，禁止随意停车。自驾优先查看星海广场外环停车泊位实时空位，停车后按斑马线进入；游乐场外停车位仅约20个，不宜依赖。大型节庆、演唱会和周末可能封闭内环或禁止车辆驶入，建议司机先在允许区域放下老人幼童，再去正规停车场，返程时重新约定同一平坦下客点。"
     },
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-xinghai-1",
+        "url": "https://www.xiaohongshu.com/explore/69d5ab1d00000000220013ff",
+        "platform": "xiaohongshu",
+        "title": "小红书 种草推荐：大连星海广场看海喂海鸥攻略",
+        "author": "温暖的11",
+        "note": "看海鸥喂海鸥、跨海大桥日落与夜景音乐喷泉；带老人小孩推车平坦顺畅，傍晚游玩最佳。",
+        "screenshotUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Xinghai_Square_Dalian_2.jpg/1280px-Xinghai_Square_Dalian_2.jpg",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-dalian-forest-zoo",
@@ -3294,7 +3306,8 @@ export const INITIAL_SITES: Site[] = [
         "title": "【B站实况】大连庄河蛤蜊岛赶海记：自驾跨海大堤与滩涂挖蛤",
         "author": "大连行者",
         "note": "跨海大堤直接把车开上岛，免除了乘船周折；带好小铁耙和塑料桶，退潮前1-2小时去沙滩。",
-        "addedAt": "2026-08-30"
+        "addedAt": "2026-08-30",
+        "screenshotUrl": "https://www.dlzh.gov.cn/admin/module/NewsEdit/attached/image/20200714/20200714162723_9842.jpg"
       },
       {
         "id": "social-geli-2",
@@ -3303,7 +3316,8 @@ export const INITIAL_SITES: Site[] = [
         "title": "小红书妈妈分享：蛤蜊岛带4岁娃赶海最省力的一日线",
         "author": "@大连亲子遛娃记",
         "note": "一定要给老人孩子带包脚防滑涉水鞋，贝壳碎片较锋利；挖出来的蛤蜊去岛上渔家小院加工，鲜美极了！",
-        "addedAt": "2026-08-31"
+        "addedAt": "2026-08-31",
+        "screenshotUrl": "https://www.dlzh.gov.cn/admin/module/NewsEdit/attached/image/20200714/20200714162747_8435.jpg"
       }
     ]
   }

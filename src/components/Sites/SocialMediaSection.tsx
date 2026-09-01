@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Site, SocialMediaLink, SocialPlatform } from '../../types/travel';
 import { 
   ExternalLink, Plus, Trash2, Eye, RefreshCw, Copy, Check, X, 
-  Sparkles, AlertCircle
+  Sparkles, AlertCircle, Image as ImageIcon, Upload, Maximize2, Minimize2,
+  Smartphone, Monitor, ZoomIn, ZoomOut, Camera
 } from 'lucide-react';
 
 interface SocialMediaSectionProps {
@@ -134,6 +135,38 @@ export function getEmbeddableUrl(url: string, platform?: SocialPlatform): string
   return trimmed;
 }
 
+// Utility to compress an image file / dataUrl to reasonable dimensions
+function compressImage(base64Str: string, maxDim = 1400, quality = 0.85): Promise<string> {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.src = base64Str;
+    img.onload = () => {
+      let w = img.width;
+      let h = img.height;
+      if (w > maxDim || h > maxDim) {
+        if (w > h) {
+          h = Math.round((h * maxDim) / w);
+          w = maxDim;
+        } else {
+          w = Math.round((w * maxDim) / h);
+          h = maxDim;
+        }
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext('2d');
+      if (ctx) {
+        ctx.drawImage(img, 0, 0, w, h);
+        resolve(canvas.toDataURL('image/jpeg', quality));
+      } else {
+        resolve(base64Str);
+      }
+    };
+    img.onerror = () => resolve(base64Str);
+  });
+}
+
 export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
   site,
   onUpdateSite
@@ -143,12 +176,22 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
   const [inputTitle, setInputTitle] = useState('');
   const [inputAuthor, setInputAuthor] = useState('');
   const [inputNote, setInputNote] = useState('');
+  const [inputScreenshot, setInputScreenshot] = useState('');
   const [inputPlatform, setInputPlatform] = useState<SocialPlatform>('xiaohongshu');
 
-  // Preview state
+  // Preview Modal state
   const [activePreviewLink, setActivePreviewLink] = useState<SocialMediaLink | null>(null);
+  const [previewTab, setPreviewTab] = useState<'web' | 'screenshot'>('web');
+  const [deviceMode, setDeviceMode] = useState<'desktop' | 'mobile'>('desktop');
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [zoomScale, setZoomScale] = useState(1);
   const [iframeKey, setIframeKey] = useState(0);
   const [copiedUrl, setCopiedUrl] = useState(false);
+
+  // Hidden file inputs
+  const addFileInputRef = useRef<HTMLInputElement>(null);
+  const cardFileInputRef = useRef<HTMLInputElement>(null);
+  const [targetLinkForScreenshot, setTargetLinkForScreenshot] = useState<string | null>(null);
 
   const links = site.socialMediaLinks || [];
 
@@ -161,12 +204,44 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
     }
   };
 
+  // Handle image file selection (convert to compressed base64)
+  const processImageFile = async (file: File): Promise<string> => {
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onload = async (e) => {
+        const raw = e.target?.result as string;
+        const compressed = await compressImage(raw);
+        resolve(compressed);
+      };
+      reader.readAsDataURL(file);
+    });
+  };
+
+  // Handle paste event (Ctrl+V / Cmd+V) to capture screenshot from clipboard!
+  const handleFormPaste = async (e: React.ClipboardEvent) => {
+    const items = e.clipboardData?.items;
+    if (!items) return;
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].type.startsWith('image/')) {
+        const file = items[i].getAsFile();
+        if (file) {
+          const base64 = await processImageFile(file);
+          setInputScreenshot(base64);
+          break;
+        }
+      }
+    }
+  };
+
   const handleAddLink = (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputUrl.trim()) return;
 
     const detectedPlatform = inputPlatform || detectSocialPlatform(inputUrl.trim());
     const meta = getPlatformMeta(detectedPlatform);
+
+    // If no screenshot uploaded, provide fallback preview
+    const screenshot = inputScreenshot.trim() || undefined;
 
     const newLink: SocialMediaLink = {
       id: `social-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
@@ -175,6 +250,7 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
       title: inputTitle.trim() || `${meta.label} 种草推荐`,
       author: inputAuthor.trim() || undefined,
       note: inputNote.trim() || undefined,
+      screenshotUrl: screenshot,
       addedAt: new Date().toISOString().slice(0, 10)
     };
 
@@ -190,6 +266,7 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
     setInputTitle('');
     setInputAuthor('');
     setInputNote('');
+    setInputScreenshot('');
     setShowAddForm(false);
   };
 
@@ -205,15 +282,63 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
     }
   };
 
+  // Attach/Update screenshot for an existing link card
+  const handleAttachScreenshotToCard = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !targetLinkForScreenshot) return;
+    const base64 = await processImageFile(file);
+    const updated = links.map((item) => {
+      if (item.id === targetLinkForScreenshot) {
+        return { ...item, screenshotUrl: base64 };
+      }
+      return item;
+    });
+    onUpdateSite({
+      ...site,
+      socialMediaLinks: updated
+    });
+    if (activePreviewLink?.id === targetLinkForScreenshot) {
+      setActivePreviewLink({
+        ...activePreviewLink,
+        screenshotUrl: base64
+      });
+    }
+    setTargetLinkForScreenshot(null);
+    if (cardFileInputRef.current) cardFileInputRef.current.value = '';
+  };
+
   const handleCopyLink = (url: string) => {
     navigator.clipboard.writeText(url);
     setCopiedUrl(true);
     setTimeout(() => setCopiedUrl(false), 2000);
   };
 
+  // Open Preview Modal
+  const handleOpenPreview = (link: SocialMediaLink, defaultTab: 'web' | 'screenshot' = 'web') => {
+    setActivePreviewLink(link);
+    setPreviewTab(defaultTab);
+    setIframeKey((k) => k + 1);
+    setZoomScale(1);
+    // Auto-select mobile mode for Xiaohongshu / Douyin / TikTok to view full app experience nicely
+    if (['xiaohongshu', 'douyin', 'tiktok'].includes(link.platform || '')) {
+      setDeviceMode('mobile');
+    } else {
+      setDeviceMode('desktop');
+    }
+  };
+
   return (
     <div className="space-y-6">
       
+      {/* Hidden File Input for Card Screenshot Upload */}
+      <input
+        ref={cardFileInputRef}
+        type="file"
+        accept="image/*"
+        className="hidden"
+        onChange={handleAttachScreenshotToCard}
+      />
+
       {/* Header & Add Button */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 bg-gradient-to-r from-rose-50/80 via-purple-50/40 to-indigo-50/80 rounded-2xl border border-rose-200/70 shadow-2xs">
         <div className="flex items-center gap-3">
@@ -230,7 +355,7 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
               </span>
             </div>
             <p className="text-xs text-slate-500 mt-0.5">
-              支持小红书、抖音、大众点评、B站等博主打卡攻略，点击即可在画中画直接加载网页预览。
+              支持小红书、抖音、大众点评、B站等博主打卡攻略，支持贴入高清截图与大屏浏览器视窗全景浏览。
             </p>
           </div>
         </div>
@@ -245,10 +370,11 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
         </button>
       </div>
 
-      {/* Quick Add Form */}
+      {/* Quick Add Form with Screenshot Attachment */}
       {showAddForm && (
         <form 
           onSubmit={handleAddLink}
+          onPaste={handleFormPaste}
           className="p-5 bg-white rounded-2xl border-2 border-rose-200 shadow-md space-y-4 animate-in fade-in zoom-in-95 duration-200"
         >
           <div className="flex items-center justify-between border-b border-slate-100 pb-3">
@@ -256,7 +382,7 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
               <Sparkles className="w-4 h-4 text-rose-600" />
               <span>添加一篇社交媒体 / 种草博主笔记</span>
             </h5>
-            <span className="text-[11px] text-slate-400">支持直接粘贴分享直链，系统将自动识别平台</span>
+            <span className="text-[11px] text-slate-400">支持直接粘贴分享直链与剪贴板截图</span>
           </div>
 
           <div className="space-y-3">
@@ -267,7 +393,7 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
               <input
                 type="url"
                 required
-                placeholder="例如: http://xhslink.com/... 或 https://v.douyin.com/... 或 https://www.bilibili.com/..."
+                placeholder="例如: http://xhslink.com/... 或 https://www.xiaohongshu.com/... 或 https://v.douyin.com/..."
                 value={inputUrl}
                 onChange={(e) => handleUrlChange(e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-300 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-rose-500 font-mono"
@@ -324,6 +450,83 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
               </div>
             </div>
 
+            {/* SCREENSHOT ATTACHMENT SECTION */}
+            <div className="p-3 bg-slate-50/80 rounded-2xl border border-slate-200 space-y-2">
+              <label className="text-xs font-bold text-slate-800 flex items-center justify-between">
+                <span className="flex items-center gap-1.5">
+                  <Camera className="w-3.5 h-3.5 text-rose-600" />
+                  <span>笔记截图 / 封面长图预览 (推荐配置)</span>
+                </span>
+                <span className="text-[11px] text-slate-400 font-normal">
+                  支持在此处直接按 Cmd+V / Ctrl+V 粘贴截图，或点击上传本地图片
+                </span>
+              </label>
+
+              <div className="flex flex-col sm:flex-row items-center gap-3">
+                <input
+                  type="text"
+                  placeholder="可输入截图图片 URL，或点击右侧上传/直接按 Cmd+V 粘贴..."
+                  value={inputScreenshot.startsWith('data:image') ? '【已成功上传/粘贴本地高清截图】' : inputScreenshot}
+                  onChange={(e) => {
+                    if (!inputScreenshot.startsWith('data:image')) {
+                      setInputScreenshot(e.target.value);
+                    }
+                  }}
+                  className="flex-1 w-full px-3 py-2 rounded-xl text-xs border border-slate-300 bg-white"
+                />
+
+                <input
+                  ref={addFileInputRef}
+                  type="file"
+                  accept="image/*"
+                  className="hidden"
+                  onChange={async (e) => {
+                    const file = e.target.files?.[0];
+                    if (file) {
+                      const base64 = await processImageFile(file);
+                      setInputScreenshot(base64);
+                    }
+                  }}
+                />
+
+                <div className="flex items-center gap-2 w-full sm:w-auto">
+                  <button
+                    type="button"
+                    onClick={() => addFileInputRef.current?.click()}
+                    className="flex-1 sm:flex-none px-3 py-2 bg-white hover:bg-slate-100 text-slate-700 text-xs font-bold rounded-xl border border-slate-300 flex items-center justify-center gap-1 transition-colors"
+                  >
+                    <Upload className="w-3.5 h-3.5 text-slate-500" />
+                    <span>上传截图</span>
+                  </button>
+
+                  {inputScreenshot && (
+                    <button
+                      type="button"
+                      onClick={() => setInputScreenshot('')}
+                      className="p-2 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-xl transition-colors"
+                      title="清除截图"
+                    >
+                      <Trash2 className="w-3.5 h-3.5" />
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {/* Live Preview Thumbnail of uploaded screenshot */}
+              {inputScreenshot && (
+                <div className="relative w-full sm:w-48 h-32 rounded-xl overflow-hidden border border-slate-200 bg-black/5 shadow-inner mt-2">
+                  <img
+                    src={inputScreenshot}
+                    alt="截图预览"
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute bottom-1 right-1 px-1.5 py-0.5 bg-black/70 text-white text-[10px] rounded font-bold">
+                    已加载预览截图
+                  </span>
+                </div>
+              )}
+            </div>
+
             <div>
               <label className="block text-xs font-bold text-slate-700 mb-1">
                 核心避坑重点与摘录笔记 (选填)
@@ -357,23 +560,21 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
         </form>
       )}
 
-      {/* Links List Cards */}
+      {/* Links List Cards (With Screenshot Thumbnails & Large Preview Buttons) */}
       {links.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {links.map((item) => {
             const meta = getPlatformMeta(item.platform);
-            const isPreviewing = activePreviewLink?.id === item.id;
+            const hasScreenshot = Boolean(item.screenshotUrl);
 
             return (
               <div
                 key={item.id}
-                className={`p-4 bg-white rounded-2xl border transition-all duration-200 flex flex-col justify-between space-y-3 ${
-                  isPreviewing
-                    ? 'border-rose-500 ring-2 ring-rose-400/20 shadow-md bg-rose-50/20'
-                    : 'border-slate-200 hover:border-rose-300 hover:shadow-md'
-                }`}
+                className="p-4 bg-white rounded-2xl border border-slate-200 hover:border-rose-300 hover:shadow-lg transition-all duration-200 flex flex-col justify-between space-y-3"
               >
-                <div className="space-y-2">
+                <div className="space-y-3">
+                  
+                  {/* Card Top: Platform + Author + Date */}
                   <div className="flex items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
                       <span className={`px-2 py-0.5 rounded-md text-[11px] font-bold border flex items-center gap-1 ${meta.badgeClass}`}>
@@ -393,10 +594,58 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
                     )}
                   </div>
 
-                  <h5 className="text-xs sm:text-sm font-bold text-slate-900 line-clamp-2 leading-snug">
+                  {/* Screenshot Thumbnail Preview (If available) */}
+                  {hasScreenshot ? (
+                    <div 
+                      onClick={() => handleOpenPreview(item, 'screenshot')}
+                      className="group/img relative w-full h-44 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 cursor-pointer shadow-inner"
+                      title="点击放大查看高清长图与截图详情"
+                    >
+                      <img
+                        src={item.screenshotUrl}
+                        alt={item.title}
+                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover/img:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end justify-between p-2.5">
+                        <span className="text-[11px] text-white font-bold flex items-center gap-1 drop-shadow-md">
+                          <Camera className="w-3.5 h-3.5 text-rose-400" />
+                          <span>点击全屏查看截图快照</span>
+                        </span>
+                        <span className="px-2 py-0.5 bg-black/60 backdrop-blur-md text-white text-[10px] rounded-lg font-bold">
+                          📸 高清长图
+                        </span>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="flex items-center justify-between p-2.5 bg-slate-50 rounded-xl border border-dashed border-slate-200 text-slate-500 text-xs">
+                      <div className="flex items-center gap-1.5">
+                        <ImageIcon className="w-4 h-4 text-slate-400" />
+                        <span className="text-[11px]">暂无截图快照 (可补充上传)</span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setTargetLinkForScreenshot(item.id);
+                          cardFileInputRef.current?.click();
+                        }}
+                        className="px-2.5 py-1 bg-white hover:bg-slate-100 text-slate-700 text-[11px] font-bold rounded-lg border border-slate-200 flex items-center gap-1 shadow-2xs transition-colors"
+                      >
+                        <Upload className="w-3 h-3" />
+                        <span>上传截图</span>
+                      </button>
+                    </div>
+                  )}
+
+                  {/* Title */}
+                  <h5 
+                    onClick={() => handleOpenPreview(item, 'web')}
+                    className="text-sm font-bold text-slate-900 line-clamp-2 leading-snug cursor-pointer hover:text-rose-600 transition-colors"
+                    title="点击打开大屏网页浏览器视窗"
+                  >
                     {item.title || '无标题种草攻略'}
                   </h5>
 
+                  {/* Notes / Tips */}
                   {item.note && (
                     <div className="p-2.5 bg-slate-50 rounded-xl text-xs text-slate-600 border border-slate-200/80 leading-relaxed font-normal">
                       <span className="font-bold text-slate-700 mr-1">📝 笔记重点:</span>
@@ -411,29 +660,37 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
 
                 {/* Actions Row */}
                 <div className="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center gap-1.5 flex-wrap">
+                    
+                    {/* Primary Button: Open BIG Webpage Browser */}
                     <button
                       type="button"
-                      onClick={() => {
-                        setActivePreviewLink(item);
-                        setIframeKey((prev) => prev + 1);
-                      }}
-                      className={`px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1 transition-all ${
-                        isPreviewing
-                          ? 'bg-rose-600 text-white shadow-2xs'
-                          : 'bg-rose-50 text-rose-700 hover:bg-rose-100 border border-rose-200/70'
-                      }`}
-                      title="在下方内置窗口中直接加载预览此网页"
+                      onClick={() => handleOpenPreview(item, 'web')}
+                      className="px-3.5 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-sm shadow-rose-600/20 transition-all hover:scale-102"
+                      title="打开大屏独立浏览器视窗浏览网页"
                     >
                       <Eye className="w-3.5 h-3.5" />
-                      <span>{isPreviewing ? '正在预览' : '网页即时预览'}</span>
+                      <span>全屏大窗浏览</span>
                     </button>
+
+                    {/* Secondary Button: View Screenshot */}
+                    {hasScreenshot && (
+                      <button
+                        type="button"
+                        onClick={() => handleOpenPreview(item, 'screenshot')}
+                        className="px-2.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-700 rounded-xl text-xs font-bold flex items-center gap-1 transition-colors border border-rose-200/70"
+                        title="查看高清长图快照"
+                      >
+                        <Camera className="w-3.5 h-3.5" />
+                        <span>看截图</span>
+                      </button>
+                    )}
 
                     <a
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold flex items-center gap-1 transition-colors"
+                      className="px-2.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold flex items-center gap-1 transition-colors"
                       title="在新标签页全屏打开此网页"
                     >
                       <ExternalLink className="w-3 h-3" />
@@ -441,14 +698,28 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
                     </a>
                   </div>
 
-                  <button
-                    type="button"
-                    onClick={() => handleDeleteLink(item.id)}
-                    className="p-1.5 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-colors"
-                    title="移除此链接"
-                  >
-                    <Trash2 className="w-3.5 h-3.5" />
-                  </button>
+                  <div className="flex items-center gap-1">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setTargetLinkForScreenshot(item.id);
+                        cardFileInputRef.current?.click();
+                      }}
+                      className="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
+                      title="更新/上传此篇笔记的高清截图"
+                    >
+                      <Camera className="w-3.5 h-3.5" />
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => handleDeleteLink(item.id)}
+                      className="p-1.5 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-colors"
+                      title="移除此链接"
+                    >
+                      <Trash2 className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
                 </div>
               </div>
             );
@@ -462,7 +733,7 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
           <div>
             <h5 className="text-sm font-bold text-slate-800">暂无收录的社交媒体打卡链接</h5>
             <p className="text-xs text-slate-500 max-w-sm mx-auto mt-1">
-              您在刷小红书、抖音、大众点评时发现实用的赶海攻略、亲子排雷贴，可点击上方「新增社交媒体链接」贴进来，支持画中画即时加载预览！
+              您在刷小红书、抖音、大众点评时发现实用的赶海攻略、亲子排雷贴，可点击上方「新增社交媒体链接」贴进来，支持截图与大屏浏览器视窗全景浏览！
             </p>
           </div>
           <button
@@ -476,100 +747,347 @@ export const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({
         </div>
       )}
 
-      {/* ==================== IN-PAGE WEBPAGE PREVIEWER ==================== */}
+      {/* ========================================================================= */}
+      {/* FULL-WINDOW BIG BROWSER & SCREENSHOT VIEWER MODAL (REAL BROWSER EXPERIENCE) */}
+      {/* ========================================================================= */}
       {activePreviewLink && (
-        <div className="p-4 sm:p-5 bg-slate-950 text-white rounded-3xl shadow-2xl border border-slate-800 space-y-3 animate-in fade-in zoom-in-95 duration-200">
+        <div className="fixed inset-0 z-[120] bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-2 sm:p-4 animate-in fade-in duration-200">
           
-          {/* Browser-like Toolbar */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-2 border-b border-slate-800">
-            <div className="flex items-center gap-2 min-w-0">
-              <span className="p-1 bg-slate-800 rounded-lg text-sm flex-shrink-0">
-                {getPlatformMeta(activePreviewLink.platform).icon}
-              </span>
-              <div className="min-w-0">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-white truncate max-w-xs sm:max-w-md">
-                    {activePreviewLink.title}
-                  </span>
-                  <span className="px-1.5 py-0.2 bg-slate-800 text-slate-300 text-[10px] rounded font-medium flex-shrink-0">
-                    {getPlatformMeta(activePreviewLink.platform).label}
-                  </span>
+          <div 
+            className={`bg-slate-900 text-white rounded-3xl shadow-2xl border border-slate-800 flex flex-col overflow-hidden transition-all duration-300 ${
+              isFullscreen 
+                ? 'w-full h-full rounded-none' 
+                : 'w-full max-w-[98vw] h-[94vh] sm:h-[96vh]'
+            }`}
+          >
+            
+            {/* Top Browser Window Toolbar */}
+            <div className="bg-slate-950 px-4 py-2.5 border-b border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 select-none">
+              
+              {/* Left: Traffic Lights & Tab Switch (Web vs Screenshot) */}
+              <div className="flex items-center gap-3">
+                
+                {/* Traffic lights */}
+                <div className="flex items-center gap-1.5 pr-2 border-r border-slate-800">
+                  <button 
+                    onClick={() => setActivePreviewLink(null)} 
+                    className="w-3 h-3 rounded-full bg-rose-500 hover:bg-rose-600 transition-colors" 
+                    title="关闭"
+                  />
+                  <button 
+                    onClick={() => setDeviceMode(deviceMode === 'desktop' ? 'mobile' : 'desktop')} 
+                    className="w-3 h-3 rounded-full bg-amber-500 hover:bg-amber-600 transition-colors" 
+                    title="切换移动/桌面视图"
+                  />
+                  <button 
+                    onClick={() => setIsFullscreen(!isFullscreen)} 
+                    className="w-3 h-3 rounded-full bg-emerald-500 hover:bg-emerald-600 transition-colors" 
+                    title="切换全屏模式"
+                  />
                 </div>
-                <div className="text-[10px] text-slate-400 font-mono truncate max-w-xs sm:max-w-md">
+
+                {/* View Tabs: 🌐 实时网页 vs 📸 高清长图截图 */}
+                <div className="flex items-center bg-slate-900 p-1 rounded-xl border border-slate-800 text-xs font-bold">
+                  <button
+                    type="button"
+                    onClick={() => setPreviewTab('web')}
+                    className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all ${
+                      previewTab === 'web'
+                        ? 'bg-rose-600 text-white shadow-sm'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    <span>🌐 实时网页</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setPreviewTab('screenshot')}
+                    className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all ${
+                      previewTab === 'screenshot'
+                        ? 'bg-rose-600 text-white shadow-sm'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    <span>📸 高清截图</span>
+                    {activePreviewLink.screenshotUrl && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    )}
+                  </button>
+                </div>
+
+                {/* Device Mode Switcher (Only in Web mode) */}
+                {previewTab === 'web' && (
+                  <div className="hidden md:flex items-center bg-slate-900 p-1 rounded-xl border border-slate-800 text-xs font-bold text-slate-400">
+                    <button
+                      type="button"
+                      onClick={() => setDeviceMode('desktop')}
+                      className={`px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition-all ${
+                        deviceMode === 'desktop' ? 'bg-slate-800 text-white' : 'hover:text-white'
+                      }`}
+                      title="电脑宽屏全景浏览"
+                    >
+                      <Monitor className="w-3.5 h-3.5" />
+                      <span>电脑大屏</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setDeviceMode('mobile')}
+                      className={`px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition-all ${
+                        deviceMode === 'mobile' ? 'bg-slate-800 text-white' : 'hover:text-white'
+                      }`}
+                      title="手机竖屏真机视窗 (最适合小红书/抖音等短图文)"
+                    >
+                      <Smartphone className="w-3.5 h-3.5" />
+                      <span>手机竖屏</span>
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              {/* Center: Real Browser Address Bar */}
+              <div className="flex-1 max-w-xl mx-auto flex items-center gap-2 px-3 py-1.5 bg-slate-900 rounded-xl border border-slate-800 text-xs text-slate-300 shadow-inner">
+                <span className="text-slate-500">🔒</span>
+                <span className="px-1.5 py-0.2 bg-slate-800 text-slate-300 text-[10px] rounded font-bold flex-shrink-0">
+                  {getPlatformMeta(activePreviewLink.platform).icon} {getPlatformMeta(activePreviewLink.platform).label}
+                </span>
+                <span className="text-white font-semibold truncate max-w-[120px] sm:max-w-[200px]">
+                  {activePreviewLink.title}
+                </span>
+                <span className="text-slate-500 font-mono truncate hidden lg:inline flex-1 text-[11px]">
                   {activePreviewLink.url}
-                </div>
+                </span>
+              </div>
+
+              {/* Right: Quick Tools & Fullscreen Toggle */}
+              <div className="flex items-center gap-1.5 justify-end">
+                {previewTab === 'web' && (
+                  <button
+                    type="button"
+                    onClick={() => setIframeKey((k) => k + 1)}
+                    className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl text-xs flex items-center gap-1 transition-colors"
+                    title="刷新网页"
+                  >
+                    <RefreshCw className="w-3.5 h-3.5" />
+                  </button>
+                )}
+
+                <button
+                  type="button"
+                  onClick={() => handleCopyLink(activePreviewLink.url)}
+                  className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl text-xs flex items-center gap-1 transition-colors"
+                  title="复制网页直链"
+                >
+                  {copiedUrl ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                </button>
+
+                <a
+                  href={activePreviewLink.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white rounded-xl text-xs font-bold flex items-center gap-1 shadow-sm transition-all"
+                >
+                  <span>新标签页打开</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+
+                {/* Fullscreen Toggle */}
+                <button
+                  type="button"
+                  onClick={() => setIsFullscreen(!isFullscreen)}
+                  className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition-colors hidden sm:block"
+                  title={isFullscreen ? '退出全屏' : '展开至全屏沉浸视窗'}
+                >
+                  {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
+                </button>
+
+                {/* Close Button */}
+                <button
+                  type="button"
+                  onClick={() => setActivePreviewLink(null)}
+                  className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition-colors"
+                  title="关闭浏览器视窗"
+                >
+                  <X className="w-4 h-4" />
+                </button>
               </div>
             </div>
 
-            <div className="flex items-center gap-2 flex-wrap">
-              <button
-                type="button"
-                onClick={() => setIframeKey((k) => k + 1)}
-                className="p-1.5 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg text-xs flex items-center gap-1 transition-colors"
-                title="重新加载网页"
-              >
-                <RefreshCw className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline text-[11px]">刷新</span>
-              </button>
+            {/* Note Sub-Bar (If available) */}
+            {activePreviewLink.note && (
+              <div className="bg-slate-950/90 px-4 py-2 border-b border-slate-800 flex items-center gap-2 text-xs text-slate-300">
+                <span className="font-bold text-amber-400 flex-shrink-0">📝 笔记备忘:</span>
+                <span className="truncate">{activePreviewLink.note}</span>
+              </div>
+            )}
 
-              <button
-                type="button"
-                onClick={() => handleCopyLink(activePreviewLink.url)}
-                className="p-1.5 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg text-xs flex items-center gap-1 transition-colors"
-                title="复制网页直链"
-              >
-                {copiedUrl ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-                <span className="hidden sm:inline text-[11px]">{copiedUrl ? '已复制' : '复制直链'}</span>
-              </button>
+            {/* Content Area */}
+            <div className="flex-1 overflow-hidden relative flex flex-col items-center justify-center bg-slate-950">
+              
+              {/* ======================================== */}
+              {/* MODE 1: LIVE WEBPAGE BROWSER (BIG SCREEN) */}
+              {/* ======================================== */}
+              {previewTab === 'web' && (
+                <div className="w-full h-full flex flex-col items-center justify-center">
+                  
+                  {/* Cross-Origin Friendly Top Banner */}
+                  <div className="w-full bg-slate-900/90 px-4 py-2 border-b border-slate-800/80 flex items-center justify-between text-[11px] text-slate-300">
+                    <div className="flex items-center gap-2 truncate">
+                      <AlertCircle className="w-3.5 h-3.5 text-amber-400 flex-shrink-0" />
+                      <span className="truncate">
+                        小红书/抖音等移动端页面若被浏览器同源策略限制，可切换至「📸 高清截图」或点击右侧全屏打开。
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 flex-shrink-0">
+                      {activePreviewLink.screenshotUrl && (
+                        <button
+                          type="button"
+                          onClick={() => setPreviewTab('screenshot')}
+                          className="text-emerald-400 hover:underline font-bold"
+                        >
+                          切换到高清截图 ↗
+                        </button>
+                      )}
+                      <a
+                        href={activePreviewLink.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-rose-400 hover:text-rose-300 font-bold underline"
+                      >
+                        在新标签页打开 ↗
+                      </a>
+                    </div>
+                  </div>
 
-              <a
-                href={activePreviewLink.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white rounded-xl text-xs font-bold flex items-center gap-1 shadow-sm transition-all"
-              >
-                <span>在新标签页打开</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
+                  {/* Viewport Frame */}
+                  <div className="flex-1 w-full flex items-center justify-center p-2 sm:p-4 overflow-hidden">
+                    <div 
+                      className={`h-full transition-all duration-300 rounded-2xl overflow-hidden shadow-2xl bg-white flex flex-col ${
+                        deviceMode === 'mobile'
+                          ? 'w-[440px] max-w-full border-4 border-slate-700 ring-4 ring-black/40'
+                          : 'w-full border border-slate-800'
+                      }`}
+                    >
+                      {deviceMode === 'mobile' && (
+                        <div className="bg-slate-900 py-1.5 px-4 flex items-center justify-between text-[10px] text-slate-400 border-b border-slate-800 flex-shrink-0 select-none">
+                          <span>09:41</span>
+                          <span className="w-14 h-3 bg-black rounded-full" />
+                          <span>5G 100%</span>
+                        </div>
+                      )}
+                      <iframe
+                        key={iframeKey}
+                        src={getEmbeddableUrl(activePreviewLink.url, activePreviewLink.platform)}
+                        title={activePreviewLink.title}
+                        className="w-full flex-1 border-0 bg-white"
+                        sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
 
-              <button
-                type="button"
-                onClick={() => setActivePreviewLink(null)}
-                className="p-1.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                title="关闭预览窗口"
-              >
-                <X className="w-4 h-4" />
-              </button>
+              {/* ======================================== */}
+              {/* MODE 2: HIGH-DEFINITION SCREENSHOT VIEWER */}
+              {/* ======================================== */}
+              {previewTab === 'screenshot' && (
+                <div className="w-full h-full flex flex-col">
+                  
+                  {/* Screenshot Toolbar */}
+                  <div className="bg-slate-900/90 px-4 py-2 border-b border-slate-800 flex items-center justify-between text-xs text-slate-300">
+                    <div className="flex items-center gap-2">
+                      <Camera className="w-4 h-4 text-rose-500" />
+                      <span className="font-bold text-white">高清长图 / 笔记快照</span>
+                      <span className="text-[11px] text-slate-500">免登录直接查看</span>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setZoomScale(Math.max(0.5, zoomScale - 0.2))}
+                        className="p-1.5 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors"
+                        title="缩小"
+                      >
+                        <ZoomOut className="w-3.5 h-3.5" />
+                      </button>
+                      <span className="text-xs font-mono font-bold w-12 text-center">
+                        {Math.round(zoomScale * 100)}%
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => setZoomScale(Math.min(3, zoomScale + 0.2))}
+                        className="p-1.5 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors"
+                        title="放大"
+                      >
+                        <ZoomIn className="w-3.5 h-3.5" />
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setZoomScale(1)}
+                        className="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-xs font-bold transition-colors ml-1"
+                      >
+                        复位
+                      </button>
+
+                      {/* Replace Screenshot */}
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setTargetLinkForScreenshot(activePreviewLink.id);
+                          cardFileInputRef.current?.click();
+                        }}
+                        className="px-3 py-1.5 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-xs font-bold flex items-center gap-1 transition-colors ml-2"
+                      >
+                        <Upload className="w-3.5 h-3.5" />
+                        <span>更换截图</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Screenshot Image Container */}
+                  <div className="flex-1 overflow-auto p-4 sm:p-8 flex items-start justify-center">
+                    {activePreviewLink.screenshotUrl ? (
+                      <div 
+                        className="transition-transform duration-200 shadow-2xl rounded-2xl overflow-hidden bg-white max-w-4xl"
+                        style={{ transform: `scale(${zoomScale})`, transformOrigin: 'top center' }}
+                      >
+                        <img
+                          src={activePreviewLink.screenshotUrl}
+                          alt={activePreviewLink.title}
+                          className="w-full h-auto object-contain select-none"
+                        />
+                      </div>
+                    ) : (
+                      <div className="my-auto p-8 text-center bg-slate-900/80 rounded-3xl border border-slate-800 max-w-md space-y-4">
+                        <div className="w-14 h-14 rounded-full bg-rose-500/10 text-rose-400 flex items-center justify-center mx-auto text-2xl">
+                          📸
+                        </div>
+                        <div>
+                          <h4 className="text-base font-bold text-white">尚未为此篇笔记上传截图</h4>
+                          <p className="text-xs text-slate-400 mt-1">
+                            您可截取小红书或手机上的攻略图，直接点击下方按钮上传或粘贴，即可永久保存免登录查看！
+                          </p>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setTargetLinkForScreenshot(activePreviewLink.id);
+                            cardFileInputRef.current?.click();
+                          }}
+                          className="px-5 py-2.5 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs font-bold inline-flex items-center gap-1.5 shadow-md"
+                        >
+                          <Upload className="w-4 h-4" />
+                          <span>立即上传此笔记截图</span>
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
             </div>
-          </div>
-
-          {/* Cross-Origin Friendly Tip Banner */}
-          <div className="flex items-start gap-2 p-2.5 bg-slate-900/90 rounded-xl border border-slate-800 text-[11px] text-slate-300">
-            <AlertCircle className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
-            <div className="flex-1">
-              <span>部分平台（如小红书、抖音、大众点评）因浏览器的同源跨域安全策略，可能会阻止在网页内画中画直接加载。</span>
-              <a
-                href={activePreviewLink.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-rose-400 hover:text-rose-300 font-bold underline ml-1 inline-flex items-center gap-0.5"
-              >
-                点此直接在新标签页全屏打开 ↗
-              </a>
-            </div>
-          </div>
-
-          {/* Iframe Viewport */}
-          <div className="relative w-full h-[540px] sm:h-[620px] rounded-2xl overflow-hidden bg-white shadow-2xl">
-            <iframe
-              key={iframeKey}
-              src={getEmbeddableUrl(activePreviewLink.url, activePreviewLink.platform)}
-              title={activePreviewLink.title}
-              className="w-full h-full border-0 bg-white"
-              sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              loading="lazy"
-            />
           </div>
         </div>
       )}

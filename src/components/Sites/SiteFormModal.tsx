@@ -85,6 +85,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
   const [newSocialTitle, setNewSocialTitle] = useState('');
   const [newSocialAuthor, setNewSocialAuthor] = useState('');
   const [newSocialNote, setNewSocialNote] = useState('');
+  const [newSocialScreenshot, setNewSocialScreenshot] = useState('');
 
   // Search places
   const [geocodingQuery, setGeocodingQuery] = useState('');
@@ -247,6 +248,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       title: newSocialTitle.trim() || `${meta.label} 种草推荐`,
       author: newSocialAuthor.trim() || undefined,
       note: newSocialNote.trim() || undefined,
+      screenshotUrl: newSocialScreenshot.trim() || undefined,
       addedAt: new Date().toISOString().slice(0, 10)
     };
     setSocialMediaLinks([...socialMediaLinks, link]);
@@ -254,6 +256,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
     setNewSocialTitle('');
     setNewSocialAuthor('');
     setNewSocialNote('');
+    setNewSocialScreenshot('');
   };
 
   const handleRemoveSocialLink = (id: string) => {
@@ -951,6 +954,16 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
                   value={newSocialNote}
                   onChange={(e) => setNewSocialNote(e.target.value)}
                   className="sm:col-span-2 text-xs px-3 py-1.5 rounded-xl border border-slate-200 bg-white"
+                />
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  placeholder="截图 / 封面图片 URL (选填，在详情页将优先以高清大图呈现)"
+                  value={newSocialScreenshot}
+                  onChange={(e) => setNewSocialScreenshot(e.target.value)}
+                  className="w-full text-xs px-3 py-1.5 rounded-xl border border-slate-200 bg-white font-mono"
                 />
               </div>
 
