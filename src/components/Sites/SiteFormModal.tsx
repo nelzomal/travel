@@ -1,14 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { Site, SiteCategory, WalkingIntensity, StairsLevel, WeatherSuitability, SocialMediaLink, SocialPlatform } from '../../types/travel';
+import { Site, SiteCategory, WalkingIntensity, StairsLevel, WeatherSuitability, SocialMediaLink, SocialPlatform, Trip } from '../../types/travel';
 import { detectSocialPlatform, getPlatformMeta } from './SocialMediaSection';
-import { X, Search, Plus, Trash2, Check, Loader2 } from 'lucide-react';
+import { 
+  X, Search, Plus, Trash2, Check, Loader2, Sparkles, Bot, 
+  Copy, Download, Wand2, SlidersHorizontal, AlertCircle, CheckCircle2, 
+  Video, RefreshCw, ChevronDown, ChevronUp, MapPin, Eye, FileText 
+} from 'lucide-react';
 import { searchPlaces, GeocodeResult } from '../../services/geocoding';
+import { 
+  generateSiteResearchPrompt, parseLLMReply, getDefaultCustomFields, 
+  CustomFieldDef 
+} from '../../utils/llmSiteResearch';
+import { getSmartCuratedMediaForSite } from '../../utils/photoCurator';
 
 interface SiteFormModalProps {
   initialSite?: Site | null;
   initialCoords?: [number, number] | null;
   initialAddress?: string;
   initialName?: string;
+  trip?: Trip | null;
   isOpen: boolean;
   onClose: () => void;
   onSave: (site: Site) => void;
@@ -19,6 +29,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
   initialCoords,
   initialAddress,
   initialName,
+  trip,
   isOpen,
   onClose,
   onSave
@@ -33,6 +44,8 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
   const [coverImage, setCoverImage] = useState('');
   const [galleryUrls, setGalleryUrls] = useState<string[]>([]);
   const [newGalleryUrl, setNewGalleryUrl] = useState('');
+  const [videos, setVideos] = useState<string[]>([]);
+  const [newVideoUrl, setNewVideoUrl] = useState('');
   const [description, setDescription] = useState('');
 
   // Logistics
@@ -79,6 +92,11 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
   const [newDineFeatures, setNewDineFeatures] = useState('');
   const [newDineWalk, setNewDineWalk] = useState(3);
 
+  // Custom Fields (雨天备选, 门票预约渠道, 停车信息等)
+  const [customFieldsMap, setCustomFieldsMap] = useState<Record<string, string>>({});
+  const [newCustomKey, setNewCustomKey] = useState('');
+  const [newCustomVal, setNewCustomVal] = useState('');
+
   // Social Media Links
   const [socialMediaLinks, setSocialMediaLinks] = useState<SocialMediaLink[]>([]);
   const [newSocialUrl, setNewSocialUrl] = useState('');
@@ -92,6 +110,24 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
   const [geocodeResults, setGeocodeResults] = useState<GeocodeResult[]>([]);
   const [isSearchingGeocode, setIsSearchingGeocode] = useState(false);
 
+  // AI Prompt & AI Reply Assistant States
+  const [aiTab, setAiTab] = useState<'prompt' | 'reply' | 'curate'>('prompt');
+  const [isAiPanelOpen, setIsAiPanelOpen] = useState(true);
+  const [llmReplyText, setLlmReplyText] = useState('');
+  const [copiedPrompt, setCopiedPrompt] = useState(false);
+  const [aiStatus, setAiStatus] = useState<{ success: boolean; message: string } | null>(null);
+  const [showPromptPreview, setShowPromptPreview] = useState(false);
+
+  // Custom prompt fields config
+  const [promptCustomFields, setPromptCustomFields] = useState<CustomFieldDef[]>([]);
+  const [showAddPromptField, setShowAddPromptField] = useState(false);
+  const [newPromptFieldKey, setNewPromptFieldKey] = useState('');
+  const [newPromptFieldLabel, setNewPromptFieldLabel] = useState('');
+
+  const destination = trip?.destination || (city === '大连' ? '中国 · 大连' : '日本');
+  const tripTitle = trip?.title || `${city || destination}慢游之旅`;
+  const isDalian = (city && city.includes('大连')) || destination.includes('大连') || trip?.id === 'trip-dalian-coastal-multigen-2026' || (initialSite?.id && initialSite.id.startsWith('site-dalian-'));
+
   useEffect(() => {
     if (initialSite) {
       setName(initialSite.name);
@@ -103,6 +139,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       setLng(initialSite.coordinates[1]);
       setCoverImage(initialSite.coverImage);
       setGalleryUrls(initialSite.gallery || []);
+      setVideos(initialSite.videos || []);
       setDescription(initialSite.description);
       setRecommendedDurationMin(initialSite.recommendedDurationMin);
       setOpeningHours(initialSite.openingHours);
@@ -123,7 +160,11 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       setAmenities(initialSite.amenities);
       setFamilyTips(initialSite.familyTips || []);
       setNearbyDining(initialSite.nearbyDining || []);
+      setCustomFieldsMap(initialSite.customFields || {});
       setSocialMediaLinks(initialSite.socialMediaLinks || []);
+      setPromptCustomFields(getDefaultCustomFields(destination, Boolean(isDalian)));
+      setAiStatus(null);
+      setLlmReplyText('');
     } else {
       // Reset for new site
       setSocialMediaLinks([]);
@@ -136,6 +177,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       setLng(initialCoords ? initialCoords[1] : 139.6993);
       setCoverImage('https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80');
       setGalleryUrls(['https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80']);
+      setVideos([]);
       setDescription('');
       setRecommendedDurationMin(90);
       setOpeningHours('09:00 - 17:00');
@@ -168,8 +210,12 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       });
       setFamilyTips(['准备便携保温水杯与婴儿车防雨罩。']);
       setNearbyDining([]);
+      setCustomFieldsMap({});
+      setPromptCustomFields(getDefaultCustomFields(destination, Boolean(isDalian)));
+      setAiStatus(null);
+      setLlmReplyText('');
     }
-  }, [initialSite, initialCoords, initialAddress, initialName, isOpen]);
+  }, [initialSite, initialCoords, initialAddress, initialName, isOpen, destination]);
 
   if (!isOpen) return null;
 
@@ -263,6 +309,223 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
     setSocialMediaLinks(socialMediaLinks.filter((s) => s.id !== id));
   };
 
+  const handleAddVideo = () => {
+    if (!newVideoUrl.trim()) return;
+    setVideos([...videos, newVideoUrl.trim()]);
+    setNewVideoUrl('');
+  };
+
+  const handleRemoveVideo = (idx: number) => {
+    setVideos(videos.filter((_, i) => i !== idx));
+  };
+
+  const handleAddCustomFieldEntry = () => {
+    if (!newCustomKey.trim() || !newCustomVal.trim()) return;
+    setCustomFieldsMap({
+      ...customFieldsMap,
+      [newCustomKey.trim()]: newCustomVal.trim()
+    });
+    setNewCustomKey('');
+    setNewCustomVal('');
+  };
+
+  const handleRemoveCustomFieldEntry = (key: string) => {
+    const updated = { ...customFieldsMap };
+    delete updated[key];
+    setCustomFieldsMap(updated);
+  };
+
+  const handleAddPromptCustomField = () => {
+    if (!newPromptFieldLabel.trim()) return;
+    const key = newPromptFieldKey.trim() || `custom_${Date.now()}`;
+    setPromptCustomFields([...promptCustomFields, { key, label: newPromptFieldLabel.trim(), example: '详细调研说明' }]);
+    setNewPromptFieldKey('');
+    setNewPromptFieldLabel('');
+    setShowAddPromptField(false);
+  };
+
+  const handleRemovePromptCustomField = (key: string) => {
+    setPromptCustomFields(promptCustomFields.filter((f) => f.key !== key));
+  };
+
+  const handleResetPromptFields = () => {
+    setPromptCustomFields(getDefaultCustomFields(destination, Boolean(isDalian)));
+  };
+
+  const generatedPrompt = generateSiteResearchPrompt({
+    siteName: name || '待调研景点',
+    localName,
+    city: city || '东京',
+    category,
+    address,
+    trip,
+    customFields: promptCustomFields,
+    siteId: initialSite?.id,
+    existingCoverImage: coverImage
+  });
+
+  const handleCopyPrompt = () => {
+    navigator.clipboard.writeText(generatedPrompt);
+    setCopiedPrompt(true);
+    setTimeout(() => setCopiedPrompt(false), 2500);
+  };
+
+  const handleParseAndApplyReply = async () => {
+    setAiStatus(null);
+    if (!llmReplyText.trim()) {
+      setAiStatus({ success: false, message: '请先粘贴 LLM 的回复内容或 JSON 代码块！' });
+      return;
+    }
+
+    const currentDraft: Partial<Site> = {
+      id: initialSite?.id,
+      name,
+      localName,
+      description,
+      coverImage,
+      gallery: galleryUrls,
+      videos,
+      recommendedDurationMin,
+      openingHours,
+      admissionFee: {
+        adult: adultFee,
+        senior: seniorFee,
+        child4yo: childFee,
+        notes: feeNotes
+      },
+      bestTimeToVisit,
+      weatherSuitability,
+      strollerRating,
+      strollerNotes,
+      kidRating,
+      kidNotes,
+      elderlyRating,
+      elderlyNotes,
+      walkingIntensity,
+      stairsLevel,
+      amenities,
+      familyTips,
+      nearbyDining,
+      customFields: customFieldsMap
+    };
+
+    const result = parseLLMReply(llmReplyText, currentDraft);
+    if (!result.success || !result.data) {
+      setAiStatus({ success: false, message: result.message });
+      return;
+    }
+
+    const d = result.data;
+    if (d.name) setName(d.name);
+    if (d.localName !== undefined) setLocalName(d.localName);
+    if (d.description) setDescription(d.description);
+    if (d.coverImage) setCoverImage(d.coverImage);
+    if (d.gallery && d.gallery.length > 0) setGalleryUrls(d.gallery);
+    if (d.videos && d.videos.length > 0) setVideos(d.videos);
+    if (d.city) setCity(d.city);
+    if (d.address) setAddress(d.address);
+    if (d.coordinates) {
+      setLat(d.coordinates[0]);
+      setLng(d.coordinates[1]);
+    }
+    if (d.recommendedDurationMin) setRecommendedDurationMin(d.recommendedDurationMin);
+    if (d.openingHours) setOpeningHours(d.openingHours);
+    if (d.admissionFee) {
+      if (d.admissionFee.adult) setAdultFee(d.admissionFee.adult);
+      if (d.admissionFee.senior) setSeniorFee(d.admissionFee.senior);
+      if (d.admissionFee.child4yo) setChildFee(d.admissionFee.child4yo);
+      if (d.admissionFee.notes !== undefined) setFeeNotes(d.admissionFee.notes);
+    }
+    if (d.bestTimeToVisit) setBestTimeToVisit(d.bestTimeToVisit);
+    if (d.weatherSuitability) setWeatherSuitability(d.weatherSuitability);
+    if (d.strollerRating) setStrollerRating(d.strollerRating);
+    if (d.strollerNotes) setStrollerNotes(d.strollerNotes);
+    if (d.kidRating) setKidRating(d.kidRating);
+    if (d.kidNotes) setKidNotes(d.kidNotes);
+    if (d.elderlyRating) setElderlyRating(d.elderlyRating);
+    if (d.elderlyNotes) setElderlyNotes(d.elderlyNotes);
+    if (d.walkingIntensity) setWalkingIntensity(d.walkingIntensity);
+    if (d.stairsLevel) setStairsLevel(d.stairsLevel);
+    if (d.amenities) setAmenities(prev => ({ ...prev, ...d.amenities }));
+    if (d.familyTips && d.familyTips.length > 0) setFamilyTips(d.familyTips);
+    if (d.nearbyDining && d.nearbyDining.length > 0) setNearbyDining(d.nearbyDining);
+    if (d.customFields) setCustomFieldsMap(prev => ({ ...prev, ...d.customFields }));
+
+    setAiStatus({
+      success: true,
+      message: `${result.message} 所有信息已自动回填至表单各字段，您可在下方直接核对与按需微调！`
+    });
+
+    const targetQuery = d.name || name;
+    if (targetQuery && (!lat || (lat === 35.6764 && lng === 139.6993 && !city.includes('东京')))) {
+      try {
+        const places = await searchPlaces(targetQuery);
+        if (places && places.length > 0) {
+          const first = places[0];
+          setLat(first.lat);
+          setLng(first.lng);
+          if (first.displayName) setAddress(first.displayName);
+          if (first.address.city || first.address.town || first.address.state) {
+            setCity(first.address.city || first.address.town || first.address.state || city);
+          }
+        }
+      } catch (err) {
+        // silent
+      }
+    }
+  };
+
+  const handleAutoCurate = () => {
+    const targetSiteDraft: Partial<Site> & { name: string } = {
+      id: initialSite?.id,
+      name: name || '',
+      localName,
+      coverImage,
+      gallery: galleryUrls,
+      videos
+    };
+    const curated = getSmartCuratedMediaForSite(targetSiteDraft);
+    if (curated.gallery && curated.gallery.length > 0) {
+      setGalleryUrls(curated.gallery);
+      if (curated.coverImage) setCoverImage(curated.coverImage);
+      if (curated.videos && curated.videos.length > 0) setVideos(curated.videos);
+      setAiStatus({
+        success: true,
+        message: `已自动为「${name || '该景点'}」匹配权威实景图库：填入 ${curated.gallery.length} 张高清实拍相册与 ${curated.videos.length} 部 4K 导览视频！`
+      });
+    } else {
+      setAiStatus({
+        success: false,
+        message: `未在内置实景图库中精确匹配到「${name || '该景点'}」，建议使用「1. 调研提示词」让 AI 生成实拍图片直链！`
+      });
+    }
+  };
+
+  const handleAutoGeocodeByName = async () => {
+    const targetQuery = name.trim();
+    if (!targetQuery) return;
+    setIsSearchingGeocode(true);
+    try {
+      const places = await searchPlaces(targetQuery);
+      if (places && places.length > 0) {
+        handleSelectGeocode(places[0]);
+        setAiStatus({
+          success: true,
+          message: `已成功联网检索并定位「${targetQuery}」：坐标 (${places[0].lat.toFixed(4)}, ${places[0].lng.toFixed(4)})，详细地址已自动回填！`
+        });
+      } else {
+        setAiStatus({
+          success: false,
+          message: `未找到「${targetQuery}」的精确在线坐标，请在上方的搜索框手动输入搜索。`
+        });
+      }
+    } catch (err: any) {
+      setAiStatus({ success: false, message: `检索失败: ${err.message}` });
+    } finally {
+      setIsSearchingGeocode(false);
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim()) return;
@@ -277,6 +540,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       city: city.trim(),
       coverImage: coverImage.trim() || 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80',
       gallery: galleryUrls.length > 0 ? galleryUrls : [coverImage],
+      videos: videos.length > 0 ? videos : undefined,
       description: description.trim() || `${name} (${city})`,
       recommendedDurationMin: Number(recommendedDurationMin),
       openingHours: openingHours.trim(),
@@ -301,6 +565,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       nearbyDining,
       socialMediaLinks,
       customTags: initialSite?.customTags || ['亲子精选'],
+      customFields: Object.keys(customFieldsMap).length > 0 ? customFieldsMap : undefined,
       createdAt: initialSite?.createdAt || new Date().toISOString().slice(0, 10)
     };
 
@@ -380,6 +645,387 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
                     </span>
                   </button>
                 ))}
+              </div>
+            )}
+          </div>
+
+          {/* AI Research & Auto-Fill Assistant Panel */}
+          <div className="rounded-2xl border border-purple-200/90 bg-gradient-to-br from-indigo-50/70 via-purple-50/50 to-pink-50/60 p-4 shadow-sm space-y-3.5">
+            {/* Panel Header */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-b border-purple-200/60 pb-3">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2 bg-gradient-to-tr from-indigo-600 to-purple-600 text-white rounded-xl shadow-xs flex-shrink-0">
+                  <Sparkles className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h3 className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                      <span>AI 智能调研与填单助手</span>
+                      <span className="text-[10px] bg-indigo-100 text-indigo-700 font-bold px-2 py-0.5 rounded-full border border-indigo-200">
+                        AI Prompt &amp; Reply
+                      </span>
+                    </h3>
+                  </div>
+                  <p className="text-[11px] text-slate-500 mt-0.5">
+                    根据当前行程【{tripTitle}】专属定制三代同堂慢游提示词，或粘贴 AI 回复一键自动填满全表单
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-1.5 self-start sm:self-auto">
+                <div className="flex items-center bg-white/90 p-0.5 rounded-xl border border-purple-200 shadow-2xs">
+                  <button
+                    type="button"
+                    onClick={() => { setAiTab('prompt'); setIsAiPanelOpen(true); }}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1 ${
+                      aiTab === 'prompt' && isAiPanelOpen
+                        ? 'bg-indigo-600 text-white shadow-xs'
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    <Copy className="w-3.5 h-3.5" />
+                    <span>1. 调研提示词 (Prompt)</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => { setAiTab('reply'); setIsAiPanelOpen(true); }}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1 ${
+                      aiTab === 'reply' && isAiPanelOpen
+                        ? 'bg-indigo-600 text-white shadow-xs'
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    <span>2. 粘贴回复填单 (Reply)</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => { setAiTab('curate'); setIsAiPanelOpen(true); }}
+                    className={`px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1 ${
+                      aiTab === 'curate' && isAiPanelOpen
+                        ? 'bg-indigo-600 text-white shadow-xs'
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                    title="图库补齐"
+                  >
+                    <Wand2 className="w-3.5 h-3.5" />
+                    <span className="hidden sm:inline">3. 智能图库</span>
+                  </button>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setIsAiPanelOpen(!isAiPanelOpen)}
+                  className="p-1.5 text-slate-400 hover:text-slate-700 bg-white/70 hover:bg-white rounded-lg border border-purple-200 transition-colors"
+                  title={isAiPanelOpen ? '收起 AI 助手' : '展开 AI 助手'}
+                >
+                  {isAiPanelOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                </button>
+              </div>
+            </div>
+
+            {/* Panel Body */}
+            {isAiPanelOpen && (
+              <div className="space-y-3.5 pt-1">
+                
+                {/* TAB 1: AI PROMPT */}
+                {aiTab === 'prompt' && (
+                  <div className="space-y-3 animate-in fade-in duration-150">
+                    {/* Status context pill */}
+                    <div className="flex flex-wrap items-center justify-between gap-2 p-2.5 bg-white/80 rounded-xl border border-purple-100 text-xs">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="font-bold text-slate-700">待调研景点:</span>
+                        <span className="px-2 py-0.5 bg-indigo-50 text-indigo-700 rounded-lg font-bold border border-indigo-200">
+                          {name.trim() || '（尚未输入景点名称）'}
+                        </span>
+                        <span className="text-slate-400">•</span>
+                        <span className="text-slate-500">归属目的地:</span>
+                        <span className="font-bold text-slate-700">{destination}</span>
+                      </div>
+
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full border border-emerald-200 font-semibold flex items-center gap-1">
+                          <span>👶 4岁幼童</span>
+                          <span>+</span>
+                          <span>🧓 65岁长辈</span>
+                        </span>
+                        <span className="text-[10px] bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full border border-purple-200 font-semibold">
+                          8-10实景图 + 4K视频
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Quick input if name is empty */}
+                    {!name.trim() && (
+                      <div className="p-3 bg-amber-50/80 rounded-xl border border-amber-200 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 text-xs">
+                        <div className="flex items-center gap-1.5 text-amber-900 font-semibold">
+                          <span>💡 快速生成：</span>
+                        </div>
+                        <input
+                          type="text"
+                          placeholder="在此处输入待调研景点名称，例如: 明治神宫 / 大连圣亚海洋世界 / 品海楼..."
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
+                          className="flex-1 px-3 py-1.5 bg-white rounded-lg border border-amber-300 text-xs focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                        />
+                        <span className="text-[11px] text-amber-700 hidden sm:inline">输入后将自动定制专属 Prompt</span>
+                      </div>
+                    )}
+
+                    {/* Custom fields configurator toggle */}
+                    <div className="p-3 bg-white/70 rounded-xl border border-purple-100 space-y-2">
+                      <div className="flex items-center justify-between text-xs">
+                        <div className="flex items-center gap-1.5 font-bold text-slate-700">
+                          <SlidersHorizontal className="w-3.5 h-3.5 text-indigo-600" />
+                          <span>自定义扩展调研字段 ({promptCustomFields.length})</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={handleResetPromptFields}
+                            className="text-[11px] text-slate-400 hover:text-slate-600 transition-colors"
+                          >
+                            重置默认
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setShowAddPromptField(!showAddPromptField)}
+                            className="text-[11px] text-indigo-600 hover:text-indigo-800 font-bold flex items-center gap-0.5"
+                          >
+                            <Plus className="w-3 h-3" />
+                            <span>{showAddPromptField ? '收起' : '增加字段'}</span>
+                          </button>
+                        </div>
+                      </div>
+
+                      {showAddPromptField && (
+                        <div className="p-2.5 bg-white rounded-xl border border-indigo-200 shadow-2xs space-y-2">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <input
+                              type="text"
+                              placeholder="显示名称 (如: 📸 最佳拍照机位)"
+                              value={newPromptFieldLabel}
+                              onChange={(e) => setNewPromptFieldLabel(e.target.value)}
+                              className="text-xs px-2.5 py-1.5 rounded-lg border border-slate-300 focus:ring-1 focus:ring-indigo-500 focus:outline-none"
+                            />
+                            <input
+                              type="text"
+                              placeholder="JSON 键名 (如: photoSpots)"
+                              value={newPromptFieldKey}
+                              onChange={(e) => setNewPromptFieldKey(e.target.value)}
+                              className="text-xs px-2.5 py-1.5 rounded-lg border border-slate-300 focus:ring-1 focus:ring-indigo-500 focus:outline-none"
+                            />
+                          </div>
+                          <div className="flex justify-end">
+                            <button
+                              type="button"
+                              onClick={handleAddPromptCustomField}
+                              className="px-3 py-1 bg-indigo-600 text-white rounded-lg text-xs font-bold hover:bg-indigo-700"
+                            >
+                              加入 Prompt
+                            </button>
+                          </div>
+                        </div>
+                      )}
+
+                      <div className="flex flex-wrap gap-1.5">
+                        {promptCustomFields.map((f) => (
+                          <span
+                            key={f.key}
+                            className="inline-flex items-center gap-1 px-2.5 py-1 bg-white rounded-lg border border-slate-200 text-[11px] text-slate-700"
+                          >
+                            <span className="font-semibold">{f.label}</span>
+                            <button
+                              type="button"
+                              onClick={() => handleRemovePromptCustomField(f.key)}
+                              className="text-slate-300 hover:text-rose-600 ml-0.5 transition-colors"
+                            >
+                              ✕
+                            </button>
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Action button & preview */}
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 pt-1">
+                      <div className="text-[11px] text-slate-500 flex items-center gap-1.5">
+                        <FileText className="w-3.5 h-3.5 text-indigo-600" />
+                        <span>提示词已融合：推车平缓度、4岁互动点、长辈休息设施、8-10张实景图与 JSON 代码块</span>
+                      </div>
+
+                      <div className="flex items-center gap-2">
+                        <button
+                          type="button"
+                          onClick={() => setShowPromptPreview(!showPromptPreview)}
+                          className="px-3 py-2 text-xs font-semibold text-slate-600 hover:text-slate-900 bg-white/80 hover:bg-white rounded-xl border border-purple-200 transition-colors flex items-center gap-1"
+                        >
+                          <Eye className="w-3.5 h-3.5" />
+                          <span>{showPromptPreview ? '隐藏预览' : '查看完整 Prompt'}</span>
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={handleCopyPrompt}
+                          className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-sm ${
+                            copiedPrompt
+                              ? 'bg-emerald-600 text-white'
+                              : 'bg-indigo-600 hover:bg-indigo-700 text-white'
+                          }`}
+                        >
+                          {copiedPrompt ? (
+                            <>
+                              <Check className="w-4 h-4" />
+                              <span>已成功复制到剪贴板！</span>
+                            </>
+                          ) : (
+                            <>
+                              <Copy className="w-4 h-4" />
+                              <span>复制完整调研提示词</span>
+                            </>
+                          )}
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Optional Prompt Preview */}
+                    {showPromptPreview && (
+                      <div className="relative pt-1 animate-in fade-in duration-150">
+                        <textarea
+                          readOnly
+                          rows={8}
+                          value={generatedPrompt}
+                          className="w-full p-3 rounded-xl border border-purple-200 bg-white/90 font-mono text-[11px] leading-relaxed text-slate-800 shadow-inner focus:outline-none"
+                        />
+                      </div>
+                    )}
+
+                    <div className="p-2.5 bg-indigo-50/70 rounded-xl border border-indigo-100 text-[11px] text-indigo-900">
+                      💡 <strong>使用流程</strong>：1. 点击「复制完整调研提示词」→ 2. 发送至 ChatGPT / Claude / DeepSeek / Kimi / 豆包 → 3. 复制 AI 的回复，点击上方「2. 粘贴回复填单」一键完成自动填表！
+                    </div>
+                  </div>
+                )}
+
+                {/* TAB 2: AI REPLY */}
+                {aiTab === 'reply' && (
+                  <div className="space-y-3 animate-in fade-in duration-150">
+                    <div className="flex items-center justify-between">
+                      <label className="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                        <Download className="w-3.5 h-3.5 text-indigo-600" />
+                        <span>粘贴 AI 回复内容或 JSON 代码块：</span>
+                      </label>
+                      {llmReplyText && (
+                        <button
+                          type="button"
+                          onClick={() => setLlmReplyText('')}
+                          className="text-[11px] text-slate-400 hover:text-rose-600 transition-colors"
+                        >
+                          清空内容
+                        </button>
+                      )}
+                    </div>
+
+                    <textarea
+                      rows={6}
+                      placeholder="在此处直接粘贴 ChatGPT / Claude / DeepSeek / Kimi / Gemini 等返回的完整回复或包含 ```json ... ``` 的代码块..."
+                      value={llmReplyText}
+                      onChange={(e) => setLlmReplyText(e.target.value)}
+                      className="w-full p-3 rounded-xl border border-purple-200 bg-white text-xs font-mono leading-relaxed focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-inner"
+                    />
+
+                    {/* Status Alert Banner */}
+                    {aiStatus && (
+                      <div
+                        className={`p-3 rounded-xl border text-xs flex items-start gap-2 animate-in fade-in duration-200 ${
+                          aiStatus.success
+                            ? 'bg-emerald-50 border-emerald-200 text-emerald-800'
+                            : 'bg-rose-50 border-rose-200 text-rose-800'
+                        }`}
+                      >
+                        {aiStatus.success ? (
+                          <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
+                        ) : (
+                          <AlertCircle className="w-4 h-4 text-rose-600 flex-shrink-0 mt-0.5" />
+                        )}
+                        <div className="flex-1">
+                          <p className="font-semibold">{aiStatus.message}</p>
+                          {aiStatus.success && name.trim() && (lat === 35.6764 && lng === 139.6993 && !city.includes('东京')) && (
+                            <button
+                              type="button"
+                              onClick={handleAutoGeocodeByName}
+                              disabled={isSearchingGeocode}
+                              className="mt-2 px-3 py-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1 shadow-2xs"
+                            >
+                              <MapPin className="w-3.5 h-3.5" />
+                              <span>联网自动检索并回填「{name}」精确地理坐标与地址</span>
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="flex items-center justify-between pt-1">
+                      <span className="text-[11px] text-slate-500">
+                        系统将自动提取相册、视频、三代同堂评分、避坑贴士、周边美食与无障碍配置
+                      </span>
+
+                      <button
+                        type="button"
+                        onClick={handleParseAndApplyReply}
+                        className="px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-xl text-xs font-bold shadow-md transition-all flex items-center gap-1.5"
+                      >
+                        <RefreshCw className="w-4 h-4" />
+                        <span>✨ 一键解析并回填全表单</span>
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {/* TAB 3: SMART MEDIA CURATOR */}
+                {aiTab === 'curate' && (
+                  <div className="p-3.5 bg-white/80 rounded-xl border border-purple-100 space-y-3 animate-in fade-in duration-150">
+                    <div className="flex items-center justify-between flex-wrap gap-2">
+                      <div>
+                        <h4 className="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                          <Wand2 className="w-4 h-4 text-purple-600" />
+                          <span>一键匹配权威实拍图库与 4K 导览视频</span>
+                        </h4>
+                        <p className="text-[11px] text-slate-500 mt-0.5">
+                          系统内置经权威审核的高清实景相册（8-10张）与沉浸式导览视频，避免 AI 生成失效图片链接
+                        </p>
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={handleAutoCurate}
+                        className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-xl text-xs font-bold shadow-sm transition-all flex items-center gap-1.5"
+                      >
+                        <Wand2 className="w-3.5 h-3.5" />
+                        <span>一键匹配并应用实景图库</span>
+                      </button>
+                    </div>
+
+                    {aiStatus && (
+                      <div
+                        className={`p-2.5 rounded-xl border text-xs flex items-center gap-2 ${
+                          aiStatus.success
+                            ? 'bg-emerald-50 border-emerald-200 text-emerald-800'
+                            : 'bg-amber-50 border-amber-200 text-amber-800'
+                        }`}
+                      >
+                        {aiStatus.success ? (
+                          <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                        ) : (
+                          <AlertCircle className="w-4 h-4 text-amber-600 flex-shrink-0" />
+                        )}
+                        <span>{aiStatus.message}</span>
+                      </div>
+                    )}
+                  </div>
+                )}
+
               </div>
             )}
           </div>
@@ -537,6 +1183,48 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
                         type="button"
                         onClick={() => handleRemoveGalleryUrl(idx)}
                         className="absolute inset-0 bg-red-600/80 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-xs"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* 4K Videos Section */}
+            <div className="pt-3 border-t border-slate-100 space-y-2">
+              <label className="block text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1.5">
+                <Video className="w-3.5 h-3.5 text-rose-600" />
+                <span>4K 视频导览与短片直链 ({videos.length} 部)</span>
+              </label>
+              <div className="flex gap-2 mb-2">
+                <input
+                  type="url"
+                  placeholder="输入 YouTube / Bilibili / MP4 视频直链..."
+                  value={newVideoUrl}
+                  onChange={(e) => setNewVideoUrl(e.target.value)}
+                  className="flex-1 px-3 py-2 rounded-xl text-xs border border-slate-200 font-mono focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+                />
+                <button
+                  type="button"
+                  onClick={handleAddVideo}
+                  className="px-3 py-2 bg-slate-800 text-white rounded-xl text-xs font-semibold hover:bg-slate-900 transition-colors flex items-center gap-1"
+                >
+                  <Plus className="w-3.5 h-3.5" />
+                  添加视频
+                </button>
+              </div>
+
+              {videos.length > 0 && (
+                <div className="space-y-1.5">
+                  {videos.map((vid, idx) => (
+                    <div key={idx} className="p-2 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between text-xs font-mono">
+                      <span className="truncate text-slate-700 pr-2">🎬 {vid}</span>
+                      <button
+                        type="button"
+                        onClick={() => handleRemoveVideo(idx)}
+                        className="text-slate-400 hover:text-rose-600 p-1 flex-shrink-0 font-sans"
                       >
                         ✕
                       </button>
@@ -904,6 +1592,66 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
                       type="button"
                       onClick={() => handleRemoveDining(dine.id)}
                       className="text-slate-400 hover:text-rose-600 p-1"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Section: Custom Research Fields */}
+          <div className="space-y-3 pt-4 border-t border-slate-100">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+                <SlidersHorizontal className="w-3.5 h-3.5 text-indigo-600" />
+                <span>自定义扩展调研字段 ({Object.keys(customFieldsMap).length})</span>
+              </h3>
+              <span className="text-[11px] text-slate-400">如雨天备选、门票预约渠道、停车与上下客动线等</span>
+            </div>
+
+            <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <input
+                  type="text"
+                  placeholder="字段名称 (如: 雨天备选方案)..."
+                  value={newCustomKey}
+                  onChange={(e) => setNewCustomKey(e.target.value)}
+                  className="text-xs px-3 py-1.5 rounded-xl border border-slate-200 bg-white"
+                />
+                <input
+                  type="text"
+                  placeholder="调研内容与建议..."
+                  value={newCustomVal}
+                  onChange={(e) => setNewCustomVal(e.target.value)}
+                  className="sm:col-span-2 text-xs px-3 py-1.5 rounded-xl border border-slate-200 bg-white"
+                />
+              </div>
+              <div className="flex justify-end">
+                <button
+                  type="button"
+                  onClick={handleAddCustomFieldEntry}
+                  className="px-3.5 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded-xl text-xs font-semibold flex items-center gap-1 transition-colors"
+                >
+                  <Plus className="w-3.5 h-3.5" />
+                  添加扩展字段
+                </button>
+              </div>
+            </div>
+
+            {Object.keys(customFieldsMap).length > 0 && (
+              <div className="space-y-1.5">
+                {Object.entries(customFieldsMap).map(([k, v]) => (
+                  <div key={k} className="p-2.5 bg-white rounded-xl border border-slate-200 flex items-start justify-between text-xs gap-2">
+                    <div>
+                      <span className="font-bold text-slate-800">{k}：</span>
+                      <span className="text-slate-600 leading-relaxed">{v}</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => handleRemoveCustomFieldEntry(k)}
+                      className="text-slate-400 hover:text-rose-600 p-1 flex-shrink-0"
                     >
                       ✕
                     </button>

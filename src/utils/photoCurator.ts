@@ -426,13 +426,58 @@ export const CURATED_MEDIA_BANK: Record<string, { gallery: string[]; videos: str
   }
 };
 
-export const getSmartCuratedMediaForSite = (site: Site): { gallery: string[]; videos: string[]; coverImage: string } => {
-  if (CURATED_MEDIA_BANK[site.id]) {
+const SITE_NAME_KEYWORD_MAP: Array<{ keywords: string[]; key: string }> = [
+  { keywords: ['东福寺', 'tofukuji', '東福寺'], key: 'site-tofukuji' },
+  { keywords: ['西本愿寺', 'nishi honganji', '西本願寺'], key: 'site-nishi-honganji' },
+  { keywords: ['永观堂', '禅林寺', 'eikando', '永観堂'], key: 'site-eikando' },
+  { keywords: ['岚山', '渡月桥', '竹林小径', 'arashiyama', '嵐山'], key: 'site-arashiyama-combo' },
+  { keywords: ['伏见稻荷', '千本鸟居', '十石舟', 'fushimi inari', '伏見稲荷'], key: 'site-fushimi-inari-jikkokubune' },
+  { keywords: ['清水寺', '三年坂', '二年坂', '祇园', 'kiyomizu', 'gion'], key: 'site-kiyomizu-gion-walk' },
+  { keywords: ['贵船', '鞍马', '流水素面', 'kifune', 'kurama', '貴船'], key: 'site-kifune-kurama' },
+  { keywords: ['京都铁道', '京都水族馆', '梅小路', 'kyoto railway'], key: 'site-kyoto-railway-aquarium' },
+  { keywords: ['明治神宫', 'meiji jingu', '明治神宮'], key: 'site-meiji-jingu' },
+  { keywords: ['台场', '高达', 'odaiba', 'お台場'], key: 'site-odaiba' },
+  { keywords: ['大涌谷', '箱根', 'owakudani', 'hakone'], key: 'site-hakone-owakudani' },
+  { keywords: ['芦之湖', '海盗船', 'lake ashi', '芦ノ湖'], key: 'site-lake-ashi-cruise' },
+  { keywords: ['富士山', '五合目', '河口湖', 'mount fuji', 'kawaguchiko'], key: 'site-mount-fuji-5th-kawaguchiko' },
+  { keywords: ['葛西临海', 'kasai rinkai', '葛西臨海'], key: 'site-kasai-rinkai-aquarium' },
+  { keywords: ['上野公园', '上野动物园', 'ueno park', 'ueno zoo'], key: 'site-ueno-park-zoo' },
+  { keywords: ['三寰牧场', '三寰', 'sanhuan'], key: 'site-dalian-sanhuan-ranch' },
+  { keywords: ['发现王国', 'discovery kingdom'], key: 'site-dalian-discovery-kingdom' },
+  { keywords: ['金石滩', '地质公园', 'golden pebble'], key: 'site-dalian-golden-pebble-beach' },
+  { keywords: ['自然博物馆', '黑石礁', 'natural history museum'], key: 'site-dalian-natural-history-museum' },
+  { keywords: ['星海湾游艇', '出海喂海鸥', 'yacht'], key: 'site-dalian-yacht-cruise' },
+  { keywords: ['星海广场', '跨海大桥', 'xinghai square'], key: 'site-dalian-xinghai-square' },
+  { keywords: ['森林动物园', '大熊猫', 'forest zoo'], key: 'site-dalian-forest-zoo' },
+  { keywords: ['圣亚', '海底通道', 'sun asia'], key: 'site-dalian-sun-asia-ocean-world' },
+  { keywords: ['老虎滩', '极地馆', 'laohutan'], key: 'site-dalian-laohutan-ocean-park' },
+  { keywords: ['英歌石', '植物园', 'yinggeshi'], key: 'site-dalian-yinggeshi-botanical-garden' },
+  { keywords: ['骆驼山', '赶海', '海滨森林', 'luotuoshan'], key: 'site-dalian-luotuoshan-haibin' },
+  { keywords: ['蛤蜊岛', 'geli island'], key: 'site-dalian-zhuanghe-geli-island' }
+];
+
+export const getSmartCuratedMediaForSite = (site: Partial<Site> & { name?: string }): { gallery: string[]; videos: string[]; coverImage: string; matchedKey?: string } => {
+  if (site.id && CURATED_MEDIA_BANK[site.id]) {
     return {
       gallery: CURATED_MEDIA_BANK[site.id].gallery,
       videos: CURATED_MEDIA_BANK[site.id].videos,
-      coverImage: CURATED_MEDIA_BANK[site.id].cover
+      coverImage: CURATED_MEDIA_BANK[site.id].cover,
+      matchedKey: site.id
     };
+  }
+
+  // Name or keyword match
+  const searchTargets = [site.name, site.localName].filter(Boolean).map(s => (s || '').toLowerCase());
+  for (const item of SITE_NAME_KEYWORD_MAP) {
+    const hasMatch = item.keywords.some(kw => searchTargets.some(target => target.includes(kw.toLowerCase())));
+    if (hasMatch && CURATED_MEDIA_BANK[item.key]) {
+      return {
+        gallery: CURATED_MEDIA_BANK[item.key].gallery,
+        videos: CURATED_MEDIA_BANK[item.key].videos,
+        coverImage: CURATED_MEDIA_BANK[item.key].cover,
+        matchedKey: item.key
+      };
+    }
   }
 
   return {

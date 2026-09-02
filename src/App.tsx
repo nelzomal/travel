@@ -844,6 +844,7 @@ export function App() {
         initialCoords={newSiteCoords}
         initialAddress={newSiteAddress}
         initialName={newSiteName}
+        trip={activeTrip}
         onClose={() => setIsSiteFormOpen(false)}
         onSave={handleSaveSite}
       />

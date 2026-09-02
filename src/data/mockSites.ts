@@ -222,7 +222,58 @@ export const INITIAL_SITES: Site[] = [
       "parkingAndDropoff": "自驾使用北境内地停车场，由花屋町通进出；官方住宿设施标注免费但可能满位，夜间21:30–05:30不能出入，寺院17:00闭门。场内图标有无障碍车位；停车处至阿弥陀堂约120–180米，为地图比例估算，全程基本平缓。出租车可要求在西本愿寺御影堂门寺侧安全落客，下车至门约10–30米且无需爬楼梯；如遇法要交通管制或需轮椅近距离落客，应提前致电075-371-5181确认。"
     },
     "tripId": "trip-japan-grand-multigen-2026",
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-discovery-xhs-four-year-old",
+        "url": "https://www.xiaohongshu.com/explore/6881bee100000000120144a1?xsec_token=ABacWKi7wma3P1H55buqBgc4uNg6QPoTj6XlDDin-ATSw=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "**🌊 带4岁娃勇闯发现王国！1米2以下这么玩",
+        "author": "慢慢即漫漫",
+        "screenshotUrl": "/social-media/dalian-discovery-kingdom/four-year-old.webp",
+        "note": "4岁、约110厘米幼童实测：小火车、飞天小象、旋转木马和室内迷你世界可玩；建议入园先看身高限制、租推车，并现场确认烟花时间。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-discovery-xhs-under-120cm",
+        "url": "https://www.xiaohongshu.com/explore/6a53086a000000000602135b?xsec_token=AB4N_mEnvbpRTRlNx9qra3M9LQ-BsIIGo6s7mZBDwt3lU=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连发现王国|1.2米的娃怎么玩",
+        "author": "咚哩个咚",
+        "screenshotUrl": "/social-media/dalian-discovery-kingdom/under-120cm.webp",
+        "note": "重点解释1.2米上下可玩的项目差异，提醒先查官方电子导游图和当日停运项目，避免到场后大量设施无法体验。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-discovery-xhs-family-day",
+        "url": "https://www.xiaohongshu.com/explore/6a8053ea0000000027021b4d?xsec_token=ABRuXk1rSiEhqcWuUR-0ne8L9B0JOWGfj9q-zHfMvehTw=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连发现王国亲子一日游保姆级攻略",
+        "author": "小盐豆不闲",
+        "screenshotUrl": "/social-media/dalian-discovery-kingdom/family-day.webp",
+        "note": "覆盖亲子温和项目、演出、漂流、摩天轮和烟花；从入口右侧开始较温和，低于1.2米可重点玩迷你世界。演出与开放项目以当日公告为准。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-discovery-xhs-toddler-summer",
+        "url": "https://www.xiaohongshu.com/explore/6a76d648000000002402437c?xsec_token=AB-4jUFThufvg4y1_Z4ptM5lh_BYh8JsJ0TO80LLsMncE=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "本地人不说🤫｜低幼童发现王国夏日攻略🫧",
+        "author": "隔壁王姨",
+        "screenshotUrl": "/social-media/dalian-discovery-kingdom/toddler-summer.webp",
+        "note": "2.5岁低幼夏日半天路线：早玩摩天轮与木马，中午转入有空调的迷你世界，再按天气决定戏水；备换洗衣物和溯溪鞋。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-discovery-xhs-shows-route",
+        "url": "https://www.xiaohongshu.com/explore/69f61f6c000000002301c90e?xsec_token=ABkXIli5EXFkFMPWi_IjsTGHKDoZfwmdw6g-GNJ-QJAu8=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连发现王国省时省力&表演+游玩攻略",
+        "author": "大连王哪跑",
+        "screenshotUrl": "/social-media/dalian-discovery-kingdom/shows-route.webp",
+        "note": "按园区环线串联低幼项目、彩车、真人特技、奥特曼互动和夜间烟花的样板时间表；实际演出场次每天可能变化，入园先取当日地图。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-eikando",
@@ -328,7 +379,58 @@ export const INITIAL_SITES: Site[] = [
       "parkingAndDropoff": "普通季节寺内允许停车但车位很少；总门至售票/大玄关按地图比例约150–200米，以缓坡参道为主、无需爬楼梯，但含石板或砂砾。行动困难者宜事先致电075-761-0007询问能否靠近寺务所下客。2026年11月11日–12月6日私家车及多数观光巴士禁止驶入。自驾可停冈崎公园地下停车场，但距寺约1.4公里；轮椅或推车必须停有电梯的B1，不要停无电梯的B2。三代同行最佳方案是包车总门下客、司机外围停车、结束后预约接回。"
     },
     "tripId": "trip-japan-grand-multigen-2026",
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-golden-xhs-gates-overview",
+        "url": "https://www.xiaohongshu.com/explore/6a5877a2000000001400798d?xsec_token=ABR14RYTKHLxAE6UPGcSMsVhm3txZMMricR6-cp7sd81E=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "💙金石滩黄金海岸1-7号门全攻略|治愈🌊",
+        "author": "诗淇",
+        "screenshotUrl": "/social-media/dalian-golden-pebble-beach/gates-overview.webp",
+        "note": "对比黄金海岸1至7号门的沙质、人流、水上项目和赶海点；低幼家庭优先细沙较多的6、7号门，赶海必须另查当天潮汐。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-golden-xhs-toddler-gates",
+        "url": "https://www.xiaohongshu.com/explore/6a85c4000000000025000955?xsec_token=ABoV0ab2q8_nMkKt_N98evTKVqX_XWBpX-g3k9VLAnVQo=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "🏖️十里黄金海岸1-7号门全解析｜带娃必",
+        "author": "小芽在成长🌱",
+        "screenshotUrl": "/social-media/dalian-golden-pebble-beach/toddler-gates.webp",
+        "note": "详细列出各入口停车、卫生间、冲脚与沙滩特点；0至3岁和老人休闲优先7号门，首次到访且需要餐饮配套可选3号门。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-golden-xhs-family-day",
+        "url": "https://www.xiaohongshu.com/explore/6a74b617000000002202f539?xsec_token=ABE5RUHjG0yXKGb2ZwQapf2rdC1N7STiBjNdKkwTIwejI=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连金石滩保姆级带娃攻略🌊2026最新｜不",
+        "author": "拾光小栈民宿",
+        "screenshotUrl": "/social-media/dalian-golden-pebble-beach/family-day.webp",
+        "note": "地质公园、黄金海岸、赶海与日落的一日轻松亲子线，并提供暴晒或雨天转室内场馆的替代思路；票价和开放时间需核实。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-golden-xhs-geopark-route",
+        "url": "https://www.xiaohongshu.com/explore/6a70af3400000000320327c6?xsec_token=ABWlOhrhXCagzXUShyLTZZ-T4lnFdMcqyAn95hITJVIII=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连金石滩地质公园攻略",
+        "author": "余涪🍊",
+        "screenshotUrl": "/social-media/dalian-golden-pebble-beach/geopark-route.webp",
+        "note": "地质公园交通、徒步路线和主要海蚀景观点位；沿线台阶较多且园内餐饮有限，需穿防滑鞋、自带水和简餐。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-golden-xhs-tickets-shuttle",
+        "url": "https://www.xiaohongshu.com/explore/6a2bf30800000000220168e6?xsec_token=ABAK6lS1G0Lie5Zeol6cQAB4F1pjBBpXsS2d16YgbuKDk=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连 | 金石滩一日游，买票坐车一篇讲清楚",
+        "author": "🐯芝芝恬恬",
+        "screenshotUrl": "/social-media/dalian-golden-pebble-beach/tickets-shuttle.webp",
+        "note": "携老带小实测地质公园加快乐海岸，讲清游客中心购票、旅游大巴与园内接驳车；地质公园台阶多，不适合推车。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-arashiyama-combo",
@@ -436,7 +538,58 @@ export const INITIAL_SITES: Site[] = [
       "parkingAndDropoff": "最省力的包车下客点是JR嵯峨嵐山站南口或トロッコ嵯峨站前，步行至小火车入口约30-80米，站内可走缓坡并使用多功能厕所，不必经过トロッコ嵐山站的60级台阶。トロッコ嵯峨、嵐山和保津峡站没有专用停车场；渡月桥旁的京都市嵐山观光停车场或レストラン嵐山停车场较近，但旺季可能涨价、限流或优先接待旅游巴士。レストラン嵐山停车场距渡月桥约0-100米，距竹林约15分钟步行，旅游巴士可预约，单纯上下客亦可能收费。保津川下亀冈乘船场设约80个免费车位，停车场与乘船场在同一场地，通常步行不足100米且无需长距离爬楼梯；但轮椅乘客必须能在协助下转移到船上座位，轮椅只能折叠后放在船尾。自驾车辆不会随船运到岚山，船抵达后必须乘JR、小火车或出租车返回亀冈取车，因此三代出行更适合包车在亀冈送客、岚山另约车辆接客。猴子公园山顶无车辆道路，出租车只能在渡月桥南岸或附近公共道路下客，之后仍需步行约200-400米到入口并完成约20分钟陡坡和台阶，无法做到无障碍直达。樱花与红叶旺季渡月桥周边可能实施临时单行、禁行或停车限制，应让司机在外围合法下客并避免穿越核心拥堵区。"
     },
     "tripId": "trip-japan-grand-multigen-2026",
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-ranch-xhs-day-plan",
+        "url": "https://www.xiaohongshu.com/explore/68cfe544000000001301244a?xsec_token=ABfH_rPqHLyDDEg3s02z8Ri4v61twQqBfvZ6ISm479wWY=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "三寰牧场 超适合带娃的露营地🏕️",
+        "author": "乔乔",
+        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/day-plan.webp",
+        "note": "4至6小时亲子一日方案，覆盖动物互动、迷宫、野餐和返程电瓶车；表演、接驳车与开放时间有季节变化，出发前向园方确认。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-ranch-xhs-weekend-family",
+        "url": "https://www.xiaohongshu.com/explore/68bd8f12000000001d0176d6?xsec_token=ABddhY3tyDluDKVklkEFp-N2OyiMvFFNEdRldmqZxSx4w=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "周末遛娃好去处-🏕️三寰牧场",
+        "author": "一个圆圆贝果",
+        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/weekend-family.webp",
+        "note": "周末露营实测：去程步行、回程上坡乘摆渡车更省力；帐篷选树荫并避开羊圈，幼童投喂时成人要扶住食物。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-ranch-xhs-mom-tips",
+        "url": "https://www.xiaohongshu.com/explore/684fc8e6000000002202cd90?xsec_token=ABdU0tt_tzL2jr72-66u48lWfi17SwBWmlxgzAQtT7GgE=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连宝妈必藏！三寰牧场撒欢遛娃天花板",
+        "author": "米乐麻麻吖",
+        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/mom-tips.webp",
+        "note": "多次带娃后的省力建议：装备多可提前租露营车，主路平坦但牧区石子路较多，轻便推车更合适；周末注意错峰和防晒。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-ranch-xhs-activities",
+        "url": "https://www.xiaohongshu.com/explore/6814b92e00000000210024e8?xsec_token=AB6hdYTeAqQX34MvIPv41jMdKEuX-OXBrImDlDuFuvhEU=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连遛娃｜被这片森林牧场治愈啦",
+        "author": "菠萝的莉",
+        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/activities.webp",
+        "note": "萌宠投喂、免费儿童乐园、收费丛林项目、小火车和农作物认知路线；需穿运动鞋，收费项目和投喂规则以现场为准。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-ranch-xhs-photo-guide",
+        "url": "https://www.xiaohongshu.com/explore/68e1fc52000000000401398c?xsec_token=ABvBeAZxZukY6phQJ877d4LeeINdeRaXnTbqRgoBcjL-o=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连也有自己的阿勒泰！三寰牧场出片攻略",
+        "author": "一只糯仔",
+        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/photo-guide.webp",
+        "note": "下午放牧、草坪露营和亲子活动的拍照攻略；门口到大草坪步行约20分钟，长辈或幼童可考虑电瓶车或代步车。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-fushimi-inari-jikkokubune",
@@ -541,7 +694,58 @@ export const INITIAL_SITES: Site[] = [
       "parkingAndDropoff": "伏见稻荷建议包车定位JR稻荷站或表参道，正常情况下下车至第一鸟居约30-80米、基本平坦无楼梯；拥堵或交通管制时可能需步行100-300米。社内参拜停车场道路极拥堵，12月30日至1月6日关闭。十石舟建议在月桂冠大仓纪念馆附近下车，至受付及河岸台阶入口约80-150米；最后一段必须下台阶且没有直梯。十石舟无专用停车场，月桂冠车位仅供入馆客人；伏见港公园约200个车位，但至乘船场约需步行10-15分钟。"
     },
     "tripId": "trip-japan-grand-multigen-2026",
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-yacht-xhs-seagull-prices",
+        "url": "https://www.xiaohongshu.com/explore/69f699a6000000001f007e70?xsec_token=ABkXIli5EXFkFMPWi_IjsTGI-rP6vTDWVTHO6i8Z-wsLQ=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "星海广场坐船喂海鸥攻略，狂省75",
+        "author": "【海上游大连】特价船票",
+        "screenshotUrl": "/social-media/dalian-yacht-cruise/seagull-prices.webp",
+        "note": "对比星海广场两处码头的帆船、游艇与快艇航时和报价；属于商家笔记，仅用于询价参考，必须现场确认船只、航线、总价与保险。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yacht-xhs-safety-checklist",
+        "url": "https://www.xiaohongshu.com/explore/6a5d88110000000014007bb8?xsec_token=ABsV_5ks6nktTHh4LshSjiV-i9sAVyCNx1ERixv_tUqGI=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "🚢 游艇出海避雷指南",
+        "author": "非西",
+        "screenshotUrl": "/social-media/dalian-yacht-cruise/safety-checklist.webp",
+        "note": "通用出海核对清单：天气海况、平底防滑鞋、防晒、预约、包含项目与改期规则；带老人和幼童应优先短航线、救生衣和稳定船型。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yacht-xhs-solicitor-warning",
+        "url": "https://www.xiaohongshu.com/explore/6a654fc1000000000503bc5c?xsec_token=ABVgJw3YbyOTSVPh7rhcu7lONyJ7iActX9JXivrsJYIFc=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连星海广场大避雷！包船出海全是套",
+        "author": "哈哈哈哈哈",
+        "screenshotUrl": "/social-media/dalian-yacht-cruise/solicitor-warning.webp",
+        "note": "星海广场现场揽客的真实纠纷案例：口头承诺缩水并出现额外拍照收费。不要向流动揽客付款，所有航线、接送、时长和附加费用须写清并留凭证。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yacht-xhs-sailboat-seagulls",
+        "url": "https://www.xiaohongshu.com/explore/683faffd000000002101ad75?xsec_token=AB4zv6ZZHiZd0xrwOzqZerwSSj7W4yBe2GK-51rwb-Bj0=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连必做浪漫事🌊｜星海广场喂海鸥&坐帆船，",
+        "author": "威🌟",
+        "screenshotUrl": "/social-media/dalian-yacht-cruise/sailboat-seagulls.webp",
+        "note": "岸上喂海鸥加短程帆船的体验参考；帆船相对平稳、快艇更易湿身。不要直接手喂，幼童全程坐稳并按船员要求穿救生衣。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yacht-xhs-toddler-sea-fishing",
+        "url": "https://www.xiaohongshu.com/explore/691d3d5b000000001f00b057?xsec_token=ABJzO6wNR2EJ2kNDGQRH_-mKygnqRYZXJ3YBVJXky_SPg=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连 海钓｜带2岁宝贝乘风破浪去啦🎣",
+        "author": "啦啦噜🍃",
+        "screenshotUrl": "/social-media/dalian-yacht-cruise/toddler-sea-fishing.webp",
+        "note": "带2岁幼童全天海钓与船上近距离看海鸥的实测，提醒选择正规船长、降低上鱼预期；幼童是否适合应以当天海况和救生设备为先。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-kiyomizu-gion-walk",
@@ -647,7 +851,58 @@ export const INITIAL_SITES: Site[] = [
       "parkingAndDropoff": "清水寺没有自有停车场。京都市清水坂观光停车场距寺院直线约500米，实际约500-700米持续上坡；茶碗坂可避开主要石阶但仍较陡。正门前道路08:00-19:00限制普通车辆，出租车实际下客点会随管制变化，通常距仁王门约100-300米。真正使用轮椅者可由车辆经茶碗坂防灾道路接近本堂，建议提前致电075-551-1234确认并让司机在入口说明。自驾停车位在旺季可能限制私家车；长辈怕坡时推荐包车分段接送，并将八坂神社下客点指定为常磐新殿停车场侧。"
     },
     "tripId": "trip-japan-grand-multigen-2026",
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-sun-asia-xhs-efficient-route",
+        "url": "https://www.xiaohongshu.com/explore/688c456f0000000023027575?xsec_token=ABtKwhXDoRj9P6iw_-nL4omju2vik9pajsmIGEBoXqJB4=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连圣亚海洋世界｜带娃高效游 走心攻略～",
+        "author": "一只小乐仔呀",
+        "screenshotUrl": "/social-media/dalian-sun-asia/efficient-route.webp",
+        "note": "早到后按极地、海洋、珊瑚、银河的顺序卡表演，适合半天高效游；馆内温度低需带薄外套，表演时间须查当天官方公告。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-sun-asia-xhs-summer-guide",
+        "url": "https://www.xiaohongshu.com/explore/6a633b73000000001002a5ae?xsec_token=ABca131cwXDCa4_eudqBJauKgDhFpGONtADZdkF6AjK_o=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连亲子游｜圣亚海洋馆暑期保姆级攻略❗️❗️",
+        "author": "Fu💫乐乐",
+        "screenshotUrl": "/social-media/dalian-sun-asia/summer-guide.webp",
+        "note": "四馆亮点、交通和暑期错峰建议；优先安排海洋馆与极地馆表演，再穿插静态馆，旺季可开馆即到或午后错峰。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-sun-asia-xhs-elderly-comparison",
+        "url": "https://www.xiaohongshu.com/explore/6a92b7120000000024006e94?xsec_token=ABXgg-XEM2GpuEelHfnJs47O8NdpfY-jPthpepAzK58vM=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "圣亚和老虎滩哪个适合老人带娃过来人告诉你",
+        "author": "小芽在成长🌱",
+        "screenshotUrl": "/social-media/dalian-sun-asia/elderly-comparison.webp",
+        "note": "对比圣亚和老虎滩：腿脚一般的长辈、低龄娃和推车家庭优先圣亚，半天即可；含少走回头路路线和保暖、证件提示。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-sun-asia-xhs-september-schedule",
+        "url": "https://www.xiaohongshu.com/explore/6a9632ce000000002700a9b8?xsec_token=ABCOXTWEypCNC4T9hRS7i0T6CBbhm7zhHyy3FgNJoU6fs=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连圣亚海洋世界9月四馆9点入园详细攻略",
+        "author": "大连旅游推荐官",
+        "screenshotUrl": "/social-media/dalian-sun-asia/september-schedule.webp",
+        "note": "按最新发帖时段编排白鲸、海狮、海豚三场表演与四馆动线；每馆通常只能进一次，实际开馆和表演时间必须当日复核。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-sun-asia-xhs-toddler-guide",
+        "url": "https://www.xiaohongshu.com/explore/6a8c38a8000000001402a46b?xsec_token=AB_G-DO2QbEEy0orufxZza405lf2myoVxF0lMtFyxKboI=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "22个月逛大连圣亚海洋世界保姆攻略",
+        "author": "小可妈妈的早教笔记",
+        "screenshotUrl": "/social-media/dalian-sun-asia/toddler-guide.webp",
+        "note": "22个月幼儿实测四馆和表演，海底隧道与动态演出足够吸引小月龄；建议进门拍表演表、按宝宝状态排馆，并注意每馆单次进入规则。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-kifune-kurama",
@@ -751,7 +1006,58 @@ export const INITIAL_SITES: Site[] = [
       "parkingAndDropoff": "出租车通常可在贵船本宫鸟居或对面餐厅附近短暂停靠，距石阶底部约0-50米，但拜殿仍需爬约80余级石阶。贵船官方停车场仅本宫8辆、奥宫10辆，¥1,000/2小时，不提供普通车预约；夏季部分日期会限制普通车北行，出租车和路线路巴士通常豁免。鞍马寺无自有停车场，宜在鞍马站或仁王门附近下客，至仁王门约200-300米、步行3-5分钟。自驾道路极窄，优先包车、出租车或餐厅接送。"
     },
     "tripId": "trip-japan-grand-multigen-2026",
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-laohutan-xhs-full-guide",
+        "url": "https://www.xiaohongshu.com/explore/6a72d4d10000000025009553?xsec_token=ABBKAifCdscQKdNkYzHpvCPhoZPNG9Ws2GNT6BFBA0HzI=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "🔥大连老虎滩保姆级攻略✨",
+        "author": "小红薯带您玩转大连",
+        "screenshotUrl": "/social-media/dalian-laohutan/full-guide.webp",
+        "note": "五馆、海景与演出的完整路线；旺季优先公交、开园早到，室外防晒而室内备薄外套。所有演出场次以当天公告为准。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-laohutan-xhs-family-guide",
+        "url": "https://www.xiaohongshu.com/explore/6a841bb700000000350158ff?xsec_token=ABIFVTIHZIES0Gi2Mhms-BVjHOHnVes9HVTVdhvi5NqlE=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连老虎滩海洋公园｜亲子保姆级攻略",
+        "author": "魏伴左右",
+        "screenshotUrl": "/social-media/dalian-laohutan/family-guide.webp",
+        "note": "带娃实测先租或自带童车、领地图与表演表，串联极地馆、欢乐剧场、沙滩、海兽馆和鸟语林；付费投喂按需选择。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-laohutan-xhs-four-hour-route",
+        "url": "https://www.xiaohongshu.com/explore/6a544c8000000000160241e0?xsec_token=ABIfjnCu0gwP3vMatDkonhdaMQdzUAVbuWaCD-UDTkzw4=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连遛娃省时攻略，老虎滩4小时精简游玩路线",
+        "author": "小红薯6A548207",
+        "screenshotUrl": "/social-media/dalian-laohutan/four-hour-route.webp",
+        "note": "4小时精简路线：珊瑚馆、极地馆、欢乐剧场、海兽馆、鸟语林；极地表演提前占位，露天剧场准备遮阳或防雨。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-laohutan-xhs-real-experience",
+        "url": "https://www.xiaohongshu.com/explore/6a596c6e000000001302eb10?xsec_token=AB2H2fAQg1RAsVZKtvIh_RVi1Jq_3c3Ub9Xbz3FIP0dOA=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "太原亲子在大连丨Day3 老虎滩，踩坑？",
+        "author": "冰糖有点咸",
+        "screenshotUrl": "/social-media/dalian-laohutan/real-experience.webp",
+        "note": "展示带娃行程易被沙滩、表演和额外船票打乱的真实情况；不要预付过多组合项目，应保留取舍空间，索道对省力帮助有限。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-laohutan-xhs-bird-park",
+        "url": "https://www.xiaohongshu.com/explore/6a69b0c1000000000f017768?xsec_token=ABVfr0mgPMLGWU1XyibGeXF3bfc0mzRrEmcHeHZJbWy9Y=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "2026大连老虎滩|鸟语林游玩攻略附演出时间",
+        "author": "大林林的旅行",
+        "screenshotUrl": "/social-media/dalian-laohutan/bird-park.webp",
+        "note": "鸟语林适合放最后，步行免费但上坡坑洼、推车颠簸；索道更适合体力弱者。禽鸟表演受天气影响，场次与停运时间必须复核。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-kyoto-railway-aquarium",
@@ -884,7 +1190,58 @@ export const INITIAL_SITES: Site[] = [
       }
     ],
     "tripId": "trip-japan-grand-multigen-2026",
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-yinggeshi-xhs-flower-guide",
+        "url": "https://www.xiaohongshu.com/explore/69a38fbf000000000e03fc7e?xsec_token=ABgsZ0DMvyIQ3rCxBHuxmFyjqj1WJ0NWAV4VrfBzhN-WA=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连的莫奈花园｜英歌石花海太美啦！（附攻略）",
+        "author": "Cicci的旅行",
+        "screenshotUrl": "/social-media/dalian-yinggeshi/flower-guide.webp",
+        "note": "芝樱、郁金香和海棠花期实拍，含停车、园内代步车、露营与儿童乐园信息；花期、票价和开放日期需按当年官方公告确认。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yinggeshi-xhs-baby-guide",
+        "url": "https://www.xiaohongshu.com/explore/69fb248d000000002301fbaf?xsec_token=ABPUZhIdWhe0GnlIaM2Jm_kEIAIc07QDC5suPPg-jSS7E=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "🌷10月龄宝宝闯入油画世界 英歌石植物园",
+        "author": "Max.",
+        "screenshotUrl": "/social-media/dalian-yinggeshi/baby-guide.webp",
+        "note": "10月龄宝宝的推车、草坪爬行和拍照经验；主路可推车但花田有坡道，准备隔汗巾、驱蚊液并避开正午强光。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yinggeshi-xhs-parents-guide",
+        "url": "https://www.xiaohongshu.com/explore/69f71dbb000000003501f69f?xsec_token=ABaeRpaJPuv0Y7heS4T3mygxACWZYSvXzjSf9tpmt5oU0=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "答应我！五一一定要带爸妈来英歌石一次🌷",
+        "author": "Day Day Up",
+        "screenshotUrl": "/social-media/dalian-yinggeshi/parents-guide.webp",
+        "note": "带父母赏花的轻松体验，园内观光车可减少步行；节假日客流大，长辈同行优先工作日或早场错峰。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yinggeshi-xhs-family-day",
+        "url": "https://www.xiaohongshu.com/explore/69f542b5000000002003ac9c?xsec_token=ABs37rXNuqnNhne4YviYga1d2GGo-Vyl_c-LxGzXkZgIQ=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "带着家人大连英歌石一日游",
+        "author": "冒泡泡的鱼儿",
+        "screenshotUrl": "/social-media/dalian-yinggeshi/family-day.webp",
+        "note": "5大1小家庭慢游：先在草坪搭帐篷作为休息基地，再分段赏花和遛娃；建议自驾、早到、带推车与简餐。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yinggeshi-xhs-walking-reality",
+        "url": "https://www.xiaohongshu.com/explore/6a353b8e0000000015025b87?xsec_token=ABp1Sc_PK_VgQSXAYB2rqjMj1QgFPXdnSgN7BVupyqtf0=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "带娃来英歌石植物园怒走万步",
+        "author": "兔妈妈系打工人",
+        "screenshotUrl": "/social-media/dalian-yinggeshi/walking-reality.webp",
+        "note": "提醒植物园虽适合三代赏花、露营和儿童乐园，但完整游览步数很高；应精简花区、使用观光车并随时回休息点。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-meiji-jingu",
@@ -2022,7 +2379,58 @@ export const INITIAL_SITES: Site[] = [
       "ticketBookingTip": "普通工作日不必抢票，但暑期周末、五一、国庆和烟花活动日建议提前2-3天在官方微信小程序或正规平台实名购票，携带每位购票人的身份证原件。电子票通常可刷身份证入园，部分低价票购买后约2小时才生效。未查到普通长者、轮椅或婴儿车家庭的常设免排队绿色通道；发现王国度假酒店门票套餐可提供专属入口、约提前10分钟入园、部分指定项目优速通及两日多次入园。",
       "parkingAndDropoff": "园区停车场约1138个泊位，参考收费小车10元/次、中大型车15元/次，15分钟内离场免费。停车位至主入口通常步行约3-5分钟、约200-400米；官方未公布网约车落客点到闸机的准确米数，按现有动线估算约100-300米。入口区域主要为硬质平坦路面，无需攀爬长楼梯；建议先让长辈和孩子在入口广场附近下车，再由一名成人停车。导航应选择发现王国主题公园主入口或停车场，不要只导航到金石滩站。"
     },
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-discovery-kingdom-xhs-four-year-old",
+        "url": "https://www.xiaohongshu.com/explore/6881bee100000000120144a1?xsec_token=ABacWKi7wma3P1H55buqBgc4uNg6QPoTj6XlDDin-ATSw=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "**🌊 带4岁娃勇闯发现王国！1米2以下这么玩",
+        "author": "慢慢即漫漫",
+        "screenshotUrl": "/social-media/dalian-discovery-kingdom/four-year-old.webp",
+        "note": "4岁低幼儿童可玩项目清单；身高限制和演出时间以园区当日公告为准。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-discovery-kingdom-xhs-under-120cm",
+        "url": "https://www.xiaohongshu.com/explore/6a53086a000000000602135b?xsec_token=AB4N_mEnvbpRTRlNx9qra3M9LQ-BsIIGo6s7mZBDwt3lU=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连发现王国|1.2米的娃怎么玩",
+        "author": "咚哩个咚",
+        "screenshotUrl": "/social-media/dalian-discovery-kingdom/under-120cm.webp",
+        "note": "按1.2米左右身高筛选项目，先查官方地图和当天停运信息。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-discovery-kingdom-xhs-family-day",
+        "url": "https://www.xiaohongshu.com/explore/6a8053ea0000000027021b4d?xsec_token=ABRuXk1rSiEhqcWuUR-0ne8L9B0JOWGfj9q-zHfMvehTw=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连发现王国亲子一日游保姆级攻略",
+        "author": "小盐豆不闲",
+        "screenshotUrl": "/social-media/dalian-discovery-kingdom/family-day.webp",
+        "note": "亲子一日项目、表演与烟花安排；高温天注意补水并核实场次。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-discovery-kingdom-xhs-toddler-summer",
+        "url": "https://www.xiaohongshu.com/explore/6a76d648000000002402437c?xsec_token=AB-4jUFThufvg4y1_Z4ptM5lh_BYh8JsJ0TO80LLsMncE=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "本地人不说🤫｜低幼童发现王国夏日攻略🫧",
+        "author": "隔壁王姨",
+        "screenshotUrl": "/social-media/dalian-discovery-kingdom/toddler-summer.webp",
+        "note": "低幼儿童半日清凉路线；戏水区状态及开放时间需当天确认。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-discovery-kingdom-xhs-shows-route",
+        "url": "https://www.xiaohongshu.com/explore/69f61f6c000000002301c90e?xsec_token=ABkXIli5EXFkFMPWi_IjsTGHKDoZfwmdw6g-GNJ-QJAu8=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连发现王国省时省力&表演+游玩攻略",
+        "author": "大连王哪跑",
+        "screenshotUrl": "/social-media/dalian-discovery-kingdom/shows-route.webp",
+        "note": "表演与游乐项目省力环线；场次、项目及烟花均以当日公告为准。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-dalian-golden-pebble-beach",
@@ -2154,7 +2562,58 @@ export const INITIAL_SITES: Site[] = [
       "ticketBookingTip": "黄金海岸免费且不预约。地质公园无需抢票，当前线上渠道支持当日电子票；普通成人提前购票可减少售票窗口排队。免费儿童和70岁以上长者需带身份证或户口簿，通常仍需人工核验。未查到长者、推车专属绿色通道；节假日建议08:20到场。恶劣天气当天先致电0411-87900497确认是否开放。",
       "parkingAndDropoff": "地质公园有恐龙探海停车场和恐龙背停车场：恐龙探海停车场较宽敞，但到售票处约步行10分钟；恐龙背停车场位于公园内部，到售票及检票口约1分钟，是三代家庭首选，但旺季可能限制车辆进入。包车或网约车应定位“大连滨海国家地质公园核心景区/恐龙背停车场”，并让司机现场确认放行。快乐海岸停车场就在海滩旁，正规下客区到主入口约50-150米，入口广场无长距离楼梯，但沙滩本身不适合普通轮椅或小轮婴儿车。"
     },
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-golden-pebble-xhs-gates-overview",
+        "url": "https://www.xiaohongshu.com/explore/6a5877a2000000001400798d?xsec_token=ABR14RYTKHLxAE6UPGcSMsVhm3txZMMricR6-cp7sd81E=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "💙金石滩黄金海岸1-7号门全攻略|治愈🌊",
+        "author": "诗淇",
+        "screenshotUrl": "/social-media/dalian-golden-pebble-beach/gates-overview.webp",
+        "note": "比较黄金海岸各入口的沙质、设施和人流，收费与开放设施需现场确认。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-golden-pebble-xhs-toddler-gates",
+        "url": "https://www.xiaohongshu.com/explore/6a85c4000000000025000955?xsec_token=ABoV0ab2q8_nMkKt_N98evTKVqX_XWBpX-g3k9VLAnVQo=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "🏖️十里黄金海岸1-7号门全解析｜带娃必",
+        "author": "小芽在成长🌱",
+        "screenshotUrl": "/social-media/dalian-golden-pebble-beach/toddler-gates.webp",
+        "note": "面向低幼儿童比较各入口；海况、潮汐和露营规则应当天复核。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-golden-pebble-xhs-family-day",
+        "url": "https://www.xiaohongshu.com/explore/6a74b617000000002202f539?xsec_token=ABE5RUHjG0yXKGb2ZwQapf2rdC1N7STiBjNdKkwTIwejI=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连金石滩保姆级带娃攻略🌊2026最新｜不",
+        "author": "拾光小栈民宿",
+        "screenshotUrl": "/social-media/dalian-golden-pebble-beach/family-day.webp",
+        "note": "整合海滩、赶海和地质公园玩法；赶海必须查潮汐并穿防滑鞋。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-golden-pebble-xhs-geopark-route",
+        "url": "https://www.xiaohongshu.com/explore/6a70af3400000000320327c6?xsec_token=ABWlOhrhXCagzXUShyLTZZ-T4lnFdMcqyAn95hITJVIII=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连金石滩地质公园攻略",
+        "author": "余涪🍊",
+        "screenshotUrl": "/social-media/dalian-golden-pebble-beach/geopark-route.webp",
+        "note": "地质公园徒步路线参考；台阶较多，维修及开放状态先查官方。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-golden-pebble-xhs-tickets-shuttle",
+        "url": "https://www.xiaohongshu.com/explore/6a2bf30800000000220168e6?xsec_token=ABAK6lS1G0Lie5Zeol6cQAB4F1pjBBpXsS2d16YgbuKDk=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连 | 金石滩一日游，买票坐车一篇讲清楚",
+        "author": "🐯芝芝恬恬",
+        "screenshotUrl": "/social-media/dalian-golden-pebble-beach/tickets-shuttle.webp",
+        "note": "携老带小的一日路线；价格、末班车及优惠证件以当天公告为准。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-dalian-natural-history-museum",
@@ -2280,7 +2739,58 @@ export const INITIAL_SITES: Site[] = [
       "ticketBookingTip": "当前没有有效售票或预约入口，无需抢票，也不要购买仍展示旧价格的旅行社产品。未找到牧场对长者、轮椅或婴儿车游客提供优先绿色通道的正式承诺。复开后先致电0411-86186999或0411-86186888确认开放日期、动物项目、观光车和无障碍服务，再从园方公布渠道购票。",
       "parkingAndDropoff": "改造前南门和北门均有地面停车场，社会车辆不能进入游览区。南门距离大草坪较近、坡路更少，更适合长者和推车家庭。官方未公布停车位至闸机的精确米数，不能可靠承诺固定距离；入口实拍显示主要为铺装通道，没有必须连续爬楼的记录。当前闭园期间停车场和上下客区不保证开放。"
     },
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-sanhuan-ranch-xhs-day-plan",
+        "url": "https://www.xiaohongshu.com/explore/68cfe544000000001301244a?xsec_token=ABfH_rPqHLyDDEg3s02z8Ri4v61twQqBfvZ6ISm479wWY=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "三寰牧场 超适合带娃的露营地🏕️",
+        "author": "乔乔",
+        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/day-plan.webp",
+        "note": "三寰牧场半日至一日玩法；票价、表演和接驳班次需当天确认。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-sanhuan-ranch-xhs-weekend-family",
+        "url": "https://www.xiaohongshu.com/explore/68bd8f12000000001d0176d6?xsec_token=ABddhY3tyDluDKVklkEFp-N2OyiMvFFNEdRldmqZxSx4w=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "周末遛娃好去处-🏕️三寰牧场",
+        "author": "一个圆圆贝果",
+        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/weekend-family.webp",
+        "note": "周末亲子露营与投喂实测；注意动物互动安全，返程量力乘摆渡车。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-sanhuan-ranch-xhs-mom-tips",
+        "url": "https://www.xiaohongshu.com/explore/684fc8e6000000002202cd90?xsec_token=ABdU0tt_tzL2jr72-66u48lWfi17SwBWmlxgzAQtT7GgE=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连宝妈必藏！三寰牧场撒欢遛娃天花板",
+        "author": "米乐麻麻吖",
+        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/mom-tips.webp",
+        "note": "省力准备、租车和帐篷选址建议；第三方租赁及票价须自行核实。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-sanhuan-ranch-xhs-activities",
+        "url": "https://www.xiaohongshu.com/explore/6814b92e00000000210024e8?xsec_token=AB6hdYTeAqQX34MvIPv41jMdKEuX-OXBrImDlDuFuvhEU=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连遛娃｜被这片森林牧场治愈啦",
+        "author": "菠萝的莉",
+        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/activities.webp",
+        "note": "萌宠、儿童设施和林间步道组合；收费、宠物及露营规则以园区为准。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-sanhuan-ranch-xhs-photo-guide",
+        "url": "https://www.xiaohongshu.com/explore/68e1fc52000000000401398c?xsec_token=ABvBeAZxZukY6phQJ877d4LeeINdeRaXnTbqRgoBcjL-o=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连也有自己的阿勒泰！三寰牧场出片攻略",
+        "author": "一只糯仔",
+        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/photo-guide.webp",
+        "note": "下午放牧与拍照攻略；带长辈可考虑电瓶车并核实运营。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-dalian-yacht-cruise",
@@ -2413,7 +2923,58 @@ export const INITIAL_SITES: Site[] = [
       "ticketBookingTip": "无需在独立官网抢票，通常通过微信小程序或抖音搜索“海上游大连”，也可在游客中心购票。三代家庭建议至少提前1天联系，锁定大帆船/双体船、09:00-10:30船期、儿童尺码救生衣及老人陪同要求；所有乘客携带有效证件，免费儿童仍须申报并占核载人数。没有可核实的长者或推车绿色通道，旺季提前30-40分钟核销即可。出发当日早晨再次确认风浪、能见度和是否停航。",
       "parkingAndDropoff": "打车或包车直接导航“海上游大连·星海湾游艇港3号码头”，备用定位为“星海湾游艇码头游客服务中心、中山路西段638号、圣亚海洋世界正门西南侧”。车辆尽量在游客中心或码头入口落客，通常再步行约50-200米至候船区、约100-300米至浮桥；最后一段不能乘车且有引桥坡度、台阶或跨缝。自驾优先圣亚海洋世界立体停车场，再步行约5-8分钟；次选中山路638号星海公园公共停车场。节假日先让长辈和孩子落客，再由一名成人停车，避免全家从远端车位步行。"
     },
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-yacht-cruise-xhs-seagull-prices",
+        "url": "https://www.xiaohongshu.com/explore/69f699a6000000001f007e70?xsec_token=ABkXIli5EXFkFMPWi_IjsTGI-rP6vTDWVTHO6i8Z-wsLQ=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "星海广场坐船喂海鸥攻略，狂省75",
+        "author": "【海上游大连】特价船票",
+        "screenshotUrl": "/social-media/dalian-yacht-cruise/seagull-prices.webp",
+        "note": "经营者报价只作比价线索；须确认资质、保险、航线、时长和退改。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yacht-cruise-xhs-safety-checklist",
+        "url": "https://www.xiaohongshu.com/explore/6a5d88110000000014007bb8?xsec_token=ABsV_5ks6nktTHh4LshSjiV-i9sAVyCNx1ERixv_tUqGI=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "🚢 游艇出海避雷指南",
+        "author": "非西",
+        "screenshotUrl": "/social-media/dalian-yacht-cruise/safety-checklist.webp",
+        "note": "天气、防晒、防滑和预约清单；安全以海事及船方要求为准。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yacht-cruise-xhs-solicitor-warning",
+        "url": "https://www.xiaohongshu.com/explore/6a654fc1000000000503bc5c?xsec_token=ABVgJw3YbyOTSVPh7rhcu7lONyJ7iActX9JXivrsJYIFc=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连星海广场大避雷！包船出海全是套",
+        "author": "哈哈哈哈哈",
+        "screenshotUrl": "/social-media/dalian-yacht-cruise/solicitor-warning.webp",
+        "note": "游客讲述口头承诺缩水；拒绝现场揽客并保留船牌与付款凭证。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yacht-cruise-xhs-sailboat-seagulls",
+        "url": "https://www.xiaohongshu.com/explore/683faffd000000002101ad75?xsec_token=AB4zv6ZZHiZd0xrwOzqZerwSSj7W4yBe2GK-51rwb-Bj0=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连必做浪漫事🌊｜星海广场喂海鸥&坐帆船，",
+        "author": "威🌟",
+        "screenshotUrl": "/social-media/dalian-yacht-cruise/sailboat-seagulls.webp",
+        "note": "帆船喂海鸥体验参考；儿童全程穿救生衣并由成人看护。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yacht-cruise-xhs-toddler-sea-fishing",
+        "url": "https://www.xiaohongshu.com/explore/691d3d5b000000001f00b057?xsec_token=ABJzO6wNR2EJ2kNDGQRH_-mKygnqRYZXJ3YBVJXky_SPg=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连 海钓｜带2岁宝贝乘风破浪去啦🎣",
+        "author": "啦啦噜🍃",
+        "screenshotUrl": "/social-media/dalian-yacht-cruise/toddler-sea-fishing.webp",
+        "note": "带2岁幼童海钓经历；先评估晕船、天气、救生衣和船方资质。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-dalian-xinghai-square",
@@ -2881,7 +3442,58 @@ export const INITIAL_SITES: Site[] = [
       "ticketBookingTip": "普通工作日无需抢票，可在官方小程序或可信OTA提前购买电子票；周末、暑期和法定假日建议提前1天。携带所有老人和儿童年龄证件，入园前打开二维码。公开资料没有承诺长者或推车家庭优先绿色通道，可向工作人员申请使用无障碍电梯和剧场无障碍席位。每个馆通常限进入一次，演出提前15-25分钟候场。",
       "parkingAndDropoff": "导航设为大连圣亚海洋世界游客中心、圣亚海洋世界立体停车场或企鹅酒店一侧，通常由中山路经星雨街/连山街进入。立体停车场地图标注距景点约120米，企鹅酒店停车入口约187米。包车宜先在游客中心一侧落客再停车，落客区至入口约50-120米、以平整铺装为主，无需连续爬楼梯；节假日可能封控连山街转向或停车饱和，届时优先打车直达并听从现场交警安排。"
     },
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-sun-asia-xhs-efficient-route",
+        "url": "https://www.xiaohongshu.com/explore/6a7433860000000028000cdc?xsec_token=ABE5RUHjG0yXKGb2ZwQapf2jrpGAjtNq970xlQgAVStYA=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连圣亚海洋世界游玩建议",
+        "author": "小_迷糊",
+        "screenshotUrl": "/social-media/dalian-sun-asia/efficient-route.webp",
+        "note": "四馆、表演与停车的家庭实测；特殊入馆安排必须先向园方确认。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-sun-asia-xhs-summer-guide",
+        "url": "https://www.xiaohongshu.com/explore/6a633b73000000001002a5ae?xsec_token=ABca131cwXDCa4_eudqBJauKgDhFpGONtADZdkF6AjK_o=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连亲子游｜圣亚海洋馆暑期保姆级攻略❗️❗️",
+        "author": "Fu💫乐乐",
+        "screenshotUrl": "/social-media/dalian-sun-asia/summer-guide.webp",
+        "note": "暑期四馆亲子动线；票价、演出和营业时间查看官方当日信息。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-sun-asia-xhs-elderly-comparison",
+        "url": "https://www.xiaohongshu.com/explore/6a92b7120000000024006e94?xsec_token=ABXgg-XEM2GpuEelHfnJs47O8NdpfY-jPthpepAzK58vM=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "圣亚和老虎滩哪个适合老人带娃过来人告诉你",
+        "author": "小芽在成长🌱",
+        "screenshotUrl": "/social-media/dalian-sun-asia/elderly-comparison.webp",
+        "note": "从长辈与婴儿车角度比较两园；无障碍条件和演出内容需确认。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-sun-asia-xhs-september-schedule",
+        "url": "https://www.xiaohongshu.com/explore/6a9632ce000000002700a9b8?xsec_token=ABCOXTWEypCNC4T9hRS7i0T6CBbhm7zhHyy3FgNJoU6fs=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连圣亚海洋世界9月四馆9点入园详细攻略",
+        "author": "大连旅游推荐官",
+        "screenshotUrl": "/social-media/dalian-sun-asia/september-schedule.webp",
+        "note": "9月表演排程样例；场次变化快，出发当天以官方表为准。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-sun-asia-xhs-toddler-guide",
+        "url": "https://www.xiaohongshu.com/explore/6a8c38a8000000001402a46b?xsec_token=AB_G-DO2QbEEy0orufxZza405lf2myoVxF0lMtFyxKboI=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "22个月逛大连圣亚海洋世界保姆攻略",
+        "author": "小可妈妈的早教笔记",
+        "screenshotUrl": "/social-media/dalian-sun-asia/toddler-guide.webp",
+        "note": "22个月幼童的四馆体验；重复入馆、票价与演出以园方说明为准。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-dalian-laohutan-ocean-park",
@@ -3015,7 +3627,58 @@ export const INITIAL_SITES: Site[] = [
       "ticketBookingTip": "普通工作日通常不需抢票，暑假、周末和法定假期建议提前1天通过官方微信公众号实名购票，携带所有成人、长者及儿童身份证明。电子票可减少售票窗口等待，但不能跳过安检、各馆入口或表演排队。未查到园方承诺的长者/童车通用优先通道；轮椅游客到场后向服务中心询问无障碍入口及工作人员协助。避免购买要求门口集合统一入园的低价团队票。",
       "parkingAndDropoff": "包车或打车导航至“大连老虎滩海洋公园正门/虎雕广场”，在交通管理允许时于广场外平坦道路下客，通常无需先爬长楼梯；公开地图未公布上下客点至闸机的精确米数。自驾可选地上或地下停车场，地下停车场公开参考约1000个车位、约10元/小时；携轮椅或童车先确认无障碍电梯位置。若行程以鸟语林结束，可提前预约司机到鸟语林停车场侧接回，避免折返主入口。"
     },
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-laohutan-xhs-full-guide",
+        "url": "https://www.xiaohongshu.com/explore/6a72d4d10000000025009553?xsec_token=ABBKAifCdscQKdNkYzHpvCPhoZPNG9Ws2GNT6BFBA0HzI=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "🔥大连老虎滩保姆级攻略✨",
+        "author": "小红薯带您玩转大连",
+        "screenshotUrl": "/social-media/dalian-laohutan/full-guide.webp",
+        "note": "五馆路线与装备总览；表演及闭馆时间以官方当天公告为准。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-laohutan-xhs-family-guide",
+        "url": "https://www.xiaohongshu.com/explore/6a841bb700000000350158ff?xsec_token=ABIFVTIHZIES0Gi2Mhms-BVjHOHnVes9HVTVdhvi5NqlE=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连老虎滩海洋公园｜亲子保姆级攻略",
+        "author": "魏伴左右",
+        "screenshotUrl": "/social-media/dalian-laohutan/family-guide.webp",
+        "note": "亲子顺游、童车和休息点参考；先拿当日地图再按孩子节奏调整。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-laohutan-xhs-four-hour-route",
+        "url": "https://www.xiaohongshu.com/explore/6a544c8000000000160241e0?xsec_token=ABIfjnCu0gwP3vMatDkonhdaMQdzUAVbuWaCD-UDTkzw4=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连遛娃省时攻略，老虎滩4小时精简游玩路线",
+        "author": "小红薯6A548207",
+        "screenshotUrl": "/social-media/dalian-laohutan/four-hour-route.webp",
+        "note": "四小时精简路线；鸟语林仍需额外步行，长辈和幼童不要硬赶。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-laohutan-xhs-real-experience",
+        "url": "https://www.xiaohongshu.com/explore/6a596c6e000000001302eb10?xsec_token=AB2H2fAQg1RAsVZKtvIh_RVi1Jq_3c3Ub9Xbz3FIP0dOA=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "太原亲子在大连丨Day3 老虎滩，踩坑？",
+        "author": "冰糖有点咸",
+        "screenshotUrl": "/social-media/dalian-laohutan/real-experience.webp",
+        "note": "亲子实游反思索道与附加项目，避免一次购买过多组合项目。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-laohutan-xhs-bird-park",
+        "url": "https://www.xiaohongshu.com/explore/6a69b0c1000000000f017768?xsec_token=ABVfr0mgPMLGWU1XyibGeXF3bfc0mzRrEmcHeHZJbWy9Y=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "2026大连老虎滩|鸟语林游玩攻略附演出时间",
+        "author": "大林林的旅行",
+        "screenshotUrl": "/social-media/dalian-laohutan/bird-park.webp",
+        "note": "鸟语林步行与索道选择；坡路较多，票价、天气和场次需当天核实。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-dalian-yinggeshi-botanical-garden",
@@ -3140,7 +3803,58 @@ export const INITIAL_SITES: Site[] = [
       "ticketBookingTip": "未发现必须提前抢官网名额的制度，OTA通常可当天购票，但部分电子票仍需到售票处换票，因此不能保证完全免排队。旺季建议前一晚购买可退款产品，07:30前后到达。儿童免票及70岁以上半价人员携带有效证件原件。没有查到景区设置长者或婴儿车专用绿色通道。",
       "parkingAndDropoff": "2025年交警资料显示园区内部4个停车场约335个车位，北侧燕山基地另有700余个免费溢出泊位。内部停车位最省力；外围停车区可能需步行约600米以上。出租车或包车应明确导航至英歌石植物园正门售票处下客，先放下长辈、孩子和照护者再停车。入口实拍为地面层，未见必须爬楼梯，但官方没有公布精确下客点米数和无障碍坡道参数。"
     },
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-yinggeshi-xhs-flower-guide",
+        "url": "https://www.xiaohongshu.com/explore/69a38fbf000000000e03fc7e?xsec_token=ABgsZ0DMvyIQ3rCxBHuxmFyjqj1WJ0NWAV4VrfBzhN-WA=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连的莫奈花园｜英歌石花海太美啦！（附攻略）",
+        "author": "Cicci的旅行",
+        "screenshotUrl": "/social-media/dalian-yinggeshi/flower-guide.webp",
+        "note": "花期、票价、露营和电动车参考；当日花况与开放区须查园方。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yinggeshi-xhs-baby-guide",
+        "url": "https://www.xiaohongshu.com/explore/69fb248d000000002301fbaf?xsec_token=ABPUZhIdWhe0GnlIaM2Jm_kEIAIc07QDC5suPPg-jSS7E=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "🌷10月龄宝宝闯入油画世界 英歌石植物园",
+        "author": "Max.",
+        "screenshotUrl": "/social-media/dalian-yinggeshi/baby-guide.webp",
+        "note": "小月龄宝宝与推车体验；注意坡道、防晒驱虫并避免误食花草。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yinggeshi-xhs-parents-guide",
+        "url": "https://www.xiaohongshu.com/explore/69f71dbb000000003501f69f?xsec_token=ABaeRpaJPuv0Y7heS4T3mygxACWZYSvXzjSf9tpmt5oU0=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "答应我！五一一定要带爸妈来英歌石一次🌷",
+        "author": "Day Day Up",
+        "screenshotUrl": "/social-media/dalian-yinggeshi/parents-guide.webp",
+        "note": "带爸妈赏花的省力体验；观光车运营、线路和费用需当天确认。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yinggeshi-xhs-family-day",
+        "url": "https://www.xiaohongshu.com/explore/69f542b5000000002003ac9c?xsec_token=ABs37rXNuqnNhne4YviYga1d2GGo-Vyl_c-LxGzXkZgIQ=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "带着家人大连英歌石一日游",
+        "author": "冒泡泡的鱼儿",
+        "screenshotUrl": "/social-media/dalian-yinggeshi/family-day.webp",
+        "note": "家庭慢游与帐篷休息思路；携长辈幼童应预留休息并核实露营规则。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-yinggeshi-xhs-walking-reality",
+        "url": "https://www.xiaohongshu.com/explore/6a353b8e0000000015025b87?xsec_token=ABp1Sc_PK_VgQSXAYB2rqjMj1QgFPXdnSgN7BVupyqtf0=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "带娃来英歌石植物园怒走万步",
+        "author": "兔妈妈系打工人",
+        "screenshotUrl": "/social-media/dalian-yinggeshi/walking-reality.webp",
+        "note": "带娃实测步数较多；降低打卡密度，花期和开放区域以现场为准。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-dalian-luotuoshan-haibin",
@@ -3270,7 +3984,58 @@ export const INITIAL_SITES: Site[] = [
       "ticketBookingTip": "自然岸线没有统一官网预约或抢票要求，也没有可靠的长者/推车绿色通道。旺季拥堵主要发生在停车、餐饮和水上项目。不要购买来源不明的所谓骆驼山门票；付费前确认收费究竟对应停车、浴场设施还是娱乐项目。",
       "parkingAndDropoff": "没有统一主入口，因此无法提供可靠的固定下车距离。直接导航景点名可能到荒地；三代同行优先定位八仙岛旅游度假区或大魏村龙凤滩，并提前索取当日停车定位。司机应先在坚实平地让长辈和孩子下车，再去停车；从停车位到海滩仍可能经过软沙，无法保证无台阶或有无障碍坡道。包车应约定原地等候，不建议现场临时叫返程车。"
     },
-    "socialMediaLinks": []
+    "socialMediaLinks": [
+      {
+        "id": "social-luotuoshan-xhs-free-secret",
+        "url": "https://www.xiaohongshu.com/explore/6a8511960000000005028b26?xsec_token=ABoV0ab2q8_nMkKt_N98evTF2sz3zwLDzCr43dncNg9rE=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连1.5h直达免费秘境✨亿年排石赶海看日落",
+        "author": "大拿",
+        "screenshotUrl": "/social-media/dalian-luotuoshan/free-secret.webp",
+        "note": "排石赶海与日落攻略；悬崖无护栏、礁石湿滑，必须查潮汐并穿防滑鞋。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-luotuoshan-xhs-tidepool-stay",
+        "url": "https://www.xiaohongshu.com/explore/6a86d332000000002402ee1c?xsec_token=ABZJm8O-mflNWIjO32nl2cNr3ySrVhAYe5s-3fzcf30K4=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连你还有多少惊喜是俺不知道的（赶海版）",
+        "author": "快乐小付-",
+        "screenshotUrl": "/social-media/dalian-luotuoshan/tidepool-stay.webp",
+        "note": "以附近住宿串联赶海、灯塔和排石日落；住宿加工及定位需逐项核实。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-luotuoshan-xhs-tuoshan-coast",
+        "url": "https://www.xiaohongshu.com/explore/66a045d5000000000d00c84f?xsec_token=ABEqUZD3x6h98T5RHCn_Gwhx0rcElJmMctVyeSXkYcnUA=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "瓦房店驼山乡这个海边来过吗？",
+        "author": "普兰店丫丫",
+        "screenshotUrl": "/social-media/dalian-luotuoshan/tuoshan-coast.webp",
+        "note": "驼山乡原始海岸画面参考；海况、露营许可和精确落客点需另行确认。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-luotuoshan-xhs-wafangdian-day",
+        "url": "https://www.xiaohongshu.com/explore/69fd7f86000000003701dbf6?xsec_token=ABS6BIUjL67149yQWS0stiupBxuuTCmjYy_84JCP2-yjU=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连瓦房店一日游✨打工人出逃全攻略",
+        "author": "十点钟睡觉的桃子小姐",
+        "screenshotUrl": "/social-media/dalian-luotuoshan/wafangdian-day.webp",
+        "note": "瓦房店自驾日程；路线较长，赶海须查潮汐并控制长辈体力。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-luotuoshan-xhs-tidepool-sand",
+        "url": "https://www.xiaohongshu.com/explore/6a71abe30000000032022809?xsec_token=ABqcnBbbD6IlyixAAx6HN9R5IB-1si5D5GRtpb3QBAjn0=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "瓦房店赶海、挖沙🏖️",
+        "author": "圆圆逛吃记",
+        "screenshotUrl": "/social-media/dalian-luotuoshan/tidepool-sand.webp",
+        "note": "短实拍定位信息较弱；只作画面参考，另核实精确位置和潮汐。",
+        "addedAt": "2026-09-01"
+      }
+    ]
   },
   {
     "id": "site-dalian-zhuanghe-geli-island",
@@ -3415,14 +4180,54 @@ export const INITIAL_SITES: Site[] = [
         "screenshotUrl": "https://www.dlzh.gov.cn/admin/module/NewsEdit/attached/image/20200714/20200714162723_9842.jpg"
       },
       {
-        "id": "social-geli-2",
-        "url": "https://www.xiaohongshu.com/explore",
+        "id": "social-geli-xhs-overview",
+        "url": "https://www.xiaohongshu.com/explore/6a2a499f0000000015024155?xsec_token=ABDw_ShrTWlZswVvQrlTkofI1y0y5g47vLsf2w5wW2a9k=&xsec_source=",
         "platform": "xiaohongshu",
-        "title": "小红书妈妈分享：蛤蜊岛带4岁娃赶海最省力的一日线",
-        "author": "@大连亲子遛娃记",
-        "note": "一定要给老人孩子带包脚防滑涉水鞋，贝壳碎片较锋利；挖出来的蛤蜊去岛上渔家小院加工，鲜美极了！",
-        "addedAt": "2026-08-31",
-        "screenshotUrl": "https://www.dlzh.gov.cn/admin/module/NewsEdit/attached/image/20200714/20200714162747_8435.jpg"
+        "title": "辽南离陆地最近的岛屿🏝️蛤蜊岛",
+        "author": "刘小七很佛系🍵",
+        "screenshotUrl": "/social-media/dalian-geli-island/overview.webp",
+        "note": "自驾上岛、景点顺序和赶海装备的完整参考；门票、优惠与开放时间必须向景区核实，赶海先查潮汐并在涨潮前撤离。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-geli-xhs-hidden-costs",
+        "url": "https://www.xiaohongshu.com/explore/6a742e5500000000280039ca?xsec_token=ABE5RUHjG0yXKGb2ZwQapf2kPqlacKQmvan6sPbmn26s4=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连庄河蛤蜊岛很好，再也不来了",
+        "author": "Re",
+        "screenshotUrl": "/social-media/dalian-geli-island/hidden-costs.webp",
+        "note": "游客对门票和帐篷等二次消费的负面实测；价格属于个人当次经历，适合提醒入场前逐项问清收费与更衣淋浴位置。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-geli-xhs-island-views",
+        "url": "https://www.xiaohongshu.com/explore/6a0ae6bd0000000038035a1b?xsec_token=ABQNSrQEFegdRICcA3xu5yx-EVOCvIFBBbKn0_5YoHdDM=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "庄河蛤蜊岛我来啦！！！",
+        "author": "糯米和年糕",
+        "screenshotUrl": "/social-media/dalian-geli-island/island-views.webp",
+        "note": "跨海连岛与海岸景观的短视频画面参考，实操信息较少；用于预览环境，门票、餐饮和当天海况需另行核实。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-geli-xhs-tidepool-day",
+        "url": "https://www.xiaohongshu.com/explore/6a7c3da600000000060073e0?xsec_token=ABJLupwzmge61H63eJdni1cnQkfS6qBZN8usnRNI6LNHw=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "沉浸式感受在庄河蛤蜊岛赶海的一天",
+        "author": "糯米和年糕",
+        "screenshotUrl": "/social-media/dalian-geli-island/tidepool-day.webp",
+        "note": "赶海当天的现场实拍，可观察滩涂和收获类型；出发前必须另查庄河潮汐，幼童穿包脚防滑鞋并远离涨潮水线。",
+        "addedAt": "2026-09-01"
+      },
+      {
+        "id": "social-geli-xhs-family-drive",
+        "url": "https://www.xiaohongshu.com/explore/681cb4230000000020029334?xsec_token=ABk6pkM84CpfSQamUhA9P8QvswFCSc8gFWxrpQymTu_qA=&xsec_source=",
+        "platform": "xiaohongshu",
+        "title": "大连庄河市内海边+蛤蜊岛",
+        "author": "Christina",
+        "screenshotUrl": "/social-media/dalian-geli-island/family-drive.webp",
+        "note": "亲子自驾上岛、沙滩捡贝壳与庄河周边组合路线；车辆不要驶入松软沙地，岛内收费和道路状态需当天确认。",
+        "addedAt": "2026-09-01"
       }
     ]
   }
