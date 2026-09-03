@@ -137,6 +137,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
   // Social media research options
   const [enableSocialResearch, setEnableSocialResearch] = useState(true);
   const [socialPlatforms, setSocialPlatforms] = useState<('xiaohongshu' | 'bilibili')[]>(['xiaohongshu', 'bilibili']);
+  const [quickPromptName, setQuickPromptName] = useState('');
 
   const destination = trip?.destination || (city === '大连' ? '中国 · 大连' : '日本');
   const tripTitle = trip?.title || `${city || destination}慢游之旅`;
@@ -179,10 +180,12 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       setPromptCustomFields(getDefaultCustomFields(destination, Boolean(isDalian)));
       setAiStatus(null);
       setLlmReplyText('');
+      setQuickPromptName(initialSite.name);
     } else {
       // Reset for new site
       setSocialMediaLinks([]);
       setName(initialName || '');
+      setQuickPromptName(initialName || '');
       setLocalName('');
       setCity(defaultCity);
       setAddress(initialAddress || defaultAddress);
@@ -243,6 +246,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
 
   const handleSelectGeocode = (res: GeocodeResult) => {
     setName(res.name);
+    setQuickPromptName(res.name);
     setAddress(res.displayName);
     setLat(res.lat);
     setLng(res.lng);
@@ -435,7 +439,10 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
     const resolvedCity = d.city || (isTargetDalian ? '大连' : defaultCity);
     const resolvedAddress = d.address || (isTargetDalian ? (address && !address.includes('东京') && !address.includes('日本') ? address : '中国 辽宁省 大连市') : defaultAddress);
 
-    if (d.name) setName(d.name);
+    if (d.name) {
+      setName(d.name);
+      setQuickPromptName(d.name);
+    }
     if (d.localName !== undefined) setLocalName(d.localName);
     if (d.description) setDescription(d.description);
     if (d.coverImage) setCoverImage(d.coverImage);
@@ -796,22 +803,42 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
                       </div>
                     </div>
 
-                    {/* Quick input if name is empty */}
-                    {!name.trim() && (
-                      <div className="p-3 bg-amber-50/80 rounded-xl border border-amber-200 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 text-xs">
-                        <div className="flex items-center gap-1.5 text-amber-900 font-semibold">
-                          <span>💡 快速生成：</span>
-                        </div>
+                    {/* Quick input for research prompt */}
+                    <div className="p-3 bg-amber-50/80 rounded-xl border border-amber-200 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 text-xs">
+                      <div className="flex items-center gap-1.5 text-amber-900 font-semibold flex-shrink-0">
+                        <span>💡 快速生成：</span>
+                      </div>
+                      <div className="flex-1 flex items-center gap-2">
                         <input
                           type="text"
-                          placeholder="在此处输入待调研景点名称，例如: 明治神宫 / 大连圣亚海洋世界 / 品海楼..."
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
+                          placeholder="输入待调研景点名称，按回车键定制专属 Prompt (例如: 莲花山海达索道 / 圣亚海洋世界)..."
+                          value={quickPromptName}
+                          onChange={(e) => setQuickPromptName(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              if (quickPromptName.trim()) {
+                                setName(quickPromptName.trim());
+                              }
+                            }
+                          }}
                           className="flex-1 px-3 py-1.5 bg-white rounded-lg border border-amber-300 text-xs focus:ring-2 focus:ring-amber-500 focus:outline-none"
                         />
-                        <span className="text-[11px] text-amber-700 hidden sm:inline">输入后将自动定制专属 Prompt</span>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            if (quickPromptName.trim()) {
+                              setName(quickPromptName.trim());
+                            }
+                          }}
+                          className="px-3 py-1.5 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-lg text-xs flex-shrink-0 transition-colors shadow-2xs cursor-pointer flex items-center gap-1"
+                        >
+                          <span>确认生成</span>
+                          <span className="text-[10px] opacity-80">(Enter ↵)</span>
+                        </button>
                       </div>
-                    )}
+                    </div>
 
                     {/* Social Media Research Configurator */}
                     <div className="p-3 bg-white/70 rounded-xl border border-purple-100 space-y-2">
@@ -1141,7 +1168,10 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
                   type="text"
                   required
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                    setQuickPromptName(e.target.value);
+                  }}
                   placeholder="例如: 明治神宫 / 台场海滨公园"
                   className="w-full px-3 py-2 rounded-xl text-xs border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
                 />
