@@ -3317,6 +3317,101 @@
     ]
   },
   {
+    "id": "site-dalian-haida-cableway",
+    "name": "海达索道",
+    "localName": "莲花山海达索道",
+    "category": "attraction",
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "coordinates": [
+      38.8788,
+      121.6038
+    ],
+    "address": "辽宁省大连市西岗区迎春路 (森林动物园南门至莲花山山顶)",
+    "city": "大连",
+    "coverImage": "https://images.unsplash.com/photo-1596422846543-75c6fc197f11?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1542037104857-ffbb0b955fb0?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1518890569493-66df9a87a1c1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1559825481-12a05cc00344?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "videos": [
+      "https://www.bilibili.com/video/BV1Wt4y1L7qK/",
+      "https://www.bilibili.com/video/BV1mY4y1j7tR/"
+    ],
+    "description": "大连城市空中吊厢索道，横跨莲花山，单程约20分钟，高空俯瞰星海湾大桥、城市山海全景。吊厢观光，可远眺海岸线；适合家庭观景，大风天气会临时停运，站点配套有限，老人儿童需注意高空防风。",
+    "recommendedDurationMin": 90,
+    "openingHours": "09:00 - 16:30（16:30停止检票，大风雷雨临时关闭）",
+    "admissionFee": {
+      "adult": "60元/人单程，往返100元/人",
+      "senior": "索道无老人优惠，同成人价；森林动物园大门票60‑69岁半价，70岁以上免票",
+      "child4yo": "免费 (1.3米以下)",
+      "notes": "北门摆渡电瓶车10元/人，老人儿童同价；吊厢限2大1小"
+    },
+    "bestTimeToVisit": "上午09:00开园入场，匹配孩子午睡节奏，避开午后暴晒与旅游团排队高峰；旺季优先南门进减少排队",
+    "weatherSuitability": "大风、雨天停运；晴天、多云适宜",
+    "strollerRating": 3,
+    "strollerNotes": "索道站点有台阶无直梯与无障碍坡道，婴儿推车必须折叠，不可推入吊厢；索道站点不提供推车租借，需要租赁前往森林动物园主园",
+    "kidRating": 4,
+    "kidNotes": "4岁孩子喜欢吊厢空中滑行看海，莲花山站有机会偶遇梅花鹿；吊厢全封闭安全性尚可；站点无母婴室与尿布台，需要前往动物园园区",
+    "elderlyRating": 4,
+    "elderlyNotes": "几乎不用爬山，总步行200‑350米；站台休息长椅较少，山顶有简易咖啡厅；高血压、恐高人群谨慎乘坐；索道无长者票价优惠",
+    "walkingIntensity": "轻松 (<500米)",
+    "stairsLevel": "站点登吊厢有局部台阶，其余区域平坦",
+    "amenities": {
+      "nursingRoom": false,
+      "diaperChanging": false,
+      "accessibleRestroom": true,
+      "benchesRestAreas": true,
+      "shuttleOrCart": true,
+      "elevatorAvailable": false,
+      "strollerRental": false,
+      "wheelchairRental": false,
+      "shadeAvailable": false,
+      "indoorRainyDayOption": true,
+      "kidPlayArea": false
+    },
+    "familyTips": [
+      "行程安排上午游玩，保证13:30前返回酒店满足孩子午睡",
+      "旺季想少排队优先南门上北门下，牺牲面朝大海视角换取舒适",
+      "山顶高空风力大，全家备好薄外套；出发前致电确认索道是否运行",
+      "索道站点无母婴室，婴儿推车必须折叠收纳"
+    ],
+    "nearbyDining": [
+      {
+        "id": "dine-haida-1",
+        "name": "喜家德水饺（星海店）",
+        "cuisine": "海鲜水饺、清淡家常菜",
+        "familyFeatures": "提供宝宝椅儿童餐具，虾三鲜水饺软嫩，口味少油清淡，适合幼童与长辈",
+        "walkingTimeMin": 8
+      },
+      {
+        "id": "dine-haida-2",
+        "name": "日月昇渔家菜（星海店）",
+        "cuisine": "大连老菜、清蒸海鲜、海胆豆腐",
+        "familyFeatures": "可定制少油少盐，海胆豆腐软嫩易消化，配备宝宝椅，地道本地菜",
+        "walkingTimeMin": 10
+      }
+    ],
+    "customTags": [
+      "亲子精选",
+      "高空索道",
+      "俯瞰山海",
+      "大连特色"
+    ],
+    "customFields": {
+      "tideOrWeatherTip": "索道本地无赶海点位；就近赶海去傅家庄/银沙滩，选低潮前后1‑2小时；高空风力比地面低3‑5℃，务必备防风薄外套；儿童穿包头防滑鞋，做好高倍海边防晒",
+      "ticketBookingTip": "支持线上提前购票，但需要到现场换纸质票，非强制实名预约；索道本身没有长者优惠；森林动物园大门票老人优待必须出示本人身份证原件",
+      "parkingAndDropoff": "北门付费可直达索道检票口约15米，否则需步行800米，摆渡电瓶车10元/人；南门下车距离检票口20米；旺季北门排队30‑120分钟，南门排队5‑20分钟；省力家庭动线：南门乘坐索道去往北门",
+      "rainyDayPlan": "大风下雨索道直接停运；就近备选：森林动物园室内熊猫馆（满足4岁孩子看大熊猫）；次选星海片区大连海洋世界室内水族馆，不受风雨影响"
+    },
+    "createdAt": "2026-09-03"
+  },
+  {
     "id": "site-dalian-sun-asia-ocean-world",
     "name": "大连圣亚海洋世界",
     "localName": "Sun Asia Ocean World (Xinghai Park)",

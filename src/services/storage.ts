@@ -88,7 +88,33 @@ export const getStoredSites = (): Site[] => {
       localStorage.setItem(SITES_KEY, JSON.stringify(INITIAL_SITES));
       return INITIAL_SITES;
     }
-    return JSON.parse(raw);
+    const sites: Site[] = JSON.parse(raw);
+    let dirty = false;
+    const sanitized = sites.map((s) => {
+      if ((s.name.includes('海达索道') || s.name.includes('莲花山索道')) && (s.city === '东京' || s.coordinates[0] === 35.6764)) {
+        dirty = true;
+        return {
+          ...s,
+          id: s.id.startsWith('site-dalian-') ? s.id : 'site-dalian-haida-cableway',
+          city: '大连',
+          tripId: 'trip-dalian-coastal-multigen-2026',
+          address: '辽宁省大连市西岗区迎春路 (森林动物园南门至莲花山山顶)',
+          coordinates: [38.8788, 121.6038] as [number, number]
+        };
+      }
+      return s;
+    });
+    if (!sanitized.some((s) => s.name === '海达索道')) {
+      const haidaInInitial = INITIAL_SITES.find((s) => s.name === '海达索道');
+      if (haidaInInitial) {
+        sanitized.push(haidaInInitial);
+        dirty = true;
+      }
+    }
+    if (dirty) {
+      localStorage.setItem(SITES_KEY, JSON.stringify(sanitized));
+    }
+    return sanitized;
   } catch (e) {
     console.error('Error loading sites from storage:', e);
     return INITIAL_SITES;

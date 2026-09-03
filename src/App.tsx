@@ -5,7 +5,8 @@ import {
   getStoredTrips, saveTrips, 
   getActiveTripId, setActiveTripId, 
   resetToDefaults,
-  syncFromDiskToLocalStorage
+  syncFromDiskToLocalStorage,
+  isLocalEnvironment
 } from './services/storage';
 
 import { Navbar, ActiveTab } from './components/Navbar';
@@ -90,6 +91,9 @@ export function App() {
 
   useEffect(() => {
     loadData();
+    if (isLocalEnvironment()) {
+      handleSyncFromDisk();
+    }
   }, []);
 
   // Sync initial pending route site after sites are loaded
@@ -159,9 +163,12 @@ export function App() {
 
   // Site CRUD operations
   const handleSaveSite = async (savedSite: Site) => {
+    const isDalian = savedSite.city === '大连' || savedSite.id.startsWith('site-dalian-') || activeTrip?.id === 'trip-dalian-coastal-multigen-2026';
+    const defaultTripId = isDalian ? 'trip-dalian-coastal-multigen-2026' : 'trip-japan-grand-multigen-2026';
     const siteWithTrip: Site = {
       ...savedSite,
-      tripId: savedSite.tripId || activeTrip?.id || 'trip-japan-grand-multigen-2026'
+      city: savedSite.city || (isDalian ? '大连' : '东京'),
+      tripId: savedSite.tripId || activeTrip?.id || defaultTripId
     };
     const exists = sites.some((s) => s.id === siteWithTrip.id);
     let updated: Site[];
@@ -196,9 +203,12 @@ export function App() {
   };
 
   const handleUpdateSite = async (updatedSite: Site) => {
+    const isDalian = updatedSite.city === '大连' || updatedSite.id.startsWith('site-dalian-') || activeTrip?.id === 'trip-dalian-coastal-multigen-2026';
+    const defaultTripId = isDalian ? 'trip-dalian-coastal-multigen-2026' : 'trip-japan-grand-multigen-2026';
     const siteWithTrip: Site = {
       ...updatedSite,
-      tripId: updatedSite.tripId || activeTrip?.id || 'trip-japan-grand-multigen-2026'
+      city: updatedSite.city || (isDalian ? '大连' : '东京'),
+      tripId: updatedSite.tripId || activeTrip?.id || defaultTripId
     };
     const updated = sites.map((s) => (s.id === siteWithTrip.id ? siteWithTrip : s));
     setSites(updated);

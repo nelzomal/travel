@@ -34,13 +34,22 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
   onClose,
   onSave
 }) => {
+  const isTripDalian = trip?.id === 'trip-dalian-coastal-multigen-2026' || trip?.destination?.includes('大连') || trip?.title?.includes('大连');
+  const defaultCity = isTripDalian ? '大连' : (trip?.destination?.includes('京都') ? '京都' : (trip?.destination?.includes('箱根') ? '箱根' : '东京'));
+  const defaultAddress = isTripDalian ? '中国 辽宁省 大连市' : '日本 东京';
+  const defaultLat = isTripDalian ? 38.8788 : 35.6764;
+  const defaultLng = isTripDalian ? 121.6038 : 139.6993;
+  const defaultAdultFee = isTripDalian ? '门票免费 / ¥50' : '免费参拜 / ¥500';
+  const defaultSeniorFee = isTripDalian ? '60岁以上老人半价 / 免票' : '免费 / 半价';
+  const defaultChildFee = isTripDalian ? '免费 (4岁 / 1.3米以下)' : '免费 (4岁)';
+
   const [name, setName] = useState('');
   const [localName, setLocalName] = useState('');
   const [category, setCategory] = useState<SiteCategory>('attraction');
-  const [city, setCity] = useState('东京');
-  const [address, setAddress] = useState('');
-  const [lat, setLat] = useState<number>(35.6764);
-  const [lng, setLng] = useState<number>(139.6993);
+  const [city, setCity] = useState(defaultCity);
+  const [address, setAddress] = useState(defaultAddress);
+  const [lat, setLat] = useState<number>(defaultLat);
+  const [lng, setLng] = useState<number>(defaultLng);
   const [coverImage, setCoverImage] = useState('');
   const [galleryUrls, setGalleryUrls] = useState<string[]>([]);
   const [newGalleryUrl, setNewGalleryUrl] = useState('');
@@ -52,9 +61,9 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
   // Logistics
   const [recommendedDurationMin, setRecommendedDurationMin] = useState(90);
   const [openingHours, setOpeningHours] = useState('09:00 - 17:00');
-  const [adultFee, setAdultFee] = useState('¥600');
-  const [seniorFee, setSeniorFee] = useState('¥300');
-  const [childFee, setChildFee] = useState('免费 (4岁)');
+  const [adultFee, setAdultFee] = useState(defaultAdultFee);
+  const [seniorFee, setSeniorFee] = useState(defaultSeniorFee);
+  const [childFee, setChildFee] = useState(defaultChildFee);
   const [feeNotes, setFeeNotes] = useState('');
   const [bestTimeToVisit, setBestTimeToVisit] = useState('早晨 09:00 避开旅行团与烈日');
   const [weatherSuitability, setWeatherSuitability] = useState<WeatherSuitability>('全天候适宜');
@@ -171,20 +180,19 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       setSocialMediaLinks([]);
       setName(initialName || '');
       setLocalName('');
-      setCategory('attraction');
-      setCity('东京');
-      setAddress(initialAddress || '日本 东京');
-      setLat(initialCoords ? initialCoords[0] : 35.6764);
-      setLng(initialCoords ? initialCoords[1] : 139.6993);
+      setCity(defaultCity);
+      setAddress(initialAddress || defaultAddress);
+      setLat(initialCoords ? initialCoords[0] : defaultLat);
+      setLng(initialCoords ? initialCoords[1] : defaultLng);
       setCoverImage('https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80');
       setGalleryUrls(['https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80']);
       setVideos([]);
       setDescription('');
       setRecommendedDurationMin(90);
       setOpeningHours('09:00 - 17:00');
-      setAdultFee('免费参拜 / ¥500');
-      setSeniorFee('免费 / 半价');
-      setChildFee('免费 (4岁)');
+      setAdultFee(defaultAdultFee);
+      setSeniorFee(defaultSeniorFee);
+      setChildFee(defaultChildFee);
       setFeeNotes('');
       setBestTimeToVisit('早晨 09:00 前往');
       setWeatherSuitability('全天候适宜');
@@ -417,17 +425,24 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
     }
 
     const d = result.data;
+    const isTargetDalian = isTripDalian || d.city?.includes('大连') || d.name?.includes('大连') || d.description?.includes('大连') || (d.localName && d.localName.includes('大连'));
+    const resolvedCity = d.city || (isTargetDalian ? '大连' : defaultCity);
+    const resolvedAddress = d.address || (isTargetDalian ? (address && !address.includes('东京') && !address.includes('日本') ? address : '中国 辽宁省 大连市') : defaultAddress);
+
     if (d.name) setName(d.name);
     if (d.localName !== undefined) setLocalName(d.localName);
     if (d.description) setDescription(d.description);
     if (d.coverImage) setCoverImage(d.coverImage);
     if (d.gallery && d.gallery.length > 0) setGalleryUrls(d.gallery);
     if (d.videos && d.videos.length > 0) setVideos(d.videos);
-    if (d.city) setCity(d.city);
-    if (d.address) setAddress(d.address);
+    setCity(resolvedCity);
+    setAddress(resolvedAddress);
     if (d.coordinates) {
       setLat(d.coordinates[0]);
       setLng(d.coordinates[1]);
+    } else if (isTargetDalian && (lat === 35.6764 || !lat)) {
+      setLat(38.8788);
+      setLng(121.6038);
     }
     if (d.recommendedDurationMin) setRecommendedDurationMin(d.recommendedDurationMin);
     if (d.openingHours) setOpeningHours(d.openingHours);
@@ -454,20 +469,21 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
 
     setAiStatus({
       success: true,
-      message: `${result.message} 所有信息已自动回填至表单各字段，您可在下方直接核对与按需微调！`
+      message: `${result.message} 所有信息已自动回填至表单各字段，城市已设为「${resolvedCity}」！`
     });
 
     const targetQuery = d.name || name;
-    if (targetQuery && (!lat || (lat === 35.6764 && lng === 139.6993 && !city.includes('东京')))) {
+    if (targetQuery && (!d.coordinates || (lat === 35.6764 && lng === 139.6993))) {
       try {
-        const places = await searchPlaces(targetQuery);
+        const queryWithCity = resolvedCity === '大连' && !targetQuery.includes('大连') ? `大连 ${targetQuery}` : targetQuery;
+        const places = await searchPlaces(queryWithCity);
         if (places && places.length > 0) {
           const first = places[0];
           setLat(first.lat);
           setLng(first.lng);
           if (first.displayName) setAddress(first.displayName);
           if (first.address.city || first.address.town || first.address.state) {
-            setCity(first.address.city || first.address.town || first.address.state || city);
+            setCity(first.address.city || first.address.town || first.address.state || resolvedCity);
           }
         }
       } catch (err) {
@@ -532,15 +548,18 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
     if (!name.trim() || isSubmitting) return;
 
     setIsSubmitting(true);
+    const isTargetDalian = isTripDalian || city?.includes('大连') || name?.includes('大连') || description?.includes('大连');
+    const finalTripId = initialSite?.tripId || trip?.id || (isTargetDalian ? 'trip-dalian-coastal-multigen-2026' : 'trip-japan-grand-multigen-2026');
+    const finalCity = city.trim() || (isTargetDalian ? '大连' : defaultCity);
     const finalSite: Site = {
-      id: initialSite ? initialSite.id : `site-${Date.now()}`,
+      id: initialSite ? initialSite.id : `site-${isTargetDalian ? 'dalian-' : ''}${Date.now()}`,
       name: name.trim(),
       localName: localName.trim() || undefined,
       category,
-      tripId: initialSite?.tripId || trip?.id || 'trip-japan-grand-multigen-2026',
+      tripId: finalTripId,
       coordinates: [Number(lat), Number(lng)],
-      address: address.trim(),
-      city: city.trim(),
+      address: address.trim() || (isTargetDalian ? '中国 辽宁省 大连市' : defaultAddress),
+      city: finalCity,
       coverImage: coverImage.trim() || 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80',
       gallery: galleryUrls.length > 0 ? galleryUrls : [coverImage],
       videos: videos.length > 0 ? videos : undefined,

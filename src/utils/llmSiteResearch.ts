@@ -148,6 +148,8 @@ ${customRequirements ? `\n【用户自定义扩展调研字段】\n${customRequi
 {
   "name": "${targetSiteName}",
   "localName": "${localName || ''}",
+  "city": "${city || (isDalian ? '大连' : '东京')}",
+  "address": "${address || (isDalian ? '辽宁省大连市西岗区' : '日本 东京')}",
   "description": "简练生动的100字景点亮点介绍",
   "coverImage": "${defaultCover}",
   "gallery": [
@@ -358,7 +360,18 @@ export const parseLLMReply = (
       })) : undefined,
       customTags: parsed.customTags || undefined,
       customFields: Object.keys(extractedCustomFields).length > 0 ? extractedCustomFields : undefined,
-      city: parsed.city?.trim() || undefined,
+      city: (() => {
+        if (parsed.city?.trim()) return parsed.city.trim();
+        const textToScan = `${parsed.name || ''} ${parsed.localName || ''} ${parsed.description || ''} ${parsed.address || ''}`;
+        if (textToScan.includes('大连') || textToScan.includes('金石滩') || textToScan.includes('星海') || textToScan.includes('莲花山') || textToScan.includes('旅顺') || textToScan.includes('庄河')) {
+          return '大连';
+        }
+        if (textToScan.includes('京都') || textToScan.includes('岚山') || textToScan.includes('清水寺')) return '京都';
+        if (textToScan.includes('箱根') || textToScan.includes('大涌谷')) return '箱根';
+        if (textToScan.includes('富士') || textToScan.includes('河口湖')) return '富士山';
+        if (textToScan.includes('东京') || textToScan.includes('台场') || textToScan.includes('浅草')) return '东京';
+        return undefined;
+      })(),
       address: parsed.address?.trim() || undefined,
       category: parsed.category || undefined
     };
