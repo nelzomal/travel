@@ -1,4 +1,4 @@
-import { Site, Trip, SiteCategory, WalkingIntensity, StairsLevel, WeatherSuitability, SiteAmenities } from '../types/travel';
+import { Site, Trip, SiteCategory, WalkingIntensity, StairsLevel, WeatherSuitability, SiteAmenities, SocialMediaLink } from '../types/travel';
 
 export interface CustomFieldDef {
   key: string;
@@ -45,6 +45,8 @@ export interface GeneratePromptParams {
   customFields?: CustomFieldDef[];
   siteId?: string;
   existingCoverImage?: string;
+  enableSocialResearch?: boolean;
+  socialPlatforms?: ('xiaohongshu' | 'bilibili')[];
 }
 
 export const generateSiteResearchPrompt = ({
@@ -56,7 +58,9 @@ export const generateSiteResearchPrompt = ({
   trip,
   customFields = [],
   siteId,
-  existingCoverImage
+  existingCoverImage,
+  enableSocialResearch = true,
+  socialPlatforms = ['xiaohongshu', 'bilibili']
 }: GeneratePromptParams): string => {
   const targetSiteName = siteName.trim() || '待调研景点';
   const destination = trip?.destination || (city === '大连' ? '中国 · 大连' : '日本');
@@ -65,8 +69,40 @@ export const generateSiteResearchPrompt = ({
   const isDalian = (city && city.includes('大连')) || destination.includes('大连') || trip?.id === 'trip-dalian-coastal-multigen-2026' || (siteId && siteId.startsWith('site-dalian-'));
   const isJapan = !isDalian && (destination.includes('日本') || (city && (city.includes('东京') || city.includes('京都') || city.includes('箱根') || city.includes('富士山'))));
 
+  let socialClause = '';
+  let exampleSocialJson = '';
+  if (enableSocialResearch && socialPlatforms && socialPlatforms.length > 0) {
+    const platformNames = socialPlatforms.map((p) => (p === 'xiaohongshu' ? '小红书（带娃真实体验与避坑笔记）' : 'B站 / 哔哩哔哩（4K路线导览与UP主实拍）')).join(' 与 ');
+    socialClause = `\n8. 📱 【社交媒体真实攻略与避坑调研（重点平台：${platformNames}）】：
+   - 请在【${platformNames}】上精选 2-4 篇关于该景点的代表性真实游客攻略、亲子/长辈带娃实测经验或深度避坑分享；
+   - 每篇请提炼：所属平台 (xiaohongshu 或 bilibili)、笔记/视频标题、博主/UP主昵称、真实或标准分享网页链接、核心避坑心得或要点摘要（如最佳拍摄机位、缆车站台无障碍、排队避峰技巧等）；
+   - 请务必在下方最终输出的 JSON 中的 "socialMediaLinks" 字段按规范输出。`;
+
+    const sampleItems: string[] = [];
+    if (socialPlatforms.includes('xiaohongshu')) {
+      sampleItems.push(`    {
+      "platform": "xiaohongshu",
+      "title": "${targetSiteName}超全带娃实测！避坑技巧与省力游览动线",
+      "author": "亲子慢游记",
+      "url": "https://www.xiaohongshu.com/explore/sample",
+      "note": "实测排队避峰技巧、推车无障碍情况与绝美拍照机位推荐"
+    }`);
+    }
+    if (socialPlatforms.includes('bilibili')) {
+      sampleItems.push(`    {
+      "platform": "bilibili",
+      "title": "【${targetSiteName}】4K沉浸式全景实录与三代同堂慢游体验",
+      "author": "漫游UP主",
+      "url": "https://www.bilibili.com/video/BV1sample",
+      "note": "高清视频展示主要出入口路线、站台台阶与核心观赏点"
+    }`);
+    }
+    exampleSocialJson = `  "socialMediaLinks": [\n${sampleItems.join(',\n')}\n  ],`;
+  }
+
+  const baseIndex = socialClause ? 9 : 8;
   const customRequirements = customFields
-    .map((f, i) => `${i + 8}. 【自定义拓展】${f.label}：请详细调研 ${f.example}`)
+    .map((f, i) => `${i + baseIndex}. 【自定义拓展】${f.label}：请详细调研 ${f.example}`)
     .join('\n');
 
   const customJsonEntries = customFields
@@ -140,7 +176,7 @@ ${admissionClause}
 ${transportClause}
 ${diningClause}
 ${mediaClause}
-${customRequirements ? `\n【用户自定义扩展调研字段】\n${customRequirements}\n` : ''}
+${socialClause ? `${socialClause}\n` : ''}${customRequirements ? `\n【用户自定义扩展调研字段】\n${customRequirements}\n` : ''}
 【输出格式要求】
 请先用中文条理清晰地给出详细解答；并在最后附带一个合法的 JSON 代码块（请用 \`\`\`json 和 \`\`\` 包裹），以便我一键导入系统更新或新增该景点：
 
@@ -191,7 +227,7 @@ ${exampleAdmission}
     "照护备忘贴士3"
   ],
 ${exampleDining}
-  "customFields": {
+${exampleSocialJson ? `${exampleSocialJson}\n` : ''}  "customFields": {
 ${customJsonEntries || '    "note": "扩展备注"'}
   }
 }
@@ -238,6 +274,7 @@ export interface ParsedSiteData {
   address?: string;
   coordinates?: [number, number];
   category?: SiteCategory;
+  socialMediaLinks?: SocialMediaLink[];
 }
 
 export interface ParseResult {
@@ -277,7 +314,7 @@ export const parseLLMReply = (
       'admissionFee', 'bestTimeToVisit', 'weatherSuitability', 'strollerRating',
       'strollerNotes', 'kidRating', 'kidNotes', 'elderlyRating', 'elderlyNotes',
       'walkingIntensity', 'stairsLevel', 'amenities', 'familyTips', 'nearbyDining',
-      'customTags', 'customFields', 'id', 'coordinates', 'address', 'city', 'coverImage', 'gallery', 'videos', 'category'
+      'customTags', 'customFields', 'id', 'coordinates', 'address', 'city', 'coverImage', 'gallery', 'videos', 'category', 'socialMediaLinks'
     ]);
 
     const extractedCustomFields: Record<string, string> = {
@@ -373,16 +410,39 @@ export const parseLLMReply = (
         return undefined;
       })(),
       address: parsed.address?.trim() || undefined,
-      category: parsed.category || undefined
+      category: parsed.category || undefined,
+      socialMediaLinks: (() => {
+        if (!Array.isArray(parsed.socialMediaLinks) || parsed.socialMediaLinks.length === 0) return undefined;
+        return parsed.socialMediaLinks.map((item: any, idx: number) => {
+          let platform: any = item.platform;
+          if (platform !== 'xiaohongshu' && platform !== 'bilibili' && platform !== 'douyin' && platform !== 'dianping' && platform !== 'youtube') {
+            const u = (item.url || '').toLowerCase();
+            if (u.includes('xiaohongshu.com') || u.includes('xhslink')) platform = 'xiaohongshu';
+            else if (u.includes('bilibili.com') || u.includes('b23.tv')) platform = 'bilibili';
+            else platform = 'xiaohongshu';
+          }
+          return {
+            id: item.id || `social-llm-${Date.now()}-${idx}`,
+            platform,
+            title: item.title?.trim() || '精选带娃攻略',
+            author: item.author?.trim() || '旅游博主',
+            url: cleanUrl(item.url) || item.url || '',
+            note: item.note?.trim() || undefined,
+            screenshotUrl: cleanUrl(item.screenshotUrl) || undefined,
+            addedAt: item.addedAt || new Date().toISOString().slice(0, 10)
+          };
+        });
+      })()
     };
 
     const countImages = gallery.length;
     const countVideos = videos.length;
+    const countSocial = data.socialMediaLinks ? data.socialMediaLinks.length : 0;
 
     return {
       success: true,
       data,
-      message: `成功解析！提取了「${data.name || '景点'}」：包含 ${countImages} 张相册、${countVideos} 部导览视频、门票与三代同堂评分！`
+      message: `成功解析！提取了「${data.name || '景点'}」：包含 ${countImages} 张相册、${countVideos} 部导览视频、${countSocial} 篇小红书/B站社交笔记！`
     };
   } catch (err: any) {
     return {

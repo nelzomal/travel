@@ -43,6 +43,10 @@ export const LLMResearchModal: React.FC<LLMResearchModalProps> = ({
   const [newFieldLabel, setNewFieldLabel] = useState('');
   const [showAddField, setShowAddField] = useState(false);
 
+  // Social media research options
+  const [enableSocialResearch, setEnableSocialResearch] = useState(true);
+  const [socialPlatforms, setSocialPlatforms] = useState<('xiaohongshu' | 'bilibili')[]>(['xiaohongshu', 'bilibili']);
+
   const [newGalleryUrl, setNewGalleryUrl] = useState('');
   const [newVideoUrl, setNewVideoUrl] = useState('');
   const [customCoverUrl, setCustomCoverUrl] = useState(site?.coverImage || '');
@@ -148,7 +152,9 @@ export const LLMResearchModal: React.FC<LLMResearchModalProps> = ({
       trip,
       customFields,
       siteId: site.id,
-      existingCoverImage: customCoverUrl || site.coverImage
+      existingCoverImage: customCoverUrl || site.coverImage,
+      enableSocialResearch,
+      socialPlatforms
     });
   };
 
@@ -206,7 +212,13 @@ export const LLMResearchModal: React.FC<LLMResearchModalProps> = ({
       familyTips: Array.isArray(parsed.familyTips) && parsed.familyTips.length > 0 ? parsed.familyTips : site.familyTips,
       nearbyDining: Array.isArray(parsed.nearbyDining) && parsed.nearbyDining.length > 0 ? parsed.nearbyDining : site.nearbyDining,
       customTags: parsed.customTags || site.customTags,
-      customFields: parsed.customFields || site.customFields
+      customFields: parsed.customFields || site.customFields,
+      socialMediaLinks: (() => {
+        if (!parsed.socialMediaLinks || parsed.socialMediaLinks.length === 0) return site.socialMediaLinks;
+        const existingUrls = new Set((site.socialMediaLinks || []).map((s) => s.url));
+        const toAdd = parsed.socialMediaLinks.filter((s) => !existingUrls.has(s.url));
+        return [...(site.socialMediaLinks || []), ...toAdd];
+      })()
     };
 
     onUpdateSite(updatedSite);
@@ -386,6 +398,67 @@ export const LLMResearchModal: React.FC<LLMResearchModalProps> = ({
                     </div>
                   ))}
                 </div>
+              </div>
+
+              {/* Social Media Research Configurator */}
+              <div className="p-3 bg-purple-50/70 rounded-2xl border border-purple-200/80 space-y-2">
+                <div className="flex items-center justify-between">
+                  <label className="flex items-center gap-2 cursor-pointer select-none">
+                    <input
+                      type="checkbox"
+                      checked={enableSocialResearch}
+                      onChange={(e) => setEnableSocialResearch(e.target.checked)}
+                      className="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 border-slate-300"
+                    />
+                    <span className="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                      <span className="text-sm">📱</span>
+                      <span>增加社交媒体与真实避坑攻略调研</span>
+                    </span>
+                  </label>
+                  <span className="text-[11px] text-slate-500 hidden sm:inline">要求 AI 调研并输出真实博主笔记</span>
+                </div>
+
+                {enableSocialResearch && (
+                  <div className="flex flex-wrap items-center gap-3 pl-6 pt-1">
+                    <label className="flex items-center gap-1.5 cursor-pointer text-xs font-medium text-slate-700 select-none">
+                      <input
+                        type="checkbox"
+                        checked={socialPlatforms.includes('xiaohongshu')}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setSocialPlatforms([...socialPlatforms, 'xiaohongshu']);
+                          } else {
+                            setSocialPlatforms(socialPlatforms.filter((p) => p !== 'xiaohongshu'));
+                          }
+                        }}
+                        className="w-3.5 h-3.5 rounded text-rose-500 focus:ring-rose-400 border-slate-300"
+                      />
+                      <span className="px-2 py-0.5 bg-rose-50 text-rose-700 rounded-md border border-rose-200 text-[11px] font-bold flex items-center gap-1">
+                        <span>📕 小红书</span>
+                        <span className="text-[10px] opacity-75 font-normal">(亲子带娃实测 / 避坑心得)</span>
+                      </span>
+                    </label>
+
+                    <label className="flex items-center gap-1.5 cursor-pointer text-xs font-medium text-slate-700 select-none">
+                      <input
+                        type="checkbox"
+                        checked={socialPlatforms.includes('bilibili')}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setSocialPlatforms([...socialPlatforms, 'bilibili']);
+                          } else {
+                            setSocialPlatforms(socialPlatforms.filter((p) => p !== 'bilibili'));
+                          }
+                        }}
+                        className="w-3.5 h-3.5 rounded text-sky-500 focus:ring-sky-400 border-slate-300"
+                      />
+                      <span className="px-2 py-0.5 bg-sky-50 text-sky-700 rounded-md border border-sky-200 text-[11px] font-bold flex items-center gap-1">
+                        <span>📺 哔哩哔哩 (B站)</span>
+                        <span className="text-[10px] opacity-75 font-normal">(4K全景路线 / 沉浸实录)</span>
+                      </span>
+                    </label>
+                  </div>
+                )}
               </div>
 
               {/* Prompt Text Box */}

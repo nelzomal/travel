@@ -134,6 +134,10 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
   const [newPromptFieldKey, setNewPromptFieldKey] = useState('');
   const [newPromptFieldLabel, setNewPromptFieldLabel] = useState('');
 
+  // Social media research options
+  const [enableSocialResearch, setEnableSocialResearch] = useState(true);
+  const [socialPlatforms, setSocialPlatforms] = useState<('xiaohongshu' | 'bilibili')[]>(['xiaohongshu', 'bilibili']);
+
   const destination = trip?.destination || (city === '大连' ? '中国 · 大连' : '日本');
   const tripTitle = trip?.title || `${city || destination}慢游之旅`;
   const isDalian = (city && city.includes('大连')) || destination.includes('大连') || trip?.id === 'trip-dalian-coastal-multigen-2026' || (initialSite?.id && initialSite.id.startsWith('site-dalian-'));
@@ -364,13 +368,15 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
   const generatedPrompt = generateSiteResearchPrompt({
     siteName: name || '待调研景点',
     localName,
-    city: city || '东京',
+    city: city || defaultCity,
     category,
     address,
     trip,
     customFields: promptCustomFields,
     siteId: initialSite?.id,
-    existingCoverImage: coverImage
+    existingCoverImage: coverImage,
+    enableSocialResearch,
+    socialPlatforms
   });
 
   const handleCopyPrompt = () => {
@@ -466,6 +472,13 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
     if (d.familyTips && d.familyTips.length > 0) setFamilyTips(d.familyTips);
     if (d.nearbyDining && d.nearbyDining.length > 0) setNearbyDining(d.nearbyDining);
     if (d.customFields) setCustomFieldsMap(prev => ({ ...prev, ...d.customFields }));
+    if (d.socialMediaLinks && d.socialMediaLinks.length > 0) {
+      setSocialMediaLinks((prev) => {
+        const existingUrls = new Set(prev.map((s) => s.url));
+        const toAdd = d.socialMediaLinks!.filter((s) => !existingUrls.has(s.url));
+        return [...prev, ...toAdd];
+      });
+    }
 
     setAiStatus({
       success: true,
@@ -799,6 +812,67 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
                         <span className="text-[11px] text-amber-700 hidden sm:inline">输入后将自动定制专属 Prompt</span>
                       </div>
                     )}
+
+                    {/* Social Media Research Configurator */}
+                    <div className="p-3 bg-white/70 rounded-xl border border-purple-100 space-y-2">
+                      <div className="flex items-center justify-between">
+                        <label className="flex items-center gap-2 cursor-pointer select-none">
+                          <input
+                            type="checkbox"
+                            checked={enableSocialResearch}
+                            onChange={(e) => setEnableSocialResearch(e.target.checked)}
+                            className="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 border-slate-300"
+                          />
+                          <span className="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                            <span className="text-sm">📱</span>
+                            <span>增加社交媒体与真实避坑攻略调研</span>
+                          </span>
+                        </label>
+                        <span className="text-[11px] text-slate-400 hidden sm:inline">要求 AI 调研并输出真实博主笔记</span>
+                      </div>
+
+                      {enableSocialResearch && (
+                        <div className="flex flex-wrap items-center gap-3 pl-6 pt-1">
+                          <label className="flex items-center gap-1.5 cursor-pointer text-xs font-medium text-slate-700 select-none">
+                            <input
+                              type="checkbox"
+                              checked={socialPlatforms.includes('xiaohongshu')}
+                              onChange={(e) => {
+                                if (e.target.checked) {
+                                  setSocialPlatforms([...socialPlatforms, 'xiaohongshu']);
+                                } else {
+                                  setSocialPlatforms(socialPlatforms.filter((p) => p !== 'xiaohongshu'));
+                                }
+                              }}
+                              className="w-3.5 h-3.5 rounded text-rose-500 focus:ring-rose-400 border-slate-300"
+                            />
+                            <span className="px-2 py-0.5 bg-rose-50 text-rose-700 rounded-md border border-rose-200 text-[11px] font-bold flex items-center gap-1">
+                              <span>📕 小红书</span>
+                              <span className="text-[10px] opacity-75 font-normal">(亲子带娃实测 / 避坑心得)</span>
+                            </span>
+                          </label>
+
+                          <label className="flex items-center gap-1.5 cursor-pointer text-xs font-medium text-slate-700 select-none">
+                            <input
+                              type="checkbox"
+                              checked={socialPlatforms.includes('bilibili')}
+                              onChange={(e) => {
+                                if (e.target.checked) {
+                                  setSocialPlatforms([...socialPlatforms, 'bilibili']);
+                                } else {
+                                  setSocialPlatforms(socialPlatforms.filter((p) => p !== 'bilibili'));
+                                }
+                              }}
+                              className="w-3.5 h-3.5 rounded text-sky-500 focus:ring-sky-400 border-slate-300"
+                            />
+                            <span className="px-2 py-0.5 bg-sky-50 text-sky-700 rounded-md border border-sky-200 text-[11px] font-bold flex items-center gap-1">
+                              <span>📺 哔哩哔哩 (B站)</span>
+                              <span className="text-[10px] opacity-75 font-normal">(4K全景路线 / 沉浸实录)</span>
+                            </span>
+                          </label>
+                        </div>
+                      )}
+                    </div>
 
                     {/* Custom fields configurator toggle */}
                     <div className="p-3 bg-white/70 rounded-xl border border-purple-100 space-y-2">
