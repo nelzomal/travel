@@ -47,6 +47,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
   const [videos, setVideos] = useState<string[]>([]);
   const [newVideoUrl, setNewVideoUrl] = useState('');
   const [description, setDescription] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Logistics
   const [recommendedDurationMin, setRecommendedDurationMin] = useState(90);
@@ -525,8 +526,6 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       setIsSearchingGeocode(false);
     }
   };
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
