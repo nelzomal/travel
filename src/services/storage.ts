@@ -6,9 +6,26 @@ const SITES_KEY = 'family_travel_sites_zh_v21';
 const TRIPS_KEY = 'family_travel_trips_zh_v21';
 const ACTIVE_TRIP_KEY = 'family_travel_active_trip_id_zh_v21';
 
+export const isLocalEnvironment = (): boolean => {
+  if (typeof window === 'undefined') return true;
+  return window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+};
+
 // Automatically sync local changes to filesystem / git codebase when running in Vite dev mode
-export const syncToFilesystem = async (sites?: Site[], trips?: Trip[]): Promise<{ success: boolean; message?: string }> => {
+export const syncToFilesystem = async (
+  sites?: Site[], 
+  trips?: Trip[]
+): Promise<{ success: boolean; isStaticHost?: boolean; message?: string }> => {
   try {
+    const isLocal = isLocalEnvironment();
+    if (!isLocal) {
+      return { 
+        success: false, 
+        isStaticHost: true,
+        message: '当前运行于线上静态部署环境，浏览器无法直接写入本地磁盘。已保存至当前浏览器本地存储。请点击顶部「存入Git」复制 JSON，或在本地启动开发服务。' 
+      };
+    }
+
     const payloadSites = sites || getStoredSites();
     const payloadTrips = trips || getStoredTrips();
     const res = await fetch('/api/sync-data', {
@@ -20,10 +37,9 @@ export const syncToFilesystem = async (sites?: Site[], trips?: Trip[]): Promise<
       const data = await res.json();
       return { success: true, message: data.message || '已成功同步到本地代码文件与 Git' };
     }
-    return { success: false, message: '同步失败，服务器返回错误' };
+    return { success: false, message: `同步写入磁盘失败 (服务器返回 HTTP ${res.status})` };
   } catch (e: any) {
-    // Graceful fallback for static hosting
-    return { success: false, message: e?.message || '静态部署环境不支持直接写入磁盘' };
+    return { success: false, message: e?.message || '无法连接本地 Vite 同步服务，请确认本地开发服务器正常运行' };
   }
 };
 
@@ -52,23 +68,15 @@ export const syncFromDiskToLocalStorage = async (): Promise<{
         };
       }
     }
-    // Fallback for static hosting / production build: reload latest bundled mock data
-    localStorage.setItem(SITES_KEY, JSON.stringify(INITIAL_SITES));
-    localStorage.setItem(TRIPS_KEY, JSON.stringify(INITIAL_TRIPS));
+    // Never destructively overwrite user's local storage if fetch fails or is static host
     return {
-      success: true,
-      sites: INITIAL_SITES,
-      trips: INITIAL_TRIPS,
-      message: `已从内置数据源刷新 (含 ${INITIAL_SITES.length} 个景点)！`
+      success: false,
+      message: '未检测到本地后端同步服务 (例如处于静态部署环境或 Vite 未启动)。为保护您当前未同步的修改，未覆盖本地存储。'
     };
   } catch (e: any) {
-    localStorage.setItem(SITES_KEY, JSON.stringify(INITIAL_SITES));
-    localStorage.setItem(TRIPS_KEY, JSON.stringify(INITIAL_TRIPS));
     return {
-      success: true,
-      sites: INITIAL_SITES,
-      trips: INITIAL_TRIPS,
-      message: `已从内置数据源刷新 (含 ${INITIAL_SITES.length} 个景点)！`
+      success: false,
+      message: `从磁盘同步失败 (${e?.message || '网络连接异常'})，已保护并保留本地已有数据。`
     };
   }
 };
@@ -87,13 +95,14 @@ export const getStoredSites = (): Site[] => {
   }
 };
 
-export const saveSites = (sites: Site[]) => {
+export const saveSites = async (sites: Site[]): Promise<{ success: boolean; isStaticHost?: boolean; message?: string }> => {
   try {
     localStorage.setItem(SITES_KEY, JSON.stringify(sites));
     // Auto-sync to disk in background
-    syncToFilesystem(sites, undefined);
-  } catch (e) {
+    return await syncToFilesystem(sites, undefined);
+  } catch (e: any) {
     console.error('Error saving sites to storage:', e);
+    return { success: false, message: e?.message || '保存到本地存储失败' };
   }
 };
 
@@ -104,20 +113,21 @@ export const getStoredTrips = (): Trip[] => {
       localStorage.setItem(TRIPS_KEY, JSON.stringify(INITIAL_TRIPS));
       return INITIAL_TRIPS;
     }
-    return INITIAL_TRIPS;
+    return JSON.parse(raw);
   } catch (e) {
     console.error('Error loading trips from storage:', e);
     return INITIAL_TRIPS;
   }
 };
 
-export const saveTrips = (trips: Trip[]) => {
+export const saveTrips = async (trips: Trip[]): Promise<{ success: boolean; isStaticHost?: boolean; message?: string }> => {
   try {
     localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
     // Auto-sync to disk in background
-    syncToFilesystem(undefined, trips);
-  } catch (e) {
+    return await syncToFilesystem(undefined, trips);
+  } catch (e: any) {
     console.error('Error saving trips to storage:', e);
+    return { success: false, message: e?.message || '保存到本地存储失败' };
   }
 };
 

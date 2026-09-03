@@ -20,7 +20,7 @@ import { PackingChecklist } from './components/Itinerary/PackingChecklist';
 import { PrintableView } from './components/Itinerary/PrintableView';
 import { LLMResearchModal } from './components/Sites/LLMResearchModal';
 import { parseCurrentUrl, updateUrlRoute } from './utils/urlRouter';
-import { Plus } from 'lucide-react';
+import { Plus, CheckCircle2, AlertCircle, X } from 'lucide-react';
 
 export function App() {
   const initialRoute = parseCurrentUrl();
@@ -42,6 +42,11 @@ export function App() {
   const [newSiteAddress, setNewSiteAddress] = useState<string>('');
   const [newSiteName, setNewSiteName] = useState<string>('');
   const [isPrintOpen, setIsPrintOpen] = useState(initialRoute.isPrintOpen ?? false);
+  const [syncToast, setSyncToast] = useState<{
+    type: 'success' | 'warn' | 'error';
+    message: string;
+    details?: string;
+  } | null>(null);
 
   // Filters
   const [filters, setFilters] = useState<SiteFilters>({
@@ -153,7 +158,7 @@ export function App() {
   }, [sites, activeTrip]);
 
   // Site CRUD operations
-  const handleSaveSite = (savedSite: Site) => {
+  const handleSaveSite = async (savedSite: Site) => {
     const siteWithTrip: Site = {
       ...savedSite,
       tripId: savedSite.tripId || activeTrip?.id || 'trip-japan-grand-multigen-2026'
@@ -166,27 +171,69 @@ export function App() {
       updated = [siteWithTrip, ...sites];
     }
     setSites(updated);
-    saveSites(updated);
+    const syncRes = await saveSites(updated);
+    if (syncRes.success) {
+      setSyncToast({
+        type: 'success',
+        message: exists ? `「${siteWithTrip.name}」已成功更新并写入本地磁盘！` : `「${siteWithTrip.name}」已成功创建并写入本地磁盘！`,
+        details: '已自动同步写入 data/sites.json 与 src/data/mockSites.ts'
+      });
+    } else if (syncRes.isStaticHost) {
+      setSyncToast({
+        type: 'warn',
+        message: exists ? `「${siteWithTrip.name}」已保存至浏览器本地存储！` : `「${siteWithTrip.name}」已保存至浏览器本地存储！`,
+        details: '当前页面为云端静态托管，无法直接写入电脑本地磁盘。请点击导航栏「存入Git」复制数据，或在本地启动开发服务 (http://localhost:5173)。'
+      });
+    } else {
+      setSyncToast({
+        type: 'error',
+        message: `「${siteWithTrip.name}」已暂存本地，但写入磁盘失败`,
+        details: syncRes.message || '请检查本地 Vite 开发服务是否正在运行'
+      });
+    }
+    setTimeout(() => setSyncToast(null), 6000);
+    return syncRes;
   };
 
-  const handleUpdateSite = (updatedSite: Site) => {
+  const handleUpdateSite = async (updatedSite: Site) => {
     const siteWithTrip: Site = {
       ...updatedSite,
       tripId: updatedSite.tripId || activeTrip?.id || 'trip-japan-grand-multigen-2026'
     };
     const updated = sites.map((s) => (s.id === siteWithTrip.id ? siteWithTrip : s));
     setSites(updated);
-    saveSites(updated);
     if (selectedSiteForDetails?.id === siteWithTrip.id) {
       setSelectedSiteForDetails(siteWithTrip);
     }
+    const syncRes = await saveSites(updated);
+    if (syncRes.success) {
+      setSyncToast({
+        type: 'success',
+        message: `「${siteWithTrip.name}」修改已保存并同步写入本地磁盘！`
+      });
+    } else if (syncRes.isStaticHost) {
+      setSyncToast({
+        type: 'warn',
+        message: `「${siteWithTrip.name}」修改已保存至浏览器本地存储 (静态环境不支持直写磁盘)`
+      });
+    }
+    setTimeout(() => setSyncToast(null), 5000);
+    return syncRes;
   };
 
-  const handleDeleteSite = (siteId: string) => {
+  const handleDeleteSite = async (siteId: string) => {
     if (!confirm('确定要从景点库中移除此景点吗？')) return;
+    const deletedSite = sites.find((s) => s.id === siteId);
     const updated = sites.filter((s) => s.id !== siteId);
     setSites(updated);
-    saveSites(updated);
+    const syncRes = await saveSites(updated);
+    if (syncRes.success) {
+      setSyncToast({
+        type: 'success',
+        message: `已移除「${deletedSite?.name || '该景点'}」并更新本地磁盘！`
+      });
+      setTimeout(() => setSyncToast(null), 4000);
+    }
   };
 
   const handleAddNewSiteFromMap = (coords: [number, number], address?: string, name?: string) => {
@@ -873,6 +920,38 @@ export function App() {
           sites={activeTripSites}
           onClose={() => setIsPrintOpen(false)}
         />
+      )}
+
+      {/* Floating Sync Toast Notification */}
+      {syncToast && (
+        <div className="fixed bottom-6 right-6 z-50 max-w-md animate-in fade-in slide-in-from-bottom-5 duration-200">
+          <div className={`p-4 rounded-2xl shadow-xl border backdrop-blur-md flex items-start gap-3 ${
+            syncToast.type === 'success' 
+              ? 'bg-emerald-50/95 border-emerald-200 text-emerald-900 shadow-emerald-500/10' 
+              : syncToast.type === 'warn'
+              ? 'bg-amber-50/95 border-amber-200 text-amber-900 shadow-amber-500/10'
+              : 'bg-rose-50/95 border-rose-200 text-rose-900 shadow-rose-500/10'
+          }`}>
+            <div className="flex-shrink-0 mt-0.5">
+              {syncToast.type === 'success' && <CheckCircle2 className="w-5 h-5 text-emerald-600" />}
+              {syncToast.type === 'warn' && <AlertCircle className="w-5 h-5 text-amber-600" />}
+              {syncToast.type === 'error' && <AlertCircle className="w-5 h-5 text-rose-600" />}
+            </div>
+            <div className="flex-1 pr-2">
+              <p className="text-xs font-bold">{syncToast.message}</p>
+              {syncToast.details && (
+                <p className="text-[11px] opacity-80 mt-1 leading-relaxed">{syncToast.details}</p>
+              )}
+            </div>
+            <button
+              type="button"
+              onClick={() => setSyncToast(null)}
+              className="text-slate-400 hover:text-slate-700 p-1 flex-shrink-0 cursor-pointer"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
       )}
 
     </div>

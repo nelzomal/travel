@@ -21,7 +21,7 @@ interface SiteFormModalProps {
   trip?: Trip | null;
   isOpen: boolean;
   onClose: () => void;
-  onSave: (site: Site) => void;
+  onSave: (site: Site) => void | Promise<any>;
 }
 
 export const SiteFormModal: React.FC<SiteFormModalProps> = ({
@@ -526,15 +526,19 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!name.trim()) return;
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name.trim() || isSubmitting) return;
+
+    setIsSubmitting(true);
     const finalSite: Site = {
       id: initialSite ? initialSite.id : `site-${Date.now()}`,
       name: name.trim(),
       localName: localName.trim() || undefined,
       category,
+      tripId: initialSite?.tripId || trip?.id || 'trip-japan-grand-multigen-2026',
       coordinates: [Number(lat), Number(lng)],
       address: address.trim(),
       city: city.trim(),
@@ -569,8 +573,12 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       createdAt: initialSite?.createdAt || new Date().toISOString().slice(0, 10)
     };
 
-    onSave(finalSite);
-    onClose();
+    try {
+      await onSave(finalSite);
+      onClose();
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -1768,10 +1776,20 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
             </button>
             <button
               type="submit"
-              className="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold shadow-md transition-all flex items-center gap-1.5"
+              disabled={isSubmitting}
+              className="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white rounded-xl text-xs font-bold shadow-md transition-all flex items-center gap-1.5 cursor-pointer disabled:cursor-not-allowed"
             >
-              <Check className="w-4 h-4" />
-              {initialSite ? '保存修改' : '确认创建景点'}
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  <span>正在保存...</span>
+                </>
+              ) : (
+                <>
+                  <Check className="w-4 h-4" />
+                  <span>{initialSite ? '保存修改' : '确认创建景点'}</span>
+                </>
+              )}
             </button>
           </div>
 
