@@ -18,6 +18,9 @@ interface NavbarProps {
   onOpenPrintView: () => void;
   onDataImported: () => void;
   onSyncFromDisk?: () => Promise<{ success: boolean; message: string }>;
+  isOpenSyncModal?: boolean;
+  onOpenSyncModal?: () => void;
+  onCloseSyncModal?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -30,7 +33,10 @@ export const Navbar: React.FC<NavbarProps> = ({
   onAddNewSite,
   onOpenPrintView,
   onDataImported,
-  onSyncFromDisk
+  onSyncFromDisk,
+  isOpenSyncModal,
+  onOpenSyncModal,
+  onCloseSyncModal
 }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [copiedLink, setCopiedLink] = useState(false);
@@ -38,7 +44,17 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [diskSyncedStatus, setDiskSyncedStatus] = useState<string | null>(null);
   const [isSyncingFromDisk, setIsSyncingFromDisk] = useState(false);
 
-  const [showSyncModal, setShowSyncModal] = useState(false);
+  const [internalShowSyncModal, setInternalShowSyncModal] = useState(false);
+  const isSyncModalVisible = isOpenSyncModal !== undefined ? isOpenSyncModal : internalShowSyncModal;
+  const openSyncModal = () => {
+    setInternalShowSyncModal(true);
+    onOpenSyncModal?.();
+  };
+  const closeSyncModal = () => {
+    setInternalShowSyncModal(false);
+    onCloseSyncModal?.();
+  };
+
   const [copiedJson, setCopiedJson] = useState(false);
 
   const handleManualSyncFromDisk = async () => {
@@ -71,14 +87,13 @@ export const Navbar: React.FC<NavbarProps> = ({
     if (isLocalDev) {
       const res = await syncToFilesystem();
       if (res.success) {
-        setSyncedStatus('已成功同步写入本地 Git 文件！');
+        setSyncedStatus('已成功写入本地 Git！');
       } else {
         setSyncedStatus(res.message || '同步完成');
       }
       setTimeout(() => setSyncedStatus(null), 3000);
-    } else {
-      setShowSyncModal(true);
     }
+    openSyncModal();
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -322,26 +337,59 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className="hidden"
               />
             </div>
+            {/* Save & Sync directly to Git codebase / Open Sync Modal */}
+            <button
+              type="button"
+              onClick={handleManualSyncToGit}
+              title="同步数据至本地 Git，或打开弹窗复制/导出完整 JSON 数据"
+              className={`px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all border shadow-2xs cursor-pointer ${
+                syncedStatus
+                  ? 'bg-emerald-50 text-emerald-700 border-emerald-300 ring-2 ring-emerald-400/20'
+                  : 'bg-indigo-50/80 hover:bg-indigo-100 text-indigo-700 border-indigo-200 hover:border-indigo-300'
+              }`}
+            >
+              {syncedStatus ? (
+                <>
+                  <Check className="w-3.5 h-3.5 text-emerald-600" />
+                  <span>已写入Git!</span>
+                </>
+              ) : (
+                <>
+                  <Save className="w-3.5 h-3.5 text-indigo-600" />
+                  <span>存入Git / 同步数据</span>
+                </>
+              )}
+            </button>
+
+            {/* Quick Add Site Button */}
+            <button
+              type="button"
+              onClick={onAddNewSite}
+              className="px-3.5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-sm shadow-indigo-600/20 transition-all hover:scale-102"
+            >
+              <Plus className="w-4 h-4" />
+              <span>新增景点</span>
+            </button>
 
           </div>
 
         </div>
 
-        {/* Mobile Navigation Tabs */}
-        <div className="flex md:hidden items-center justify-around py-2 border-t border-slate-100 text-xs font-semibold">
+        {/* Mobile Navigation Tabs Bar */}
+        <div className="flex md:hidden border-t border-slate-200/80 py-2 justify-around text-xs font-medium text-slate-600">
           <button
             type="button"
             onClick={() => onSelectTab('map_plan')}
             className={`py-1 px-2 rounded-lg ${activeTab === 'map_plan' ? 'text-indigo-600 font-bold bg-indigo-50' : 'text-slate-600'}`}
           >
-            🗺️ 地图
+            🗺️ 地图规划
           </button>
           <button
             type="button"
             onClick={() => onSelectTab('sites')}
             className={`py-1 px-2 rounded-lg ${activeTab === 'sites' ? 'text-indigo-600 font-bold bg-indigo-50' : 'text-slate-600'}`}
           >
-            🏛️ 景点
+            🏛️ 景点库
           </button>
           <button
             type="button"
@@ -361,46 +409,58 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       </div>
 
-      {/* SYNC TO GIT MODAL (For Cloudflare Pages / Static Hosting) */}
-      {showSyncModal && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl p-6 border border-slate-200 space-y-4 animate-in fade-in zoom-in-95 duration-200">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2.5">
-                <div className="w-10 h-10 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl font-bold">
+      {/* SYNC TO GIT MODAL (For Cloudflare Pages / Static Hosting & Local Export) */}
+      {isSyncModalVisible && (
+        <div 
+          className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 backdrop-blur-sm p-4 sm:p-6 flex items-center justify-center"
+          onClick={closeSyncModal}
+        >
+          <div 
+            className="relative w-full max-w-lg my-auto max-h-[calc(100vh-2rem)] flex flex-col bg-white rounded-3xl shadow-2xl border border-slate-200 animate-in fade-in zoom-in-95 duration-200 text-left"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-5 sm:p-6 pb-4 border-b border-slate-100 flex-shrink-0">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
                   💾
                 </div>
                 <div>
                   <h3 className="text-base font-extrabold text-slate-900">同步线上修改至本地 Git</h3>
-                  <p className="text-xs text-slate-500">线上部署运行于纯静态云端，修改暂存于您当前浏览器的本地存储</p>
+                  <p className="text-xs text-slate-500">线上修改暂存于当前浏览器，可一键复制 JSON 同步回 Git</p>
                 </div>
               </div>
               <button
                 type="button"
-                onClick={() => setShowSyncModal(false)}
-                className="p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-xl transition-colors"
+                onClick={closeSyncModal}
+                className="p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-xl transition-colors cursor-pointer"
+                title="关闭"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-xs space-y-2.5 text-slate-700">
-              <p className="font-bold text-slate-900">推荐同步方式：</p>
-              <div className="flex items-start gap-2">
-                <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-[11px] flex-shrink-0 mt-0.5">1</span>
-                <p>点击下方 <strong>「一键复制全部数据 JSON」</strong> 按钮；</p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-[11px] flex-shrink-0 mt-0.5">2</span>
-                <p>在 AI 对话框中直接粘贴发送，AI 助手将全量写入本地 Git 代码库并即刻提交！</p>
-              </div>
-              <div className="pt-2 border-t border-slate-200 flex items-center gap-2 text-slate-500 text-[11px]">
-                <span>💡</span>
-                <span>也可以在电脑浏览器打开本地版 <strong>http://localhost:5173</strong>，点击顶部的「📤 导入」直接生效。</span>
+            {/* Modal Scrollable Body */}
+            <div className="p-5 sm:p-6 overflow-y-auto space-y-4 text-xs text-slate-700 flex-1">
+              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/90 space-y-3">
+                <p className="font-bold text-slate-900 text-sm">推荐同步步骤：</p>
+                <div className="flex items-start gap-2.5">
+                  <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-[11px] flex-shrink-0 mt-0.5">1</span>
+                  <p className="leading-relaxed">点击下方 <strong className="text-indigo-600 font-bold">「一键复制全部数据 JSON」</strong> 按钮；</p>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-[11px] flex-shrink-0 mt-0.5">2</span>
+                  <p className="leading-relaxed">在 AI 对话框中直接粘贴发送，AI 助手将全量写入本地 Git 代码库并即刻提交！</p>
+                </div>
+                <div className="pt-2.5 border-t border-slate-200 flex items-start gap-2 text-slate-500 text-[11px]">
+                  <span className="mt-0.5">💡</span>
+                  <span>也可以在电脑打开本地版 <code className="bg-slate-200/80 px-1 py-0.5 rounded text-slate-800 font-mono">http://localhost:5173</code>，点击顶部的「📤 导入」上传导出的 JSON。</span>
+                </div>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-2.5 pt-1">
+            {/* Modal Footer Buttons */}
+            <div className="p-5 sm:p-6 pt-3 border-t border-slate-100 flex-shrink-0 flex flex-col sm:flex-row gap-2.5">
               <button
                 type="button"
                 onClick={() => {
@@ -408,7 +468,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   setCopiedJson(true);
                   setTimeout(() => setCopiedJson(false), 3000);
                 }}
-                className="flex-1 px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-indigo-600/20 transition-all"
+                className="flex-1 px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-indigo-600/20 transition-all cursor-pointer"
               >
                 {copiedJson ? (
                   <>
@@ -426,7 +486,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 type="button"
                 onClick={exportDataAsJSON}
-                className="px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-2xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all"
+                className="px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-2xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer"
               >
                 <Download className="w-4 h-4" />
                 <span>下载 JSON 文件</span>

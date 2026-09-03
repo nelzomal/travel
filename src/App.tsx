@@ -21,7 +21,7 @@ import { PackingChecklist } from './components/Itinerary/PackingChecklist';
 import { PrintableView } from './components/Itinerary/PrintableView';
 import { LLMResearchModal } from './components/Sites/LLMResearchModal';
 import { parseCurrentUrl, updateUrlRoute } from './utils/urlRouter';
-import { Plus, CheckCircle2, AlertCircle, X } from 'lucide-react';
+import { Plus, CheckCircle2, AlertCircle, X, Copy } from 'lucide-react';
 
 export function App() {
   const initialRoute = parseCurrentUrl();
@@ -48,6 +48,7 @@ export function App() {
     message: string;
     details?: string;
   } | null>(null);
+  const [isSyncModalOpen, setIsSyncModalOpen] = useState(false);
 
   // Filters
   const [filters, setFilters] = useState<SiteFilters>({
@@ -581,6 +582,9 @@ export function App() {
         onOpenPrintView={() => setIsPrintOpen(true)}
         onDataImported={loadData}
         onSyncFromDisk={handleSyncFromDisk}
+        isOpenSyncModal={isSyncModalOpen}
+        onOpenSyncModal={() => setIsSyncModalOpen(true)}
+        onCloseSyncModal={() => setIsSyncModalOpen(false)}
       />
 
       {/* Main Content Area */}
@@ -951,6 +955,19 @@ export function App() {
               <p className="text-xs font-bold">{syncToast.message}</p>
               {syncToast.details && (
                 <p className="text-[11px] opacity-80 mt-1 leading-relaxed">{syncToast.details}</p>
+              )}
+              {syncToast.type === 'warn' && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsSyncModalOpen(true);
+                    setSyncToast(null);
+                  }}
+                  className="mt-2.5 px-3 py-1.5 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer"
+                >
+                  <Copy className="w-3.5 h-3.5" />
+                  <span>立即打开同步数据弹窗</span>
+                </button>
               )}
             </div>
             <button
