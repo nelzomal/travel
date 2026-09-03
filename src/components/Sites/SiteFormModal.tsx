@@ -135,7 +135,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
   const [newPromptFieldLabel, setNewPromptFieldLabel] = useState('');
 
   // Social media research options
-  const [enableSocialResearch, setEnableSocialResearch] = useState(true);
+  const [enableSocialResearch, setEnableSocialResearch] = useState(false);
   const [socialPlatforms, setSocialPlatforms] = useState<('xiaohongshu' | 'bilibili')[]>(['xiaohongshu', 'bilibili']);
   const [quickPromptName, setQuickPromptName] = useState('');
 
@@ -184,6 +184,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
     } else {
       // Reset for new site
       setSocialMediaLinks([]);
+      setEnableSocialResearch(false);
       setName(initialName || '');
       setQuickPromptName(initialName || '');
       setLocalName('');

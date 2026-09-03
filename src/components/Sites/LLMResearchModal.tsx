@@ -44,7 +44,7 @@ export const LLMResearchModal: React.FC<LLMResearchModalProps> = ({
   const [showAddField, setShowAddField] = useState(false);
 
   // Social media research options
-  const [enableSocialResearch, setEnableSocialResearch] = useState(true);
+  const [enableSocialResearch, setEnableSocialResearch] = useState(false);
   const [socialPlatforms, setSocialPlatforms] = useState<('xiaohongshu' | 'bilibili')[]>(['xiaohongshu', 'bilibili']);
 
   const [newGalleryUrl, setNewGalleryUrl] = useState('');

@@ -59,7 +59,7 @@ export const generateSiteResearchPrompt = ({
   customFields = [],
   siteId,
   existingCoverImage,
-  enableSocialResearch = true,
+  enableSocialResearch = false,
   socialPlatforms = ['xiaohongshu', 'bilibili']
 }: GeneratePromptParams): string => {
   const targetSiteName = siteName.trim() || '待调研景点';
