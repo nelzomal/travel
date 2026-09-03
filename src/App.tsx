@@ -20,6 +20,7 @@ import { DailyTimeline } from './components/Itinerary/DailyTimeline';
 import { PackingChecklist } from './components/Itinerary/PackingChecklist';
 import { PrintableView } from './components/Itinerary/PrintableView';
 import { LLMResearchModal } from './components/Sites/LLMResearchModal';
+import { SyncToGitModal } from './components/SyncToGitModal';
 import { parseCurrentUrl, updateUrlRoute } from './utils/urlRouter';
 import { Plus, CheckCircle2, AlertCircle, X, Copy } from 'lucide-react';
 
@@ -582,9 +583,7 @@ export function App() {
         onOpenPrintView={() => setIsPrintOpen(true)}
         onDataImported={loadData}
         onSyncFromDisk={handleSyncFromDisk}
-        isOpenSyncModal={isSyncModalOpen}
         onOpenSyncModal={() => setIsSyncModalOpen(true)}
-        onCloseSyncModal={() => setIsSyncModalOpen(false)}
       />
 
       {/* Main Content Area */}
@@ -935,6 +934,12 @@ export function App() {
           onClose={() => setIsPrintOpen(false)}
         />
       )}
+
+      {/* MODAL: Sync to Git & Data Export Modal */}
+      <SyncToGitModal
+        isOpen={isSyncModalOpen}
+        onClose={() => setIsSyncModalOpen(false)}
+      />
 
       {/* Floating Sync Toast Notification */}
       {syncToast && (

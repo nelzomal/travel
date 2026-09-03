@@ -18,9 +18,7 @@ interface NavbarProps {
   onOpenPrintView: () => void;
   onDataImported: () => void;
   onSyncFromDisk?: () => Promise<{ success: boolean; message: string }>;
-  isOpenSyncModal?: boolean;
-  onOpenSyncModal?: () => void;
-  onCloseSyncModal?: () => void;
+  onOpenSyncModal: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -34,28 +32,13 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenPrintView,
   onDataImported,
   onSyncFromDisk,
-  isOpenSyncModal,
-  onOpenSyncModal,
-  onCloseSyncModal
+  onOpenSyncModal
 }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [copiedLink, setCopiedLink] = useState(false);
   const [syncedStatus, setSyncedStatus] = useState<string | null>(null);
   const [diskSyncedStatus, setDiskSyncedStatus] = useState<string | null>(null);
   const [isSyncingFromDisk, setIsSyncingFromDisk] = useState(false);
-
-  const [internalShowSyncModal, setInternalShowSyncModal] = useState(false);
-  const isSyncModalVisible = isOpenSyncModal !== undefined ? isOpenSyncModal : internalShowSyncModal;
-  const openSyncModal = () => {
-    setInternalShowSyncModal(true);
-    onOpenSyncModal?.();
-  };
-  const closeSyncModal = () => {
-    setInternalShowSyncModal(false);
-    onCloseSyncModal?.();
-  };
-
-  const [copiedJson, setCopiedJson] = useState(false);
 
   const handleManualSyncFromDisk = async () => {
     setIsSyncingFromDisk(true);
@@ -93,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       }
       setTimeout(() => setSyncedStatus(null), 3000);
     }
-    openSyncModal();
+    onOpenSyncModal();
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -408,93 +391,6 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
       </div>
-
-      {/* SYNC TO GIT MODAL (For Cloudflare Pages / Static Hosting & Local Export) */}
-      {isSyncModalVisible && (
-        <div 
-          className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 backdrop-blur-sm p-4 sm:p-6 flex items-center justify-center"
-          onClick={closeSyncModal}
-        >
-          <div 
-            className="relative w-full max-w-lg my-auto max-h-[calc(100vh-2rem)] flex flex-col bg-white rounded-3xl shadow-2xl border border-slate-200 animate-in fade-in zoom-in-95 duration-200 text-left"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Modal Header */}
-            <div className="flex items-center justify-between p-5 sm:p-6 pb-4 border-b border-slate-100 flex-shrink-0">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
-                  💾
-                </div>
-                <div>
-                  <h3 className="text-base font-extrabold text-slate-900">同步线上修改至本地 Git</h3>
-                  <p className="text-xs text-slate-500">线上修改暂存于当前浏览器，可一键复制 JSON 同步回 Git</p>
-                </div>
-              </div>
-              <button
-                type="button"
-                onClick={closeSyncModal}
-                className="p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-xl transition-colors cursor-pointer"
-                title="关闭"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* Modal Scrollable Body */}
-            <div className="p-5 sm:p-6 overflow-y-auto space-y-4 text-xs text-slate-700 flex-1">
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/90 space-y-3">
-                <p className="font-bold text-slate-900 text-sm">推荐同步步骤：</p>
-                <div className="flex items-start gap-2.5">
-                  <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-[11px] flex-shrink-0 mt-0.5">1</span>
-                  <p className="leading-relaxed">点击下方 <strong className="text-indigo-600 font-bold">「一键复制全部数据 JSON」</strong> 按钮；</p>
-                </div>
-                <div className="flex items-start gap-2.5">
-                  <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-[11px] flex-shrink-0 mt-0.5">2</span>
-                  <p className="leading-relaxed">在 AI 对话框中直接粘贴发送，AI 助手将全量写入本地 Git 代码库并即刻提交！</p>
-                </div>
-                <div className="pt-2.5 border-t border-slate-200 flex items-start gap-2 text-slate-500 text-[11px]">
-                  <span className="mt-0.5">💡</span>
-                  <span>也可以在电脑打开本地版 <code className="bg-slate-200/80 px-1 py-0.5 rounded text-slate-800 font-mono">http://localhost:5173</code>，点击顶部的「📤 导入」上传导出的 JSON。</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Modal Footer Buttons */}
-            <div className="p-5 sm:p-6 pt-3 border-t border-slate-100 flex-shrink-0 flex flex-col sm:flex-row gap-2.5">
-              <button
-                type="button"
-                onClick={() => {
-                  navigator.clipboard.writeText(getExportDataJSONString());
-                  setCopiedJson(true);
-                  setTimeout(() => setCopiedJson(false), 3000);
-                }}
-                className="flex-1 px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-indigo-600/20 transition-all cursor-pointer"
-              >
-                {copiedJson ? (
-                  <>
-                    <Check className="w-4 h-4 text-emerald-300" />
-                    <span>已复制全部数据 JSON 到剪贴板！</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-4 h-4" />
-                    <span>📋 一键复制全部数据 JSON</span>
-                  </>
-                )}
-              </button>
-
-              <button
-                type="button"
-                onClick={exportDataAsJSON}
-                className="px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-2xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer"
-              >
-                <Download className="w-4 h-4" />
-                <span>下载 JSON 文件</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </header>
   );
 };
