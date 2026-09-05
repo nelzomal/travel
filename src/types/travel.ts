@@ -14,17 +14,17 @@ export type StairsLevel = '平坦 / 无台阶' | '少量台阶 (配有无障碍�
 export type WeatherSuitability = '全天候适宜' | '室内 (雨天/避暑优选)' | '晴天适宜' | '纯户外' | (string & {});
 
 export interface SiteAmenities {
-  nursingRoom: boolean;        // 母婴室 / 哺乳室
-  diaperChanging: boolean;     // 尿布台
-  accessibleRestroom: boolean; // 无障碍洗手间
-  benchesRestAreas: boolean;   // 密集休息长椅
-  shuttleOrCart: boolean;      // 园区接驳车 / 轮椅代步
-  elevatorAvailable: boolean;  // 直梯全覆盖
-  strollerRental: boolean;     // 婴儿车租赁
-  wheelchairRental: boolean;   // 轮椅借用
-  shadeAvailable: boolean;     // 树荫 / 遮阳棚
-  indoorRainyDayOption: boolean;// 室内雨天保障
-  kidPlayArea: boolean;        // 儿童互动/玩乐区
+  nursingRoom?: boolean | null;        // 母婴室 / 哺乳室
+  diaperChanging?: boolean | null;     // 尿布台
+  accessibleRestroom?: boolean | null; // 无障碍洗手间
+  benchesRestAreas?: boolean | null;   // 密集休息长椅
+  shuttleOrCart?: boolean | null;      // 园区接驳车 / 轮椅代步
+  elevatorAvailable?: boolean | null;  // 直梯全覆盖
+  strollerRental?: boolean | null;     // 婴儿车租赁
+  wheelchairRental?: boolean | null;   // 轮椅借用
+  shadeAvailable?: boolean | null;     // 树荫 / 遮阳棚
+  indoorRainyDayOption?: boolean | null;// 室内雨天保障
+  kidPlayArea?: boolean | null;        // 儿童互动/玩乐区
 }
 
 export interface NearbyDining {

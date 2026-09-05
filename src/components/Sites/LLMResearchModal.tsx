@@ -172,63 +172,71 @@ export const LLMResearchModal: React.FC<LLMResearchModalProps> = ({
       return;
     }
 
-    const result = parseLLMReply(llmOutputText, site);
-    if (!result.success || !result.data) {
-      setImportStatus({ success: false, message: result.message });
-      return;
+    try {
+      const result = parseLLMReply(llmOutputText, site);
+      if (!result.success || !result.data) {
+        setImportStatus({ success: false, message: result.message });
+        return;
+      }
+
+      const parsed = result.data;
+      const updatedSite: Site = {
+        ...site,
+        name: parsed.name || site.name,
+        localName: parsed.localName !== undefined ? parsed.localName : site.localName,
+        description: parsed.description || site.description,
+        coverImage: parsed.coverImage || site.coverImage,
+        gallery: parsed.gallery && parsed.gallery.length > 0 ? parsed.gallery : site.gallery,
+        videos: parsed.videos && parsed.videos.length > 0 ? parsed.videos : (site.videos || []),
+        recommendedDurationMin: Number(parsed.recommendedDurationMin) || site.recommendedDurationMin,
+        openingHours: parsed.openingHours || site.openingHours,
+        admissionFee: {
+          adult: parsed.admissionFee?.adult || site.admissionFee.adult,
+          senior: parsed.admissionFee?.senior || site.admissionFee.senior,
+          child4yo: parsed.admissionFee?.child4yo || site.admissionFee.child4yo,
+          notes: parsed.admissionFee?.notes !== undefined ? parsed.admissionFee.notes : site.admissionFee.notes
+        },
+        bestTimeToVisit: parsed.bestTimeToVisit || site.bestTimeToVisit,
+        weatherSuitability: parsed.weatherSuitability || site.weatherSuitability,
+        strollerRating: parsed.strollerRating || site.strollerRating,
+        strollerNotes: parsed.strollerNotes || site.strollerNotes,
+        kidRating: parsed.kidRating || site.kidRating,
+        kidNotes: parsed.kidNotes || site.kidNotes,
+        elderlyRating: parsed.elderlyRating || site.elderlyRating,
+        elderlyNotes: parsed.elderlyNotes || site.elderlyNotes,
+        walkingIntensity: parsed.walkingIntensity || site.walkingIntensity,
+        stairsLevel: parsed.stairsLevel || site.stairsLevel,
+        amenities: {
+          ...site.amenities,
+          ...(parsed.amenities || {})
+        },
+        familyTips: Array.isArray(parsed.familyTips) && parsed.familyTips.length > 0 ? parsed.familyTips : site.familyTips,
+        nearbyDining: Array.isArray(parsed.nearbyDining) && parsed.nearbyDining.length > 0 ? parsed.nearbyDining : site.nearbyDining,
+        customTags: parsed.customTags || site.customTags,
+        customFields: parsed.customFields || site.customFields,
+        socialMediaLinks: (() => {
+          if (!parsed.socialMediaLinks || parsed.socialMediaLinks.length === 0) return site.socialMediaLinks;
+          const existingUrls = new Set((site.socialMediaLinks || []).map((s) => s.url));
+          const toAdd = parsed.socialMediaLinks.filter((s) => !existingUrls.has(s.url));
+          return [...(site.socialMediaLinks || []), ...toAdd];
+        })()
+      };
+
+      onUpdateSite(updatedSite);
+      setImportStatus({ 
+        success: true, 
+        message: result.message 
+      });
+      setTimeout(() => {
+        onClose();
+      }, 1400);
+    } catch (err: any) {
+      console.error('Error applying LLM output in LLMResearchModal:', err);
+      setImportStatus({
+        success: false,
+        message: `更新失败: ${err.message || '数据格式异常'}`
+      });
     }
-
-    const parsed = result.data;
-    const updatedSite: Site = {
-      ...site,
-      name: parsed.name || site.name,
-      localName: parsed.localName !== undefined ? parsed.localName : site.localName,
-      description: parsed.description || site.description,
-      coverImage: parsed.coverImage || site.coverImage,
-      gallery: parsed.gallery && parsed.gallery.length > 0 ? parsed.gallery : site.gallery,
-      videos: parsed.videos && parsed.videos.length > 0 ? parsed.videos : (site.videos || []),
-      recommendedDurationMin: Number(parsed.recommendedDurationMin) || site.recommendedDurationMin,
-      openingHours: parsed.openingHours || site.openingHours,
-      admissionFee: {
-        adult: parsed.admissionFee?.adult || site.admissionFee.adult,
-        senior: parsed.admissionFee?.senior || site.admissionFee.senior,
-        child4yo: parsed.admissionFee?.child4yo || site.admissionFee.child4yo,
-        notes: parsed.admissionFee?.notes !== undefined ? parsed.admissionFee.notes : site.admissionFee.notes
-      },
-      bestTimeToVisit: parsed.bestTimeToVisit || site.bestTimeToVisit,
-      weatherSuitability: parsed.weatherSuitability || site.weatherSuitability,
-      strollerRating: parsed.strollerRating || site.strollerRating,
-      strollerNotes: parsed.strollerNotes || site.strollerNotes,
-      kidRating: parsed.kidRating || site.kidRating,
-      kidNotes: parsed.kidNotes || site.kidNotes,
-      elderlyRating: parsed.elderlyRating || site.elderlyRating,
-      elderlyNotes: parsed.elderlyNotes || site.elderlyNotes,
-      walkingIntensity: parsed.walkingIntensity || site.walkingIntensity,
-      stairsLevel: parsed.stairsLevel || site.stairsLevel,
-      amenities: {
-        ...site.amenities,
-        ...(parsed.amenities || {})
-      },
-      familyTips: Array.isArray(parsed.familyTips) && parsed.familyTips.length > 0 ? parsed.familyTips : site.familyTips,
-      nearbyDining: Array.isArray(parsed.nearbyDining) && parsed.nearbyDining.length > 0 ? parsed.nearbyDining : site.nearbyDining,
-      customTags: parsed.customTags || site.customTags,
-      customFields: parsed.customFields || site.customFields,
-      socialMediaLinks: (() => {
-        if (!parsed.socialMediaLinks || parsed.socialMediaLinks.length === 0) return site.socialMediaLinks;
-        const existingUrls = new Set((site.socialMediaLinks || []).map((s) => s.url));
-        const toAdd = parsed.socialMediaLinks.filter((s) => !existingUrls.has(s.url));
-        return [...(site.socialMediaLinks || []), ...toAdd];
-      })()
-    };
-
-    onUpdateSite(updatedSite);
-    setImportStatus({ 
-      success: true, 
-      message: result.message 
-    });
-    setTimeout(() => {
-      onClose();
-    }, 1400);
   };
 
   return (

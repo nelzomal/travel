@@ -23,7 +23,13 @@ export const getDefaultCustomFields = (destination: string = '', isDalian: boole
 };
 
 export const cleanUrl = (raw: any): string => {
-  if (!raw || typeof raw !== 'string') return '';
+  if (!raw) return '';
+  if (typeof raw === 'object') {
+    const candidate = raw.url || raw.link || raw.src || raw.videoUrl || raw.href || raw.screenshotUrl || raw.coverImage || raw.image;
+    if (candidate) return cleanUrl(candidate);
+    return '';
+  }
+  if (typeof raw !== 'string') return '';
   const trimmed = raw.trim();
   const mdMatch = trimmed.match(/\[.*?\]\((https?:\/\/[^\s\)]+)\)/);
   if (mdMatch && mdMatch[1]) return mdMatch[1].trim();
@@ -33,6 +39,32 @@ export const cleanUrl = (raw: any): string => {
   if (plainMatch && plainMatch[1]) return plainMatch[1].trim();
   if (trimmed.startsWith('http')) return trimmed;
   return '';
+};
+
+export const ensureString = (val: any, fallback: string = ''): string => {
+  if (val === null || val === undefined) return fallback;
+  if (typeof val === 'string') return val.trim();
+  if (typeof val === 'number' || typeof val === 'boolean') return String(val);
+  if (Array.isArray(val)) {
+    const items = val.map((x) => ensureString(x)).filter(Boolean);
+    return items.join('；');
+  }
+  if (typeof val === 'object') {
+    if (val.title && val.url) {
+      const parts = [val.title, val.author && `(${val.author})`, val.duration, val.url].filter(Boolean);
+      return parts.join(' ');
+    }
+    if (val.text || val.content || val.value || val.description || val.tip || val.note) {
+      return ensureString(val.text || val.content || val.value || val.description || val.tip || val.note);
+    }
+    try {
+      const entries = Object.entries(val).map(([k, v]) => `${k}: ${typeof v === 'object' ? JSON.stringify(v) : v}`);
+      return entries.join(' | ');
+    } catch {
+      return JSON.stringify(val);
+    }
+  }
+  return String(val).trim();
 };
 
 export interface GeneratePromptParams {
@@ -314,29 +346,64 @@ export const parseLLMReply = (
       'admissionFee', 'bestTimeToVisit', 'weatherSuitability', 'strollerRating',
       'strollerNotes', 'kidRating', 'kidNotes', 'elderlyRating', 'elderlyNotes',
       'walkingIntensity', 'stairsLevel', 'amenities', 'familyTips', 'nearbyDining',
-      'customTags', 'customFields', 'id', 'coordinates', 'address', 'city', 'coverImage', 'gallery', 'videos', 'category', 'socialMediaLinks'
+      'customTags', 'customFields', 'id', 'coordinates', 'address', 'city', 'coverImage', 'gallery', 'videos', 'video', 'category', 'socialMediaLinks'
     ]);
 
-    const extractedCustomFields: Record<string, string> = {
-      ...(currentSite?.customFields || {}),
-      ...(parsed.customFields || {})
-    };
+    // 1. Sanitize customFields so that all values are guaranteed to be strings
+    const extractedCustomFields: Record<string, string> = {};
+    if (currentSite?.customFields && typeof currentSite.customFields === 'object') {
+      Object.entries(currentSite.customFields).forEach(([k, v]) => {
+        const s = ensureString(v);
+        if (s) extractedCustomFields[k] = s;
+      });
+    }
+
+    if (parsed.customFields) {
+      if (Array.isArray(parsed.customFields)) {
+        parsed.customFields.forEach((item: any, idx: number) => {
+          if (item && typeof item === 'object') {
+            const k = ensureString(item.key || item.name || item.label, `custom_${idx + 1}`);
+            const v = ensureString(item.value ?? item.content ?? item.text ?? item.desc ?? item.val ?? item);
+            if (k && v) extractedCustomFields[k] = v;
+          } else if (typeof item === 'string' && item.trim()) {
+            extractedCustomFields[`custom_${idx + 1}`] = item.trim();
+          }
+        });
+      } else if (typeof parsed.customFields === 'object') {
+        Object.entries(parsed.customFields).forEach(([k, v]) => {
+          const s = ensureString(v);
+          if (s) extractedCustomFields[k] = s;
+        });
+      } else if (typeof parsed.customFields === 'string' && parsed.customFields.trim()) {
+        extractedCustomFields['调研备注'] = parsed.customFields.trim();
+      }
+    }
 
     Object.keys(parsed).forEach((k) => {
-      if (!knownKeys.has(k) && typeof parsed[k] === 'string') {
-        extractedCustomFields[k] = parsed[k];
+      if (!knownKeys.has(k) && parsed[k] !== undefined && parsed[k] !== null) {
+        const s = ensureString(parsed[k]);
+        if (s) extractedCustomFields[k] = s;
       }
     });
 
+    // 2. Cover image
     let coverImage = currentSite?.coverImage || '';
     const parsedCover = cleanUrl(parsed.coverImage);
     if (parsedCover.startsWith('http')) {
       coverImage = parsedCover;
     }
 
-    let gallery = currentSite?.gallery || [];
-    if (Array.isArray(parsed.gallery) && parsed.gallery.length > 0) {
-      const validUrls = parsed.gallery.map(cleanUrl).filter((u: string) => u.startsWith('http'));
+    // 3. Gallery images
+    let gallery = currentSite?.gallery ? [...currentSite.gallery] : [];
+    const rawGallery = Array.isArray(parsed.gallery) ? parsed.gallery : (Array.isArray(parsed.images) ? parsed.images : []);
+    if (rawGallery.length > 0) {
+      const validUrls: string[] = [];
+      for (const item of rawGallery) {
+        const u = cleanUrl(item);
+        if (u.startsWith('http') && !validUrls.includes(u)) {
+          validUrls.push(u);
+        }
+      }
       if (validUrls.length > 0) {
         gallery = validUrls;
         if (!coverImage || !parsedCover.startsWith('http')) {
@@ -345,61 +412,220 @@ export const parseLLMReply = (
       }
     }
 
-    let videos = currentSite?.videos || [];
-    if (Array.isArray(parsed.videos) && parsed.videos.length > 0) {
-      const validVideos = parsed.videos.map(cleanUrl).filter((v: string) => v.startsWith('http'));
+    // 4. Videos (support string URLs, video objects with { url, title, duration, verification }, and singular video)
+    let videos = currentSite?.videos ? [...currentSite.videos] : [];
+    const extraSocialFromVideos: SocialMediaLink[] = [];
+    const rawVideos = Array.isArray(parsed.videos) ? parsed.videos : [];
+    if (rawVideos.length > 0) {
+      const validVideos: string[] = [];
+      for (const item of rawVideos) {
+        const u = cleanUrl(item);
+        if (u.startsWith('http') && !validVideos.includes(u)) {
+          validVideos.push(u);
+        }
+        if (typeof item === 'object' && item !== null && u.startsWith('http')) {
+          const lower = u.toLowerCase();
+          const isBili = lower.includes('bilibili.com') || lower.includes('b23.tv');
+          const isYt = lower.includes('youtube.com') || lower.includes('youtu.be');
+          if (isBili || isYt) {
+            extraSocialFromVideos.push({
+              id: `social-vid-${Date.now()}-${extraSocialFromVideos.length}`,
+              platform: isBili ? 'bilibili' : 'youtube',
+              title: ensureString(item.title, '4K沉浸导览视频'),
+              author: item.author ? ensureString(item.author) : 'UP主/博主',
+              url: u,
+              note: [item.duration && `时长: ${item.duration}`, item.verification && `核实: ${item.verification}`].filter(Boolean).join(' | ') || undefined,
+              addedAt: new Date().toISOString().slice(0, 10)
+            });
+          }
+        }
+      }
       if (validVideos.length > 0) {
         videos = validVideos;
       }
     } else if (parsed.video) {
-      const cleanedSingle = cleanUrl(parsed.video);
-      if (cleanedSingle.startsWith('http')) {
-        videos = [cleanedSingle];
+      const u = cleanUrl(parsed.video);
+      if (u.startsWith('http')) {
+        videos = [u];
       }
     }
 
+    // 5. Family Tips (guaranteed to be string[])
+    let familyTips: string[] | undefined = undefined;
+    if (Array.isArray(parsed.familyTips) && parsed.familyTips.length > 0) {
+      const sanitizedTips = parsed.familyTips
+        .map((tipItem: any) => ensureString(tipItem))
+        .filter((t: string) => t.length > 0);
+      if (sanitizedTips.length > 0) familyTips = sanitizedTips;
+    } else if (typeof parsed.familyTips === 'string' && parsed.familyTips.trim()) {
+      const splitted = parsed.familyTips
+        .split(/\n+|\d+[\.、]\s*/)
+        .map((t: string) => t.trim())
+        .filter((t: string) => t.length > 1);
+      if (splitted.length > 0) familyTips = splitted;
+    }
+
+    // 6. Nearby Dining (guaranteed string fields)
+    let nearbyDining: any[] | undefined = undefined;
+    if (Array.isArray(parsed.nearbyDining) && parsed.nearbyDining.length > 0) {
+      nearbyDining = parsed.nearbyDining.map((d: any, idx: number) => {
+        if (typeof d === 'string') {
+          return {
+            id: `dine-llm-${Date.now()}-${idx}`,
+            name: d.trim(),
+            cuisine: '特色餐饮',
+            familyFeatures: '适合三代同堂用餐',
+            walkingTimeMin: 3
+          };
+        }
+        return {
+          id: `dine-llm-${Date.now()}-${idx}`,
+          name: ensureString(d.name, '特色餐厅'),
+          cuisine: ensureString(d.cuisine, '和食简餐 / 本地菜'),
+          familyFeatures: ensureString(d.familyFeatures, '亲子长辈适宜'),
+          walkingTimeMin: Math.max(1, Number(d.walkingTimeMin) || 3)
+        };
+      });
+    }
+
+    // 7. Social Media Links
+    let parsedSocialLinks: SocialMediaLink[] = [];
+    if (Array.isArray(parsed.socialMediaLinks) && parsed.socialMediaLinks.length > 0) {
+      parsedSocialLinks = parsed.socialMediaLinks.map((item: any, idx: number) => {
+        if (typeof item === 'string') {
+          const rawUrl = cleanUrl(item) || item.trim();
+          let platform: any = 'xiaohongshu';
+          const u = rawUrl.toLowerCase();
+          if (u.includes('bilibili.com') || u.includes('b23.tv')) platform = 'bilibili';
+          else if (u.includes('douyin.com')) platform = 'douyin';
+          else if (u.includes('dianping.com')) platform = 'dianping';
+          else if (u.includes('youtube.com') || u.includes('youtu.be')) platform = 'youtube';
+          return {
+            id: `social-llm-${Date.now()}-${idx}`,
+            platform,
+            title: '精选带娃攻略',
+            author: '旅游博主',
+            url: rawUrl,
+            addedAt: new Date().toISOString().slice(0, 10)
+          };
+        }
+        let platform: any = item.platform;
+        const itemUrl = cleanUrl(item.url) || cleanUrl(item.link) || ensureString(item.url);
+        if (platform !== 'xiaohongshu' && platform !== 'bilibili' && platform !== 'douyin' && platform !== 'dianping' && platform !== 'youtube') {
+          const u = itemUrl.toLowerCase();
+          if (u.includes('xiaohongshu.com') || u.includes('xhslink')) platform = 'xiaohongshu';
+          else if (u.includes('bilibili.com') || u.includes('b23.tv')) platform = 'bilibili';
+          else if (u.includes('douyin.com')) platform = 'douyin';
+          else if (u.includes('dianping.com')) platform = 'dianping';
+          else if (u.includes('youtube.com') || u.includes('youtu.be')) platform = 'youtube';
+          else platform = 'xiaohongshu';
+        }
+        return {
+          id: item.id || `social-llm-${Date.now()}-${idx}`,
+          platform,
+          title: ensureString(item.title, '精选带娃攻略'),
+          author: item.author ? ensureString(item.author) : '旅游博主',
+          url: itemUrl,
+          note: item.note ? ensureString(item.note) : (item.desc ? ensureString(item.desc) : undefined),
+          screenshotUrl: cleanUrl(item.screenshotUrl) || undefined,
+          addedAt: item.addedAt || new Date().toISOString().slice(0, 10)
+        };
+      });
+    }
+
+    // Merge extra video links into socialMediaLinks if not duplicated
+    if (extraSocialFromVideos.length > 0) {
+      const seenUrls = new Set(parsedSocialLinks.map((s) => s.url));
+      extraSocialFromVideos.forEach((ev) => {
+        if (!seenUrls.has(ev.url)) {
+          parsedSocialLinks.push(ev);
+          seenUrls.add(ev.url);
+        }
+      });
+    }
+
+    // 8. Coordinates
+    let coordinates: [number, number] | undefined = undefined;
+    if (Array.isArray(parsed.coordinates) && parsed.coordinates.length >= 2) {
+      const latNum = Number(parsed.coordinates[0]);
+      const lngNum = Number(parsed.coordinates[1]);
+      if (!isNaN(latNum) && !isNaN(lngNum) && latNum !== 0 && lngNum !== 0) {
+        coordinates = [latNum, lngNum];
+      }
+    } else if (parsed.coordinates && typeof parsed.coordinates === 'object') {
+      const latNum = Number(parsed.coordinates.lat || parsed.coordinates.latitude);
+      const lngNum = Number(parsed.coordinates.lng || parsed.coordinates.lon || parsed.coordinates.longitude);
+      if (!isNaN(latNum) && !isNaN(lngNum) && latNum !== 0 && lngNum !== 0) {
+        coordinates = [latNum, lngNum];
+      }
+    }
+
+    // 9. Admission Fee
+    let admissionFee: any = undefined;
+    if (parsed.admissionFee) {
+      if (typeof parsed.admissionFee === 'string') {
+        admissionFee = {
+          adult: parsed.admissionFee.trim(),
+          senior: '免费 / 半价 (凭身份证件)',
+          child4yo: '免费 (4岁幼儿/1.3米以下)',
+          notes: parsed.admissionFee.trim()
+        };
+      } else if (typeof parsed.admissionFee === 'object') {
+        admissionFee = {
+          adult: ensureString(parsed.admissionFee.adult, '免费'),
+          senior: ensureString(parsed.admissionFee.senior, '免费 / 半价'),
+          child4yo: ensureString(parsed.admissionFee.child4yo, '免费'),
+          notes: parsed.admissionFee.notes !== undefined ? ensureString(parsed.admissionFee.notes) : undefined
+        };
+      }
+    }
+
+    // Helper for safe ratings 1-5
+    const parseRating = (val: any): 1 | 2 | 3 | 4 | 5 | undefined => {
+      if (val === null || val === undefined) return undefined;
+      const num = Number(val);
+      if (!isNaN(num) && num >= 1 && num <= 5) {
+        return Math.round(num) as 1 | 2 | 3 | 4 | 5;
+      }
+      if (typeof val === 'string') {
+        const match = val.match(/[1-5]/);
+        if (match) return Number(match[0]) as 1 | 2 | 3 | 4 | 5;
+      }
+      return undefined;
+    };
+
     const data: ParsedSiteData = {
-      name: parsed.name?.trim() || undefined,
-      localName: parsed.localName !== undefined ? String(parsed.localName).trim() : undefined,
-      description: parsed.description?.trim() || undefined,
+      name: parsed.name ? ensureString(parsed.name) : undefined,
+      localName: parsed.localName !== undefined ? ensureString(parsed.localName) : undefined,
+      description: parsed.description ? ensureString(parsed.description) : undefined,
       coverImage: coverImage || undefined,
       gallery: gallery.length > 0 ? gallery : undefined,
       videos: videos.length > 0 ? videos : undefined,
-      recommendedDurationMin: Number(parsed.recommendedDurationMin) || undefined,
-      openingHours: parsed.openingHours?.trim() || undefined,
-      admissionFee: parsed.admissionFee ? {
-        adult: parsed.admissionFee.adult || '免费',
-        senior: parsed.admissionFee.senior || '免费 / 半价',
-        child4yo: parsed.admissionFee.child4yo || '免费',
-        notes: parsed.admissionFee.notes || undefined
-      } : undefined,
-      bestTimeToVisit: parsed.bestTimeToVisit?.trim() || undefined,
+      coordinates,
+      recommendedDurationMin: Number(parsed.recommendedDurationMin) ? Math.max(15, Math.min(720, Number(parsed.recommendedDurationMin))) : undefined,
+      openingHours: parsed.openingHours ? ensureString(parsed.openingHours) : undefined,
+      admissionFee,
+      bestTimeToVisit: parsed.bestTimeToVisit ? ensureString(parsed.bestTimeToVisit) : undefined,
       weatherSuitability: parsed.weatherSuitability || undefined,
-      strollerRating: (parsed.strollerRating >= 1 && parsed.strollerRating <= 5) ? parsed.strollerRating : undefined,
-      strollerNotes: parsed.strollerNotes?.trim() || undefined,
-      kidRating: (parsed.kidRating >= 1 && parsed.kidRating <= 5) ? parsed.kidRating : undefined,
-      kidNotes: parsed.kidNotes?.trim() || undefined,
-      elderlyRating: (parsed.elderlyRating >= 1 && parsed.elderlyRating <= 5) ? parsed.elderlyRating : undefined,
-      elderlyNotes: parsed.elderlyNotes?.trim() || undefined,
+      strollerRating: parseRating(parsed.strollerRating),
+      strollerNotes: parsed.strollerNotes ? ensureString(parsed.strollerNotes) : undefined,
+      kidRating: parseRating(parsed.kidRating),
+      kidNotes: parsed.kidNotes ? ensureString(parsed.kidNotes) : undefined,
+      elderlyRating: parseRating(parsed.elderlyRating),
+      elderlyNotes: parsed.elderlyNotes ? ensureString(parsed.elderlyNotes) : undefined,
       walkingIntensity: parsed.walkingIntensity || undefined,
       stairsLevel: parsed.stairsLevel || undefined,
-      amenities: parsed.amenities ? {
+      amenities: parsed.amenities && typeof parsed.amenities === 'object' ? {
         ...(currentSite?.amenities || {}),
         ...parsed.amenities
       } : undefined,
-      familyTips: Array.isArray(parsed.familyTips) && parsed.familyTips.length > 0 ? parsed.familyTips : undefined,
-      nearbyDining: Array.isArray(parsed.nearbyDining) && parsed.nearbyDining.length > 0 ? parsed.nearbyDining.map((d: any, idx: number) => ({
-        id: `dine-llm-${Date.now()}-${idx}`,
-        name: d.name || '特色餐厅',
-        cuisine: d.cuisine || '和食简餐',
-        familyFeatures: d.familyFeatures || '亲子长辈适宜',
-        walkingTimeMin: Number(d.walkingTimeMin) || 3
-      })) : undefined,
-      customTags: parsed.customTags || undefined,
+      familyTips,
+      nearbyDining,
+      customTags: Array.isArray(parsed.customTags) ? parsed.customTags.map((t: any) => ensureString(t)).filter(Boolean) : undefined,
       customFields: Object.keys(extractedCustomFields).length > 0 ? extractedCustomFields : undefined,
       city: (() => {
-        if (parsed.city?.trim()) return parsed.city.trim();
-        const textToScan = `${parsed.name || ''} ${parsed.localName || ''} ${parsed.description || ''} ${parsed.address || ''}`;
+        if (typeof parsed.city === 'string' && parsed.city.trim()) return parsed.city.trim();
+        const textToScan = `${ensureString(parsed.name)} ${ensureString(parsed.localName)} ${ensureString(parsed.description)} ${ensureString(parsed.address)}`;
         if (textToScan.includes('大连') || textToScan.includes('金石滩') || textToScan.includes('星海') || textToScan.includes('莲花山') || textToScan.includes('旅顺') || textToScan.includes('庄河')) {
           return '大连';
         }
@@ -409,30 +635,9 @@ export const parseLLMReply = (
         if (textToScan.includes('东京') || textToScan.includes('台场') || textToScan.includes('浅草')) return '东京';
         return undefined;
       })(),
-      address: parsed.address?.trim() || undefined,
+      address: parsed.address ? ensureString(parsed.address) : undefined,
       category: parsed.category || undefined,
-      socialMediaLinks: (() => {
-        if (!Array.isArray(parsed.socialMediaLinks) || parsed.socialMediaLinks.length === 0) return undefined;
-        return parsed.socialMediaLinks.map((item: any, idx: number) => {
-          let platform: any = item.platform;
-          if (platform !== 'xiaohongshu' && platform !== 'bilibili' && platform !== 'douyin' && platform !== 'dianping' && platform !== 'youtube') {
-            const u = (item.url || '').toLowerCase();
-            if (u.includes('xiaohongshu.com') || u.includes('xhslink')) platform = 'xiaohongshu';
-            else if (u.includes('bilibili.com') || u.includes('b23.tv')) platform = 'bilibili';
-            else platform = 'xiaohongshu';
-          }
-          return {
-            id: item.id || `social-llm-${Date.now()}-${idx}`,
-            platform,
-            title: item.title?.trim() || '精选带娃攻略',
-            author: item.author?.trim() || '旅游博主',
-            url: cleanUrl(item.url) || item.url || '',
-            note: item.note?.trim() || undefined,
-            screenshotUrl: cleanUrl(item.screenshotUrl) || undefined,
-            addedAt: item.addedAt || new Date().toISOString().slice(0, 10)
-          };
-        });
-      })()
+      socialMediaLinks: parsedSocialLinks.length > 0 ? parsedSocialLinks : undefined
     };
 
     const countImages = gallery.length;

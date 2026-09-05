@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Site, SiteCategory, WalkingIntensity, StairsLevel, WeatherSuitability, SocialMediaLink, SocialPlatform, Trip } from '../../types/travel';
+import { Site, SiteAmenities, SiteCategory, WalkingIntensity, StairsLevel, WeatherSuitability, SocialMediaLink, Trip } from '../../types/travel';
 import { detectSocialPlatform, getPlatformMeta } from './SocialMediaSection';
 import { 
   X, Search, Plus, Trash2, Check, Loader2, Sparkles, Bot, 
@@ -79,7 +79,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
   const [stairsLevel, setStairsLevel] = useState<StairsLevel>('平坦 / 无台阶');
 
   // Amenities
-  const [amenities, setAmenities] = useState({
+  const [amenities, setAmenities] = useState<SiteAmenities>({
     nursingRoom: true,
     diaperChanging: true,
     accessibleRestroom: true,
@@ -172,7 +172,9 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       setElderlyNotes(initialSite.elderlyNotes);
       setWalkingIntensity(initialSite.walkingIntensity);
       setStairsLevel(initialSite.stairsLevel);
-      setAmenities(initialSite.amenities);
+      if (initialSite.amenities) {
+        setAmenities(prev => ({ ...prev, ...initialSite.amenities }));
+      }
       setFamilyTips(initialSite.familyTips || []);
       setNearbyDining(initialSite.nearbyDining || []);
       setCustomFieldsMap(initialSite.customFields || {});
@@ -397,119 +399,134 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
       return;
     }
 
-    const currentDraft: Partial<Site> = {
-      id: initialSite?.id,
-      name,
-      localName,
-      description,
-      coverImage,
-      gallery: galleryUrls,
-      videos,
-      recommendedDurationMin,
-      openingHours,
-      admissionFee: {
-        adult: adultFee,
-        senior: seniorFee,
-        child4yo: childFee,
-        notes: feeNotes
-      },
-      bestTimeToVisit,
-      weatherSuitability,
-      strollerRating,
-      strollerNotes,
-      kidRating,
-      kidNotes,
-      elderlyRating,
-      elderlyNotes,
-      walkingIntensity,
-      stairsLevel,
-      amenities,
-      familyTips,
-      nearbyDining,
-      customFields: customFieldsMap
-    };
+    try {
+      const currentDraft: Partial<Site> = {
+        id: initialSite?.id,
+        name,
+        localName,
+        description,
+        coverImage,
+        gallery: galleryUrls,
+        videos,
+        recommendedDurationMin,
+        openingHours,
+        admissionFee: {
+          adult: adultFee,
+          senior: seniorFee,
+          child4yo: childFee,
+          notes: feeNotes
+        },
+        bestTimeToVisit,
+        weatherSuitability,
+        strollerRating,
+        strollerNotes,
+        kidRating,
+        kidNotes,
+        elderlyRating,
+        elderlyNotes,
+        walkingIntensity,
+        stairsLevel,
+        amenities,
+        familyTips,
+        nearbyDining,
+        customFields: customFieldsMap
+      };
 
-    const result = parseLLMReply(llmReplyText, currentDraft);
-    if (!result.success || !result.data) {
-      setAiStatus({ success: false, message: result.message });
-      return;
-    }
-
-    const d = result.data;
-    const isTargetDalian = isTripDalian || d.city?.includes('大连') || d.name?.includes('大连') || d.description?.includes('大连') || (d.localName && d.localName.includes('大连'));
-    const resolvedCity = d.city || (isTargetDalian ? '大连' : defaultCity);
-    const resolvedAddress = d.address || (isTargetDalian ? (address && !address.includes('东京') && !address.includes('日本') ? address : '中国 辽宁省 大连市') : defaultAddress);
-
-    if (d.name) {
-      setName(d.name);
-      setQuickPromptName(d.name);
-    }
-    if (d.localName !== undefined) setLocalName(d.localName);
-    if (d.description) setDescription(d.description);
-    if (d.coverImage) setCoverImage(d.coverImage);
-    if (d.gallery && d.gallery.length > 0) setGalleryUrls(d.gallery);
-    if (d.videos && d.videos.length > 0) setVideos(d.videos);
-    setCity(resolvedCity);
-    setAddress(resolvedAddress);
-    if (d.coordinates) {
-      setLat(d.coordinates[0]);
-      setLng(d.coordinates[1]);
-    } else if (isTargetDalian && (lat === 35.6764 || !lat)) {
-      setLat(38.8788);
-      setLng(121.6038);
-    }
-    if (d.recommendedDurationMin) setRecommendedDurationMin(d.recommendedDurationMin);
-    if (d.openingHours) setOpeningHours(d.openingHours);
-    if (d.admissionFee) {
-      if (d.admissionFee.adult) setAdultFee(d.admissionFee.adult);
-      if (d.admissionFee.senior) setSeniorFee(d.admissionFee.senior);
-      if (d.admissionFee.child4yo) setChildFee(d.admissionFee.child4yo);
-      if (d.admissionFee.notes !== undefined) setFeeNotes(d.admissionFee.notes);
-    }
-    if (d.bestTimeToVisit) setBestTimeToVisit(d.bestTimeToVisit);
-    if (d.weatherSuitability) setWeatherSuitability(d.weatherSuitability);
-    if (d.strollerRating) setStrollerRating(d.strollerRating);
-    if (d.strollerNotes) setStrollerNotes(d.strollerNotes);
-    if (d.kidRating) setKidRating(d.kidRating);
-    if (d.kidNotes) setKidNotes(d.kidNotes);
-    if (d.elderlyRating) setElderlyRating(d.elderlyRating);
-    if (d.elderlyNotes) setElderlyNotes(d.elderlyNotes);
-    if (d.walkingIntensity) setWalkingIntensity(d.walkingIntensity);
-    if (d.stairsLevel) setStairsLevel(d.stairsLevel);
-    if (d.amenities) setAmenities(prev => ({ ...prev, ...d.amenities }));
-    if (d.familyTips && d.familyTips.length > 0) setFamilyTips(d.familyTips);
-    if (d.nearbyDining && d.nearbyDining.length > 0) setNearbyDining(d.nearbyDining);
-    if (d.customFields) setCustomFieldsMap(prev => ({ ...prev, ...d.customFields }));
-    if (d.socialMediaLinks && d.socialMediaLinks.length > 0) {
-      setSocialMediaLinks((prev) => {
-        const existingUrls = new Set(prev.map((s) => s.url));
-        const toAdd = d.socialMediaLinks!.filter((s) => !existingUrls.has(s.url));
-        return [...prev, ...toAdd];
-      });
-    }
-
-    setAiStatus({
-      success: true,
-      message: `${result.message} 所有信息已自动回填至表单各字段，城市已设为「${resolvedCity}」！`
-    });
-
-    const targetQuery = d.name || name;
-    if (targetQuery && (!d.coordinates || (lat === 35.6764 && lng === 139.6993))) {
-      try {
-        const queryWithCity = resolvedCity === '大连' && !targetQuery.includes('大连') ? `大连 ${targetQuery}` : targetQuery;
-        const places = await searchPlaces(queryWithCity);
-        if (places && places.length > 0) {
-          const first = places[0];
-          setLat(first.lat);
-          setLng(first.lng);
-          if (first.displayName) setAddress(first.displayName);
-          if (first.address.city || first.address.town || first.address.state) {
-            setCity(first.address.city || first.address.town || first.address.state || resolvedCity);
-          }
-        }
-      } catch (err) {
-        // silent
+      const result = parseLLMReply(llmReplyText, currentDraft);
+      if (!result.success || !result.data) {
+        setAiStatus({ success: false, message: result.message });
+        return;
       }
+
+      const d = result.data;
+      const isTargetDalian = isTripDalian || (d.city && d.city.includes('大连')) || (d.name && d.name.includes('大连')) || (d.description && d.description.includes('大连')) || (d.localName && d.localName.includes('大连'));
+      const resolvedCity = d.city || (isTargetDalian ? '大连' : defaultCity);
+      const resolvedAddress = d.address || (isTargetDalian ? (address && !address.includes('东京') && !address.includes('日本') ? address : '中国 辽宁省 大连市') : defaultAddress);
+
+      if (d.name) {
+        setName(d.name);
+        setQuickPromptName(d.name);
+      }
+      if (d.localName !== undefined) setLocalName(d.localName);
+      if (d.description) setDescription(d.description);
+      if (d.coverImage) setCoverImage(d.coverImage);
+      if (d.gallery && d.gallery.length > 0) setGalleryUrls(d.gallery);
+      if (d.videos && d.videos.length > 0) setVideos(d.videos);
+      setCity(resolvedCity);
+      setAddress(resolvedAddress);
+      if (d.coordinates) {
+        setLat(d.coordinates[0]);
+        setLng(d.coordinates[1]);
+      } else if (isTargetDalian && (lat === 35.6764 || !lat)) {
+        setLat(38.8788);
+        setLng(121.6038);
+      }
+      if (d.recommendedDurationMin) setRecommendedDurationMin(d.recommendedDurationMin);
+      if (d.openingHours) setOpeningHours(d.openingHours);
+      if (d.admissionFee) {
+        if (d.admissionFee.adult) setAdultFee(d.admissionFee.adult);
+        if (d.admissionFee.senior) setSeniorFee(d.admissionFee.senior);
+        if (d.admissionFee.child4yo) setChildFee(d.admissionFee.child4yo);
+        if (d.admissionFee.notes !== undefined) setFeeNotes(d.admissionFee.notes);
+      }
+      if (d.bestTimeToVisit) setBestTimeToVisit(d.bestTimeToVisit);
+      if (d.weatherSuitability) setWeatherSuitability(d.weatherSuitability);
+      if (d.strollerRating) setStrollerRating(d.strollerRating);
+      if (d.strollerNotes) setStrollerNotes(d.strollerNotes);
+      if (d.kidRating) setKidRating(d.kidRating);
+      if (d.kidNotes) setKidNotes(d.kidNotes);
+      if (d.elderlyRating) setElderlyRating(d.elderlyRating);
+      if (d.elderlyNotes) setElderlyNotes(d.elderlyNotes);
+      if (d.walkingIntensity) setWalkingIntensity(d.walkingIntensity);
+      if (d.stairsLevel) setStairsLevel(d.stairsLevel);
+      if (d.amenities) setAmenities(prev => ({ ...prev, ...d.amenities }));
+      if (d.familyTips && d.familyTips.length > 0) setFamilyTips(d.familyTips);
+      if (d.nearbyDining && d.nearbyDining.length > 0) setNearbyDining(d.nearbyDining);
+      if (d.customFields) {
+        // Guarantee all values are strings
+        const safeCustom: Record<string, string> = {};
+        Object.entries(d.customFields).forEach(([k, v]) => {
+          safeCustom[k] = typeof v === 'object' ? (Array.isArray(v) ? (v as any[]).join('；') : JSON.stringify(v)) : String(v ?? '');
+        });
+        setCustomFieldsMap(prev => ({ ...prev, ...safeCustom }));
+      }
+      if (d.socialMediaLinks && d.socialMediaLinks.length > 0) {
+        setSocialMediaLinks((prev) => {
+          const existingUrls = new Set(prev.map((s) => s.url));
+          const toAdd = d.socialMediaLinks!.filter((s) => !existingUrls.has(s.url));
+          return [...prev, ...toAdd];
+        });
+      }
+
+      setAiStatus({
+        success: true,
+        message: `${result.message} 所有信息已自动回填至表单各字段，城市已设为「${resolvedCity}」！`
+      });
+
+      const targetQuery = d.name || name;
+      if (targetQuery && (!d.coordinates || (lat === 35.6764 && lng === 139.6993))) {
+        try {
+          const queryWithCity = resolvedCity === '大连' && !targetQuery.includes('大连') ? `大连 ${targetQuery}` : targetQuery;
+          const places = await searchPlaces(queryWithCity);
+          if (places && places.length > 0) {
+            const first = places[0];
+            setLat(first.lat);
+            setLng(first.lng);
+            if (first.displayName) setAddress(first.displayName);
+            if (first.address && (first.address.city || first.address.town || first.address.state)) {
+              setCity(first.address.city || first.address.town || first.address.state || resolvedCity);
+            }
+          }
+        } catch (err) {
+          // silent
+        }
+      }
+    } catch (err: any) {
+      console.error('Error applying LLM reply:', err);
+      setAiStatus({
+        success: false,
+        message: `回填表单时发生异常: ${err.message || '数据结构不兼容'}，请检查粘贴的文本。`
+      });
     }
   };
 
@@ -1079,7 +1096,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
                         )}
                         <div className="flex-1">
                           <p className="font-semibold">{aiStatus.message}</p>
-                          {aiStatus.success && name.trim() && (lat === 35.6764 && lng === 139.6993 && !city.includes('东京')) && (
+                          {aiStatus.success && name.trim() && (lat === 35.6764 && lng === 139.6993 && !(city || '').includes('东京')) && (
                             <button
                               type="button"
                               onClick={handleAutoGeocodeByName}
@@ -1351,7 +1368,9 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
                 <div className="space-y-1.5">
                   {videos.map((vid, idx) => (
                     <div key={idx} className="p-2 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between text-xs font-mono">
-                      <span className="truncate text-slate-700 pr-2">🎬 {vid}</span>
+                      <span className="truncate text-slate-700 pr-2">
+                        🎬 {typeof vid === 'object' ? ((vid as any)?.title ? `${(vid as any).title} (${(vid as any).url || ''})` : (vid as any)?.url || JSON.stringify(vid)) : String(vid)}
+                      </span>
                       <button
                         type="button"
                         onClick={() => handleRemoveVideo(idx)}
@@ -1521,7 +1540,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
                   >
                     <input
                       type="checkbox"
-                      checked={(amenities as any)[amenity.key]}
+                      checked={Boolean((amenities as any)[amenity.key])}
                       onChange={(e) =>
                         setAmenities({ ...amenities, [amenity.key]: e.target.checked })
                       }
@@ -1648,7 +1667,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
               <div className="space-y-1.5">
                 {familyTips.map((tip, idx) => (
                   <div key={idx} className="p-2.5 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between text-xs">
-                    <span className="text-slate-700">💡 {tip}</span>
+                    <span className="text-slate-700">💡 {typeof tip === 'object' ? ((tip as any)?.tip || (tip as any)?.content || (tip as any)?.title || JSON.stringify(tip)) : String(tip ?? '')}</span>
                     <button
                       type="button"
                       onClick={() => handleRemoveTip(idx)}
@@ -1716,8 +1735,8 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
                 {nearbyDining.map((dine) => (
                   <div key={dine.id} className="p-2.5 bg-white rounded-xl border border-slate-200 flex items-center justify-between text-xs">
                     <div>
-                      <span className="font-bold text-slate-800">{dine.name}</span> ({dine.cuisine} • 步行{dine.walkingTimeMin}分钟)
-                      <p className="text-[11px] text-slate-500">{dine.familyFeatures}</p>
+                      <span className="font-bold text-slate-800">{typeof dine.name === 'object' ? JSON.stringify(dine.name) : String(dine.name ?? '')}</span> ({typeof dine.cuisine === 'object' ? JSON.stringify(dine.cuisine) : String(dine.cuisine ?? '')} • 步行{dine.walkingTimeMin}分钟)
+                      <p className="text-[11px] text-slate-500">{typeof dine.familyFeatures === 'object' ? (Array.isArray(dine.familyFeatures) ? (dine.familyFeatures as any[]).join('；') : JSON.stringify(dine.familyFeatures)) : String(dine.familyFeatures ?? '')}</p>
                     </div>
                     <button
                       type="button"
@@ -1777,7 +1796,7 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
                   <div key={k} className="p-2.5 bg-white rounded-xl border border-slate-200 flex items-start justify-between text-xs gap-2">
                     <div>
                       <span className="font-bold text-slate-800">{k}：</span>
-                      <span className="text-slate-600 leading-relaxed">{v}</span>
+                      <span className="text-slate-600 leading-relaxed">{typeof v === 'object' ? (Array.isArray(v) ? (v as any[]).join('；') : JSON.stringify(v)) : String(v ?? '')}</span>
                     </div>
                     <button
                       type="button"
@@ -1869,10 +1888,10 @@ export const SiteFormModal: React.FC<SiteFormModalProps> = ({
                           <span className={`px-2 py-0.5 rounded text-[10px] font-bold border ${meta.badgeClass}`}>
                             {meta.icon} {meta.label}
                           </span>
-                          <span className="font-bold text-slate-800 truncate">{link.title}</span>
-                          {link.author && <span className="text-slate-500 text-[11px]">({link.author})</span>}
+                          <span className="font-bold text-slate-800 truncate">{typeof link.title === 'object' ? JSON.stringify(link.title) : String(link.title ?? '')}</span>
+                          {link.author && <span className="text-slate-500 text-[11px]">({typeof link.author === 'object' ? JSON.stringify(link.author) : String(link.author)})</span>}
                         </div>
-                        {link.note && <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-1">笔记: {link.note}</p>}
+                        {link.note && <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-1">笔记: {typeof link.note === 'object' ? JSON.stringify(link.note) : String(link.note)}</p>}
                       </div>
                       <button
                         type="button"

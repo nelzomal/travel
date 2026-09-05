@@ -544,7 +544,7 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
                       className="p-3.5 bg-amber-50/50 rounded-2xl border border-amber-200/60 text-xs text-amber-950 flex items-start gap-2.5 leading-relaxed"
                     >
                       <span className="text-amber-600 font-bold mt-0.5">💡</span>
-                      <span className="flex-1">{tip}</span>
+                      <span className="flex-1">{typeof tip === 'object' ? ((tip as any)?.tip || (tip as any)?.content || (tip as any)?.title || JSON.stringify(tip)) : String(tip ?? '')}</span>
                     </div>
                   ))}
                 </div>
@@ -560,7 +560,7 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
                     {Object.entries(site.customFields).map(([key, val]) => (
                       <div key={key} className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs">
                         <span className="font-bold text-slate-600">{key}: </span>
-                        <span className="text-slate-800">{val}</span>
+                        <span className="text-slate-800">{typeof val === 'object' ? (Array.isArray(val) ? (val as any[]).join('；') : JSON.stringify(val)) : String(val ?? '')}</span>
                       </div>
                     ))}
                   </div>
