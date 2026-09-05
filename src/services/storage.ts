@@ -43,42 +43,110 @@ export const syncToFilesystem = async (
   }
 };
 
-// Synchronize from disk (data/sites.json & data/trips.json) into browser LocalStorage
+// Helper to apply fresh sites and trips to localStorage while preserving local user reviews
+const applyFreshDataToStorage = (
+  freshSites: Site[],
+  freshTrips: Trip[],
+  successMessage: string
+): { success: boolean; sites: Site[]; trips: Trip[]; message: string } => {
+  // Preserve user reviews & personal preferences if any exist locally
+  const existingSites = getStoredSites();
+  const reviewsMap = new Map<string, any>();
+  existingSites.forEach((s) => {
+    if (s.reviews && s.reviews.length > 0) {
+      reviewsMap.set(s.id, s.reviews);
+    }
+  });
+
+  const mergedSites = freshSites.map((s) => {
+    if ((!s.reviews || s.reviews.length === 0) && reviewsMap.has(s.id)) {
+      return { ...s, reviews: reviewsMap.get(s.id) };
+    }
+    return s;
+  });
+
+  localStorage.setItem(SITES_KEY, JSON.stringify(mergedSites));
+  localStorage.setItem(TRIPS_KEY, JSON.stringify(freshTrips));
+  const activeId = localStorage.getItem(ACTIVE_TRIP_KEY);
+  if (!activeId || !freshTrips.some((t) => t.id === activeId)) {
+    if (freshTrips.length > 0) {
+      localStorage.setItem(ACTIVE_TRIP_KEY, freshTrips[0].id);
+    }
+  }
+
+  return {
+    success: true,
+    sites: mergedSites,
+    trips: freshTrips,
+    message: successMessage
+  };
+};
+
+// Synchronize from disk (data/sites.json & data/trips.json) or static host into browser LocalStorage
 export const syncFromDiskToLocalStorage = async (): Promise<{
   success: boolean;
   sites?: Site[];
   trips?: Trip[];
   message: string;
 }> => {
+  // 1. Try local Vite dev server endpoint first
   try {
     const res = await fetch('/api/sync-data', {
       method: 'GET',
       headers: { 'Cache-Control': 'no-cache' }
     });
-    if (res.ok) {
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
       const data = await res.json();
       if (data.success && Array.isArray(data.sites) && Array.isArray(data.trips)) {
-        localStorage.setItem(SITES_KEY, JSON.stringify(data.sites));
-        localStorage.setItem(TRIPS_KEY, JSON.stringify(data.trips));
-        return {
-          success: true,
-          sites: data.sites,
-          trips: data.trips,
-          message: `已成功从磁盘载入 ${data.sites.length} 个景点与 ${data.trips.length} 个行程数据！`
-        };
+        return applyFreshDataToStorage(
+          data.sites, 
+          data.trips, 
+          `已成功从本地磁盘载入 ${data.sites.length} 个景点与 ${data.trips.length} 个行程数据！`
+        );
       }
     }
-    // Never destructively overwrite user's local storage if fetch fails or is static host
-    return {
-      success: false,
-      message: '未检测到本地后端同步服务 (例如处于静态部署环境或 Vite 未启动)。为保护您当前未同步的修改，未覆盖本地存储。'
-    };
-  } catch (e: any) {
-    return {
-      success: false,
-      message: `从磁盘同步失败 (${e?.message || '网络连接异常'})，已保护并保留本地已有数据。`
-    };
+  } catch {
+    // Continue to static endpoint
   }
+
+  // 2. Try static /data/sites.json and /data/trips.json (works on remote Cloudflare Pages static hosting)
+  try {
+    const bust = `?t=${Date.now()}`;
+    const [sitesRes, tripsRes] = await Promise.all([
+      fetch(`/data/sites.json${bust}`, { headers: { 'Cache-Control': 'no-cache' } }),
+      fetch(`/data/trips.json${bust}`, { headers: { 'Cache-Control': 'no-cache' } })
+    ]);
+    const sitesType = sitesRes.headers.get('content-type') || '';
+    const tripsType = tripsRes.headers.get('content-type') || '';
+    if (sitesRes.ok && tripsRes.ok && sitesType.includes('application/json') && tripsType.includes('application/json')) {
+      const sites = await sitesRes.json();
+      const trips = await tripsRes.json();
+      if (Array.isArray(sites) && Array.isArray(trips)) {
+        return applyFreshDataToStorage(
+          sites, 
+          trips, 
+          `已成功从云端/代码库同步 ${sites.length} 个景点与 ${trips.length} 个行程数据！`
+        );
+      }
+    }
+  } catch {
+    // Continue to bundled fallback
+  }
+
+  // 3. Fallback: Always succeed by syncing from current build's bundled INITIAL_SITES & INITIAL_TRIPS
+  if (Array.isArray(INITIAL_SITES) && INITIAL_SITES.length > 0) {
+    return applyFreshDataToStorage(
+      INITIAL_SITES, 
+      INITIAL_TRIPS, 
+      `已成功恢复当前版本内置数据 (${INITIAL_SITES.length} 个景点与 ${INITIAL_TRIPS.length} 个行程)！`
+    );
+  }
+
+  return {
+    success: false,
+    message: '从磁盘同步失败，未找到可用数据源。已保护并保留本地已有数据。'
+  };
 };
 
 export const getStoredSites = (): Site[] => {
@@ -90,6 +158,15 @@ export const getStoredSites = (): Site[] => {
     }
     const sites: Site[] = JSON.parse(raw);
     let dirty = false;
+
+    // Check if INITIAL_SITES has new sites that are not in localStorage at all!
+    const storedIds = new Set(sites.map((s) => s.id));
+    const missingSites = INITIAL_SITES.filter((s) => !storedIds.has(s.id));
+    if (missingSites.length > 0) {
+      sites.push(...missingSites);
+      dirty = true;
+    }
+
     const sanitized = sites.map((s) => {
       if ((s.name.includes('海达索道') || s.name.includes('莲花山索道')) && (s.city === '东京' || s.coordinates[0] === 35.6764)) {
         dirty = true;
@@ -139,7 +216,14 @@ export const getStoredTrips = (): Trip[] => {
       localStorage.setItem(TRIPS_KEY, JSON.stringify(INITIAL_TRIPS));
       return INITIAL_TRIPS;
     }
-    return JSON.parse(raw);
+    const trips: Trip[] = JSON.parse(raw);
+    const storedTripIds = new Set(trips.map((t) => t.id));
+    const missingTrips = INITIAL_TRIPS.filter((t) => !storedTripIds.has(t.id));
+    if (missingTrips.length > 0) {
+      trips.push(...missingTrips);
+      localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
+    }
+    return trips;
   } catch (e) {
     console.error('Error loading trips from storage:', e);
     return INITIAL_TRIPS;

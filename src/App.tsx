@@ -93,9 +93,7 @@ export function App() {
 
   useEffect(() => {
     loadData();
-    if (isLocalEnvironment()) {
-      handleSyncFromDisk();
-    }
+    handleSyncFromDisk();
   }, []);
 
   // Sync initial pending route site after sites are loaded

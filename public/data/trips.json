@@ -1,0 +1,861 @@
+[
+  {
+    "id": "trip-japan-grand-multigen-2026",
+    "title": "日本全景黄金慢游之旅 (东京·箱根活火山·富士山·京都) 🗼⛩️🗻",
+    "destination": "日本 (东京 · 箱根 · 富士山 · 京都)",
+    "startDate": "2026-10-15",
+    "endDate": "2026-10-24",
+    "coverImage": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
+    "summary": "所有景点汇聚为单一完整的大环线行程！专为4岁活泼幼童与65岁以上长辈量身定制。从东京的明治神宫、台场高达与葛西临海水族馆，到箱根大涌谷活火山、芦之湖海盗船与富士山河口湖，再无缝衔接京都的岚山小火车、伏见千本鸟居与十石舟、清水寺、贵船川床与京都铁道博物馆，每日均固定设置1.5小时午睡休整时段。",
+    "partyMembers": [
+      {
+        "id": "p1",
+        "name": "小宝 (Leo)",
+        "role": "👶 4岁幼童",
+        "notes": "极爱SL蒸汽火车、高达变身、高空缆车、海盗船与野生小猴子，每天下午 13:30-15:00 必须午睡充电"
+      },
+      {
+        "id": "p2",
+        "name": "爷爷 & 奶奶",
+        "role": "🧓 长辈/爷爷奶奶",
+        "notes": "喜爱平缓无台阶步道、湖光山色、温泉水乡与清淡和食（汤豆腐/南瓜面/热鳗鱼饭），备好保暖衣物"
+      },
+      {
+        "id": "p3",
+        "name": "爸爸 & 妈妈",
+        "role": "🧑 父母/领队",
+        "notes": "负责推婴儿车、门票预约、路线导航与全家随身行李调度"
+      }
+    ],
+    "checklist": [
+      {
+        "id": "c1",
+        "category": "幼童用品 (4岁)",
+        "item": "轻便折叠旅行婴儿推车 (可直接推上缆车/海盗船/新干线)",
+        "checked": true
+      },
+      {
+        "id": "c2",
+        "category": "幼童用品 (4岁)",
+        "item": "宝宝防风保暖外套 (箱根、富士山、贵船山中海拔较高防着凉)",
+        "checked": true
+      },
+      {
+        "id": "c3",
+        "category": "幼童用品 (4岁)",
+        "item": "消毒便携湿巾 & 挖沙小铲子 (台场海滨玩沙)",
+        "checked": true
+      },
+      {
+        "id": "c4",
+        "category": "长辈/健康保健",
+        "item": "长辈慢病随身药盒 (降压药等随身带)",
+        "checked": true
+      },
+      {
+        "id": "c5",
+        "category": "长辈/健康保健",
+        "item": "便携不锈钢保温水杯 (随时喝温热水/大麦茶)",
+        "checked": true
+      },
+      {
+        "id": "c6",
+        "category": "长辈/健康保健",
+        "item": "轻便折叠防滑健步手杖",
+        "checked": true
+      },
+      {
+        "id": "c7",
+        "category": "全家必备",
+        "item": "箱根周游券 (Hakone Freepass 3日券)",
+        "checked": true,
+        "note": "无缝换乘缆车与海盗船"
+      },
+      {
+        "id": "c8",
+        "category": "全家必备",
+        "item": "嵯峨野小火车 & 伏见十石舟 预订单",
+        "checked": true
+      },
+      {
+        "id": "c9",
+        "category": "全家必备",
+        "item": "Suica / ICOCA 西瓜卡 (手机或实体卡预充值)",
+        "checked": true
+      },
+      {
+        "id": "c10",
+        "category": "全家必备",
+        "item": "大容量移动电源 (拍照录像电量保障)",
+        "checked": true
+      },
+      {
+        "id": "c11",
+        "category": "证件与数码",
+        "item": "护照原件 & 日本入境电子申报码截图",
+        "checked": true
+      }
+    ],
+    "days": [
+      {
+        "id": "day-1",
+        "dayNumber": 1,
+        "date": "2026-10-15",
+        "theme": "东京初探：明治神宫百年古树林荫洗肺 🌿",
+        "dailyNotes": "全平缓步道舒缓日！早晨空气极佳避开高温，午间返回酒店午休，傍晚原宿温和漫步。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-1-1",
+            "siteId": "site-meiji-jingu",
+            "timeSlot": "morning",
+            "startTime": "09:00",
+            "endTime": "11:30",
+            "customNotes": "由原宿站南参道平缓入口进入，带小朋友在手水舍洗手，长辈在神宫茶屋品尝热抹茶与软和果子。",
+            "transportToNext": {
+              "mode": "taxi",
+              "durationMin": 12,
+              "costEst": "约 ¥1,500",
+              "familyNote": "中午直接打车返回酒店或餐厅，免去推车挤地铁，保存长辈体力。"
+            }
+          },
+          {
+            "id": "stop-1-2",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "酒店充电阻断：幼童1.5h午睡 & 长辈品茶泡脚 💤",
+            "timeSlot": "nap_rest",
+            "startTime": "13:30",
+            "endTime": "15:30",
+            "customNotes": "全家回酒店吹空调休息，4岁宝宝深睡眠充电，长辈放松双腿，喝杯温茶看看照片。"
+          }
+        ]
+      },
+      {
+        "id": "day-2",
+        "dayNumber": 2,
+        "date": "2026-10-16",
+        "theme": "东京湾海洋与高达：葛西临海水族园 ➔ 台场海滨公园 🐟🤖",
+        "dailyNotes": "100%全无障碍纯平日！水族馆大金枪鱼环形水槽，傍晚看1:1巨型高达变身与彩虹大桥日落。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-2-1",
+            "siteId": "site-kasai-rinkai-aquarium",
+            "timeSlot": "morning",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "customNotes": "玻璃穹顶平缓坡道，看蓝鳍金枪鱼飞速群游与小蓝企鹅跳水，馆内Seas Cafe享用亲子企鹅便当。",
+            "transportToNext": {
+              "mode": "train",
+              "durationMin": 20,
+              "familyNote": "搭乘临海线电车直达台场，推车无缝进站。"
+            }
+          },
+          {
+            "id": "stop-2-2",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "台场商场舒适休息区午休 & 咖啡茶歇 💤",
+            "timeSlot": "nap_rest",
+            "startTime": "13:30",
+            "endTime": "15:00",
+            "customNotes": "DiverCity全空调室内软沙发休整，宝宝在婴儿推车内安静午睡。"
+          },
+          {
+            "id": "stop-2-3",
+            "siteId": "site-odaiba",
+            "timeSlot": "afternoon",
+            "startTime": "15:30",
+            "endTime": "19:00",
+            "customNotes": "白沙滩踩水看自由女神，看1:1独角兽高达灯光变形，在Aqua City海景餐厅吃晚饭看彩虹大桥夜景。"
+          }
+        ]
+      },
+      {
+        "id": "day-3",
+        "dayNumber": 3,
+        "date": "2026-10-17",
+        "theme": "箱根活火山奇观：空中全景缆车与大涌谷黑玉子 ➔ 芦之湖海盗船 🌋🚢",
+        "dailyNotes": "小田急浪漫特快前往箱根，换乘全景空中缆车飞越冒白烟的活火山口，乘海盗船游芦之湖。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-3-1",
+            "siteId": "site-hakone-owakudani",
+            "timeSlot": "morning",
+            "startTime": "10:00",
+            "endTime": "12:30",
+            "customNotes": "搭乘全景大缆车俯瞰火山大裂缝，品尝刚出锅的延寿大涌谷黑温泉蛋，2F展望食堂看火山口与富士山。",
+            "transportToNext": {
+              "mode": "train",
+              "durationMin": 15,
+              "familyNote": "从大涌谷乘空中缆车直接下行至芦之湖桃源台港码头。"
+            }
+          },
+          {
+            "id": "stop-3-2",
+            "siteId": "site-lake-ashi-cruise",
+            "timeSlot": "afternoon",
+            "startTime": "13:00",
+            "endTime": "14:30",
+            "customNotes": "登上海盗船游览芦之湖，甲板吹微风看水上红色平和鸟居与富士山同框。",
+            "transportToNext": {
+              "mode": "taxi",
+              "durationMin": 15,
+              "costEst": "约 ¥2,000",
+              "familyNote": "返回箱根温泉旅馆办理入住。"
+            }
+          },
+          {
+            "id": "stop-3-3",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "箱根温泉旅馆午休 & 长辈私享天然温泉 ♨️",
+            "timeSlot": "nap_rest",
+            "startTime": "15:00",
+            "endTime": "17:30",
+            "customNotes": "宝宝睡个舒服的午觉，长辈泡天然弱碱性温泉彻底消除疲劳。"
+          }
+        ]
+      },
+      {
+        "id": "day-4",
+        "dayNumber": 4,
+        "date": "2026-10-18",
+        "theme": "圣山朝圣：富士山五合目与河口湖大石公园逆富士 🗻🌸",
+        "dailyNotes": "专车畅游富士五湖，纯平大石公园木栈道漫步赏花，品尝软糯暖胃南瓜馎饦面。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-4-1",
+            "siteId": "site-mount-fuji-5th-kawaguchiko",
+            "timeSlot": "morning",
+            "startTime": "09:30",
+            "endTime": "13:00",
+            "customNotes": "大石公园纯平木栈道推车赏花，拍倒映在清澈湖水里的富士山，中午在不动茶屋吃热腾腾的南瓜蔬菜馎饦面。",
+            "transportToNext": {
+              "mode": "car",
+              "durationMin": 20,
+              "familyNote": "专车接送回湖景酒店休息。"
+            }
+          },
+          {
+            "id": "stop-4-2",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "湖景客房午睡 & 远眺富士山落日余晖 💤",
+            "timeSlot": "nap_rest",
+            "startTime": "14:00",
+            "endTime": "16:30",
+            "customNotes": "全家在房间内静静看着富士山天色变幻，幼童安稳睡眠。"
+          }
+        ]
+      },
+      {
+        "id": "day-5",
+        "dayNumber": 5,
+        "date": "2026-10-19",
+        "theme": "新干线移师古都 · 伏见千本鸟居与十石舟水乡运河 ⛩️🛶",
+        "dailyNotes": "体验东海道新干线至京都，清晨千本鸟居前段漫步，下午乘木船穿行垂柳运河。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-5-1",
+            "siteId": "site-fushimi-inari-jikkokubune",
+            "timeSlot": "morning",
+            "startTime": "08:30",
+            "endTime": "12:00",
+            "customNotes": "清晨千本鸟居平缓段散步祈福，行至奥社折返保存体力，中午吃400年老铺烤鳗鱼与狐狸乌冬面。",
+            "transportToNext": {
+              "mode": "taxi",
+              "durationMin": 12,
+              "costEst": "约 ¥1,500",
+              "familyNote": "打车前往伏见十石舟码头。"
+            }
+          },
+          {
+            "id": "stop-5-2",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "伏见十石舟水乡木船巡游 & 酒店午休 💤",
+            "timeSlot": "afternoon",
+            "startTime": "13:30",
+            "endTime": "16:00",
+            "customNotes": "坐在平稳木船上看柳树江户酒藏，微风拂面，长辈小宝极其惬意。"
+          }
+        ]
+      },
+      {
+        "id": "day-6",
+        "dayNumber": 6,
+        "date": "2026-10-20",
+        "theme": "岚山山水一日全景：嵯峨野观光小火车 · 竹林小径 ➔ 猴子公园 🚂🐒",
+        "dailyNotes": "复古小火车穿行保津川峡谷，漫步清凉竹林，品尝温热汤豆腐，探访野生日本猕猴。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-6-1",
+            "siteId": "site-arashiyama-combo",
+            "timeSlot": "morning",
+            "startTime": "09:00",
+            "endTime": "13:00",
+            "customNotes": "搭乘嵯峨野复古小火车看保津川峡谷，漫步竹林小径，中午在「嵯峨豆腐 稻」享用软嫩汤豆腐。",
+            "transportToNext": {
+              "mode": "walk",
+              "durationMin": 10,
+              "familyNote": "渡月桥平路漫步至岚山温泉旅馆。"
+            }
+          },
+          {
+            "id": "stop-6-2",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "岚山酒店午休 & 爷爷奶奶静享温泉足汤 💤",
+            "timeSlot": "nap_rest",
+            "startTime": "13:30",
+            "endTime": "15:30",
+            "customNotes": "宝宝午睡充电，长辈泡天然温泉足汤放松双腿。"
+          }
+        ]
+      },
+      {
+        "id": "day-7",
+        "dayNumber": 7,
+        "date": "2026-10-21",
+        "theme": "古都原汁原味：清水寺木舞台 ➔ 二年坂 ➔ 八坂神社 ➔ 祇园 🏮",
+        "dailyNotes": "打车直达清水寺顶，一路顺坡向下漫步至祇园，长辈小宝膝盖省力50%！",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-7-1",
+            "siteId": "site-kiyomizu-gion-walk",
+            "timeSlot": "morning",
+            "startTime": "08:30",
+            "endTime": "12:30",
+            "customNotes": "清水舞台俯瞰全景，接音羽瀑布甘泉，顺坡逛二年坂品尝抹茶甜品，漫步至八坂神社与祇园。",
+            "transportToNext": {
+              "mode": "taxi",
+              "durationMin": 10,
+              "costEst": "约 ¥1,200",
+              "familyNote": "返回酒店午休。"
+            }
+          },
+          {
+            "id": "stop-7-2",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "酒店午睡充电 & 傍晚花见小路古街漫步 💤",
+            "timeSlot": "nap_rest",
+            "startTime": "13:30",
+            "endTime": "16:00",
+            "customNotes": "睡饱后再出门品尝祇园键善良房冰镇葛切黑糖凉面。"
+          }
+        ]
+      },
+      {
+        "id": "day-8",
+        "dayNumber": 8,
+        "date": "2026-10-22",
+        "theme": "京都北山纳凉：叡山电车 ➔ 贵船神社神奇水占卜与溪流川床料理 🎋",
+        "dailyNotes": "搭乘观景电车穿行枫叶隧道，在清澈溪流之上享用清凉川床料理与流水素面。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-8-1",
+            "siteId": "site-kifune-kurama",
+            "timeSlot": "morning",
+            "startTime": "09:30",
+            "endTime": "13:30",
+            "customNotes": "叡山电车观景，贵船神社求神奇浮字水占卜，溪流川床吃烤香鱼与流水素面。",
+            "transportToNext": {
+              "mode": "train",
+              "durationMin": 30,
+              "familyNote": "乘坐叡山电车返回京都市区。"
+            }
+          },
+          {
+            "id": "stop-8-2",
+            "siteId": "",
+            "isRestBreak": true,
+            "restTitle": "午后静修充电 & 享受京都名物抹茶和果子 🍵",
+            "timeSlot": "nap_rest",
+            "startTime": "14:30",
+            "endTime": "16:30",
+            "customNotes": "山间游览后充足休整。"
+          }
+        ]
+      },
+      {
+        "id": "day-9",
+        "dayNumber": 9,
+        "date": "2026-10-23",
+        "theme": "亲子铁道狂欢与上野熊猫：京都铁道博物馆 ➔ 上野公园 🚂🐼",
+        "dailyNotes": "全天候100%纯平无障碍！搭乘真实SL蒸汽火车，看大熊猫吃竹子，完满舒适收官。",
+        "napBreakIncluded": true,
+        "stops": [
+          {
+            "id": "stop-9-1",
+            "siteId": "site-kyoto-railway-aquarium",
+            "timeSlot": "morning",
+            "startTime": "09:30",
+            "endTime": "13:00",
+            "customNotes": "搭乘SL Steam蒸汽火车，参观梅小路扇形车库，在2F展望餐厅吃新干线便当看高铁飞驰。",
+            "transportToNext": {
+              "mode": "train",
+              "durationMin": 25,
+              "familyNote": "前往上野公园。"
+            }
+          },
+          {
+            "id": "stop-9-2",
+            "siteId": "site-ueno-park-zoo",
+            "timeSlot": "afternoon",
+            "startTime": "14:30",
+            "endTime": "17:00",
+            "customNotes": "上野动物园看大熊猫与长颈鹿，不忍池湖畔漫步，品尝伊豆荣鲜嫩无刺鳗鱼饭。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-08-31",
+    "updatedAt": "2026-08-31"
+  },
+  {
+    "id": "trip-dalian-coastal-multigen-2026",
+    "title": "大连海滨浪漫亲子慢游 (山海牧场·海洋世界·地质公园·出海喂海鸥) 🌊🦭⛵",
+    "destination": "中国 · 大连 (中山 · 沙河口 · 金石滩 · 旅顺 · 庄河)",
+    "startDate": "2026-07-10",
+    "endDate": "2026-07-17",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/8/87/Xinghai_Square_%28Dalian%29.jpg",
+    "summary": "专为4岁活泼幼童与65岁以上长辈设计的8天7晚大连海滨度假慢游！汇聚星海广场鸽群海鸥、圣亚海底隧道、豪华双体帆船出海投喂、森林动物园大熊猫、三寰牧场小新西兰草坡、发现王国亲子城堡夜场、金石滩黄金海岸与十里地质奇观、英歌石植物园花海、瓦房店骆驼山海蚀赶海与庄河蛤蜊岛自驾直达吃蛤。每日严格保障1.5小时午睡充电与全程无障碍推车关怀。",
+    "createdAt": "2026-09-01T08:00:00.000Z",
+    "updatedAt": "2026-09-01T08:00:00.000Z",
+    "partyMembers": [
+      {
+        "id": "dp1",
+        "name": "小宝 (Leo)",
+        "role": "👶 4岁幼童",
+        "notes": "极爱大熊猫、白鲸水族馆、出海喂海鸥、海滩挖沙与羊驼互动，每天下午 13:30-15:00 必须回酒店午睡充电"
+      },
+      {
+        "id": "dp2",
+        "name": "爷爷 & 奶奶",
+        "role": "🧓 长辈/爷爷奶奶",
+        "notes": "喜爱海风慢步、开阔海天、清淡海鲜蒸菜/和合水饺/大连老菜，严禁高强度登山爬坡，优先电瓶车代步"
+      },
+      {
+        "id": "dp3",
+        "name": "爸爸 & 妈妈",
+        "role": "🧑 父母/领队",
+        "notes": "负责推车、包车自驾自如切换、海滨防晒装备与行程节奏控制，确保全家轻松不赶路"
+      }
+    ],
+    "checklist": [
+      {
+        "id": "dc1",
+        "category": "幼童用品 (4岁)",
+        "item": "便携轻便折叠婴儿推车 (各大展馆全平无障碍)",
+        "checked": true
+      },
+      {
+        "id": "dc2",
+        "category": "幼童用品 (4岁)",
+        "item": "海滩挖沙玩具套装 (小水桶、塑料铲、挖蛤蜊小耙子)",
+        "checked": true
+      },
+      {
+        "id": "dc3",
+        "category": "幼童用品 (4岁)",
+        "item": "儿童防滑涉水溯溪鞋 (瓦房店骆驼山与庄河赶海防贝壳)",
+        "checked": true
+      },
+      {
+        "id": "dc4",
+        "category": "幼童用品 (4岁)",
+        "item": "儿童防风连帽薄外套 (傍晚出海吹海风防着凉)",
+        "checked": true
+      },
+      {
+        "id": "dc5",
+        "category": "长辈/健康保健",
+        "item": "长辈慢病随身药盒 (降压药等随身小包携带)",
+        "checked": true
+      },
+      {
+        "id": "dc6",
+        "category": "长辈/健康保健",
+        "item": "不锈钢便携保温水杯 (随时补充温开水/大麦茶)",
+        "checked": true
+      },
+      {
+        "id": "dc7",
+        "category": "长辈/健康保健",
+        "item": "轻便折叠防滑健步手杖",
+        "checked": true
+      },
+      {
+        "id": "dc8",
+        "category": "全家必备",
+        "item": "高倍数海滨防晒霜 (SPF50+) & 遮阳帽墨镜",
+        "checked": true
+      },
+      {
+        "id": "dc9",
+        "category": "全家必备",
+        "item": "喂海鸥干鱼小食 & 白鸽玉米粒 (星海湾出海喂海鸥)",
+        "checked": true
+      },
+      {
+        "id": "dc10",
+        "category": "全家必备",
+        "item": "大容量移动电源 (录制海鸥伴飞与萌娃喂羊驼)",
+        "checked": true
+      },
+      {
+        "id": "dc11",
+        "category": "证件与数码",
+        "item": "身份证原件 (长辈60+/70+门票减免优待凭证)",
+        "checked": true
+      }
+    ],
+    "days": [
+      {
+        "id": "dalian-day-1",
+        "dayNumber": 1,
+        "date": "2026-07-10",
+        "theme": "抵达大连·初遇浪漫海湾·星海广场慢步",
+        "napBreakIncluded": true,
+        "dailyNotes": "入住星海湾高品质海景家庭套房，行程节奏极缓，傍晚散步喂鸽吹海风看跨海大桥霓虹。",
+        "stops": [
+          {
+            "id": "s1-1",
+            "siteId": "site-dalian-xinghai-square",
+            "timeSlot": "afternoon",
+            "startTime": "16:00",
+            "endTime": "18:00",
+            "customNotes": "入住酒店休整后前往星海广场，在白鸽广场喂和平鸽，百年城雕台阶看海鸥与跨海大桥。",
+            "transportToNext": {
+              "mode": "walk",
+              "durationMin": 8,
+              "familyNote": "从广场中心慢步推车穿过滨海走廊直达品海楼"
+            }
+          },
+          {
+            "id": "s1-2",
+            "siteId": "",
+            "timeSlot": "dinner",
+            "startTime": "18:00",
+            "endTime": "19:30",
+            "customNotes": "在「品海楼 (星海店)」享用迎宾大连老菜，金牌脆皮虾、软糯海参包子，老幼皆喜。"
+          },
+          {
+            "id": "s1-3",
+            "siteId": "site-dalian-xinghai-square",
+            "timeSlot": "evening",
+            "startTime": "19:30",
+            "endTime": "20:30",
+            "customNotes": "饭后步行至海边观赏星海广场大型音乐喷泉秀，跨海大桥千盏华灯齐放，随后回酒店休息。"
+          }
+        ]
+      },
+      {
+        "id": "dalian-day-2",
+        "dayNumber": 2,
+        "date": "2026-07-11",
+        "theme": "海底隧道探秘·午间充电·双体帆船出海喂海鸥",
+        "napBreakIncluded": true,
+        "dailyNotes": "上午圣亚全室内无日晒，午后严格保障小宝在酒店午睡1.5小时，傍晚出海喂海鸥看夕阳。",
+        "stops": [
+          {
+            "id": "s2-1",
+            "siteId": "site-dalian-sun-asia-ocean-world",
+            "timeSlot": "morning",
+            "startTime": "09:30",
+            "endTime": "12:00",
+            "customNotes": "漫步118米海底通道看鲨鱼魔鬼鱼，观赏《海豚湾之恋》与《功夫海象》王牌演出。",
+            "transportToNext": {
+              "mode": "walk",
+              "durationMin": 5,
+              "familyNote": "出馆到星海公园和顺面馆，平坦树荫步道"
+            }
+          },
+          {
+            "id": "s2-2",
+            "siteId": "",
+            "timeSlot": "lunch",
+            "startTime": "12:00",
+            "endTime": "13:00",
+            "customNotes": "享用鲜美大虾面与手工水饺，清淡养胃。"
+          },
+          {
+            "id": "s2-3",
+            "siteId": "",
+            "timeSlot": "nap_rest",
+            "startTime": "13:30",
+            "endTime": "15:30",
+            "isRestBreak": true,
+            "customNotes": "🌟 核心三代午睡保护：全家回酒店吹空调午休2小时，小宝深度睡眠充电，长辈泡茶小憩。"
+          },
+          {
+            "id": "s2-4",
+            "siteId": "site-dalian-yacht-cruise",
+            "timeSlot": "afternoon",
+            "startTime": "16:00",
+            "endTime": "17:30",
+            "customNotes": "乘坐豪华双体帆船出海！上千只海鸥盘旋伴飞，手递手投喂小鱼条，远眺跨海大桥日落。"
+          }
+        ]
+      },
+      {
+        "id": "dalian-day-3",
+        "dayNumber": 3,
+        "date": "2026-07-12",
+        "theme": "森林动物园看顶流飞云·小动物村喂长颈鹿",
+        "napBreakIncluded": true,
+        "dailyNotes": "从散养区南门进，观光车直达大熊猫馆看早晨进食，小动物村零距离互动，下午午睡。",
+        "stops": [
+          {
+            "id": "s3-1",
+            "siteId": "site-dalian-forest-zoo",
+            "timeSlot": "morning",
+            "startTime": "09:00",
+            "endTime": "12:30",
+            "customNotes": "南门进乘电瓶车先睹国宝飞云啃竹子，随后在小动物村看羊驼、喂长颈鹿，树林遮阴凉爽。"
+          },
+          {
+            "id": "s3-2",
+            "siteId": "",
+            "timeSlot": "lunch",
+            "startTime": "12:30",
+            "endTime": "13:30",
+            "customNotes": "在熊猫主题餐厅享用亲子卡通定食与热玉米排骨汤。"
+          },
+          {
+            "id": "s3-3",
+            "siteId": "",
+            "timeSlot": "nap_rest",
+            "startTime": "14:00",
+            "endTime": "15:30",
+            "isRestBreak": true,
+            "customNotes": "🌟 亲子午休休整：酒店午睡，避开盛夏正午高温。"
+          },
+          {
+            "id": "s3-4",
+            "siteId": "site-dalian-xinghai-square",
+            "timeSlot": "afternoon",
+            "startTime": "16:30",
+            "endTime": "18:30",
+            "customNotes": "傍晚租用四轮亲子脚踏车慢骑海滨木栈道，享受惬意海风。"
+          }
+        ]
+      },
+      {
+        "id": "dalian-day-4",
+        "dayNumber": 4,
+        "date": "2026-07-13",
+        "theme": "黑石礁百年自然博物馆·旅顺三寰牧场小新西兰",
+        "napBreakIncluded": true,
+        "dailyNotes": "上午看亚洲最大黑露脊鲸骨架，全空调无障碍；下午前往三寰牧场看牧羊犬赶羊秀。",
+        "stops": [
+          {
+            "id": "s4-1",
+            "siteId": "site-dalian-natural-history-museum",
+            "timeSlot": "morning",
+            "startTime": "09:30",
+            "endTime": "11:30",
+            "customNotes": "震撼的巨型鲸鱼骨架与恐龙展厅，三楼观海落地窗眺望黑石礁海潮拍岸。"
+          },
+          {
+            "id": "s4-2",
+            "siteId": "",
+            "timeSlot": "lunch",
+            "startTime": "11:30",
+            "endTime": "12:30",
+            "customNotes": "在喜家德水饺享用现包虾仁水饺与热饺子汤。"
+          },
+          {
+            "id": "s4-3",
+            "siteId": "",
+            "timeSlot": "nap_rest",
+            "startTime": "13:00",
+            "endTime": "14:30",
+            "isRestBreak": true,
+            "customNotes": "🌟 车程中或酒店小憩午睡充电。"
+          },
+          {
+            "id": "s4-4",
+            "siteId": "site-dalian-sanhuan-ranch",
+            "timeSlot": "afternoon",
+            "startTime": "15:00",
+            "endTime": "18:00",
+            "customNotes": "欧式大草坡牧场！看15:30牧羊犬赶羊秀，喂羊驼小羊，品尝现挤鲜牛奶与冰淇淋。"
+          }
+        ]
+      },
+      {
+        "id": "dalian-day-5",
+        "dayNumber": 5,
+        "date": "2026-07-14",
+        "theme": "金石滩黄金海岸踏浪·发现王国城堡水上焰火夜场",
+        "napBreakIncluded": true,
+        "dailyNotes": "转移至金石滩度假区，上午沙滩挖沙踏浪，午睡后15:30进发现王国玩亲子项目看夜景城堡烟花。",
+        "stops": [
+          {
+            "id": "s5-1",
+            "siteId": "site-dalian-golden-pebble-beach",
+            "timeSlot": "morning",
+            "startTime": "09:00",
+            "endTime": "11:30",
+            "customNotes": "黄金海岸租遮阳伞躺椅，小宝在平缓浅滩挖沙堆堡，老人坐躺椅听海浪。"
+          },
+          {
+            "id": "s5-2",
+            "siteId": "",
+            "timeSlot": "lunch",
+            "startTime": "11:30",
+            "endTime": "12:30",
+            "customNotes": "渔家傲海鲜坊享用现蒸黄鱼与清甜杂色蛤豆腐汤。"
+          },
+          {
+            "id": "s5-3",
+            "siteId": "",
+            "timeSlot": "nap_rest",
+            "startTime": "13:00",
+            "endTime": "15:00",
+            "isRestBreak": true,
+            "customNotes": "🌟 金石滩度假酒店全员午睡休整，为精彩夜场蓄足体能！"
+          },
+          {
+            "id": "s5-4",
+            "siteId": "site-dalian-discovery-kingdom",
+            "timeSlot": "afternoon",
+            "startTime": "15:30",
+            "endTime": "21:00",
+            "customNotes": "玩转小人国与旋转木马，看花车大巡游，晚上八点压轴观赏城堡水上音乐焰火秀。"
+          }
+        ]
+      },
+      {
+        "id": "dalian-day-6",
+        "dayNumber": 6,
+        "date": "2026-07-15",
+        "theme": "国家地质公园恐龙探海·英歌石植物园仙境花海",
+        "napBreakIncluded": true,
+        "dailyNotes": "上午观光车巡礼亿年海蚀奇观，下午走进中国最美植物园慢步吸氧赏绣球花谷。",
+        "stops": [
+          {
+            "id": "s6-1",
+            "siteId": "site-dalian-golden-pebble-beach",
+            "timeSlot": "morning",
+            "startTime": "09:00",
+            "endTime": "11:30",
+            "customNotes": "乘坐地质公园观光车直达观景平台，俯瞰万顷碧波与鬼斧神工的「恐龙探海」大石桥。"
+          },
+          {
+            "id": "s6-2",
+            "siteId": "",
+            "timeSlot": "lunch",
+            "startTime": "11:45",
+            "endTime": "12:45",
+            "customNotes": "品尝金石滩地道海鲜大包子与清爽凉拌海藻。"
+          },
+          {
+            "id": "s6-3",
+            "siteId": "",
+            "timeSlot": "nap_rest",
+            "startTime": "13:00",
+            "endTime": "14:30",
+            "isRestBreak": true,
+            "customNotes": "🌟 午睡小憩，恢复活力。"
+          },
+          {
+            "id": "s6-4",
+            "siteId": "site-dalian-yinggeshi-botanical-garden",
+            "timeSlot": "afternoon",
+            "startTime": "15:00",
+            "endTime": "17:30",
+            "customNotes": "坐观光车至花海山顶，顺梯田漫步下山，在黑天鹅湖畔喂天鹅，空气极度甘冽。"
+          }
+        ]
+      },
+      {
+        "id": "dalian-day-7",
+        "dayNumber": 7,
+        "date": "2026-07-16",
+        "theme": "瓦房店骆驼山海滨自驾·松林海风与原生态赶海",
+        "napBreakIncluded": true,
+        "dailyNotes": "自驾前往大连北部秘境骆驼山，松林下野餐，配合退潮时间翻石头抓螃蟹捡海螺。",
+        "stops": [
+          {
+            "id": "s7-1",
+            "siteId": "site-dalian-luotuoshan-haibin",
+            "timeSlot": "morning",
+            "startTime": "10:00",
+            "endTime": "12:30",
+            "customNotes": "车停松林旁，换涉水鞋带小桶在浅滩礁石赶海，小螃蟹海星随便捡，眺望骆驼入海巨石。"
+          },
+          {
+            "id": "s7-2",
+            "siteId": "",
+            "timeSlot": "lunch",
+            "startTime": "12:30",
+            "endTime": "13:30",
+            "customNotes": "驼山渔家鲜味居现煮皮皮虾与家焖小黄鱼，大块炕头舒展双腿。"
+          },
+          {
+            "id": "s7-3",
+            "siteId": "",
+            "timeSlot": "nap_rest",
+            "startTime": "13:30",
+            "endTime": "15:00",
+            "isRestBreak": true,
+            "customNotes": "🌟 松林海风下树荫野餐垫午休，听海浪声安睡入梦。"
+          },
+          {
+            "id": "s7-4",
+            "siteId": "site-dalian-luotuoshan-haibin",
+            "timeSlot": "afternoon",
+            "startTime": "15:00",
+            "endTime": "17:00",
+            "customNotes": "将抓到的小螃蟹放归大海，在黑松林步道漫步，感受大自然馈赠。"
+          }
+        ]
+      },
+      {
+        "id": "dalian-day-8",
+        "dayNumber": 8,
+        "date": "2026-07-17",
+        "theme": "自驾跨海大堤登蛤蜊岛·滩涂挖大蛤·满载鲜美返程",
+        "napBreakIncluded": true,
+        "dailyNotes": "汽车直接开上蛤蜊岛免乘渡轮，滩涂体验一耙子挖两蛤的丰收乐趣，现煮原汁蛤蜊完美收官！",
+        "stops": [
+          {
+            "id": "s8-1",
+            "siteId": "site-dalian-zhuanghe-geli-island",
+            "timeSlot": "morning",
+            "startTime": "09:30",
+            "endTime": "12:30",
+            "customNotes": "穿过跨海大堤登岛，在蛤蜊沙滩用铁耙挖肥美大骨顶蛤，小桶迅速装满，成就感满满！"
+          },
+          {
+            "id": "s8-2",
+            "siteId": "",
+            "timeSlot": "lunch",
+            "startTime": "12:30",
+            "endTime": "14:00",
+            "customNotes": "海岛渔庄当场加工刚挖的蛤蜊，煮一锅清亮鲜香的蛤蜊手擀面，鲜美无匹。"
+          },
+          {
+            "id": "s8-3",
+            "siteId": "site-dalian-zhuanghe-geli-island",
+            "timeSlot": "afternoon",
+            "startTime": "14:00",
+            "endTime": "15:30",
+            "customNotes": "海岛环岛木栈道留影合照，收拾行装，依依不舍踏上返程之旅。"
+          }
+        ]
+      }
+    ]
+  }
+]

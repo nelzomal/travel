@@ -6,6 +6,23 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+function syncDataToPublic(rootDir: string) {
+  try {
+    const publicDataDir = path.resolve(rootDir, 'public/data');
+    const sitesPath = path.resolve(rootDir, 'data/sites.json');
+    const tripsPath = path.resolve(rootDir, 'data/trips.json');
+    fs.mkdirSync(publicDataDir, { recursive: true });
+    if (fs.existsSync(sitesPath)) {
+      fs.copyFileSync(sitesPath, path.resolve(publicDataDir, 'sites.json'));
+    }
+    if (fs.existsSync(tripsPath)) {
+      fs.copyFileSync(tripsPath, path.resolve(publicDataDir, 'trips.json'));
+    }
+  } catch (e) {
+    console.error('Failed to sync data to public directory:', e);
+  }
+}
+
 function localSyncPlugin(): Plugin {
   const syncHandler = (req: any, res: any) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -39,6 +56,8 @@ function localSyncPlugin(): Plugin {
           const tripsContent = `import { Trip } from "../types/travel";\n\nexport const INITIAL_TRIPS: Trip[] = ${JSON.stringify(trips, null, 2)};\n`;
           fs.writeFileSync(path.resolve(rootDir, 'src/data/mockTrips.ts'), tripsContent, 'utf-8');
         }
+
+        syncDataToPublic(rootDir);
 
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ 
@@ -75,6 +94,9 @@ function localSyncPlugin(): Plugin {
             fs.mkdirSync(path.resolve(rootDir, 'data'), { recursive: true });
             fs.writeFileSync(tripsPath, JSON.stringify(trips, null, 2), 'utf-8');
           }
+
+          syncDataToPublic(rootDir);
+
           res.writeHead(200, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: true, message: 'Files synchronized to Git codebase successfully' }));
         } catch (e: any) {
@@ -90,10 +112,18 @@ function localSyncPlugin(): Plugin {
 
   return {
     name: 'local-file-sync',
+    buildStart() {
+      const rootDir = path.dirname(fileURLToPath(import.meta.url));
+      syncDataToPublic(rootDir);
+    },
     configureServer(server) {
+      const rootDir = path.dirname(fileURLToPath(import.meta.url));
+      syncDataToPublic(rootDir);
       server.middlewares.use('/api/sync-data', syncHandler);
     },
     configurePreviewServer(server) {
+      const rootDir = path.dirname(fileURLToPath(import.meta.url));
+      syncDataToPublic(rootDir);
       server.middlewares.use('/api/sync-data', syncHandler);
     }
   };

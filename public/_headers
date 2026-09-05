@@ -6,3 +6,7 @@
 
 /social-media/*
   Cache-Control: public, max-age=86400, must-revalidate
+
+/data/*
+  Cache-Control: public, max-age=0, must-revalidate
+  Access-Control-Allow-Origin: *

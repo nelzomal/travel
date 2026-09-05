@@ -230,7 +230,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               type="button"
               onClick={handleManualSyncFromDisk}
               disabled={isSyncingFromDisk}
-              title="从本地磁盘代码文件 (data/sites.json 与 data/trips.json) 读取最新修改并立即载入浏览器 LocalStorage"
+              title="从磁盘/代码库读取最新景点与行程数据并更新本地缓存"
               className={`px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all border shadow-2xs ${
                 diskSyncedStatus
                   ? 'bg-amber-50 text-amber-800 border-amber-300 ring-2 ring-amber-400/20'
@@ -240,12 +240,12 @@ export const Navbar: React.FC<NavbarProps> = ({
               {diskSyncedStatus ? (
                 <>
                   <Check className="w-3.5 h-3.5 text-amber-600" />
-                  <span className="text-[11px] truncate max-w-[120px]">已从磁盘加载!</span>
+                  <span className="text-[11px] truncate max-w-[120px]">已同步最新数据!</span>
                 </>
               ) : (
                 <>
                   <RotateCw className={`w-3.5 h-3.5 text-amber-600 ${isSyncingFromDisk ? 'animate-spin' : ''}`} />
-                  <span className="hidden sm:inline">从磁盘同步</span>
+                  <span className="hidden sm:inline">从磁盘/代码库同步</span>
                 </>
               )}
             </button>
