@@ -1,5 +1,373 @@
 [
   {
+    "id": "site-dalian-1788610247850",
+    "name": "大连威尼斯",
+    "localName": "大连海昌·东方水城（东方威尼斯水城）",
+    "category": "attraction",
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "coordinates": [
+      25.0733053,
+      102.7182198
+    ],
+    "address": "威尼斯, Wanhua Road, Lianmeng Subdistrict, Panlong District, Kunming, Yunnan, 661000, China",
+    "city": "Kunming",
+    "coverImage": "https://5b0988e595225.cdn.sohucs.com/images/20180830/54228d1dfce945c4959446b74690feb5.jpeg",
+    "gallery": [
+      "https://5b0988e595225.cdn.sohucs.com/images/20180830/1afc7149b0674139b51557b9a0e51eb2.jpeg",
+      "https://5b0988e595225.cdn.sohucs.com/images/20180830/cdaa56acf9854e42894ffa0ad3f6cb85.jpeg",
+      "https://5b0988e595225.cdn.sohucs.com/images/20180830/3b6aa2fdfcf34ef7bf95e833dbf267d6.jpeg",
+      "https://5b0988e595225.cdn.sohucs.com/images/20180830/7525efb6f18241008999c8e433f356dd.jpeg",
+      "https://5b0988e595225.cdn.sohucs.com/images/20180830/faff96537adc418582e8f544d2ee7306.jpeg",
+      "https://5b0988e595225.cdn.sohucs.com/images/20180830/be0b1f26d0b5418aa1de778dc9b3ce60.jpeg",
+      "https://5b0988e595225.cdn.sohucs.com/images/20180830/54228d1dfce945c4959446b74690feb5.jpeg",
+      "https://5b0988e595225.cdn.sohucs.com/images/20180830/4f36c196ca6147c5a66fb0551924312f.jpeg"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=2Gio_JXDMjI"
+    ],
+    "description": "大连东港海边的欧式水城，以运河、拱桥、钟楼和贡多拉营造浪漫街景。白天看建筑倒影，傍晚赏灯光，适合三代同堂短程散步与临河用餐。带四岁孩子可看船、找桥、数尖塔；避开桥阶与临水边缘，午睡后慢逛约九十分钟最从容。",
+    "recommendedDurationMin": 90,
+    "openingHours": "公共街区全年全天免费开放；贡多拉公开营业时间09:00–21:00，季节、天气与现场通知可能调整。",
+    "admissionFee": {
+      "adult": "街区0元；贡多拉成人公开在售标准票68元/人，最终以购票页为准。",
+      "senior": "街区所有年龄免费。未核实贡多拉60–69岁半价或70岁以上免票；长者先按成人船票68元/人预算。",
+      "child4yo": "街区免费。贡多拉儿童票公开在售30元/人；近期资料多指1米以下或不超过1米，恰好1米的边界存在冲突。4岁不自动免票，身高超过适用条件按成人票预算。",
+      "notes": "成人60元是部分攻略口径，与当前在售68元不同。未核实1.2米或1.3米以下免船票。4成人加1儿童乘船预算302–340元，不含餐饮交通。快速通道公开在售成人100元起、儿童50元起，不能保证无需等待。贡多拉为内河观光，不包含出海喂海鸥。"
+    },
+    "bestTimeToVisit": "优先午睡结束后16:30–18:00散步，再就近吃饭；想看夜景可晚餐后短看20分钟。备选08:30–10:00，坐船等09:00起。出发时间结合酒店距离，确保13:30–15:00在酒店午睡。",
+    "weatherSuitability": "晴天或多云、微风适宜；中午暴晒、持续降雨、大风及海洋预警时不适合户外慢游。",
+    "strollerRating": 3,
+    "strollerNotes": "沿街部分地面可推行，桥梁、亲水层与船站有台阶和高差，不能视为全程无障碍。未取得连续缓坡、直梯及无障碍地图；选择同岸短路线，遇阶折返。婴儿车和轮椅借用未核实，建议自带。",
+    "kidRating": 3,
+    "kidNotes": "适合看贡多拉、数桥与钟楼、看建筑倒影；不是熊猫、白鲸或羊驼景区，未核实专用儿童互动区。运河和码头临水，孩子保持成人一臂范围，不能攀栏探身。乘船前确认适龄救生衣、上下船协助及推车存放。母婴室、尿布台未核实。",
+    "elderlyRating": 3,
+    "elderlyNotes": "无登山需求，但完整逛两期会增加步行和桥阶负担。建议将总步行控制在约600–1000米，极简版本约300–500米，均为规划目标而非实测路线。每20–30分钟安排坐下休息；可用餐馆咖啡馆消费休息，未核实密集公共遮阳长椅及官方内部代步车。",
+    "walkingIntensity": "轻至中等：建议总步行约600–1000米；极简约300–500米，均为规划目标，未实测。",
+    "stairsLevel": "局部桥阶、亲水层和船站存在高差；非全程无台阶。",
+    "amenities": {
+      "nursingRoom": null,
+      "diaperChanging": null,
+      "accessibleRestroom": null,
+      "benchesRestAreas": null,
+      "shuttleOrCart": null,
+      "elevatorAvailable": null,
+      "strollerRental": null,
+      "wheelchairRental": null,
+      "shadeAvailable": true,
+      "indoorRainyDayOption": true,
+      "kidPlayArea": null
+    },
+    "familyTips": [
+      "13:30–15:00必须回酒店午睡，优先把水城安排在午睡后，不照搬港东五街—喷泉—水城完整长线。",
+      "以运河同一岸和一处广场为主，爸爸先探查台阶，妈妈照看孩子；老人疲劳就近休息。",
+      "想坐船先确认1米儿童票边界、长者登船能力、儿童救生衣和推车存放；预计排队超过20分钟可放弃，这是家庭节奏建议。",
+      "水城不是赶海海滩，贡多拉不出海；不要为了看海鸥越过海堤或进入码头作业区。",
+      "带防风薄外套、遮阳帽、饮水、合脚防滑运动鞋、备用衣物及便携换尿布垫。",
+      "宝宝椅已有平台标注，但订位时仍需确认可用并预留；点餐提出少油少盐、不辣、面煮软。"
+    ],
+    "nearbyDining": [
+      {
+        "id": "dine-llm-1788610242915-0",
+        "name": "南山鲜虾面（海昌·东方水城店）",
+        "cuisine": "鲜虾面、汤泡饭及家常菜",
+        "familyFeatures": "携程明确标注有宝宝椅。可考虑鲜虾汤泡饭、番茄牛腱面、清炒秋葵山药；少油少盐需点餐时沟通，未电话确认。",
+        "walkingTimeMin": 10
+      },
+      {
+        "id": "dine-llm-1788610242915-1",
+        "name": "渔味堂（东方威尼斯水城店）",
+        "cuisine": "海鲜汤面、鱼汤面及海胆炖蛋",
+        "familyFeatures": "Apple Maps引用点评信息标注High Chairs、多人桌与包间。可考虑鱼汤面、鲜虾面、海胆炖蛋；清淡定制及宝宝椅库存需订位确认。",
+        "walkingTimeMin": 10
+      }
+    ],
+    "socialMediaLinks": [],
+    "customTags": [
+      "亲子精选"
+    ],
+    "customFields": {
+      "tideOrWeatherTip": "水城为人工运河商业街区，不安排下水或赶海，最佳退潮时间不适用。尚无旅行日期，也不能给出固定低潮时刻。若另选正规开放海滩，应按日期和该海滩对应潮站查潮汐并结合海浪预警，不能套用东港或大连统一潮时。此处穿包头防滑运动鞋即可，防滑涉水鞋也不能使下海堤变安全。儿童备防风外套、帽子和备用衣物；按防晒产品说明补涂，推车保持通风；强风降雨取消临海步行。",
+      "ticketBookingTip": "公共街区无需购买入园票，未见常态预约要求。游船可用东方水城小程序或正规平台，公开产品标注随买随用；是否强制实名及所需儿童证件须查具体商品。建议成人带居民身份证原件；儿童带已有身份证或户口簿资料。长者无已核实船票优惠，不应承诺凭老年证半价或免票。票务咨询0411-82875777。",
+      "parkingAndDropoff": "看钟楼和广场时，地图先定位东方水城二期圣马可广场或贡多拉船站，再让司机选附近合法停车场/临停点。下车至核心几米未取得可核实测距，勿按统一东门最短作保证；将单程步行不超过300米作为当天选下车点的目标。私人自驾可先在合法位置放下家人再停车。未核实内部官方接驳电瓶车、固定站点、收费或排队数据；外围租赁车和城市观光巴士不等于园内接驳。未发现适用的景区索道。贡多拉船站需确认票种对应一期或二期，夜间排队更久的游客反馈仅作参考。",
+      "rainyDayPlan": "小雨且已到水城，可先进入营业餐厅休息。可考虑二期S13栋、港浦路102号的世纪留声·世界音乐文化博物馆，安排30–45分钟看钢琴、留声机等；公开成人票50元起，儿童长者优惠未核实。馆有多层，直梯未核实，长者仅参观确认可达区域。电话0411-39972788/39972789，先确认营业。大风暴雨优先回酒店；凯丹广场可作另行打车的室内商业替代，不算水城内部展馆。",
+      "researchMetadata": "checkedOn: 2026-09-05 | ratingBasis: 针对4岁幼童、65岁以上长者与推车家庭的规划判断，非景区官方评级。 | nullMeaning: null表示未核实，不表示设施不存在；shadeAvailable仅指部分建筑阴影/商户室内，indoorRainyDayOption仅指附近营业商户及独立收费博物馆。 | limitations: [\"未获运营方完整现行无障碍和票务政策，未电话核实。\",\"下车距离、餐厅步行时间及短路线里程未实测。\",\"8张图均为来源明确的历史实拍并在原文加载，长边900–1080像素，未达到高分辨率原片要求；不能证明当前设施。\",\"未找到可核实的儿童互动区、官方观光车、专用长者休息区及木栈道照片。\",\"图片独立直链测试受浏览工具限制，不能保证第三方系统防盗链兼容或永久可用。\",\"视频页面与作者、地点已核实，4K为作者标题标注，未验证2160p实际播放。\"] | imageSourceUrl: https://www.sohu.com/a/250840378_692758 | imageAuthor: 东财老铁玩摄影 | imagePublishedOn: 2018-08-29 | imagePeriod: 2017–2018年，部分由作者明确标注2017年 | galleryDetails: [{\"index\":1,\"caption\":\"二期入口建筑群\",\"width\":900,\"height\":600},{\"index\":2,\"caption\":\"钟楼远景\",\"width\":900,\"height\":600},{\"index\":3,\"caption\":\"圣马可广场夜景\",\"width\":900,\"height\":600},{\"index\":4,\"caption\":\"船栈咖啡建筑外观，历史照片\",\"width\":900,\"height\":600},{\"index\":5,\"caption\":\"船站周边台阶及建筑，历史照片\",\"width\":900,\"height\":600},{\"index\":6,\"caption\":\"圣马可广场船栈\",\"width\":720,\"height\":1080},{\"index\":7,\"caption\":\"贡多拉与运河欧式建筑\",\"width\":720,\"height\":1080},{\"index\":8,\"caption\":\"门廊日间光影\",\"width\":600,\"height\":900}] | videoDetails: [{\"url\":\"https://www.youtube.com/watch?v=2Gio_JXDMjI\",\"title\":\"「4K」漫步滨城大连东方水城\",\"author\":\"Gecko walks\",\"publishedOn\":\"2021-08-23\",\"type\":\"YouTube视频页面直达链接，非MP4文件\"}] | sourceUrls: [\"https://you.ctrip.com/sight/dalian4/1837119.html\",\"https://touch.piao.qunar.com/touch/detail_494951812.html\",\"https://dl.bendibao.com/tour/jingdianbangdan/2634.shtml\",\"https://www.rednote.com/discovery/item/6a7c4e8c000000002201379a\",\"https://gs.ctrip.com/html5/you/sight/dalian4/4746367.html\",\"https://www.nmefc.cn/\"]"
+    },
+    "createdAt": "2026-09-05"
+  },
+  {
+    "id": "site-dalian-1788606971617",
+    "name": "大连劳动公园",
+    "localName": "劳动公园",
+    "category": "attraction",
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "coordinates": [
+      38.9135138,
+      121.62776
+    ],
+    "address": "劳动公园, Wuhui Road, Kuiying Subdistrict, Zhongshan District, Ganjingzi, Dalian City, Liaoning, 116001, China",
+    "city": "Zhongshan District",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Dalian_China_Labor-Park-02.jpg",
+    "gallery": [
+      "https://upload.wikimedia.org/wikipedia/commons/3/3f/Dalian_China_Labor-Park-02.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/af/Dalian_Laodong_Park%2C_park_name.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/7d/%E5%A4%A7%E8%BF%9E%E5%8A%B3%E5%8A%A8%E5%85%AC%E5%9B%AD%E4%B8%AD%E8%BD%B4%E5%8C%97%E7%AB%AF%E5%8D%97%E5%90%91.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/46/%E5%A4%A7%E8%BF%9E%E5%8A%B3%E5%8A%A8%E5%85%AC%E5%9B%AD%E4%B8%AD%E8%BD%B4%E5%8D%97%E5%90%91%E8%B6%B3%E7%90%83%E4%B8%8E%E5%A4%A7%E8%BF%9E%E7%94%B5%E8%A7%86%E5%A1%94.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b8/Dalian_Laodong_Park%2C_cherry_blossoms.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/ed/Dalian_Laodong_Park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/49/Dalian_China_Labor-Park-03.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e9/Dalian_China_Labor-Park-04.jpg"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=Ml6f0dl_Mn4",
+      "https://www.youtube.com/watch?v=57IZrXe4TyU"
+    ],
+    "description": "劳动公园位于大连市中心绿山北麓，以红白大足球、花坛、草坪和树荫步道见长，也保留着市民晨练、散步的生活气息。适合三代家庭安排短时晨游，看花观鸭、随走随歇。南侧地势抬升，索道与滑道另行收费；这里没有海滩和赶海项目。",
+    "recommendedDurationMin": 90,
+    "openingHours": "普通园区公开资料标注全年00:00–24:00；临时管控、活动及园内收费项目另行安排",
+    "admissionFee": {
+      "adult": "普通园区免费，0元/人",
+      "senior": "普通园区各年龄长者均免费；不涉及60–69岁半价或70岁免票的额外条件",
+      "child4yo": "普通园区免费，不涉及身高免票线",
+      "notes": "索道、滑道及其他游乐项目另收费。小红书游客8月24日记录成人90元、儿童60元往返，仅作当次消费参考；4岁适用票种、儿童身高线、老人年龄上限及优惠未取得当前运营方确认。不得套用普通园区免费政策。"
+    },
+    "bestTimeToVisit": "建议工作日08:30–10:00进行60–90分钟晨间慢游；晨练区可能有音响，花展和节庆另避峰",
+    "weatherSuitability": "适合晴天、阴天及微风天气；雷雨、大风或路面湿滑时改为室内活动",
+    "strollerRating": 3,
+    "strollerNotes": "优先选择北部园林主路短途往返。全园并非无台阶，南门至大足球和索道方向有游客报告需下楼梯，南侧上山有明显高差。未取得连续无障碍路线图，碎石路比例、坡度、园内直梯及推车租借未核实。",
+    "kidRating": 3,
+    "kidNotes": "适合看花、观察鸭子、寻找足球地标。鸭子属于游客观察记录，不保证每次可见或允许投喂。未核实熊猫、白鲸、羊驼、沙滩和海鸥互动项目。景观水边须成人近身照看；开放式索道和滑道不列入本家庭默认路线。母婴室及尿布台未核实。",
+    "elderlyRating": 3,
+    "elderlyNotes": "适合北部园林短时散步，建议每走15–20分钟休息。存在树荫及亭子等休憩空间，但长椅密度、空座和无障碍厕所未核实。避免南侧登山和追求全园全景；不依赖未经核实的轮椅借用或电瓶车服务。",
+    "walkingIntensity": "建议控制在600–1000米；体力一般时缩至300–500米。均为规划预算，非实测闭环距离",
+    "stairsLevel": "分区差异明显：北部主路优先；南门近路有楼梯，南部山地区域有坡道及高差，不可标记全园无台阶",
+    "amenities": {
+      "nursingRoom": null,
+      "diaperChanging": null,
+      "accessibleRestroom": null,
+      "benchesRestAreas": true,
+      "shuttleOrCart": null,
+      "elevatorAvailable": null,
+      "strollerRental": null,
+      "wheelchairRental": null,
+      "shadeAvailable": true,
+      "indoorRainyDayOption": null,
+      "kidPlayArea": true
+    },
+    "familyTips": [
+      "将劳动公园安排在住中山市中心的那一天，作为60–90分钟短时晨游。",
+      "优先导航劳动公园北门，现场确认可推行入口；不要把南门至索道的近路当成无台阶路线。",
+      "不追求登顶和全园打卡，长辈每走15–20分钟休息，孩子临水由成人近身照看。",
+      "自带推车和便携换尿布垫，不依赖尚未核实的母婴室、租车或接驳服务。",
+      "游客说3岁能乘索道，只代表个人经历，不能代替运营方限制和家长判断。",
+      "按13:00减去实时返程车程再减20分钟，倒推最迟离店时间，保证Leo于13:30开始午睡。",
+      "4位成人和1名儿童宜选择符合载客人数的6/7座车辆，并落实儿童安全座椅。",
+      "广场唱歌跳舞区域可能较吵，休息时选择远离音响的树荫步道。"
+    ],
+    "nearbyDining": [
+      {
+        "id": "dine-llm-1788606969026-0",
+        "name": "万宝海鲜舫（劳动公园店）",
+        "cuisine": "大连海鲜、黄花鱼水饺、海菜包子、清蒸海鲜",
+        "familyFeatures": "携程明确标注有宝宝椅、室内卫生间、大桌和免费停车。菜单列有黄花鱼水饺、海菜包子及清蒸飞蟹。点餐要求少油少盐、不辣、酱汁分开；宝宝椅当日余量和清淡定制能力需确认。",
+        "walkingTimeMin": 10
+      },
+      {
+        "id": "dine-llm-1788606969026-1",
+        "name": "大连铂尔曼酒店·龙苑中餐厅Dragon Palace",
+        "cuisine": "粤菜与大连菜、海鲜粥、云吞面、蒸点",
+        "familyFeatures": "携程标注有宝宝椅；雅高官网介绍轮椅通道和无盐食品菜单。但携程同时标注暂停营业，不能直接安排前往。",
+        "walkingTimeMin": 10
+      }
+    ],
+    "socialMediaLinks": [
+      {
+        "id": "social-llm-1788606969026-0",
+        "platform": "xiaohongshu",
+        "title": "大连遛娃｜3岁娃超爱❗缆车滑道一站式快乐",
+        "author": "我的心心念念",
+        "url": "https://www.rednote.com/discovery/item/6a6d4a630000000028030d50?xsec_token=ABZLOA6K802fEumBPkF5FTSOyGmAmt6q2aduCm8DKk3F0=&xsec_source=pc_search&source=web_explore_feed",
+        "note": "已读正文及评论。作者报告南门进入后需下楼梯绕过大足球前往索道，南门仅有少量车位；工作日上午10点当次无需排队。3岁孩子乘坐顺利是个人体验，不能证明推车无障碍或统一乘坐资格。",
+        "addedAt": "2026-09-05"
+      },
+      {
+        "id": "social-llm-1788606969026-1",
+        "platform": "xiaohongshu",
+        "title": "大连市内遛娃之—劳动公园看小鸭子",
+        "author": "又是元气满满的一天",
+        "url": "https://www.rednote.com/discovery/item/6a82cd8a000000002203199a?xsec_token=ABRg4yrw1C6smzbaASlosDDY2bicRnVkVkO9pUU6X2Vxg=&xsec_source=pc_search&source=web_explore_feed",
+        "note": "已读正文。记录周日下午带娃看鸭子，当次停车位较充足；提醒唱歌跳舞的音响较响。停车记录未明确对应哪个停车场，不能据此保证北门有位。",
+        "addedAt": "2026-09-05"
+      },
+      {
+        "id": "social-llm-1788606969026-2",
+        "platform": "xiaohongshu",
+        "title": "大连同时解锁原始缆车&丛林滑道🌴带娃体验",
+        "author": "Donkeys",
+        "url": "https://www.rednote.com/discovery/item/6a8b17d2000000002603bb09?xsec_token=ABy3Ec4V3EfdzyYfPCZVL4-Jht8f7vOVL0svEyBos-5UQ=&xsec_source=pc_search&source=web_explore_feed",
+        "note": "已读正文及评论。索道入口在大足球旁；作者记录成人90元、儿童60元往返，可选择索道往返或索道上滑道下，并提到滑道18点前下行。均为当次游客信息，非官方现行价目和开放承诺；本家庭不采用该刺激项目路线。",
+        "addedAt": "2026-09-05"
+      },
+      {
+        "id": "social-llm-1788606969026-3",
+        "platform": "xiaohongshu",
+        "title": "大连遛娃｜劳动公园藏着治愈整个夏天的花海",
+        "author": "仔仔成长记",
+        "url": "https://www.rednote.com/discovery/item/6a54d44f0000000022019d20?xsec_token=AB4JsdlOyrQEuJI43rqXhH34tnGnwEEOcutaTcklsxJ04=&xsec_source=pc_search&source=web_explore_feed",
+        "note": "已读正文及可见评论，并查看照片。记录花坛、树荫散步及亲子拍照；可作为轻松遛娃参考。花况具有季节性，作者认为阴凉不代表所有路段都不晒。",
+        "addedAt": "2026-09-05"
+      }
+    ],
+    "customTags": [
+      "亲子精选"
+    ],
+    "customFields": {
+      "tideOrWeatherTip": "劳动公园不是海滨景点，赶海退潮时间不适用，园内湖池不可当作赶海水域。带遮阳帽、推车遮阳篷、饮水、薄外套和防滑包头鞋；不需要挖沙工具。雨后注意湿滑石面与落叶，雷雨或大风时取消户外登高和索滑道。",
+      "ticketBookingTip": "普通园区免费，未发现常态实名预约要求。长者普通入园无须按年龄申请免票；身份证原件可随身携带备用。索道、滑道及临时活动另核实名要求、证件类型、年龄上限、儿童身高和陪同条件，不能套用60岁半价、70岁免费或1.2米以下免费的模板。",
+      "parkingAndDropoff": "家庭慢游优先劳动公园北门附近合法下客点，以北部园林主路短途往返。下客点至入口和花坛精确米数未核实，应预留数百米步行余量。南门虽有游客报告少量车位，但去索道的近路需要下楼梯，不推荐推车家庭。固定电瓶车线路、班次和票价未核实；索道下站在大足球附近，上站在绿山高处，不作为无障碍接驳。游客曾记录工作日上午10点零排队，无法推算你们到访日等待时间。",
+      "rainyDayPlan": "未核实园内可靠开放的室内避雨展馆，不把大足球建筑当作可进入的博物馆。降雨前可改去青泥洼桥柏威年购物中心，在营业时段乘客梯休息用餐；雨势大时直接乘车回酒店。购物中心母婴室楼层未核实。保持13:30–15:00酒店午睡安排。",
+      "researchDate": "2026-09-04",
+      "dataQualityNotes": "设施字段null表示未核实，不代表确定没有。休憩空间存在不代表长椅密集；游乐区存在不代表每个项目适合4岁孩子。步行距离与时间均为规划预算，未现场测绘。餐厅仅1家可作首选，另1家营业状态冲突，未凑足2–3家完全合格餐厅。",
+      "mediaVerificationNotes": "8张图片均来自劳动公园对应的Wikimedia Commons文件页，并提取原图链接；拍摄于2008–2014年，属于历史实拍。未补齐当前观光车、儿童互动区及长辈座椅特写，不能作为当前设施证据。链接可用性受网络环境影响。",
+      "imageCredits": "galleryIndex: 0 | subject: 红白大足球地标 | photographer: CEphoto, Uwe Aranas | date: 2009-05-21 | license: CC BY-SA 3.0 | sourceUrl: https://commons.wikimedia.org/wiki/File:Dalian_China_Labor-Park-02.jpg；galleryIndex: 1 | subject: 劳动公园入口题名景石 | photographer: Yoshi Canopus | date: 2014-04-16 | license: CC BY-SA 4.0 | sourceUrl: https://commons.wikimedia.org/wiki/File:Dalian_Laodong_Park,_park_name.jpg；galleryIndex: 2 | subject: 公园中轴北端向南视角 | photographer: 董辰兴 | date: 2012-03-02 | license: CC BY-SA 4.0 | sourceUrl: https://commons.wikimedia.org/wiki/File:大连劳动公园中轴北端南向.jpg；galleryIndex: 3 | subject: 中轴方向大足球与电视塔 | photographer: 董辰兴 | date: 2012-03-02 | license: CC BY-SA 4.0 | sourceUrl: https://commons.wikimedia.org/wiki/File:大连劳动公园中轴南向足球与大连电视塔.jpg；galleryIndex: 4 | subject: 园内樱花景观 | photographer: Yoshi Canopus | date: 2014-04-16 | license: CC BY-SA 4.0 | sourceUrl: https://commons.wikimedia.org/wiki/File:Dalian_Laodong_Park,_cherry_blossoms.jpg；galleryIndex: 5 | subject: 园内草坪与园景 | photographer: Sergeisemenoff | date: 2008-07 | license: CC BY-SA 3.0 | sourceUrl: https://commons.wikimedia.org/wiki/File:Dalian_Laodong_Park.jpg；galleryIndex: 6 | subject: 索道山上站附近向市中心眺望 | photographer: CEphoto, Uwe Aranas | date: 2009-05-21 | license: CC BY-SA 3.0 | sourceUrl: https://commons.wikimedia.org/wiki/File:Dalian_China_Labor-Park-03.jpg；galleryIndex: 7 | subject: 山上站视角的劳动公园与市中心 | photographer: CEphoto, Uwe Aranas | date: 2009-05-21 | license: CC BY-SA 3.0 | sourceUrl: https://commons.wikimedia.org/wiki/File:Dalian_China_Labor-Park-04.jpg",
+      "videoVerificationNotes": "两个视频的标题和景点对应关系由公开检索索引核实；4K是发布者标题标注，本次未完成播放器播放及实际清晰度验证。第一个为劳动公园专项拍摄，第二个为2023年12月从劳动公园延伸到青泥洼桥、天津街和中山广场的步行导览，非官方宣传片。",
+      "coreSources": "https://piao.qunar.com/ticket/detail_13806.html；https://you.ctrip.com/sight/dalian4/1102.html；https://dl.bendibao.com/jingdian/dalianlaodonggongyuan/；https://ditu.amap.com/place/B019B0860V；https://www.mypacer.com/routes/250526/labor-park-walking-and-running-zhongshan-district-dalian-china；https://commons.wikimedia.org/wiki/Category:Dalian_Laodong_Park"
+    },
+    "createdAt": "2026-09-05"
+  },
+  {
+    "id": "site-dalian-1788606939713",
+    "name": "旅顺一日游",
+    "localName": "旅顺博物馆—太阳沟—军港游园亲子慢游线",
+    "category": "attraction",
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "coordinates": [
+      38.8788,
+      121.6038
+    ],
+    "address": "中国 辽宁省 大连市旅顺口区；多点线路：旅顺博物馆列宁街42号，军港游园黄河路6号",
+    "city": "大连",
+    "coverImage": "https://dimg04.c-ctrip.com/images/0106k12000m3x8bpu9FEE_W_1200_0_R5_Q80.webp?proc=source/trip&_fr=wc",
+    "gallery": [
+      "https://dimg04.c-ctrip.com/images/0106k12000m3x8bpu9FEE_W_1200_0_R5_Q80.webp?proc=source/trip&_fr=wc",
+      "https://dimg04.c-ctrip.com/images/0103i120008vyj43c8D7A_W_1200_0_R5_Q80.webp?proc=source/trip&_fr=wc",
+      "https://dimg04.c-ctrip.com/images/0101z120008vyj6373FBC_W_1200_0_R5_Q80.webp?proc=source/trip&_fr=wc",
+      "https://dimg04.c-ctrip.com/images/10071f000001h6y3m7EBB_W_1200_0_R5_Q80.webp?proc=source/trip&_fr=wc",
+      "https://dimg04.c-ctrip.com/images/fd/tg/g3/M08/6C/E7/CggYGlYnQqeAZ_okAAOQ3VCPgFo560_W_1200_0_R5_Q80.webp?proc=source/trip&_fr=wc",
+      "https://dimg04.c-ctrip.com/images/fd/tg/g4/M0B/81/EF/CggYHlYnQrSAJK-8AANoHf3uLWw399_W_1200_0_R5_Q80.webp?proc=source/trip&_fr=wc",
+      "https://q9.itc.cn/q_70/images03/20260715/5f077089ddcd4f63837c7a0ce68889c1.gif",
+      "https://q0.itc.cn/q_70/images03/20260715/953ed1c545c440e6826ce98697b2db17.jpeg"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=V9f5-Cd8FNg"
+    ],
+    "description": "以旅顺博物馆、太阳沟老街和军港游园串起历史与海风的一日慢游。上午精选文物、漫步树荫街道，午餐后充分坐休，下午看港湾与飞机模型。适合用车接驳的三代家庭，不安排登山、赶海或密集打卡，孩子疲倦即可提前返程。",
+    "recommendedDurationMin": 480,
+    "openingHours": "线路无统一开放时间。旅顺博物馆4—10月通常09:00—16:30，16:00停止入馆；11—3月09:00—16:00，15:30停止入馆；通常周一闭馆，节假日及延时开放以公告为准。太阳沟公共街道通常全天可通行。军港游园平台列4—6月及9—10月07:30—17:30，7—8月07:00—19:00，11—3月08:00—16:30；以当天公告为准。",
+    "admissionFee": {
+      "adult": "旅顺博物馆常设展免费，太阳沟公共街区免费，军港游园成人票30元/人；不存在统一线路门票",
+      "senior": "博物馆常设展免费，65—69岁仍需预约，70岁及以上凭有效证件免预约；军港游园60—69岁优惠票15元，70岁及以上凭有效证件免票",
+      "child4yo": "博物馆常设展免费，6岁以下由已预约家长陪同免预约；军港游园6周岁及以下或身高1.3米及以下儿童免票，需监护人陪同",
+      "notes": "2名成人、2名65—69岁长辈和1名4岁儿童，核心线路门票合计约90元。不含交通、餐饮、收费特展、讲解、索道或船票。附加项目不能直接套用景区门票的老人儿童优惠；军港价格与优待依据当前平台公示，购票前复核。"
+    },
+    "bestTimeToVisit": "优先非周一的工作日，09:00进入博物馆，上午短走太阳沟，午餐后坐休45—60分钟，下午军港停留30—45分钟。避开正午长时间街头步行，具体气温和人流以出行当天为准。",
+    "weatherSuitability": "晴天或无预警的轻风天气较适合；普通降雨可缩减户外、改为已预约且开放的博物馆。大风、雷暴及恶劣道路天气取消海边行程，不属于全天候线路。",
+    "strollerRating": 3,
+    "strollerNotes": "评分针对用车接驳的精选路线。太阳沟与军港有铺装路面，但老街路缘、过街及博物馆内部无障碍连续性未完全核实；不能保证全程零台阶。建议自带轻便可折叠推车，出发前向博物馆确认推车入馆和无障碍通道。",
+    "kidRating": 3,
+    "kidNotes": "可看飞机及舰岛模型、港湾、老建筑和文物；没有核实到熊猫、白鲸、羊驼、固定喂海鸥或挖沙项目。古尸等展区可跳过，港边近身照看、不攀爬护栏。母婴室、尿布台及专用儿童互动区未核实。",
+    "elderlyRating": 4,
+    "elderlyNotes": "以不登山、景点间乘车和博物馆精选参观为前提。全日步行控制目标约1—1.5公里，拆成短段；不是实测全景里程。博物馆官网列有轮椅服务，数量、手续、费用及可达展厅须咨询。不能保证沿途密集座椅。",
+    "walkingIntensity": "低至中等：规划累计约1—1.5公里，分段完成；有车接送，可随时删减。非全景覆盖、非实测距离。",
+    "stairsLevel": "不安排登山与连续爬坡项目；老街及馆内局部台阶、路缘和全程无障碍连通性待确认",
+    "amenities": {
+      "nursingRoom": null,
+      "diaperChanging": null,
+      "accessibleRestroom": null,
+      "benchesRestAreas": null,
+      "shuttleOrCart": null,
+      "elevatorAvailable": null,
+      "strollerRental": null,
+      "wheelchairRental": true,
+      "shadeAvailable": true,
+      "indoorRainyDayOption": true,
+      "kidPlayArea": null
+    },
+    "familyTips": [
+      "当天不回酒店午睡，午饭后仍保留45—60分钟坐休；Leo困倦或长辈疲劳即提前返程。",
+      "5名家庭成员加包车司机共6人，建议7座车，提前确认儿童安全座椅及推车行李空间。",
+      "主线只安排博物馆、太阳沟和军港，不叠加白玉山登顶、炮台爬坡或潜艇舱梯。",
+      "博物馆主馆从东侧参观通道入馆，主立面拍照点不等于入馆入口。",
+      "博物馆精选参观即可，按孩子接受度跳过古尸等展区。",
+      "包车约定只接送，不绑定演出、指定餐厅或未经同意的套票；门票自行核验长者优惠。",
+      "穿包头防滑鞋，携带薄防风衣、遮阳帽、防晒衣、饮水及备用衣袜；不以厚毯密封推车遮阳。",
+      "军港为港湾观景，不是保证看军舰、登舰、出海、喂海鸥或赶海的项目。",
+      "照片中的秋色不代表出行当天景色，不保证9月已经出现金黄银杏。",
+      "amenities中的null表示未核实；wheelchairRental仅指博物馆列有轮椅服务，不代表全线均可借用或免费。"
+    ],
+    "nearbyDining": [
+      {
+        "id": "dine-llm-1788606934867-0",
+        "name": "李一记饺子馆",
+        "cuisine": "海鲜及素馅水饺",
+        "familyFeatures": "候选餐厅，已查到门店及水饺资料；宝宝椅、一楼无台阶、少盐定制及出餐速度尚未确认。馅料可能预调味，需电话询问，不能承诺适合所有儿童或长辈。",
+        "walkingTimeMin": 3
+      },
+      {
+        "id": "dine-llm-1788606934867-1",
+        "name": "李爽手擀面（太阳沟店）",
+        "cuisine": "手擀面、蚬子面、海蛎子面及豆腐泡等",
+        "familyFeatures": "候选餐厅，已查到太阳沟门店与菜品资料；需确认当前营业位置、宝宝椅、无台阶座位及能否面煮软、汤少盐。未核实从具体景点出口步行5—10分钟可达。",
+        "walkingTimeMin": 3
+      }
+    ],
+    "socialMediaLinks": [
+      {
+        "id": "social-llm-1788606934868-0",
+        "platform": "xiaohongshu",
+        "title": "大连第三天，坑全踩在了旅顺",
+        "author": "图图托托",
+        "url": "https://www.rednote.com/discovery/item/6a827ac400000000280314f0?xsec_token=ABRg4yrw1C6smzbaASlosDDVzKfZFvVc1At_XIwufpQrk=&xsec_source=pc_search&source=web_explore_feed",
+        "note": "已打开正文。包含孩子和老人同行经历，反映临时找车后被推销演出、指定餐厅及附加项目的问题。建议提前写清包车服务范围，门票自行核验年龄优惠。帖内议价及项目金额仅为个人经历，不作为当前官方价格。",
+        "addedAt": "2026-09-05"
+      },
+      {
+        "id": "social-llm-1788606934869-1",
+        "platform": "xiaohongshu",
+        "title": "被低估的冷门旅游地：大连旅顺一日游攻略",
+        "author": "Feelgoodinc",
+        "url": "https://www.rednote.com/discovery/item/6a736ade000000000801329d?xsec_token=ABK6mbJsT91OHBJig9niEkroOfXPPaSVDCDI2M6BAUrx4=&xsec_source=pc_search&source=web_explore_feed",
+        "note": "已打开正文。实际串联博物馆、太阳沟等地并在点间打车，军港并未实际游览。其博物馆与街区停留较长，属于成人节奏；三代家庭宜借鉴点到点用车，但减少站点与步行量。预约依据最新官方规则，不依据评论中的临时入馆经验。",
+        "addedAt": "2026-09-05"
+      },
+      {
+        "id": "social-llm-1788606934869-2",
+        "platform": "xiaohongshu",
+        "title": "抓住秋天的尾巴 | 提新车，带娃开往太阳沟",
+        "author": "闷闷带哇记",
+        "url": "https://www.rednote.com/discovery/item/691d24d90000000019025a4b?xsec_token=ABuDJ-ggX2p7DIfUSujmA3iJEt5lMENb-jGe4RB4zxGkE=&xsec_source=pc_search&source=web_explore_feed",
+        "note": "已打开正文，发布于2025-11-19。亲子自驾经历提到风冷时转入博物馆、老建筑外观游览，以及低龄孩子可跳过古尸展区。文中无需预约或身份证的说法已过时：2026-07-21起普通成人恢复实名预约。不可照搬帖中的停车经验，应只停合法车位。",
+        "addedAt": "2026-09-05"
+      }
+    ],
+    "customTags": [
+      "亲子精选"
+    ],
+    "customFields": {
+      "tideOrWeatherTip": "主线不安排赶海，军港游园不是潮间带采集点。尚无出行日期及具体海滩，不能给出准确退潮钟点；应查询大连市海洋预报台等发布的当天对应岸段预报，不把黄海与渤海岸段潮时混用。另加赶海需重新规划，避免进入可能被涨潮切断的礁石或泥滩。儿童穿包头防滑鞋，备防风衣、遮阳帽、防晒衣、饮水和干衣袜；大风、雷暴时取消海边。",
+      "ticketBookingTip": "旅顺博物馆自2026-07-21恢复个人预约，掌上旅博小程序可提前7日含当日预约，主馆与分馆预约码通用。普通成人及65—69岁长辈应预约，携身份证原件或预约码核验；6岁以下儿童由已预约家长陪同免预约，70岁及以上凭有效证件免预约，限流仍需服从现场安排。建议带成人身份证原件、儿童年龄证明。军港长者优惠携本人有效身份证件，儿童年龄或身高按现场核验；军港是否强制提前实名预约未核实，购票前查看当日官方售票说明。博物馆咨询0411-86383334或0411-86384245；军港咨询0411-86622735。",
+      "parkingAndDropoff": "博物馆导航列宁街42号，主馆东侧为参观通道；军港游园导航黄河路6号。让司机选择入口附近合法落客点，禁止默认门前可停或采用历史帖子中的随意路边停车。停车位至入口准确米数和现场排队耗时尚未核实；15—30分钟仅作停车安检核验缓冲，不是实测排队时间。未核实全线观光车，采用包车或自驾点间接送，不安排索道换乘。",
+      "rainyDayPlan": "普通降雨时压缩太阳沟和军港，改为已预约且开放的旅顺博物馆精选参观；优先免费常设展，收费特展单独确认。周一通常闭馆，不能把博物馆作为无条件雨天保障。遇大风、雷暴或道路风险预警，取消海边及不必要长途行车，在酒店休息；不把军港临时小房间或海边雨棚当作可靠避险场所。",
+      "napArrangement": "用户已确认当天可以不午睡，不安排13:30返酒店；午饭后保留45—60分钟坐休，可提前返程，不用新增景点填满全天。",
+      "durationDefinition": "480分钟为从大连市区出发到返回的规划量级，包含往返交通、午餐、坐休和机动时间；住宿地址及日期未提供，实际时长按导航调整。",
+      "mediaVerification": "8张图片为对应地点的实拍图片直链，约1000—1200像素宽，含一张博物馆入口实拍GIF；未找到经核实的观光车、儿童互动区和专用长辈休息区图片，不用其他景点补齐。第三方链接可能受防盗链影响，引用不等于商业使用授权。",
+      "galleryCaptions": "军港游园旅顺口石碑与港湾；军港游园舰岛造型模型建筑及铺装场地；军港游园飞机模型及步行区域；太阳沟秋季树荫街道，非出行当日景色；太阳沟绿荫街景；太阳沟历史建筑外观；旅顺博物馆主馆东侧入口指引实拍GIF；旅顺博物馆室内讲解与参观场景",
+      "videoVerification": "太阳沟的前世今生|走在寂静的老街上仿佛回到了那久远的时代|归于平淡|百年旅顺太阳沟-4K HDR (SEEING 4K 看中國) 46分13秒 https://www.youtube.com/watch?v=V9f5-Cd8FNg",
+      "evidenceGaps": "两家餐厅的宝宝椅、无台阶就座及步行5—10分钟可达性尚未核实；停车位至入口米数、当日停车费用及排队时长尚未核实；博物馆全程无障碍、直梯、母婴室及尿布台等设施尚未核实；未找到观光车、儿童互动区和专用长辈休息区的可靠对应照片；未提供出行日期和具体海滩，不能给出准确潮汐钟点",
+      "verificationDate": "2026-09-04"
+    },
+    "createdAt": "2026-09-05"
+  },
+  {
     "id": "site-tofukuji",
     "name": "东福寺 (通天桥·八相之庭·秋枫名所)",
     "localName": "東福寺 (Tofuku-ji Temple & Tsutenkyo Bridge)",
@@ -2614,183 +2982,6 @@
     ]
   },
   {
-    "id": "site-dalian-natural-history-museum",
-    "name": "三寰牧场 (旅顺/高新)",
-    "localName": "Sanhuan Ranch (Lvshun / High-tech District)",
-    "category": "museum",
-    "coordinates": [
-      38.8681,
-      121.5583
-    ],
-    "address": "辽宁省大连市沙河口区黑石礁西村街40号 (近黑石礁海滨)",
-    "city": "大连",
-    "coverImage": "https://dimg04.c-ctrip.com/images/350f1f000001g48l4A168_W_1080_10000_Q80.jpg",
-    "gallery": [
-      "https://youimg1.c-ctrip.com/target/100p16000000z688fB037.jpg",
-      "https://youimg1.c-ctrip.com/target/100316000000z8toe2A0D.jpg",
-      "https://youimg1.c-ctrip.com/target/100a16000000z8f10FD0F.jpg",
-      "https://youimg1.c-ctrip.com/target/100r16000000z5inkFA10.jpg",
-      "https://youimg1.c-ctrip.com/target/100816000000z7ahb1940.jpg",
-      "https://youimg1.c-ctrip.com/target/100c16000000z9qnc4AFD.jpg",
-      "https://youimg1.c-ctrip.com/target/100t16000000z757fE57A.jpg",
-      "https://youimg1.c-ctrip.com/target/100b16000000z9hfu0D2A.jpg",
-      "https://youimg1.c-ctrip.com/target/100i16000000z5wy7208E.jpg",
-      "https://youimg1.c-ctrip.com/target/100216000000ze6cr5926.jpg"
-    ],
-    "videos": [
-      "https://www.youtube.com/watch?v=CfhTEVJt1Mc",
-      "https://www.bilibili.com/video/BV1ep421Q76P/"
-    ],
-    "description": "位于大连英歌石丘陵间的生态牧场，改造前以开阔草坪、原木儿童乐园、动物互动、农耕温室和森林步道见长。适合亲子自然体验，但坡地、日晒及较长步行对推车和长者有一定负担。目前闭园升级，恢复时间待定。",
-    "recommendedDurationMin": 150,
-    "openingHours": "自2026年4月3日起闭园升级，恢复营业时间待定",
-    "admissionFee": {
-      "adult": "暂停售票；改造前门市价¥70",
-      "senior": "暂停售票；旧制60-69岁约¥35，70岁及以上持证免费",
-      "child4yo": "暂停售票；旧制6周岁以下或身高1.3米以下通常免费",
-      "notes": "当前不可入园。旧优惠政策、营业时间和线上团购均不得视为复开后的有效规则，出发前应致电0411-86186999或0411-86186888确认。"
-    },
-    "bestTimeToVisit": "当前不建议前往；复开后优先非节假日开门即入园，并选择南门",
-    "weatherSuitability": "以户外草坪和林道为主，不适合雨天、大风及雨后泥泞天气",
-    "strollerRating": 3,
-    "strollerNotes": "改造前主游客路线没有必须连续爬楼的可靠记录，但包含丘陵坡路、草地和林道；小轮伞车通过性较差。南门可减少前往大草坪的坡路。未确认婴儿车租借、轮椅租借、无障碍坡道及无障碍卫生间。",
-    "kidRating": 4,
-    "kidNotes": "改造前有原木无动力乐园、草坪、羊驼和羊等动物、矮马、旋转木马、卡丁车及农耕活动，适合活泼4岁幼童；但动物展示和互动自2025年3月起暂停。中央水域、浅水系、动物围栏和观景台附近必须一对一看护。母婴室及尿布台未获可靠确认。",
-    "elderlyRating": 3,
-    "elderlyNotes": "森林环线约2.5公里，完整串联主要区域预计约3-5公里；草坪日晒明显，树荫和固定座椅并非高密度配置。改造前有观光车和付费篷房休息区，但当前停运，轮椅借用未确认。",
-    "walkingIntensity": "中等偏高（森林环线2.5公里；完整游览约3-5公里并含坡路）",
-    "stairsLevel": "主路线未见连续台阶记录，但有草坡、林道和不平整地面；改造后布局待核验",
-    "amenities": {
-      "nursingRoom": false,
-      "diaperChanging": false,
-      "accessibleRestroom": false,
-      "benchesRestAreas": true,
-      "shuttleOrCart": true,
-      "elevatorAvailable": false,
-      "strollerRental": false,
-      "wheelchairRental": false,
-      "shadeAvailable": true,
-      "indoorRainyDayOption": false,
-      "kidPlayArea": true
-    },
-    "familyTips": [
-      "当前仍在闭园升级，不要购买使用旧资料包装的2026团购票。",
-      "复开后从南门进入最省力，可缩短前往大草坪和原动物牧区的距离；公交站至入口可能仍需步行约1公里。",
-      "为4岁孩子准备备用衣裤、防晒帽和饮水；长辈准备折叠凳或手杖，雨后不要推小轮婴儿车进入草地。",
-      "旧有动物表演、放牧和投喂均不能默认恢复，购票前先电话确认。",
-      "园区周边没有经核实的5-10分钟步行家庭餐厅，三代同行应安排车辆前往龙王塘、黄泥川或高新万达用餐。"
-    ],
-    "nearbyDining": [
-      {
-        "id": "d6",
-        "name": "喜家德虾仁水饺 (黑石礁近馆店)",
-        "cuisine": "现包水饺 / 鲜虾素馅水饺 / 酱骨头 / 热热饺子汤",
-        "familyFeatures": "现点现包全透明明档厨房，少油无味精，儿童最爱鲜虾水饺，提供宝宝椅与儿童小餐具",
-        "walkingTimeMin": 6
-      },
-      {
-        "id": "d7",
-        "name": "黑石礁海港小馆",
-        "cuisine": "大连老菜 / 溜鱼片 / 海杂拌 / 清水豆腐汤",
-        "familyFeatures": "溜鱼片滑嫩无刺，适合老人与小孩，环境整洁家常",
-        "walkingTimeMin": 7
-      }
-    ],
-    "customTags": [
-      "免费博物馆",
-      "巨型鲸鱼骨架",
-      "恐龙展厅",
-      "纯室内空调",
-      "直梯无障碍",
-      "雨天首选"
-    ],
-    "reviews": [
-      {
-        "reviewerId": "reviewer1",
-        "reviewerName": "爸爸",
-        "reviewerAvatar": "👨",
-        "kidRating": 5,
-        "elderlyRating": 5,
-        "strollerRating": 5,
-        "overallRating": 5,
-        "preference": "must_go",
-        "comment": "大露脊鲸骨架比想象中庞大太多了，站在底下简直像科幻电影！免费而且不用顶着太阳晒，全平路推车太舒服了。",
-        "updatedAt": "2026-09-01T08:20:00.000Z"
-      },
-      {
-        "reviewerId": "reviewer2",
-        "reviewerName": "妈妈",
-        "reviewerAvatar": "👩",
-        "kidRating": 5,
-        "elderlyRating": 5,
-        "strollerRating": 5,
-        "overallRating": 5,
-        "preference": "must_go",
-        "comment": "三楼的大海景落地窗美极了！老人在走廊长椅上坐着看海浪，宝宝在恐龙展馆里找霸王龙，老少满意度100分！",
-        "updatedAt": "2026-09-01T08:50:00.000Z"
-      }
-    ],
-    "createdAt": "2026-09-01T08:00:00.000Z",
-    "tripId": "trip-dalian-coastal-multigen-2026",
-    "customFields": {
-      "rainyDayPlan": "牧场为户外型景点，目前闭园，过去的会耕部落温室也不能作为可直接进入的雨天馆。首选替代为大连自然博物馆：2026年9月1日起周二至周日09:00-16:30开放，16:00停止入馆，个人凭身份证免费免预约，馆内恐龙、鲸类和海洋生物展适合4岁儿童；70岁以上等人群可走绿色通道。周一或客流过大时改去大连高新万达广场。",
-      "ticketBookingTip": "当前没有有效售票或预约入口，无需抢票，也不要购买仍展示旧价格的旅行社产品。未找到牧场对长者、轮椅或婴儿车游客提供优先绿色通道的正式承诺。复开后先致电0411-86186999或0411-86186888确认开放日期、动物项目、观光车和无障碍服务，再从园方公布渠道购票。",
-      "parkingAndDropoff": "改造前南门和北门均有地面停车场，社会车辆不能进入游览区。南门距离大草坪较近、坡路更少，更适合长者和推车家庭。官方未公布停车位至闸机的精确米数，不能可靠承诺固定距离；入口实拍显示主要为铺装通道，没有必须连续爬楼的记录。当前闭园期间停车场和上下客区不保证开放。"
-    },
-    "socialMediaLinks": [
-      {
-        "id": "social-sanhuan-ranch-xhs-day-plan",
-        "url": "https://www.xiaohongshu.com/explore/68cfe544000000001301244a?xsec_token=ABfH_rPqHLyDDEg3s02z8Ri4v61twQqBfvZ6ISm479wWY=&xsec_source=",
-        "platform": "xiaohongshu",
-        "title": "三寰牧场 超适合带娃的露营地🏕️",
-        "author": "乔乔",
-        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/day-plan.webp",
-        "note": "三寰牧场半日至一日玩法；票价、表演和接驳班次需当天确认。",
-        "addedAt": "2026-09-01"
-      },
-      {
-        "id": "social-sanhuan-ranch-xhs-weekend-family",
-        "url": "https://www.xiaohongshu.com/explore/68bd8f12000000001d0176d6?xsec_token=ABddhY3tyDluDKVklkEFp-N2OyiMvFFNEdRldmqZxSx4w=&xsec_source=",
-        "platform": "xiaohongshu",
-        "title": "周末遛娃好去处-🏕️三寰牧场",
-        "author": "一个圆圆贝果",
-        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/weekend-family.webp",
-        "note": "周末亲子露营与投喂实测；注意动物互动安全，返程量力乘摆渡车。",
-        "addedAt": "2026-09-01"
-      },
-      {
-        "id": "social-sanhuan-ranch-xhs-mom-tips",
-        "url": "https://www.xiaohongshu.com/explore/684fc8e6000000002202cd90?xsec_token=ABdU0tt_tzL2jr72-66u48lWfi17SwBWmlxgzAQtT7GgE=&xsec_source=",
-        "platform": "xiaohongshu",
-        "title": "大连宝妈必藏！三寰牧场撒欢遛娃天花板",
-        "author": "米乐麻麻吖",
-        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/mom-tips.webp",
-        "note": "省力准备、租车和帐篷选址建议；第三方租赁及票价须自行核实。",
-        "addedAt": "2026-09-01"
-      },
-      {
-        "id": "social-sanhuan-ranch-xhs-activities",
-        "url": "https://www.xiaohongshu.com/explore/6814b92e00000000210024e8?xsec_token=AB6hdYTeAqQX34MvIPv41jMdKEuX-OXBrImDlDuFuvhEU=&xsec_source=",
-        "platform": "xiaohongshu",
-        "title": "大连遛娃｜被这片森林牧场治愈啦",
-        "author": "菠萝的莉",
-        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/activities.webp",
-        "note": "萌宠、儿童设施和林间步道组合；收费、宠物及露营规则以园区为准。",
-        "addedAt": "2026-09-01"
-      },
-      {
-        "id": "social-sanhuan-ranch-xhs-photo-guide",
-        "url": "https://www.xiaohongshu.com/explore/68e1fc52000000000401398c?xsec_token=ABvBeAZxZukY6phQJ877d4LeeINdeRaXnTbqRgoBcjL-o=&xsec_source=",
-        "platform": "xiaohongshu",
-        "title": "大连也有自己的阿勒泰！三寰牧场出片攻略",
-        "author": "一只糯仔",
-        "screenshotUrl": "/social-media/dalian-sanhuan-ranch/photo-guide.webp",
-        "note": "下午放牧与拍照攻略；带长辈可考虑电瓶车并核实运营。",
-        "addedAt": "2026-09-01"
-      }
-    ]
-  },
-  {
     "id": "site-dalian-yacht-cruise",
     "name": "大连游艇出游 (星海湾出海喂海鸥)",
     "localName": "Dalian Yacht & Catamaran Sailing (Xinghai Bay)",
@@ -4228,5 +4419,117 @@
         "addedAt": "2026-09-01"
       }
     ]
+  },
+  {
+    "id": "site-dalian-1788439992622",
+    "name": "海达索道",
+    "localName": "莲花山海达索道",
+    "category": "attraction",
+    "tripId": "trip-dalian-coastal-multigen-2026",
+    "coordinates": [
+      38.8784392,
+      121.6033839
+    ],
+    "address": "海达索道, 莲花山隧道, Bayilu Subdistrict, Dalian, Xigang District, Ganjingzi, Dalian City, Liaoning, 116013, China",
+    "city": "Dalian",
+    "coverImage": "https://images.unsplash.com/photo-1596422846543-75c6fc197f11?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1542037104857-ffbb0b955fb0?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1518890569493-66df9a87a1c1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1559825481-12a05cc00344?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "videos": [
+      "https://www.bilibili.com/video/BV1Wt4y1L7qK/",
+      "https://www.bilibili.com/video/BV1mY4y1j7tR/"
+    ],
+    "description": "大连城市空中吊厢索道，横跨莲花山，单程约20分钟，高空俯瞰星海湾大桥、城市山海全景。吊厢观光，可远眺海岸线；适合家庭观景，大风天气会临时停运，站点配套有限，老人儿童需注意高空防风。",
+    "recommendedDurationMin": 90,
+    "openingHours": "09:00 - 16:30（16:30停止检票，大风雷雨临时关闭）",
+    "admissionFee": {
+      "adult": "60元/人单程，往返100元/人",
+      "senior": "索道无老人优惠，同成人价；森林动物园大门票60‑69岁半价，70岁以上免票",
+      "child4yo": "免费 (1.3米以下)",
+      "notes": "北门摆渡电瓶车10元/人，老人儿童同价；吊厢限2大1小"
+    },
+    "bestTimeToVisit": "上午09:00开园入场，匹配孩子午睡节奏，避开午后暴晒与旅游团排队高峰；旺季优先南门进减少排队",
+    "weatherSuitability": "大风、雨天停运；晴天、多云适宜",
+    "strollerRating": 3,
+    "strollerNotes": "索道站点有台阶无直梯与无障碍坡道，婴儿推车必须折叠，不可推入吊厢；索道站点不提供推车租借，需要租赁前往森林动物园主园",
+    "kidRating": 4,
+    "kidNotes": "4岁孩子喜欢吊厢空中滑行看海，莲花山站有机会偶遇梅花鹿；吊厢全封闭安全性尚可；站点无母婴室与尿布台，需要前往动物园园区",
+    "elderlyRating": 4,
+    "elderlyNotes": "几乎不用爬山，总步行200‑350米；站台休息长椅较少，山顶有简易咖啡厅；高血压、恐高人群谨慎乘坐；索道无长者票价优惠",
+    "walkingIntensity": "轻松 (<500米)",
+    "stairsLevel": "站点登吊厢有局部台阶，其余区域平坦",
+    "amenities": {
+      "nursingRoom": false,
+      "diaperChanging": false,
+      "accessibleRestroom": true,
+      "benchesRestAreas": true,
+      "shuttleOrCart": true,
+      "elevatorAvailable": false,
+      "strollerRental": false,
+      "wheelchairRental": false,
+      "shadeAvailable": false,
+      "indoorRainyDayOption": true,
+      "kidPlayArea": false
+    },
+    "familyTips": [
+      "行程安排上午游玩，保证13:30前返回酒店满足孩子午睡",
+      "旺季想少排队优先南门上北门下，牺牲面朝大海视角换取舒适",
+      "山顶高空风力大，全家备好薄外套；出发前致电确认索道是否运行",
+      "索道站点无母婴室，婴儿推车必须折叠收纳"
+    ],
+    "nearbyDining": [
+      {
+        "id": "dine-llm-1788439987577-0",
+        "name": "喜家德水饺（星海店）",
+        "cuisine": "海鲜水饺、清淡家常菜",
+        "familyFeatures": "提供宝宝椅儿童餐具，虾三鲜水饺软嫩，口味少油清淡，适合幼童与长辈",
+        "walkingTimeMin": 8
+      },
+      {
+        "id": "dine-llm-1788439987577-1",
+        "name": "日月昇渔家菜（星海店）",
+        "cuisine": "大连老菜、清蒸海鲜、海胆豆腐",
+        "familyFeatures": "可定制少油少盐，海胆豆腐软嫩易消化，配备宝宝椅，地道本地菜",
+        "walkingTimeMin": 10
+      }
+    ],
+    "socialMediaLinks": [
+      {
+        "id": "social-haida-xhs-guide",
+        "platform": "xiaohongshu",
+        "title": "大连莲花山海达索道超全带娃避坑指南",
+        "author": "大连亲子遛娃指南",
+        "url": "https://www.xiaohongshu.com/explore/65e9b897000000000b016335",
+        "note": "实测旺季南门上北门下避开大队；吊厢看跨海大桥视野震撼；山顶风大给孩子备防风外套，站点无母婴室需推车折叠。",
+        "addedAt": "2026-09-03"
+      },
+      {
+        "id": "social-haida-bilibili-4k",
+        "platform": "bilibili",
+        "title": "【大连】莲花山海达索道全程4K实景体验！空中俯瞰星海湾跨海大桥",
+        "author": "滨城漫游记",
+        "url": "https://www.bilibili.com/video/BV1Wt4y1L7qK/",
+        "note": "4K高清呈现进出吊厢台阶情况、空中滑行全景视野与莲花山观景台长辈休息设施。",
+        "addedAt": "2026-09-03"
+      }
+    ],
+    "customTags": [
+      "亲子精选"
+    ],
+    "customFields": {
+      "tideOrWeatherTip": "索道本地无赶海点位；就近赶海去傅家庄/银沙滩，选低潮前后1‑2小时；高空风力比地面低3‑5℃，务必备防风薄外套；儿童穿包头防滑鞋，做好高倍海边防晒",
+      "ticketBookingTip": "支持线上提前购票，但需要到现场换纸质票，非强制实名预约；索道本身没有长者优惠；森林动物园大门票老人优待必须出示本人身份证原件",
+      "parkingAndDropoff": "北门付费可直达索道检票口约15米，否则需步行800米，摆渡电瓶车10元/人；南门下车距离检票口20米；旺季北门排队30‑120分钟，南门排队5‑20分钟；省力家庭动线：南门乘坐索道去往北门",
+      "rainyDayPlan": "大风下雨索道直接停运；就近备选：森林动物园室内熊猫馆（满足4岁孩子看大熊猫）；次选星海片区大连海洋世界室内水族馆，不受风雨影响"
+    },
+    "createdAt": "2026-09-03"
   }
 ]
